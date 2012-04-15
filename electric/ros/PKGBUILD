@@ -40,7 +40,7 @@ build() {
   patch -p1 -i "$srcdir/ros.diff"
   rosmake --no-rosdep -i --bootstrap ros
   install_ros_stack ${srcdir}/ros-${pkgver} /opt/ros/electric/ros
-  cp ${srcdir}/setup.* $pkgdir/$2
+  cp ${srcdir}/setup.* $pkgdir/opt/ros/electric
   cp ${srcdir}/rosinstall $pkgdir/opt/ros/electric/.rosinstall
 }
 
