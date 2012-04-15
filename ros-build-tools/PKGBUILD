@@ -1,0 +1,22 @@
+# Maintainer: Lorenz Moesenlechner <moesenle@gmail.com>
+
+pkgdesc='Utilities for building arch packages for ROS stacks.'
+
+pkgname='ros-build-tools'
+pkgver='0.0.1'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=()
+depends=()
+
+source=('fix-python-scripts.sh'
+        'stack-install-tools.sh')
+md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
+         '79ae7fb600e116623a42631d15d66a87')
+
+build() {
+  mkdir -p $pkgdir/usr/share/ros-build-tools
+  cp ${srcdir}/fix-python-scripts.sh ${srcdir}/stack-install-tools.sh $pkgdir/usr/share/ros-build-tools
+}
+
