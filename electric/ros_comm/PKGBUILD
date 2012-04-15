@@ -1,0 +1,31 @@
+
+pkgdesc='The ros_comm stack.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-ros-comm'
+pkgver='1.6.6'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+depends=('ros-electric-ros' 'apr' 'apr-util' 'log4cxx' 'python-imaging'
+         'python-numpy' 'python2-matplotlib' 'python-paramiko')
+
+source=("https://code.ros.org/svn/release/download/stacks/ros_comm/ros_comm-1.6.6/ros_comm-1.6.6.tar.bz2"
+        'ros_comm.patch')
+md5sums=('2d3c8470a3d97aa7b27bf55c87505a90'
+         'd5e7d09019c5860e85568d6979e3d368')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/ros_comm ] || ln -sf ../ros_comm-${pkgver} ${srcdir}/stacks/ros_comm
+  cd $srcdir/stacks ; patch -p0 -i "$srcdir/ros_comm.patch"
+  rosmake --no-rosdep -i ros_comm
+  install_ros_stack ${srcdir}/stacks/ros_comm /opt/ros/electric/stacks/ros_comm
+}
+
