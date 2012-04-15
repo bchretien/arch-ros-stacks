@@ -17,7 +17,7 @@ depends=('python2' 'cmake' 'tinyxml' 'libyaml' 'python2-yaml' 'pygtk'
 
 
 source=("https://code.ros.org/svn/release/download/stacks/ros/ros-$pkgver/ros-$pkgver.tar.bz2"
-        'ros.diff'
+        'ros.patch'
         'setup.sh'
         'setup.bash'
         'setup.zsh'
@@ -39,7 +39,7 @@ build() {
   export PYTHONPATH=$ROS_ROOT/core/roslib/src:$PYTHONPATH
 
   cd "${srcdir}/ros-${pkgver}"
-  patch -p1 -i "$srcdir/ros.diff"
+  patch -p1 -i "$srcdir/ros.patch"
   rosmake --no-rosdep -i --bootstrap ros
   install_ros_stack ${srcdir}/ros-${pkgver} /opt/ros/electric/ros
   cp ${srcdir}/setup.* $pkgdir/opt/ros/electric
