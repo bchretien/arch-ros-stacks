@@ -1,0 +1,4 @@
+- other:
+    local-name: /opt/ros/electric/ros
+- other:
+    local-name: /opt/ros/electric/stacks
