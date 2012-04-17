@@ -1,0 +1,27 @@
+diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro-1.6.0/src/xacro.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro/src/xacro.py
+--- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro-1.6.0/src/xacro.py	2011-06-30 00:53:28.000000000 +0200
++++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro/src/xacro.py	2012-04-17 09:51:08.440429585 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2008, Willow Garage, Inc.
+ # All rights reserved.
+ #
+diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro-1.6.0/test/test_xacro.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro/test/test_xacro.py
+--- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro-1.6.0/test/test_xacro.py	2011-06-30 00:53:28.000000000 +0200
++++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro/test/test_xacro.py	2012-04-17 09:51:08.437096253 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ import roslib
+ roslib.load_manifest('xacro')
+ 
+diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro-1.6.0/xacro.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro/xacro.py
+--- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro-1.6.0/xacro.py	2011-06-30 00:53:28.000000000 +0200
++++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/xacro/tmp/xacro/xacro.py	2012-04-17 09:51:08.433762920 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2008, Willow Garage, Inc.
+ # All rights reserved.
+ #
