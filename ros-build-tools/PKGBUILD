@@ -17,7 +17,7 @@ source=('fix-python-scripts.sh'
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
          '79ae7fb600e116623a42631d15d66a87'
          '4a7580eaa3e648b3a08715587306b3ee'
-         'a2ecbb4fd7cbf59ea8865f5f59c18546')
+         '5ea29f0aca61c1bf03bdc5691313e714')
 
 build() {
   mkdir -p $pkgdir/usr/share/ros-build-tools

@@ -10,7 +10,7 @@ license=('BSD')
 makedepends=('ros-build-tools')
 
 #TODO: Fill in ROS stack dependencies and rosdep dependencies
-depends=()
+depends=(ros-@ROS_DISTRO@-ros)
 
 source=("@STACK_URL@")
 md5sums=('@STACK_MD5@')
