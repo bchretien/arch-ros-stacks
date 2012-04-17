@@ -12,8 +12,10 @@ makedepends=('ros-build-tools')
 #TODO: Fill in ROS stack dependencies and rosdep dependencies
 depends=(ros-@ROS_DISTRO@-ros)
 
-source=("@STACK_URL@")
-md5sums=('@STACK_MD5@')
+source=("@STACK_URL@"
+        '@STACK_NAME@.patch')
+md5sums=('@STACK_MD5@' 
+         '@STACK_PATCH_MD5@')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/@ROS_DISTRO@/setup.bash
@@ -23,7 +25,7 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/@STACK_NAME@ ] || ln -sf ../@STACK_NAME@-${pkgver} ${srcdir}/stacks/@STACK_NAME@
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/@STACK_NAME@.patch"
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/@STACK_NAME@.patch"
   rosmake --no-rosdep -i @STACK_NAME@
   install_ros_stack ${srcdir}/stacks/@STACK_NAME@ /opt/ros/@ROS_DISTRO@/stacks/@STACK_NAME@
 }
