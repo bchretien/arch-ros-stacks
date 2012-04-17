@@ -1,0 +1,63 @@
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/cfg/Test.cfg driver_common/dynamic_reconfigure/cfg/Test.cfg
+--- driver_common-1.2.4/dynamic_reconfigure/cfg/Test.cfg	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/cfg/Test.cfg	2012-04-17 20:07:43.481829652 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/cmake/dynamic_reconfigure/parameter_generator.py driver_common/dynamic_reconfigure/cmake/dynamic_reconfigure/parameter_generator.py
+--- driver_common-1.2.4/dynamic_reconfigure/cmake/dynamic_reconfigure/parameter_generator.py	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/cmake/dynamic_reconfigure/parameter_generator.py	2012-04-17 20:07:43.475162985 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/cmake/gendeps driver_common/dynamic_reconfigure/cmake/gendeps
+--- driver_common-1.2.4/dynamic_reconfigure/cmake/gendeps	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/cmake/gendeps	2012-04-17 20:07:43.478496319 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/scripts/dynparam driver_common/dynamic_reconfigure/scripts/dynparam
+--- driver_common-1.2.4/dynamic_reconfigure/scripts/dynparam	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/scripts/dynparam	2012-04-17 20:07:43.461829652 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/scripts/reconfigure_gui driver_common/dynamic_reconfigure/scripts/reconfigure_gui
+--- driver_common-1.2.4/dynamic_reconfigure/scripts/reconfigure_gui	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/scripts/reconfigure_gui	2012-04-17 20:07:43.465162985 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/test/testclient.py driver_common/dynamic_reconfigure/test/testclient.py
+--- driver_common-1.2.4/dynamic_reconfigure/test/testclient.py	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/test/testclient.py	2012-04-17 20:07:43.468496319 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur driver_common-1.2.4/dynamic_reconfigure/test/testserver.py driver_common/dynamic_reconfigure/test/testserver.py
+--- driver_common-1.2.4/dynamic_reconfigure/test/testserver.py	2011-10-22 01:00:19.000000000 +0200
++++ driver_common/dynamic_reconfigure/test/testserver.py	2012-04-17 20:07:43.471829652 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ #*********************************************************************
+ # Software License Agreement (BSD License)
+ #
