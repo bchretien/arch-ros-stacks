@@ -1,0 +1,29 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-bullet'
+pkgver='2.76.5'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-ros freeglut libxext)
+
+source=("https://code.ros.org/svn/release/download/stacks/bullet/bullet-2.76.5/bullet-2.76.5.tar.bz2")
+md5sums=('59b8a2f1e492be82684c2eac9d7d2264')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/bullet ] || ln -sf ../bullet-${pkgver} ${srcdir}/stacks/bullet
+  rosmake --no-rosdep -i bullet
+  install_ros_stack ${srcdir}/stacks/bullet /opt/ros/electric/stacks/bullet
+}
+
