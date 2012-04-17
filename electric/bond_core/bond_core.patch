@@ -1,0 +1,27 @@
+diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core-1.6.1/test_bond/scripts/tester.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core/test_bond/scripts/tester.py
+--- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core-1.6.1/test_bond/scripts/tester.py	2011-10-20 01:47:56.000000000 +0200
++++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core/test_bond/scripts/tester.py	2012-04-17 10:05:05.517127815 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2009, Willow Garage, Inc.
+ # All rights reserved.
+ #
+diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core-1.6.1/test_bond/test/exercise_bond.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core/test_bond/test/exercise_bond.py
+--- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core-1.6.1/test_bond/test/exercise_bond.py	2011-10-20 01:47:56.000000000 +0200
++++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core/test_bond/test/exercise_bond.py	2012-04-17 10:05:05.523794481 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2009, Willow Garage, Inc.
+ # All rights reserved.
+ #
+diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core-1.6.1/test_bond/test/test_callbacks_py.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core/test_bond/test/test_callbacks_py.py
+--- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core-1.6.1/test_bond/test/test_callbacks_py.py	2011-10-20 01:47:56.000000000 +0200
++++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/bond_core/tmp/bond_core/test_bond/test/test_callbacks_py.py	2012-04-17 10:05:05.520461149 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2009, Willow Garage, Inc.
+ # All rights reserved.
+ #
