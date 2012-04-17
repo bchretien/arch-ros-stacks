@@ -23,7 +23,6 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/filters ] || ln -sf ../filters-${pkgver} ${srcdir}/stacks/filters
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/filters.patch"
   rosmake --no-rosdep -i filters
   install_ros_stack ${srcdir}/stacks/filters /opt/ros/electric/stacks/filters
 }

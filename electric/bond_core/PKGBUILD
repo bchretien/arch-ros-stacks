@@ -12,8 +12,10 @@ makedepends=('ros-build-tools')
 #TODO: Fill in ROS stack dependencies and rosdep dependencies
 depends=(ros-electric-ros ros-electric-ros-comm uuid)
 
-source=("https://code.ros.org/svn/release/download/stacks/bond_core/bond_core-1.6.1/bond_core-1.6.1.tar.bz2")
-md5sums=('6eae6aaf440a08d1a32f1f5651f2a8ca')
+source=("https://code.ros.org/svn/release/download/stacks/bond_core/bond_core-1.6.1/bond_core-1.6.1.tar.bz2"
+        'bond_core.patch')
+md5sums=('6eae6aaf440a08d1a32f1f5651f2a8ca' 
+         '5a4b56ea0c5719afac738f49d708d13f')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/electric/setup.bash
@@ -23,7 +25,7 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/bond_core ] || ln -sf ../bond_core-${pkgver} ${srcdir}/stacks/bond_core
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/bond_core.patch"
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/bond_core.patch"
   rosmake --no-rosdep -i bond_core
   install_ros_stack ${srcdir}/stacks/bond_core /opt/ros/electric/stacks/bond_core
 }

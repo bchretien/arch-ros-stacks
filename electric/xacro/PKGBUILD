@@ -9,11 +9,12 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-#TODO: Fill in ROS stack dependencies and rosdep dependencies
-depends=(ros-electric-ros ros-electric-ros-comm)
+depends=(ros-electric-ros)
 
-source=("https://code.ros.org/svn/release/download/stacks/xacro/xacro-1.6.0/xacro-1.6.0.tar.bz2")
-md5sums=('81fe824e613f41c6bdb352450114430b')
+source=("https://code.ros.org/svn/release/download/stacks/xacro/xacro-1.6.0/xacro-1.6.0.tar.bz2"
+        'xacro.patch')
+md5sums=('81fe824e613f41c6bdb352450114430b' 
+         'bca9f9cda508ccd1d593f112ce89eb00')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/electric/setup.bash
@@ -23,7 +24,7 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/xacro ] || ln -sf ../xacro-${pkgver} ${srcdir}/stacks/xacro
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/xacro.patch"
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/xacro.patch"
   rosmake --no-rosdep -i xacro
   install_ros_stack ${srcdir}/stacks/xacro /opt/ros/electric/stacks/xacro
 }

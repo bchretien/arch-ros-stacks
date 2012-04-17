@@ -23,7 +23,6 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/common_rosdeps ] || ln -sf ../common_rosdeps-${pkgver} ${srcdir}/stacks/common_rosdeps
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/common_rosdeps.patch"
   rosmake --no-rosdep -i common_rosdeps
   install_ros_stack ${srcdir}/stacks/common_rosdeps /opt/ros/electric/stacks/common_rosdeps
 }

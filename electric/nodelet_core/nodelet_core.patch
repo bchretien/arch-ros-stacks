@@ -1,33 +1,33 @@
-diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/nodelet/scripts/declared_nodelets /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/nodelet/scripts/declared_nodelets
---- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/nodelet/scripts/declared_nodelets	2011-12-05 22:54:39.000000000 +0100
-+++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/nodelet/scripts/declared_nodelets	2012-04-17 10:03:45.910458148 +0200
+diff -Naur nodelet_core-1.6.2/nodelet/scripts/declared_nodelets nodelet_core/nodelet/scripts/declared_nodelets
+--- nodelet_core-1.6.2/nodelet/scripts/declared_nodelets	2011-12-05 22:54:39.000000000 +0100
++++ nodelet_core/nodelet/scripts/declared_nodelets	2012-04-17 20:03:48.711830146 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
  
  # Software License Agreement (BSD License)
  #
-diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/nodelet/scripts/list_nodelets /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/nodelet/scripts/list_nodelets
---- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/nodelet/scripts/list_nodelets	2011-12-05 22:54:39.000000000 +0100
-+++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/nodelet/scripts/list_nodelets	2012-04-17 10:03:45.913791479 +0200
+diff -Naur nodelet_core-1.6.2/nodelet/scripts/list_nodelets nodelet_core/nodelet/scripts/list_nodelets
+--- nodelet_core-1.6.2/nodelet/scripts/list_nodelets	2011-12-05 22:54:39.000000000 +0100
++++ nodelet_core/nodelet/scripts/list_nodelets	2012-04-17 20:03:48.715163479 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
  # Provides quick access to the services exposed by MechanismControlNode
  
  import roslib
-diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/test_nodelet/test/plus_local.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/test_nodelet/test/plus_local.py
---- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/test_nodelet/test/plus_local.py	2011-12-05 22:54:39.000000000 +0100
-+++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/test_nodelet/test/plus_local.py	2012-04-17 10:03:45.903791481 +0200
+diff -Naur nodelet_core-1.6.2/test_nodelet/test/plus_local.py nodelet_core/test_nodelet/test/plus_local.py
+--- nodelet_core-1.6.2/test_nodelet/test/plus_local.py	2011-12-05 22:54:39.000000000 +0100
++++ nodelet_core/test_nodelet/test/plus_local.py	2012-04-17 20:03:48.705163479 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
  
  # Copyright (c) 2009, Willow Garage, Inc.
  # All rights reserved.
-diff -Naur /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/test_nodelet/test/test_loader.py /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/test_nodelet/test/test_loader.py
---- /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core-1.6.2/test_nodelet/test/test_loader.py	2011-12-05 22:54:39.000000000 +0100
-+++ /home/moesenle/work/ros/arch/arch-ros-stacks/electric/nodelet_core/tmp/nodelet_core/test_nodelet/test/test_loader.py	2012-04-17 10:03:45.907124815 +0200
+diff -Naur nodelet_core-1.6.2/test_nodelet/test/test_loader.py nodelet_core/test_nodelet/test/test_loader.py
+--- nodelet_core-1.6.2/test_nodelet/test/test_loader.py	2011-12-05 22:54:39.000000000 +0100
++++ nodelet_core/test_nodelet/test/test_loader.py	2012-04-17 20:03:48.708496813 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2

@@ -9,7 +9,6 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-#TODO: Fill in ROS stack dependencies and rosdep dependencies
 depends=(ros-electric-ros ros-electric-ros-comm)
 
 source=("https://code.ros.org/svn/release/download/stacks/pluginlib/pluginlib-1.6.0/pluginlib-1.6.0.tar.bz2")
@@ -23,7 +22,6 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/pluginlib ] || ln -sf ../pluginlib-${pkgver} ${srcdir}/stacks/pluginlib
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/pluginlib.patch"
   rosmake --no-rosdep -i pluginlib
   install_ros_stack ${srcdir}/stacks/pluginlib /opt/ros/electric/stacks/pluginlib
 }

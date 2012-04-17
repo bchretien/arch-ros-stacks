@@ -24,7 +24,7 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/diagnostics ] || ln -sf ../diagnostics-${pkgver} ${srcdir}/stacks/diagnostics
-  #cd $srcdir/stacks; patch -p0 -i "$srcdir/diagnostics.patch"
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/diagnostics.patch"
   rosmake --no-rosdep -i diagnostics
   install_ros_stack ${srcdir}/stacks/diagnostics /opt/ros/electric/stacks/diagnostics
 }
