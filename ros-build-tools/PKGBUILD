@@ -16,7 +16,7 @@ source=('fix-python-scripts.sh'
         'PKGBUILD.rostemplate')
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
          '79ae7fb600e116623a42631d15d66a87'
-         'db77dfb863b1a57a1343fb20ec3cb68f'
+         '4a7580eaa3e648b3a08715587306b3ee'
          'a2ecbb4fd7cbf59ea8865f5f59c18546')
 
 build() {
