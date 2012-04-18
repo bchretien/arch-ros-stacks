@@ -12,16 +12,20 @@ depends=()
 
 source=('fix-python-scripts.sh'
         'stack-install-tools.sh'
+        'import-rosinstall.py'
         'create-arch-ros-package.sh'
         'PKGBUILD.rostemplate')
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
          '79ae7fb600e116623a42631d15d66a87'
-         '2199b55294cfa38e89bfb98590fa7068'
+         '57a0b531518c21fa7539c4fb7b6df422'
+         '44aaed27f6a7ce9caa63ee4a656ead40'
          'b43e81c22d2323154aec2f5a4316275d')
 
 build() {
   mkdir -p $pkgdir/usr/share/ros-build-tools
-  for file in 'fix-python-scripts.sh' 'stack-install-tools.sh' 'create-arch-ros-package.sh' 'PKGBUILD.rostemplate'; do
+  for file in 'fix-python-scripts.sh' 'stack-install-tools.sh' 'import-rosinstall.py' \
+      'create-arch-ros-package.sh' 'PKGBUILD.rostemplate'
+  do
       cp $file $pkgdir/usr/share/ros-build-tools
   done
 }
