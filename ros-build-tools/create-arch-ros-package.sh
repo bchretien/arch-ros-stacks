@@ -15,9 +15,11 @@ URL=$4
 
 PACKAGE_DIRECTORY=$(pwd)/$STACK
 
-read -p "Create package for stack $STACK in directory $PACKAGE_DIRECTORY? (y/n) "
-if ! [ "$REPLY" == "y" ]; then
-    exit 0
+if [ -d $PACKAGE_DIRECTORY ]; then
+    read -p "Directory $STACK already exists. Overwrite? (y/n) "
+    if ! [ "$REPLY" == "y" ]; then
+        exit 0
+    fi
 fi
 
 mkdir -p $PACKAGE_DIRECTORY
