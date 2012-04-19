@@ -1,0 +1,28 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-assimp'
+pkgver='0.1.1'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+depends=(assimp)
+
+source=("https://code.ros.org/svn/release/download/stacks/assimp/assimp-0.1.1/assimp-0.1.1.tar.bz2")
+md5sums=('07fc2869b555d9411c0211a78ff42e33' )
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/assimp ] || ln -sf ../assimp-${pkgver} ${srcdir}/stacks/assimp
+  rosmake --no-rosdep -i assimp
+  install_ros_stack ${srcdir}/stacks/assimp /opt/ros/electric/stacks/assimp
+}
+
