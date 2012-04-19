@@ -16,7 +16,7 @@ depends=(ros-electric-ros ros-electric-bullet ros-electric-common-msgs
 source=("https://code.ros.org/svn/release/download/stacks/geometry/geometry-1.6.1/geometry-1.6.1.tar.bz2"
         'geometry.patch')
 md5sums=('2c64c52908558a0d2e56c35aedbf7b72' 
-         '0ffa8af309c2f7d9dc8e81842149dbdb')
+         'bf5da982b2906ac36361bce397008627')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/electric/setup.bash

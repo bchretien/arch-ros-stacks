@@ -1,24 +1,36 @@
-diff -Naur geometry-1.6.1/tf/scripts/tf_remap geometry/tf/scripts/tf_remap
---- geometry-1.6.1/tf/scripts/tf_remap	2011-10-18 05:57:56.000000000 +0200
-+++ geometry/tf/scripts/tf_remap	2012-04-19 00:18:52.791492394 +0200
+diff -Naur geometry-1.6.1-orig/tf/include/tf/message_filter.h geometry/tf/include/tf/message_filter.h
+--- geometry-1.6.1-orig/tf/include/tf/message_filter.h	2011-10-18 05:57:57.000000000 +0200
++++ geometry/tf/include/tf/message_filter.h	2012-04-19 22:03:33.850967217 +0200
+@@ -398,7 +398,7 @@
+ 
+       ++successful_transform_count_;
+ 
+-      signalMessage(evt);
++      this->signalMessage(evt);
+     }
+     else
+     {
+diff -Naur geometry-1.6.1-orig/tf/scripts/tf_remap geometry/tf/scripts/tf_remap
+--- geometry-1.6.1-orig/tf/scripts/tf_remap	2011-10-18 05:57:56.000000000 +0200
++++ geometry/tf/scripts/tf_remap	2012-04-19 20:00:58.187796779 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
  # Software License Agreement (BSD License)
  #
  # Copyright (c) 2008, Willow Garage, Inc.
-diff -Naur geometry-1.6.1/tf/scripts/view_frames geometry/tf/scripts/view_frames
---- geometry-1.6.1/tf/scripts/view_frames	2011-10-18 05:57:56.000000000 +0200
-+++ geometry/tf/scripts/view_frames	2012-04-19 00:18:52.798159061 +0200
+diff -Naur geometry-1.6.1-orig/tf/scripts/view_frames geometry/tf/scripts/view_frames
+--- geometry-1.6.1-orig/tf/scripts/view_frames	2011-10-18 05:57:56.000000000 +0200
++++ geometry/tf/scripts/view_frames	2012-04-19 20:00:58.187796779 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
  # Software License Agreement (BSD License)
  #
  # Copyright (c) 2008, Willow Garage, Inc.
-diff -Naur geometry-1.6.1/tf/test/test_datatype_conversion.py geometry/tf/test/test_datatype_conversion.py
---- geometry-1.6.1/tf/test/test_datatype_conversion.py	2011-10-18 05:57:56.000000000 +0200
-+++ geometry/tf/test/test_datatype_conversion.py	2012-04-19 00:18:52.801492395 +0200
+diff -Naur geometry-1.6.1-orig/tf/test/test_datatype_conversion.py geometry/tf/test/test_datatype_conversion.py
+--- geometry-1.6.1-orig/tf/test/test_datatype_conversion.py	2011-10-18 05:57:56.000000000 +0200
++++ geometry/tf/test/test_datatype_conversion.py	2012-04-19 20:00:58.187796779 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
