@@ -1,0 +1,126 @@
+diff -Naur rx-1.6.1/rxbag/scripts/rxbag rx/rxbag/scripts/rxbag
+--- rx-1.6.1/rxbag/scripts/rxbag	2011-09-02 19:49:07.000000000 +0200
++++ rx/rxbag/scripts/rxbag	2012-04-19 00:10:23.294806517 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur rx-1.6.1/rxbag/src/rxbag/rxbag_main.py rx/rxbag/src/rxbag/rxbag_main.py
+--- rx-1.6.1/rxbag/src/rxbag/rxbag_main.py	2011-09-02 19:49:07.000000000 +0200
++++ rx/rxbag/src/rxbag/rxbag_main.py	2012-04-19 00:10:23.298139851 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur rx-1.6.1/rxdeps/src/rxdeps.py rx/rxdeps/src/rxdeps.py
+--- rx-1.6.1/rxdeps/src/rxdeps.py	2011-09-02 19:49:07.000000000 +0200
++++ rx/rxdeps/src/rxdeps.py	2012-04-19 00:10:23.248139849 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # Copyright (c) 2008, Willow Garage, Inc.
+ # All rights reserved.
+diff -Naur rx-1.6.1/rxgraph/nodes/rxgraph rx/rxgraph/nodes/rxgraph
+--- rx-1.6.1/rxgraph/nodes/rxgraph	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxgraph/nodes/rxgraph	2012-04-19 00:10:23.254806516 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur rx-1.6.1/rxgraph/src/rxgraph/impl.py rx/rxgraph/src/rxgraph/impl.py
+--- rx-1.6.1/rxgraph/src/rxgraph/impl.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxgraph/src/rxgraph/impl.py	2012-04-19 00:10:23.258139850 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur rx-1.6.1/rxgraph/src/rxgraph/viewer.py rx/rxgraph/src/rxgraph/viewer.py
+--- rx-1.6.1/rxgraph/src/rxgraph/viewer.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxgraph/src/rxgraph/viewer.py	2012-04-19 00:10:23.264806516 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Copyright (c) 2010, Willow Garage, Inc.
+ # All rights reserved.
+ # 
+diff -Naur rx-1.6.1/rxtools/nodes/rxplot rx/rxtools/nodes/rxplot
+--- rx-1.6.1/rxtools/nodes/rxplot	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxtools/nodes/rxplot	2012-04-19 00:10:23.284806517 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur rx-1.6.1/rxtools/src/rxtools/rosplot.py rx/rxtools/src/rxtools/rosplot.py
+--- rx-1.6.1/rxtools/src/rxtools/rosplot.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxtools/src/rxtools/rosplot.py	2012-04-19 00:10:23.291473184 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur rx-1.6.1/rxtools/src/rxtools/rxplot.py rx/rxtools/src/rxtools/rxplot.py
+--- rx-1.6.1/rxtools/src/rxtools/rxplot.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxtools/src/rxtools/rxplot.py	2012-04-19 00:10:23.288139851 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Based on public domain code from Eli Bendersky (eliben@gmail.com)
+ # http://eli.thegreenplace.net/2008/08/01/matplotlib-with-wxpython-guis/
+diff -Naur rx-1.6.1/rxtools/test/rxplot_stress_test_datagen.py rx/rxtools/test/rxplot_stress_test_datagen.py
+--- rx-1.6.1/rxtools/test/rxplot_stress_test_datagen.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/rxtools/test/rxplot_stress_test_datagen.py	2012-04-19 00:10:23.281473183 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ import roslib
+ roslib.load_manifest('rxtools')
+ # maybe not so kosher but then again we probably don't want geometry_msgs in the manifest
+diff -Naur rx-1.6.1/test_rxplot/test/test_rxplot_command_offline.py rx/test_rxplot/test/test_rxplot_command_offline.py
+--- rx-1.6.1/test_rxplot/test/test_rxplot_command_offline.py	2011-09-02 19:49:07.000000000 +0200
++++ rx/test_rxplot/test/test_rxplot_command_offline.py	2012-04-19 00:10:23.251473182 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur rx-1.6.1/xdot/dot_viewer.py rx/xdot/dot_viewer.py
+--- rx-1.6.1/xdot/dot_viewer.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/xdot/dot_viewer.py	2012-04-19 00:10:23.268139850 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ # Copyright (c) 2010, Willow Garage, Inc.
+ # All rights reserved.
+diff -Naur rx-1.6.1/xdot/src/xdot/wxxdot.py rx/xdot/src/xdot/wxxdot.py
+--- rx-1.6.1/xdot/src/xdot/wxxdot.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/xdot/src/xdot/wxxdot.py	2012-04-19 00:10:23.271473183 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # wxpython widgets for using Jose Fonseca's cairo graphviz visualizer
+ # Copyright (c) 2010, Willow Garage, Inc.
+diff -Naur rx-1.6.1/xdot/src/xdot/xdot.py rx/xdot/src/xdot/xdot.py
+--- rx-1.6.1/xdot/src/xdot/xdot.py	2011-09-02 19:49:08.000000000 +0200
++++ rx/xdot/src/xdot/xdot.py	2012-04-19 00:10:23.278139850 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Copyright 2008 Jose Fonseca
+ #
