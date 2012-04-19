@@ -1,0 +1,27 @@
+diff -Naur geometry-1.6.1/tf/scripts/tf_remap geometry/tf/scripts/tf_remap
+--- geometry-1.6.1/tf/scripts/tf_remap	2011-10-18 05:57:56.000000000 +0200
++++ geometry/tf/scripts/tf_remap	2012-04-19 00:18:52.791492394 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur geometry-1.6.1/tf/scripts/view_frames geometry/tf/scripts/view_frames
+--- geometry-1.6.1/tf/scripts/view_frames	2011-10-18 05:57:56.000000000 +0200
++++ geometry/tf/scripts/view_frames	2012-04-19 00:18:52.798159061 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur geometry-1.6.1/tf/test/test_datatype_conversion.py geometry/tf/test/test_datatype_conversion.py
+--- geometry-1.6.1/tf/test/test_datatype_conversion.py	2011-10-18 05:57:56.000000000 +0200
++++ geometry/tf/test/test_datatype_conversion.py	2012-04-19 00:18:52.801492395 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ import roslib; roslib.load_manifest('tf')
+ 
+ import sys
