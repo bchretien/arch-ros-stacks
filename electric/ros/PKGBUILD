@@ -23,7 +23,7 @@ source=("https://code.ros.org/svn/release/download/stacks/ros/ros-$pkgver/ros-$p
         'setup.zsh'
         'rosinstall')
 md5sums=('cd9d53414c6decda2731ca092733fae7'
-         '8539e25d150e120fa3e89fc6ecd414fc'
+         'b3513713b44df7b8952095947e85a0fd'
          'cb3ae83c3dbc749a36a7724eb7e0ed02'
          '2d69eaed23dd4e4642ec1976208b2d76'
          'be76f46468657513e378ceaefb1f82b8'
