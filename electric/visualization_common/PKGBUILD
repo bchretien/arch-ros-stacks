@@ -1,0 +1,31 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-visualization-common'
+pkgver='1.6.2'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-ros ros-electric-ros-comm
+         ros-electric-rx freeimage nvidia-cg-toolkit
+         libxrandr)
+
+source=("https://code.ros.org/svn/release/download/stacks/visualization_common/visualization_common-1.6.2/visualization_common-1.6.2.tar.bz2")
+md5sums=('dd47fdb70c98f0ba81d6fbf7e79f6940')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/visualization_common ] || ln -sf ../visualization_common-${pkgver} ${srcdir}/stacks/visualization_common
+  rosmake --no-rosdep -i visualization_common
+  install_ros_stack ${srcdir}/stacks/visualization_common /opt/ros/electric/stacks/visualization_common
+}
+
