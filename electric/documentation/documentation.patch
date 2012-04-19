@@ -1,0 +1,81 @@
+diff -Naur documentation-1.4.3/rosdoc/rosdoc documentation/rosdoc/rosdoc
+--- documentation-1.4.3/rosdoc/rosdoc	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/rosdoc	2012-04-19 00:10:49.321474166 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/docindex.py documentation/rosdoc/src/rosdoc/docindex.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/docindex.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/docindex.py	2012-04-19 00:10:49.341474166 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/doxygenator.py documentation/rosdoc/src/rosdoc/doxygenator.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/doxygenator.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/doxygenator.py	2012-04-19 00:10:49.331474166 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/epyenator.py documentation/rosdoc/src/rosdoc/epyenator.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/epyenator.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/epyenator.py	2012-04-19 00:10:49.338140833 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/__init__.py documentation/rosdoc/src/rosdoc/__init__.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/__init__.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/__init__.py	2012-04-19 00:10:49.324807499 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/landing_page.py documentation/rosdoc/src/rosdoc/landing_page.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/landing_page.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/landing_page.py	2012-04-19 00:10:49.348140833 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/licenseindex.py documentation/rosdoc/src/rosdoc/licenseindex.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/licenseindex.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/licenseindex.py	2012-04-19 00:10:49.344807499 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/sphinxenator.py documentation/rosdoc/src/rosdoc/sphinxenator.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/sphinxenator.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/sphinxenator.py	2012-04-19 00:10:49.328140832 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur documentation-1.4.3/rosdoc/src/rosdoc/upload.py documentation/rosdoc/src/rosdoc/upload.py
+--- documentation-1.4.3/rosdoc/src/rosdoc/upload.py	2011-10-19 20:18:14.000000000 +0200
++++ documentation/rosdoc/src/rosdoc/upload.py	2012-04-19 00:10:49.334807500 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
