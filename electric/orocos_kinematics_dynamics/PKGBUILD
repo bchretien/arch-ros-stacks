@@ -1,0 +1,29 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-orocos-kinematics-dynamics'
+pkgver='0.2.3'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools' 'python2-sip')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(cppunit eigen3)
+
+source=("https://code.ros.org/svn/release/download/stacks/orocos_kinematics_dynamics/orocos_kinematics_dynamics-0.2.3/orocos_kinematics_dynamics-0.2.3.tar.bz2")
+md5sums=('976f56c1023815924226cf50801668ba')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/orocos_kinematics_dynamics ] || ln -sf ../orocos_kinematics_dynamics-${pkgver} ${srcdir}/stacks/orocos_kinematics_dynamics
+  rosmake --no-rosdep -i orocos_kinematics_dynamics
+  install_ros_stack ${srcdir}/stacks/orocos_kinematics_dynamics /opt/ros/electric/stacks/orocos_kinematics_dynamics
+}
+
