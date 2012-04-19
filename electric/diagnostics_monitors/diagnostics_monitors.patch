@@ -1,0 +1,108 @@
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/scripts/robot_monitor diagnostics_monitors/robot_monitor/scripts/robot_monitor
+--- diagnostics_monitors-1.4.3/robot_monitor/scripts/robot_monitor	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/scripts/robot_monitor	2012-04-19 00:10:33.811473580 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/scripts/robot_monitor.py diagnostics_monitors/robot_monitor/scripts/robot_monitor.py
+--- diagnostics_monitors-1.4.3/robot_monitor/scripts/robot_monitor.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/scripts/robot_monitor.py	2012-04-19 00:10:33.814806914 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/src/robot_monitor/message_timeline.py diagnostics_monitors/robot_monitor/src/robot_monitor/message_timeline.py
+--- diagnostics_monitors-1.4.3/robot_monitor/src/robot_monitor/message_timeline.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/src/robot_monitor/message_timeline.py	2012-04-19 00:10:33.838140248 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/src/robot_monitor/robot_monitor_panel.py diagnostics_monitors/robot_monitor/src/robot_monitor/robot_monitor_panel.py
+--- diagnostics_monitors-1.4.3/robot_monitor/src/robot_monitor/robot_monitor_panel.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/src/robot_monitor/robot_monitor_panel.py	2012-04-19 00:10:33.828140248 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/src/robot_monitor/viewer_panel.py diagnostics_monitors/robot_monitor/src/robot_monitor/viewer_panel.py
+--- diagnostics_monitors-1.4.3/robot_monitor/src/robot_monitor/viewer_panel.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/src/robot_monitor/viewer_panel.py	2012-04-19 00:10:33.834806915 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/test/diag_agg_pub_changing.py diagnostics_monitors/robot_monitor/test/diag_agg_pub_changing.py
+--- diagnostics_monitors-1.4.3/robot_monitor/test/diag_agg_pub_changing.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/test/diag_agg_pub_changing.py	2012-04-19 00:10:33.821473581 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/test/diag_agg_pub.py diagnostics_monitors/robot_monitor/test/diag_agg_pub.py
+--- diagnostics_monitors-1.4.3/robot_monitor/test/diag_agg_pub.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/test/diag_agg_pub.py	2012-04-19 00:10:33.824806914 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/robot_monitor/test/test_robot_mon.py diagnostics_monitors/robot_monitor/test/test_robot_mon.py
+--- diagnostics_monitors-1.4.3/robot_monitor/test/test_robot_mon.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/robot_monitor/test/test_robot_mon.py	2012-04-19 00:10:33.818140248 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/runtime_monitor/scripts/monitor diagnostics_monitors/runtime_monitor/scripts/monitor
+--- diagnostics_monitors-1.4.3/runtime_monitor/scripts/monitor	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/runtime_monitor/scripts/monitor	2012-04-19 00:10:33.841473582 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/runtime_monitor/src/runtime_monitor/monitor_panel.py diagnostics_monitors/runtime_monitor/src/runtime_monitor/monitor_panel.py
+--- diagnostics_monitors-1.4.3/runtime_monitor/src/runtime_monitor/monitor_panel.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/runtime_monitor/src/runtime_monitor/monitor_panel.py	2012-04-19 00:10:33.851473582 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/runtime_monitor/test/diag_pub.py diagnostics_monitors/runtime_monitor/test/diag_pub.py
+--- diagnostics_monitors-1.4.3/runtime_monitor/test/diag_pub.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/runtime_monitor/test/diag_pub.py	2012-04-19 00:10:33.844806915 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
+diff -Naur diagnostics_monitors-1.4.3/runtime_monitor/test/test_monitor.py diagnostics_monitors/runtime_monitor/test/test_monitor.py
+--- diagnostics_monitors-1.4.3/runtime_monitor/test/test_monitor.py	2012-03-22 21:27:32.000000000 +0100
++++ diagnostics_monitors/runtime_monitor/test/test_monitor.py	2012-04-19 00:10:33.848140249 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2009, Willow Garage, Inc.
