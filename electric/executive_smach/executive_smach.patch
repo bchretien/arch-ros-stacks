@@ -1,0 +1,36 @@
+diff -Naur executive_smach-1.0.4/smach_ros/test/concurrence.py executive_smach/smach_ros/test/concurrence.py
+--- executive_smach-1.0.4/smach_ros/test/concurrence.py	2011-10-20 01:53:29.000000000 +0200
++++ executive_smach/smach_ros/test/concurrence.py	2012-04-19 00:10:17.814806311 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import roslib; roslib.load_manifest('smach_ros')
+ import rospy
+diff -Naur executive_smach-1.0.4/smach_ros/test/sequence.py executive_smach/smach_ros/test/sequence.py
+--- executive_smach-1.0.4/smach_ros/test/sequence.py	2011-10-20 01:53:29.000000000 +0200
++++ executive_smach/smach_ros/test/sequence.py	2012-04-19 00:10:17.804806310 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import roslib; roslib.load_manifest('smach_ros')
+ import rospy
+diff -Naur executive_smach-1.0.4/smach_ros/test/smach_actionlib.py executive_smach/smach_ros/test/smach_actionlib.py
+--- executive_smach-1.0.4/smach_ros/test/smach_actionlib.py	2011-10-20 01:53:29.000000000 +0200
++++ executive_smach/smach_ros/test/smach_actionlib.py	2012-04-19 00:10:17.811472978 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import roslib; roslib.load_manifest('smach_ros')
+ import rospy
+diff -Naur executive_smach-1.0.4/smach_ros/test/state_machine.py executive_smach/smach_ros/test/state_machine.py
+--- executive_smach-1.0.4/smach_ros/test/state_machine.py	2011-10-20 01:53:29.000000000 +0200
++++ executive_smach/smach_ros/test/state_machine.py	2012-04-19 00:10:17.808139644 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import roslib; roslib.load_manifest('smach_ros')
+ import rospy
