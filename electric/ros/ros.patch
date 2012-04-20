@@ -1,6 +1,6 @@
 diff -Naur ros-1.6.8-orig/bin/rosbag ros-1.6.8/bin/rosbag
---- ros-1.6.8-orig/bin/rosbag	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosbag	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/rosbag	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosbag	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -8,8 +8,8 @@ diff -Naur ros-1.6.8-orig/bin/rosbag ros-1.6.8/bin/rosbag
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosboost-cfg ros-1.6.8/bin/rosboost-cfg
---- ros-1.6.8-orig/bin/rosboost-cfg	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosboost-cfg	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/rosboost-cfg	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosboost-cfg	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -17,8 +17,8 @@ diff -Naur ros-1.6.8-orig/bin/rosboost-cfg ros-1.6.8/bin/rosboost-cfg
  #
  # Copyright (c) 2010, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosclean ros-1.6.8/bin/rosclean
---- ros-1.6.8-orig/bin/rosclean	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosclean	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/rosclean	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosclean	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -26,8 +26,8 @@ diff -Naur ros-1.6.8-orig/bin/rosclean ros-1.6.8/bin/rosclean
  #
  # Copyright (c) 2010, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/roscore ros-1.6.8/bin/roscore
---- ros-1.6.8-orig/bin/roscore	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roscore	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/roscore	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roscore	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -35,8 +35,8 @@ diff -Naur ros-1.6.8-orig/bin/roscore ros-1.6.8/bin/roscore
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/roscreate-pkg ros-1.6.8/bin/roscreate-pkg
---- ros-1.6.8-orig/bin/roscreate-pkg	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roscreate-pkg	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/roscreate-pkg	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roscreate-pkg	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -44,8 +44,8 @@ diff -Naur ros-1.6.8-orig/bin/roscreate-pkg ros-1.6.8/bin/roscreate-pkg
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/roscreate-stack ros-1.6.8/bin/roscreate-stack
---- ros-1.6.8-orig/bin/roscreate-stack	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roscreate-stack	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/roscreate-stack	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roscreate-stack	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -53,8 +53,8 @@ diff -Naur ros-1.6.8-orig/bin/roscreate-stack ros-1.6.8/bin/roscreate-stack
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosdep ros-1.6.8/bin/rosdep
---- ros-1.6.8-orig/bin/rosdep	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosdep	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/rosdep	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosdep	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -62,8 +62,8 @@ diff -Naur ros-1.6.8-orig/bin/rosdep ros-1.6.8/bin/rosdep
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosgraph ros-1.6.8/bin/rosgraph
---- ros-1.6.8-orig/bin/rosgraph	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosgraph	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/rosgraph	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosgraph	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -71,16 +71,16 @@ diff -Naur ros-1.6.8-orig/bin/rosgraph ros-1.6.8/bin/rosgraph
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/roslaunch ros-1.6.8/bin/roslaunch
---- ros-1.6.8-orig/bin/roslaunch	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roslaunch	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/roslaunch	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roslaunch	2012-04-20 12:02:42.310156348 +0200
 @@ -1,3 +1,3 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
  from ros import roslaunch
  roslaunch.main()
 diff -Naur ros-1.6.8-orig/bin/roslaunch-deps ros-1.6.8/bin/roslaunch-deps
---- ros-1.6.8-orig/bin/roslaunch-deps	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roslaunch-deps	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/roslaunch-deps	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roslaunch-deps	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -88,8 +88,8 @@ diff -Naur ros-1.6.8-orig/bin/roslaunch-deps ros-1.6.8/bin/roslaunch-deps
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/roslaunch-logs ros-1.6.8/bin/roslaunch-logs
---- ros-1.6.8-orig/bin/roslaunch-logs	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roslaunch-logs	2012-04-19 23:50:44.314158146 +0200
+--- ros-1.6.8-orig/bin/roslaunch-logs	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roslaunch-logs	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -97,8 +97,8 @@ diff -Naur ros-1.6.8-orig/bin/roslaunch-logs ros-1.6.8/bin/roslaunch-logs
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosmake ros-1.6.8/bin/rosmake
---- ros-1.6.8-orig/bin/rosmake	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosmake	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosmake	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosmake	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -106,8 +106,8 @@ diff -Naur ros-1.6.8-orig/bin/rosmake ros-1.6.8/bin/rosmake
  # Copyright (c) 2009, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/bin/rosmaster ros-1.6.8/bin/rosmaster
---- ros-1.6.8-orig/bin/rosmaster	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosmaster	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosmaster	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosmaster	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -115,8 +115,8 @@ diff -Naur ros-1.6.8-orig/bin/rosmaster ros-1.6.8/bin/rosmaster
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosmsg ros-1.6.8/bin/rosmsg
---- ros-1.6.8-orig/bin/rosmsg	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosmsg	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosmsg	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosmsg	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -124,8 +124,8 @@ diff -Naur ros-1.6.8-orig/bin/rosmsg ros-1.6.8/bin/rosmsg
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosnode ros-1.6.8/bin/rosnode
---- ros-1.6.8-orig/bin/rosnode	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosnode	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosnode	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosnode	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -133,8 +133,8 @@ diff -Naur ros-1.6.8-orig/bin/rosnode ros-1.6.8/bin/rosnode
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosparam ros-1.6.8/bin/rosparam
---- ros-1.6.8-orig/bin/rosparam	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosparam	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosparam	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosparam	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -142,8 +142,8 @@ diff -Naur ros-1.6.8-orig/bin/rosparam ros-1.6.8/bin/rosparam
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosservice ros-1.6.8/bin/rosservice
---- ros-1.6.8-orig/bin/rosservice	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosservice	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosservice	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosservice	2012-04-20 12:02:42.310156348 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -151,8 +151,8 @@ diff -Naur ros-1.6.8-orig/bin/rosservice ros-1.6.8/bin/rosservice
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rossrv ros-1.6.8/bin/rossrv
---- ros-1.6.8-orig/bin/rossrv	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rossrv	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rossrv	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rossrv	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -160,8 +160,8 @@ diff -Naur ros-1.6.8-orig/bin/rossrv ros-1.6.8/bin/rossrv
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rostest ros-1.6.8/bin/rostest
---- ros-1.6.8-orig/bin/rostest	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rostest	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rostest	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rostest	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -169,8 +169,8 @@ diff -Naur ros-1.6.8-orig/bin/rostest ros-1.6.8/bin/rostest
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rostopic ros-1.6.8/bin/rostopic
---- ros-1.6.8-orig/bin/rostopic	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rostopic	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rostopic	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rostopic	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -178,8 +178,8 @@ diff -Naur ros-1.6.8-orig/bin/rostopic ros-1.6.8/bin/rostopic
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rosversion ros-1.6.8/bin/rosversion
---- ros-1.6.8-orig/bin/rosversion	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rosversion	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rosversion	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rosversion	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -187,8 +187,8 @@ diff -Naur ros-1.6.8-orig/bin/rosversion ros-1.6.8/bin/rosversion
  # Copyright (c) 2008, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/bin/roswtf ros-1.6.8/bin/roswtf
---- ros-1.6.8-orig/bin/roswtf	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/roswtf	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/roswtf	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/roswtf	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -196,8 +196,8 @@ diff -Naur ros-1.6.8-orig/bin/roswtf ros-1.6.8/bin/roswtf
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rxbag ros-1.6.8/bin/rxbag
---- ros-1.6.8-orig/bin/rxbag	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rxbag	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rxbag	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rxbag	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -205,8 +205,8 @@ diff -Naur ros-1.6.8-orig/bin/rxbag ros-1.6.8/bin/rxbag
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rxdeps ros-1.6.8/bin/rxdeps
---- ros-1.6.8-orig/bin/rxdeps	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rxdeps	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rxdeps	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rxdeps	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -214,8 +214,8 @@ diff -Naur ros-1.6.8-orig/bin/rxdeps ros-1.6.8/bin/rxdeps
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rxgraph ros-1.6.8/bin/rxgraph
---- ros-1.6.8-orig/bin/rxgraph	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rxgraph	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rxgraph	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rxgraph	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -223,8 +223,8 @@ diff -Naur ros-1.6.8-orig/bin/rxgraph ros-1.6.8/bin/rxgraph
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/bin/rxplot ros-1.6.8/bin/rxplot
---- ros-1.6.8-orig/bin/rxplot	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/bin/rxplot	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/bin/rxplot	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/bin/rxplot	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -232,8 +232,8 @@ diff -Naur ros-1.6.8-orig/bin/rxplot ros-1.6.8/bin/rxplot
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/check_same_directories.py ros-1.6.8/core/rosbuild/bin/check_same_directories.py
---- ros-1.6.8-orig/core/rosbuild/bin/check_same_directories.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/check_same_directories.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/check_same_directories.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/check_same_directories.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -241,8 +241,8 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/bin/check_same_directories.py ros-1.6.8/
  # Simple script to check whether two directories are the same.  I'm doing
  # it in this script because the following command-line invocation produces
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/download_checkmd5.py ros-1.6.8/core/rosbuild/bin/download_checkmd5.py
---- ros-1.6.8-orig/core/rosbuild/bin/download_checkmd5.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/download_checkmd5.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/download_checkmd5.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/download_checkmd5.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -250,8 +250,8 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/bin/download_checkmd5.py ros-1.6.8/core/
  NAME="download_checkmd5.py"
  
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/package_source.py ros-1.6.8/core/rosbuild/bin/package_source.py
---- ros-1.6.8-orig/core/rosbuild/bin/package_source.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/package_source.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/package_source.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/package_source.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -259,8 +259,8 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/bin/package_source.py ros-1.6.8/core/ros
  """
  usage: %prog [args]
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/roscheck ros-1.6.8/core/rosbuild/bin/roscheck
---- ros-1.6.8-orig/core/rosbuild/bin/roscheck	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/roscheck	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/roscheck	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/roscheck	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -268,8 +268,8 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/bin/roscheck ros-1.6.8/core/rosbuild/bin
  # Copyright (c) 2008, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/rosgcov_summarize ros-1.6.8/core/rosbuild/bin/rosgcov_summarize
---- ros-1.6.8-orig/core/rosbuild/bin/rosgcov_summarize	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/rosgcov_summarize	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/rosgcov_summarize	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/rosgcov_summarize	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -277,8 +277,8 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/bin/rosgcov_summarize ros-1.6.8/core/ros
  import sys
  import fileinput
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/rosmakeall_stackdist ros-1.6.8/core/rosbuild/bin/rosmakeall_stackdist
---- ros-1.6.8-orig/core/rosbuild/bin/rosmakeall_stackdist	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/rosmakeall_stackdist	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/rosmakeall_stackdist	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/rosmakeall_stackdist	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -286,17 +286,30 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/bin/rosmakeall_stackdist ros-1.6.8/core/
  import roslib
  import sys
 diff -Naur ros-1.6.8-orig/core/rosbuild/bin/rostar ros-1.6.8/core/rosbuild/bin/rostar
---- ros-1.6.8-orig/core/rosbuild/bin/rostar	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/bin/rostar	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/bin/rostar	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/bin/rostar	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
  
  """
  usage: %(progname)s [package] <ball.tar>
+diff -Naur ros-1.6.8-orig/core/rosbuild/private.cmake ros-1.6.8/core/rosbuild/private.cmake
+--- ros-1.6.8-orig/core/rosbuild/private.cmake	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/private.cmake	2012-04-20 12:03:27.616824723 +0200
+@@ -15,6 +15,9 @@
+ endmacro(_rosbuild_warn_deprecate_no_prefix)
+ 
+ # look up python interpreter, store in ${PYTHON_EXECUTABLE}
++# Hack(moesenle): to work on Arch we need to search for python2, not for
++# python.
++find_program(PYTHON_EXECUTABLE NAMES python2)
+ find_package(PythonInterp)
+ 
+ ###############################################################################
 diff -Naur ros-1.6.8-orig/core/rosbuild/tests/count_cores.py ros-1.6.8/core/rosbuild/tests/count_cores.py
---- ros-1.6.8-orig/core/rosbuild/tests/count_cores.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/rosbuild/tests/count_cores.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/rosbuild/tests/count_cores.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/rosbuild/tests/count_cores.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -304,8 +317,8 @@ diff -Naur ros-1.6.8-orig/core/rosbuild/tests/count_cores.py ros-1.6.8/core/rosb
  import os
  print os.sysconf(os.sysconf_names['SC_NPROCESSORS_ONLN'])
 diff -Naur ros-1.6.8-orig/core/roslib/scripts/gendeps ros-1.6.8/core/roslib/scripts/gendeps
---- ros-1.6.8-orig/core/roslib/scripts/gendeps	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/scripts/gendeps	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/scripts/gendeps	2012-04-20 12:02:33.263489340 +0200
++++ ros-1.6.8/core/roslib/scripts/gendeps	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -313,8 +326,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/scripts/gendeps ros-1.6.8/core/roslib/scri
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/gentools.py ros-1.6.8/core/roslib/src/roslib/gentools.py
---- ros-1.6.8-orig/core/roslib/src/roslib/gentools.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/gentools.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/gentools.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/roslib/src/roslib/gentools.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -322,8 +335,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/gentools.py ros-1.6.8/core/rosl
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/launcher.py ros-1.6.8/core/roslib/src/roslib/launcher.py
---- ros-1.6.8-orig/core/roslib/src/roslib/launcher.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/launcher.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/launcher.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/roslib/src/roslib/launcher.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -331,8 +344,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/launcher.py ros-1.6.8/core/rosl
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/manifestlib.py ros-1.6.8/core/roslib/src/roslib/manifestlib.py
---- ros-1.6.8-orig/core/roslib/src/roslib/manifestlib.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/manifestlib.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/manifestlib.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/roslib/src/roslib/manifestlib.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -340,8 +353,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/manifestlib.py ros-1.6.8/core/r
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/manifest.py ros-1.6.8/core/roslib/src/roslib/manifest.py
---- ros-1.6.8-orig/core/roslib/src/roslib/manifest.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/manifest.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/manifest.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/roslib/src/roslib/manifest.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -349,8 +362,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/manifest.py ros-1.6.8/core/rosl
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/os_detect.py ros-1.6.8/core/roslib/src/roslib/os_detect.py
---- ros-1.6.8-orig/core/roslib/src/roslib/os_detect.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/os_detect.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/os_detect.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/roslib/src/roslib/os_detect.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -358,8 +371,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/os_detect.py ros-1.6.8/core/ros
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/stack_manifest.py ros-1.6.8/core/roslib/src/roslib/stack_manifest.py
---- ros-1.6.8-orig/core/roslib/src/roslib/stack_manifest.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/stack_manifest.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/stack_manifest.py	2012-04-20 12:02:33.263489340 +0200
++++ ros-1.6.8/core/roslib/src/roslib/stack_manifest.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -367,8 +380,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/stack_manifest.py ros-1.6.8/cor
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/stacks.py ros-1.6.8/core/roslib/src/roslib/stacks.py
---- ros-1.6.8-orig/core/roslib/src/roslib/stacks.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/core/roslib/src/roslib/stacks.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/core/roslib/src/roslib/stacks.py	2012-04-20 12:02:33.266822673 +0200
++++ ros-1.6.8/core/roslib/src/roslib/stacks.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -376,8 +389,8 @@ diff -Naur ros-1.6.8-orig/core/roslib/src/roslib/stacks.py ros-1.6.8/core/roslib
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/test/test_roslib/test/fake_node.py ros-1.6.8/test/test_roslib/test/fake_node.py
---- ros-1.6.8-orig/test/test_roslib/test/fake_node.py	2012-02-03 17:32:20.000000000 +0100
-+++ ros-1.6.8/test/test_roslib/test/fake_node.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/test/test_roslib/test/fake_node.py	2012-04-20 12:02:33.260156006 +0200
++++ ros-1.6.8/test/test_roslib/test/fake_node.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -385,8 +398,8 @@ diff -Naur ros-1.6.8-orig/test/test_roslib/test/fake_node.py ros-1.6.8/test/test
  
  print "hello"
 diff -Naur ros-1.6.8-orig/test/test_rosmake/test/test_parallel_build.py ros-1.6.8/test/test_rosmake/test/test_parallel_build.py
---- ros-1.6.8-orig/test/test_rosmake/test/test_parallel_build.py	2012-02-03 17:32:20.000000000 +0100
-+++ ros-1.6.8/test/test_rosmake/test/test_parallel_build.py	2012-04-19 23:50:44.317491478 +0200
+--- ros-1.6.8-orig/test/test_rosmake/test/test_parallel_build.py	2012-04-20 12:02:33.260156006 +0200
++++ ros-1.6.8/test/test_rosmake/test/test_parallel_build.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -394,8 +407,8 @@ diff -Naur ros-1.6.8-orig/test/test_rosmake/test/test_parallel_build.py ros-1.6.
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py ros-1.6.8/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py
---- ros-1.6.8-orig/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -403,8 +416,8 @@ diff -Naur ros-1.6.8-orig/tools/rosboost_cfg/src/rosboost_cfg/rosboost_cfg.py ro
  #
  # Copyright (c) 2010, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/core.py ros-1.6.8/tools/roscreate/src/roscreate/core.py
---- ros-1.6.8-orig/tools/roscreate/src/roscreate/core.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/roscreate/src/roscreate/core.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/roscreate/src/roscreate/core.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/roscreate/src/roscreate/core.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -412,8 +425,8 @@ diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/core.py ros-1.6.8/tools/
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/__init__.py ros-1.6.8/tools/roscreate/src/roscreate/__init__.py
---- ros-1.6.8-orig/tools/roscreate/src/roscreate/__init__.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/roscreate/src/roscreate/__init__.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/roscreate/src/roscreate/__init__.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/roscreate/src/roscreate/__init__.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -421,8 +434,8 @@ diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/__init__.py ros-1.6.8/to
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatepkg.py ros-1.6.8/tools/roscreate/src/roscreate/roscreatepkg.py
---- ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatepkg.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/roscreate/src/roscreate/roscreatepkg.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatepkg.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/roscreate/src/roscreate/roscreatepkg.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -430,8 +443,8 @@ diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatepkg.py ros-1.6.
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatestack.py ros-1.6.8/tools/roscreate/src/roscreate/roscreatestack.py
---- ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatestack.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/roscreate/src/roscreate/roscreatestack.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatestack.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/roscreate/src/roscreate/roscreatestack.py	2012-04-20 12:02:42.313489681 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -439,8 +452,8 @@ diff -Naur ros-1.6.8-orig/tools/roscreate/src/roscreate/roscreatestack.py ros-1.
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosdep/scripts/rosdep ros-1.6.8/tools/rosdep/scripts/rosdep
---- ros-1.6.8-orig/tools/rosdep/scripts/rosdep	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/scripts/rosdep	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/scripts/rosdep	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/scripts/rosdep	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -448,8 +461,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/scripts/rosdep ros-1.6.8/tools/rosdep/scr
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/arch.py ros-1.6.8/tools/rosdep/src/rosdep/arch.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/arch.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/arch.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/arch.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/arch.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -481,8 +494,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/arch.py ros-1.6.8/tools/rosdep
          filename = "/etc/arch-release"
          if os.path.exists(filename):
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/base_rosdep.py ros-1.6.8/tools/rosdep/src/rosdep/base_rosdep.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/base_rosdep.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/base_rosdep.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/base_rosdep.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/base_rosdep.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -490,8 +503,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/base_rosdep.py ros-1.6.8/tools
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/core.py ros-1.6.8/tools/rosdep/src/rosdep/core.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/core.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/core.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/core.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/core.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -499,8 +512,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/core.py ros-1.6.8/tools/rosdep
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/cygwin.py ros-1.6.8/tools/rosdep/src/rosdep/cygwin.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/cygwin.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/cygwin.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/cygwin.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/cygwin.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -508,8 +521,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/cygwin.py ros-1.6.8/tools/rosd
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/debian.py ros-1.6.8/tools/rosdep/src/rosdep/debian.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/debian.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/debian.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/debian.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/debian.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -517,8 +530,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/debian.py ros-1.6.8/tools/rosd
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/freebsd.py ros-1.6.8/tools/rosdep/src/rosdep/freebsd.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/freebsd.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/freebsd.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/freebsd.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/freebsd.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -526,8 +539,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/freebsd.py ros-1.6.8/tools/ros
  # All rights reserved.
  #
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/gentoo.py ros-1.6.8/tools/rosdep/src/rosdep/gentoo.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/gentoo.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/gentoo.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/gentoo.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/gentoo.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -535,8 +548,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/gentoo.py ros-1.6.8/tools/rosd
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/installers.py ros-1.6.8/tools/rosdep/src/rosdep/installers.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/installers.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/installers.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/installers.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/installers.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -563,7 +576,7 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/installers.py ros-1.6.8/tools/
 +
 +    def check_presence(self):
 +        return len(self.get_packages_to_install()) == 0
- 
++
 +    def generate_package_install_command(self, default_yes = False, execute = True, display = True):
 +        script = '!#/bin/bash\n#no script'
 +        packages_to_install = self.get_packages_to_install()
@@ -576,7 +589,7 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/installers.py ros-1.6.8/tools/
 +        elif display:
 +            print("To install packages: %s would have executed script\n{{{\n%s\n}}}"%(packages_to_install, script))
 +        return False
-+
+ 
 +    def pacman_detect(self, pkgs):
 +        """ 
 +        Given a list of package, return the list of installed packages.
@@ -594,8 +607,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/installers.py ros-1.6.8/tools/
 +        return ret_list
 +        
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/main.py ros-1.6.8/tools/rosdep/src/rosdep/main.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/main.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/main.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/main.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/main.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -603,8 +616,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/main.py ros-1.6.8/tools/rosdep
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/opensuse.py ros-1.6.8/tools/rosdep/src/rosdep/opensuse.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/opensuse.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/opensuse.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/opensuse.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/opensuse.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -612,8 +625,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/opensuse.py ros-1.6.8/tools/ro
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/osx.py ros-1.6.8/tools/rosdep/src/rosdep/osx.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/osx.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/osx.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/osx.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/osx.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -621,8 +634,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/osx.py ros-1.6.8/tools/rosdep/
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/redhat.py ros-1.6.8/tools/rosdep/src/rosdep/redhat.py
---- ros-1.6.8-orig/tools/rosdep/src/rosdep/redhat.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosdep/src/rosdep/redhat.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosdep/src/rosdep/redhat.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosdep/src/rosdep/redhat.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -630,8 +643,8 @@ diff -Naur ros-1.6.8-orig/tools/rosdep/src/rosdep/redhat.py ros-1.6.8/tools/rosd
  # All rights reserved.
  # 
 diff -Naur ros-1.6.8-orig/tools/rosmake/src/rosmake/engine.py ros-1.6.8/tools/rosmake/src/rosmake/engine.py
---- ros-1.6.8-orig/tools/rosmake/src/rosmake/engine.py	2012-02-03 17:32:20.000000000 +0100
-+++ ros-1.6.8/tools/rosmake/src/rosmake/engine.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosmake/src/rosmake/engine.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosmake/src/rosmake/engine.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -639,8 +652,8 @@ diff -Naur ros-1.6.8-orig/tools/rosmake/src/rosmake/engine.py ros-1.6.8/tools/ro
  # Copyright (c) 2009, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/tools/rosmake/src/rosmake/package_stats.py ros-1.6.8/tools/rosmake/src/rosmake/package_stats.py
---- ros-1.6.8-orig/tools/rosmake/src/rosmake/package_stats.py	2012-02-03 17:32:20.000000000 +0100
-+++ ros-1.6.8/tools/rosmake/src/rosmake/package_stats.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosmake/src/rosmake/package_stats.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosmake/src/rosmake/package_stats.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -648,8 +661,8 @@ diff -Naur ros-1.6.8-orig/tools/rosmake/src/rosmake/package_stats.py ros-1.6.8/t
  # Copyright (c) 2009, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/tools/rosmake/src/rosmake/parallel_build.py ros-1.6.8/tools/rosmake/src/rosmake/parallel_build.py
---- ros-1.6.8-orig/tools/rosmake/src/rosmake/parallel_build.py	2012-02-03 17:32:20.000000000 +0100
-+++ ros-1.6.8/tools/rosmake/src/rosmake/parallel_build.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosmake/src/rosmake/parallel_build.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosmake/src/rosmake/parallel_build.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -657,8 +670,8 @@ diff -Naur ros-1.6.8-orig/tools/rosmake/src/rosmake/parallel_build.py ros-1.6.8/
  # Copyright (c) 2009, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/tools/rospack/markstack ros-1.6.8/tools/rospack/markstack
---- ros-1.6.8-orig/tools/rospack/markstack	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rospack/markstack	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rospack/markstack	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rospack/markstack	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#! /usr/bin/env python
 +#! /usr/bin/env python2
@@ -666,8 +679,8 @@ diff -Naur ros-1.6.8-orig/tools/rospack/markstack ros-1.6.8/tools/rospack/markst
  # Copyright (c) 2009, Willow Garage, Inc.
  # All rights reserved.
 diff -Naur ros-1.6.8-orig/tools/rospack/rosalldeps ros-1.6.8/tools/rospack/rosalldeps
---- ros-1.6.8-orig/tools/rospack/rosalldeps	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rospack/rosalldeps	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rospack/rosalldeps	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rospack/rosalldeps	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -675,8 +688,8 @@ diff -Naur ros-1.6.8-orig/tools/rospack/rosalldeps ros-1.6.8/tools/rospack/rosal
  import os, sys
  from optparse import OptionParser
 diff -Naur ros-1.6.8-orig/tools/rospack/rosallpkgs ros-1.6.8/tools/rospack/rosallpkgs
---- ros-1.6.8-orig/tools/rospack/rosallpkgs	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rospack/rosallpkgs	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rospack/rosallpkgs	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rospack/rosallpkgs	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -684,8 +697,8 @@ diff -Naur ros-1.6.8-orig/tools/rospack/rosallpkgs ros-1.6.8/tools/rospack/rosal
  USAGE = 'USAGE: rosallpkgs [pkg1 pkg2...]'
  
 diff -Naur ros-1.6.8-orig/tools/rosunit/bin/rosunit ros-1.6.8/tools/rosunit/bin/rosunit
---- ros-1.6.8-orig/tools/rosunit/bin/rosunit	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/bin/rosunit	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosunit/bin/rosunit	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/bin/rosunit	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -693,8 +706,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/bin/rosunit ros-1.6.8/tools/rosunit/bin/
  #
  # Copyright (c) 2010, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/check_test_ran.py ros-1.6.8/tools/rosunit/scripts/check_test_ran.py
---- ros-1.6.8-orig/tools/rosunit/scripts/check_test_ran.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/scripts/check_test_ran.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosunit/scripts/check_test_ran.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/scripts/check_test_ran.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -702,8 +715,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/check_test_ran.py ros-1.6.8/tool
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/clean_junit_xml.py ros-1.6.8/tools/rosunit/scripts/clean_junit_xml.py
---- ros-1.6.8-orig/tools/rosunit/scripts/clean_junit_xml.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/scripts/clean_junit_xml.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosunit/scripts/clean_junit_xml.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/scripts/clean_junit_xml.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -711,8 +724,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/clean_junit_xml.py ros-1.6.8/too
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/pycoverage_to_html.py ros-1.6.8/tools/rosunit/scripts/pycoverage_to_html.py
---- ros-1.6.8-orig/tools/rosunit/scripts/pycoverage_to_html.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/scripts/pycoverage_to_html.py	2012-04-19 23:50:44.320824811 +0200
+--- ros-1.6.8-orig/tools/rosunit/scripts/pycoverage_to_html.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/scripts/pycoverage_to_html.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -720,8 +733,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/pycoverage_to_html.py ros-1.6.8/
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/summarize_results.py ros-1.6.8/tools/rosunit/scripts/summarize_results.py
---- ros-1.6.8-orig/tools/rosunit/scripts/summarize_results.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/scripts/summarize_results.py	2012-04-19 23:50:44.324158145 +0200
+--- ros-1.6.8-orig/tools/rosunit/scripts/summarize_results.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/scripts/summarize_results.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -729,8 +742,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/summarize_results.py ros-1.6.8/t
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/test_results_dir.py ros-1.6.8/tools/rosunit/scripts/test_results_dir.py
---- ros-1.6.8-orig/tools/rosunit/scripts/test_results_dir.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/scripts/test_results_dir.py	2012-04-19 23:50:44.324158145 +0200
+--- ros-1.6.8-orig/tools/rosunit/scripts/test_results_dir.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/scripts/test_results_dir.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -738,8 +751,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/scripts/test_results_dir.py ros-1.6.8/to
  #
  # Copyright (c) 2009, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/src/rosunit/junitxml.py ros-1.6.8/tools/rosunit/src/rosunit/junitxml.py
---- ros-1.6.8-orig/tools/rosunit/src/rosunit/junitxml.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/src/rosunit/junitxml.py	2012-04-19 23:50:44.324158145 +0200
+--- ros-1.6.8-orig/tools/rosunit/src/rosunit/junitxml.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/src/rosunit/junitxml.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
@@ -747,8 +760,8 @@ diff -Naur ros-1.6.8-orig/tools/rosunit/src/rosunit/junitxml.py ros-1.6.8/tools/
  #
  # Copyright (c) 2008, Willow Garage, Inc.
 diff -Naur ros-1.6.8-orig/tools/rosunit/test/test_junitxml.py ros-1.6.8/tools/rosunit/test/test_junitxml.py
---- ros-1.6.8-orig/tools/rosunit/test/test_junitxml.py	2012-02-03 17:32:21.000000000 +0100
-+++ ros-1.6.8/tools/rosunit/test/test_junitxml.py	2012-04-19 23:50:44.324158145 +0200
+--- ros-1.6.8-orig/tools/rosunit/test/test_junitxml.py	2012-04-20 12:02:33.256822673 +0200
++++ ros-1.6.8/tools/rosunit/test/test_junitxml.py	2012-04-20 12:02:42.316823014 +0200
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env python
 +#!/usr/bin/env python2
