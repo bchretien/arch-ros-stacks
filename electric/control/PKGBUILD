@@ -1,0 +1,29 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-control'
+pkgver='1.0.0'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-ros ros-electric-common-msgs)
+
+source=("https://code.ros.org/svn/release/download/stacks/control/control-1.0.0/control-1.0.0.tar.bz2")
+md5sums=('ec268cdd4b191eca841709971d9aff9c')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/control ] || ln -sf ../control-${pkgver} ${srcdir}/stacks/control
+  rosmake --no-rosdep -i control
+  install_ros_stack ${srcdir}/stacks/control /opt/ros/electric/stacks/control
+}
+
