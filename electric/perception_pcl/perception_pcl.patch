@@ -1,0 +1,130 @@
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/EuclideanClusterExtraction.cfg perception_pcl/pcl_ros/cfg/EuclideanClusterExtraction.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/EuclideanClusterExtraction.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/EuclideanClusterExtraction.cfg	2012-04-20 12:26:44.330210717 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/ExtractIndices.cfg perception_pcl/pcl_ros/cfg/ExtractIndices.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/ExtractIndices.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/ExtractIndices.cfg	2012-04-20 12:26:44.300210716 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/ExtractPolygonalPrismData.cfg perception_pcl/pcl_ros/cfg/ExtractPolygonalPrismData.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/ExtractPolygonalPrismData.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/ExtractPolygonalPrismData.cfg	2012-04-20 12:26:44.310210717 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/Feature.cfg perception_pcl/pcl_ros/cfg/Feature.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/Feature.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/Feature.cfg	2012-04-20 12:26:44.316877383 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/Filter.cfg perception_pcl/pcl_ros/cfg/Filter.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/Filter.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/Filter.cfg	2012-04-20 12:26:44.333544051 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/Filter_common.py perception_pcl/pcl_ros/cfg/Filter_common.py
+--- perception_pcl-1.0.2/pcl_ros/cfg/Filter_common.py	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/Filter_common.py	2012-04-20 12:26:44.336877384 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/MLS.cfg perception_pcl/pcl_ros/cfg/MLS.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/MLS.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/MLS.cfg	2012-04-20 12:26:44.323544051 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/SACSegmentation.cfg perception_pcl/pcl_ros/cfg/SACSegmentation.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/SACSegmentation.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/SACSegmentation.cfg	2012-04-20 12:26:44.320210717 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/SACSegmentation_common.py perception_pcl/pcl_ros/cfg/SACSegmentation_common.py
+--- perception_pcl-1.0.2/pcl_ros/cfg/SACSegmentation_common.py	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/SACSegmentation_common.py	2012-04-20 12:26:44.296877383 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/SACSegmentationFromNormals.cfg perception_pcl/pcl_ros/cfg/SACSegmentationFromNormals.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/SACSegmentationFromNormals.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/SACSegmentationFromNormals.cfg	2012-04-20 12:26:44.306877383 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/SegmentDifferences.cfg perception_pcl/pcl_ros/cfg/SegmentDifferences.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/SegmentDifferences.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/SegmentDifferences.cfg	2012-04-20 12:26:44.326877384 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/StatisticalOutlierRemoval.cfg perception_pcl/pcl_ros/cfg/StatisticalOutlierRemoval.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/StatisticalOutlierRemoval.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/StatisticalOutlierRemoval.cfg	2012-04-20 12:26:44.303544049 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+diff -Naur perception_pcl-1.0.2/pcl_ros/cfg/VoxelGrid.cfg perception_pcl/pcl_ros/cfg/VoxelGrid.cfg
+--- perception_pcl-1.0.2/pcl_ros/cfg/VoxelGrid.cfg	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl_ros/cfg/VoxelGrid.cfg	2012-04-20 12:26:44.313544050 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # set up parameters that we care about
+ PACKAGE = 'pcl_ros'
+--- perception_pcl-1.0.2-orig/pcl/vtk_include.cmake	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl/vtk_include.cmake	2012-04-20 17:05:02.137506957 +0200
+@@ -1,3 +1,4 @@
++set(VTK_INSTALL_EXPORT_NAME True)
+ find_package (VTK REQUIRED)
+ execute_process (COMMAND echo ${VTK_INCLUDE_DIRS} COMMAND sed "s/ / -I/g")
+ 
+--- perception_pcl-1.0.2-orig/pcl/vtk_library.cmake	2011-11-21 23:59:16.000000000 +0100
++++ perception_pcl/pcl/vtk_library.cmake	2012-04-20 17:06:48.310844293 +0200
+@@ -1,2 +1,3 @@
++set(VTK_INSTALL_EXPORT_NAME True)
+ find_package (VTK REQUIRED)
+ execute_process (COMMAND echo ${VTK_LIBRARY_DIRS})

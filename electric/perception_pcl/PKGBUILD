@@ -1,0 +1,39 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-perception-pcl'
+pkgver='1.0.2'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-ros ros-electric-ros-comm
+    ros-electric-common-msgs ros-electric-driver-common
+    ros-electric-geometry python2-yaml boost unzip
+    cmake vtk qhull subversion hdf5)
+
+source=("https://code.ros.org/svn/release/download/stacks/perception_pcl/perception_pcl-1.0.2/perception_pcl-1.0.2.tar.bz2"
+        'perception_pcl.patch'
+        'pcl.patch')
+md5sums=('b9285da944f6cbbbe8b17ae5ae31624e' 
+         '8ac144a0e1ed2596b8eed91b95b7b2f1'
+         '367cb93034585ed4f937ffe9882b86ee')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/perception_pcl ] || ln -sf ../perception_pcl-${pkgver} ${srcdir}/stacks/perception_pcl
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/perception_pcl.patch"
+  rm -f $srcdir/stacks/perception_pcl/pcl/pcl.patch
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/pcl.patch"
+  rosmake --no-rosdep -i perception_pcl
+  install_ros_stack ${srcdir}/stacks/perception_pcl /opt/ros/electric/stacks/perception_pcl
+}
+
