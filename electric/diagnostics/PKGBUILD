@@ -13,8 +13,10 @@ makedepends=('ros-build-tools')
 depends=(ros-electric-ros ros-electric-common-msgs ros-electric-pluginlib
          ros-electric-ros-comm)
 
-source=("https://code.ros.org/svn/release/download/stacks/diagnostics/diagnostics-1.6.4/diagnostics-1.6.4.tar.bz2")
-md5sums=('c2b8167153b0f674eebc26855d21b867')
+source=("https://code.ros.org/svn/release/download/stacks/diagnostics/diagnostics-1.6.4/diagnostics-1.6.4.tar.bz2"
+        'diagnostics.patch')
+md5sums=('c2b8167153b0f674eebc26855d21b867'
+         '233403ab0f5c93b4a2ec4b983bd6c7dc')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/electric/setup.bash
