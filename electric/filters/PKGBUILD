@@ -10,7 +10,7 @@ license=('BSD')
 makedepends=('ros-build-tools')
 
 #TODO: Fill in ROS stack dependencies and rosdep dependencies
-depends=(ros-electric-ros ros-electric-ros-comm)
+depends=(ros-electric-ros ros-electric-ros-comm ros-electric-pluginlib)
 
 source=("https://code.ros.org/svn/release/download/stacks/filters/filters-1.6.0/filters-1.6.0.tar.bz2")
 md5sums=('0113542399807efd2de0dd7bdafd2400')
