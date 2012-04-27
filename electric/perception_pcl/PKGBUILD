@@ -13,7 +13,7 @@ makedepends=('ros-build-tools')
 depends=(ros-electric-ros ros-electric-ros-comm
     ros-electric-common-msgs ros-electric-driver-common
     ros-electric-geometry python2-yaml boost unzip
-    cmake vtk qhull subversion hdf5)
+    cmake vtk qhull subversion ros-hdf5-cxx)
 
 source=("https://code.ros.org/svn/release/download/stacks/perception_pcl/perception_pcl-1.0.2/perception_pcl-1.0.2.tar.bz2"
         'perception_pcl.patch'
