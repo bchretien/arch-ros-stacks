@@ -1,0 +1,27 @@
+diff -Naur pr2_ethercat_drivers-1.6.1/fingertip_pressure/scripts/view_fingertip_pressure pr2_ethercat_drivers/fingertip_pressure/scripts/view_fingertip_pressure
+--- pr2_ethercat_drivers-1.6.1/fingertip_pressure/scripts/view_fingertip_pressure	2011-11-17 22:41:54.000000000 +0100
++++ pr2_ethercat_drivers/fingertip_pressure/scripts/view_fingertip_pressure	2012-04-29 19:35:57.958455419 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur pr2_ethercat_drivers-1.6.1/fingertip_pressure/src/fingertip_pressure/fingertip_panel.py pr2_ethercat_drivers/fingertip_pressure/src/fingertip_pressure/fingertip_panel.py
+--- pr2_ethercat_drivers-1.6.1/fingertip_pressure/src/fingertip_pressure/fingertip_panel.py	2011-11-17 22:41:54.000000000 +0100
++++ pr2_ethercat_drivers/fingertip_pressure/src/fingertip_pressure/fingertip_panel.py	2012-04-29 19:35:57.965122086 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur pr2_ethercat_drivers-1.6.1/fingertip_pressure/test/pressure_info_test.py pr2_ethercat_drivers/fingertip_pressure/test/pressure_info_test.py
+--- pr2_ethercat_drivers-1.6.1/fingertip_pressure/test/pressure_info_test.py	2011-11-17 22:41:54.000000000 +0100
++++ pr2_ethercat_drivers/fingertip_pressure/test/pressure_info_test.py	2012-04-29 19:35:57.961788752 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #***********************************************************
+ #* Software License Agreement (BSD License)
+ #*

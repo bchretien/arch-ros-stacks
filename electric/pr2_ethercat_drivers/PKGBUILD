@@ -1,0 +1,32 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-pr2-ethercat-drivers'
+pkgver='1.6.1'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-common ros-electric-common-msgs ros-electric-diagnostics ros-electric-pr2-common ros-electric-pr2-mechanism ros-electric-ros ros-electric-ros-comm ros-electric-rx)
+
+source=("https://code.ros.org/svn/release/download/stacks/pr2_ethercat_drivers/pr2_ethercat_drivers-1.6.1/pr2_ethercat_drivers-1.6.1.tar.bz2"
+        'pr2_ethercat_drivers.patch')
+md5sums=('aa250aeed83a20684dc749bbff3853b2' 
+         'bbc97eba44e7ee6564a579d4d179066b')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/pr2_ethercat_drivers ] || ln -sf ../pr2_ethercat_drivers-${pkgver} ${srcdir}/stacks/pr2_ethercat_drivers
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/pr2_ethercat_drivers.patch"
+  rosmake --no-rosdep -i pr2_ethercat_drivers
+  install_ros_stack ${srcdir}/stacks/pr2_ethercat_drivers /opt/ros/electric/stacks/pr2_ethercat_drivers
+}
+
