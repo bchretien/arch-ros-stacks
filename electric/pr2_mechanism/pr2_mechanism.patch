@@ -1,0 +1,63 @@
+diff -Naur pr2_mechanism-1.5.4/pr2_controller_manager/scripts/pr2_controller_manager pr2_mechanism/pr2_controller_manager/scripts/pr2_controller_manager
+--- pr2_mechanism-1.5.4/pr2_controller_manager/scripts/pr2_controller_manager	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/pr2_controller_manager/scripts/pr2_controller_manager	2012-04-29 17:10:01.084967375 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Provides quick access to the services exposed by MechanismControlNode
+ 
+ import roslib, time
+diff -Naur pr2_mechanism-1.5.4/pr2_controller_manager/scripts/spawner pr2_mechanism/pr2_controller_manager/scripts/spawner
+--- pr2_mechanism-1.5.4/pr2_controller_manager/scripts/spawner	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/pr2_controller_manager/scripts/spawner	2012-04-29 17:10:01.081634042 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2008, Willow Garage, Inc.
+ # All rights reserved.
+ #
+diff -Naur pr2_mechanism-1.5.4/pr2_controller_manager/scripts/unspawner pr2_mechanism/pr2_controller_manager/scripts/unspawner
+--- pr2_mechanism-1.5.4/pr2_controller_manager/scripts/unspawner	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/pr2_controller_manager/scripts/unspawner	2012-04-29 17:10:01.078300708 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # Copyright (c) 2008, Willow Garage, Inc.
+ # All rights reserved.
+diff -Naur pr2_mechanism-1.5.4/pr2_controller_manager/src/pr2_controller_manager/pr2_controller_manager_interface.py pr2_mechanism/pr2_controller_manager/src/pr2_controller_manager/pr2_controller_manager_interface.py
+--- pr2_mechanism-1.5.4/pr2_controller_manager/src/pr2_controller_manager/pr2_controller_manager_interface.py	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/pr2_controller_manager/src/pr2_controller_manager/pr2_controller_manager_interface.py	2012-04-29 17:10:01.088300708 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Wrappers around the services provided by MechanismControlNode
+ 
+ import roslib; roslib.load_manifest('pr2_controller_manager')
+diff -Naur pr2_mechanism-1.5.4/pr2_mechanism_diagnostics/test/mech_diag_test.py pr2_mechanism/pr2_mechanism_diagnostics/test/mech_diag_test.py
+--- pr2_mechanism-1.5.4/pr2_mechanism_diagnostics/test/mech_diag_test.py	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/pr2_mechanism_diagnostics/test/mech_diag_test.py	2012-04-29 17:10:01.074967374 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur pr2_mechanism-1.5.4/pr2_mechanism_diagnostics/test/pub_mech_stats.py pr2_mechanism/pr2_mechanism_diagnostics/test/pub_mech_stats.py
+--- pr2_mechanism-1.5.4/pr2_mechanism_diagnostics/test/pub_mech_stats.py	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/pr2_mechanism_diagnostics/test/pub_mech_stats.py	2012-04-29 17:10:01.071634041 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur pr2_mechanism-1.5.4/realtime_tools/scripts/channelecho.py pr2_mechanism/realtime_tools/scripts/channelecho.py
+--- pr2_mechanism-1.5.4/realtime_tools/scripts/channelecho.py	2011-08-19 21:42:59.000000000 +0200
++++ pr2_mechanism/realtime_tools/scripts/channelecho.py	2012-04-29 17:10:01.068300708 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Copyright (c) 2009, Willow Garage, Inc.
+ # All rights reserved.
+ #
