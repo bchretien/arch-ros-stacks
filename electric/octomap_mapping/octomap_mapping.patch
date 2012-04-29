@@ -1,0 +1,61 @@
+diff -Naur octomap_mapping-0.3.8/octomap/Makefile octomap_mapping/octomap/Makefile
+--- octomap_mapping-0.3.8/octomap/Makefile	2012-04-26 17:27:03.000000000 +0200
++++ octomap_mapping/octomap/Makefile	2012-04-29 20:10:16.485158455 +0200
+@@ -5,7 +5,7 @@
+ #
+ TARBALL = build/octomap.tar.gz
+ TARBALL_URL = https://code.ros.org/svn/release/download/thirdparty/octomap/octomap-1.4.2.tar.gz
+-TARBALL_PATCH = 
++TARBALL_PATCH = octomap-arch.patch
+ INITIAL_DIR = build/octomap
+ SOURCE_DIR = build/octomap-tar
+ include $(shell rospack find mk)/download_unpack_build.mk
+diff -Naur octomap_mapping-0.3.8/octomap/octomap-arch.patch octomap_mapping/octomap/octomap-arch.patch
+--- octomap_mapping-0.3.8/octomap/octomap-arch.patch	1970-01-01 01:00:00.000000000 +0100
++++ octomap_mapping/octomap/octomap-arch.patch	2012-04-29 20:10:47.548492336 +0200
+@@ -0,0 +1,27 @@
++diff -Naur octomap/include/octomap/OccupancyOcTreeBase.hxx include/octomap/OccupancyOcTreeBase.hxx
++--- octomap/include/octomap/OccupancyOcTreeBase.hxx	2012-04-24 14:47:08.000000000 +0200
+++++ include/octomap/OccupancyOcTreeBase.hxx	2012-04-29 20:07:02.311821691 +0200
++@@ -363,12 +363,12 @@
++       if (isNodeOccupied(startingNode)){
++         // Occupied node found at origin 
++         // (need to convert from key, since origin does not need to be a voxel center)
++-        genCoords(current_key, this->tree_depth, end);
+++        this->genCoords(current_key, this->tree_depth, end);
++         return true;
++       }
++     } else if(!ignoreUnknown){
++       OCTOMAP_ERROR_STR("Origin node at " << origin << " for raycasting not found, does the node exist?");
++-      genCoords(current_key, this->tree_depth, end);
+++      this->genCoords(current_key, this->tree_depth, end);
++       return false;
++     }
++ 
++@@ -435,7 +435,7 @@
++       {
++     	  OCTOMAP_WARNING("Coordinate hit bounds in dim %d, aborting raycast\n", dim);
++     	  // return border point nevertheless:
++-    	  genCoords(current_key, this->tree_depth, end);
+++    	  this->genCoords(current_key, this->tree_depth, end);
++     	  return false;
++       }
++ 
+diff -Naur octomap_mapping-0.3.8/octomap_server/cfg/OctomapServer.cfg octomap_mapping/octomap_server/cfg/OctomapServer.cfg
+--- octomap_mapping-0.3.8/octomap_server/cfg/OctomapServer.cfg	2012-04-26 17:27:03.000000000 +0200
++++ octomap_mapping/octomap_server/cfg/OctomapServer.cfg	2012-04-29 20:03:07.488484209 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ PACKAGE = "octomap_server"
+ import roslib;roslib.load_manifest(PACKAGE)
+ 
+diff -Naur octomap_mapping-0.3.8/octomap_server/scripts/octomap_eraser_cli.py octomap_mapping/octomap_server/scripts/octomap_eraser_cli.py
+--- octomap_mapping-0.3.8/octomap_server/scripts/octomap_eraser_cli.py	2012-04-26 17:27:03.000000000 +0200
++++ octomap_mapping/octomap_server/scripts/octomap_eraser_cli.py	2012-04-29 20:03:07.488484209 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ """Clear a region specified by a global axis-aligned bounding box in stored
+ OctoMap.
