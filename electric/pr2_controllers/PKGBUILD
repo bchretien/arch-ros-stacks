@@ -1,0 +1,34 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-pr2-controllers'
+pkgver='1.2.6'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-common ros-electric-common-msgs ros-electric-diagnostics
+    ros-electric-geometry ros-electric-pr2-common ros-electric-pr2-mechanism
+    ros-electric-robot-model ros-electric-ros ros-electric-visualization-common)
+
+source=("https://code.ros.org/svn/release/download/stacks/pr2_controllers/pr2_controllers-1.2.6/pr2_controllers-1.2.6.tar.bz2"
+        'pr2_controllers.patch')
+md5sums=('ceb7b9177281a82e0d6018622526d3ba' 
+         '2aefa834935f2dacf69835051571ce8f')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/pr2_controllers ] || ln -sf ../pr2_controllers-${pkgver} ${srcdir}/stacks/pr2_controllers
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/pr2_controllers.patch"
+  rosmake --no-rosdep -i pr2_controllers
+  install_ros_stack ${srcdir}/stacks/pr2_controllers /opt/ros/electric/stacks/pr2_controllers
+}
+
