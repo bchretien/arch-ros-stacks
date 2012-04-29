@@ -1,0 +1,32 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-sql-database'
+pkgver='0.2.5'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-common ros-electric-ros ros-electric-ros-comm postgresql-libs)
+
+source=("https://code.ros.org/svn/release/download/stacks/sql_database/sql_database-0.2.5/sql_database-0.2.5.tar.bz2"
+        'sql_database.patch')
+md5sums=('201e209cb8134d027d2114ceed841df7' 
+         'd41d8cd98f00b204e9800998ecf8427e')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/sql_database ] || ln -sf ../sql_database-${pkgver} ${srcdir}/stacks/sql_database
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/sql_database.patch"
+  rosmake --no-rosdep -i sql_database
+  install_ros_stack ${srcdir}/stacks/sql_database /opt/ros/electric/stacks/sql_database
+}
+
