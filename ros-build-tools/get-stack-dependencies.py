@@ -27,26 +27,21 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-import yaml
+import xml.dom.minidom as minidom
 import sys
 
-def parse_rosinstall_entry(entry):
-  entry_data = entry['tar']
-  name = entry_data['local-name']
-  uri = entry_data['uri']
-  version = entry_data['version'][len(name)+1:]
-  return name, version, uri
-
 def main():
-  if len(sys.argv) < 3:
-    print('Usage: %s <rosinstall file> <distro>' % sys.argv[0])
+  if len(sys.argv) < 2:
+    print('Usage: %s <stack.xml>' % sys.argv[0])
     return 1
 
-  rosinstall = yaml.load(open(sys.argv[1], mode='r'))
-  for entry in rosinstall:
-    (name, version, uri) = parse_rosinstall_entry(entry)
-    print('/usr/share/ros-build-tools/create-arch-ros-package.sh %s %s %s "%s"' % (
-        sys.argv[2], name, version, uri))
-
+  top_level = minidom.parse(sys.argv[1])
+  if len(top_level.childNodes) != 1 or top_level.childNodes[0].nodeName != 'stack':
+    print('Invalid stack.xml. No <stack> node found on toplevel.')
+    return 1
+  stack = top_level.childNodes[0]
+  print(*[n.getAttribute('stack')
+          for n in stack.childNodes if n.nodeName == 'depend'],
+         sep=' ', end='')
 if __name__ == '__main__':
   main()
