@@ -1,0 +1,18 @@
+diff -Naur object_manipulation-0.5.13/household_objects_database/scripts/register.py object_manipulation/household_objects_database/scripts/register.py
+--- object_manipulation-0.5.13/household_objects_database/scripts/register.py	2012-03-29 03:54:13.000000000 +0200
++++ object_manipulation/household_objects_database/scripts/register.py	2012-04-29 16:57:10.661620430 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2010, Willow Garage, Inc.
+diff -Naur object_manipulation-0.5.13/object_manipulator/src/object_manipulator/point_cloud.py object_manipulation/object_manipulator/src/object_manipulator/point_cloud.py
+--- object_manipulation-0.5.13/object_manipulator/src/object_manipulator/point_cloud.py	2012-03-29 03:54:13.000000000 +0200
++++ object_manipulation/object_manipulator/src/object_manipulator/point_cloud.py	2012-04-29 16:57:10.664953763 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ """
+ Serialization of sensor_msgs.PointCloud2 messages.

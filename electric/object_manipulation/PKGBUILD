@@ -1,0 +1,36 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-object-manipulation'
+pkgver='0.5.13'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-arm-navigation ros-electric-arm-navigation-experimental ros-electric-common
+    ros-electric-common-msgs ros-electric-common-rosdeps ros-electric-eigen ros-electric-geometry
+    ros-electric-perception-pcl ros-electric-pr2-controllers ros-electric-pr2-mechanism
+    ros-electric-ros ros-electric-ros-comm ros-electric-sql-database ros-electric-visualization
+    ros-electric-visualization-common)
+
+source=("https://code.ros.org/svn/release/download/stacks/object_manipulation/object_manipulation-0.5.13/object_manipulation-0.5.13.tar.bz2"
+        'object_manipulation.patch')
+md5sums=('c62795a1e01d04c8ae75b5d9d77f9963' 
+         '4f9c9bb7b4236ce6bcc79f4f2c27f37f')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/object_manipulation ] || ln -sf ../object_manipulation-${pkgver} ${srcdir}/stacks/object_manipulation
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/object_manipulation.patch"
+  rosmake --no-rosdep -i object_manipulation
+  install_ros_stack ${srcdir}/stacks/object_manipulation /opt/ros/electric/stacks/object_manipulation
+}
+
