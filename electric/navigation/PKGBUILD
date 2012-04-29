@@ -1,0 +1,32 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-navigation'
+pkgver='1.6.5'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-bullet ros-electric-common ros-electric-common-msgs ros-electric-driver-common ros-electric-eigen ros-electric-geometry ros-electric-laser-pipeline ros-electric-perception-pcl ros-electric-pluginlib ros-electric-ros ros-electric-ros-comm)
+
+source=("https://code.ros.org/svn/release/download/stacks/navigation/navigation-1.6.5/navigation-1.6.5.tar.bz2"
+        'navigation.patch')
+md5sums=('811e3819e837b465dbd61b38925bb70d' 
+         'cb1df88c1d0db1f200890003d72aa073')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/navigation ] || ln -sf ../navigation-${pkgver} ${srcdir}/stacks/navigation
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/navigation.patch"
+  rosmake --no-rosdep -i navigation
+  install_ros_stack ${srcdir}/stacks/navigation /opt/ros/electric/stacks/navigation
+}
+
