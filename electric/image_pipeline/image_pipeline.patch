@@ -1,0 +1,108 @@
+diff -Naur image_pipeline-1.6.4/camera_calibration/nodes/camera_hammer.py image_pipeline/camera_calibration/nodes/camera_hammer.py
+--- image_pipeline-1.6.4/camera_calibration/nodes/camera_hammer.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/nodes/camera_hammer.py	2012-04-29 19:38:00.728457588 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ PKG = 'camera_calibration' # this package name
+ import roslib; roslib.load_manifest(PKG)
+ 
+diff -Naur image_pipeline-1.6.4/camera_calibration/scripts/tarfile_calibration.py image_pipeline/camera_calibration/scripts/tarfile_calibration.py
+--- image_pipeline-1.6.4/camera_calibration/scripts/tarfile_calibration.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/scripts/tarfile_calibration.py	2012-04-29 19:38:00.715124255 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur image_pipeline-1.6.4/camera_calibration/src/camera_calibration/approxsync.py image_pipeline/camera_calibration/src/camera_calibration/approxsync.py
+--- image_pipeline-1.6.4/camera_calibration/src/camera_calibration/approxsync.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/src/camera_calibration/approxsync.py	2012-04-29 19:38:00.731790921 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur image_pipeline-1.6.4/camera_calibration/src/camera_calibration/calibrator.py image_pipeline/camera_calibration/src/camera_calibration/calibrator.py
+--- image_pipeline-1.6.4/camera_calibration/src/camera_calibration/calibrator.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/src/camera_calibration/calibrator.py	2012-04-29 19:38:00.738457589 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur image_pipeline-1.6.4/camera_calibration/test/directed.py image_pipeline/camera_calibration/test/directed.py
+--- image_pipeline-1.6.4/camera_calibration/test/directed.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/test/directed.py	2012-04-29 19:38:00.721790921 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur image_pipeline-1.6.4/camera_calibration/test/multiple_boards.py image_pipeline/camera_calibration/test/multiple_boards.py
+--- image_pipeline-1.6.4/camera_calibration/test/multiple_boards.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/test/multiple_boards.py	2012-04-29 19:38:00.718457588 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur image_pipeline-1.6.4/camera_calibration/test/testapproxsync.py image_pipeline/camera_calibration/test/testapproxsync.py
+--- image_pipeline-1.6.4/camera_calibration/test/testapproxsync.py	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/camera_calibration/test/testapproxsync.py	2012-04-29 19:38:00.725124255 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ #
+ # Software License Agreement (BSD License)
+ #
+diff -Naur image_pipeline-1.6.4/image_proc/cfg/CropDecimate.cfg image_pipeline/image_proc/cfg/CropDecimate.cfg
+--- image_pipeline-1.6.4/image_proc/cfg/CropDecimate.cfg	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/image_proc/cfg/CropDecimate.cfg	2012-04-29 19:38:00.708457588 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ PACKAGE='image_proc'
+ import roslib; roslib.load_manifest(PACKAGE)
+diff -Naur image_pipeline-1.6.4/image_proc/cfg/Debayer.cfg image_pipeline/image_proc/cfg/Debayer.cfg
+--- image_pipeline-1.6.4/image_proc/cfg/Debayer.cfg	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/image_proc/cfg/Debayer.cfg	2012-04-29 19:38:00.701790921 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ PACKAGE='image_proc'
+ import roslib; roslib.load_manifest(PACKAGE)
+diff -Naur image_pipeline-1.6.4/image_proc/cfg/Rectify.cfg image_pipeline/image_proc/cfg/Rectify.cfg
+--- image_pipeline-1.6.4/image_proc/cfg/Rectify.cfg	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/image_proc/cfg/Rectify.cfg	2012-04-29 19:38:00.705124254 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ PACKAGE='image_proc'
+ import roslib; roslib.load_manifest(PACKAGE)
+diff -Naur image_pipeline-1.6.4/image_rotate/cfg/ImageRotate.cfg image_pipeline/image_rotate/cfg/ImageRotate.cfg
+--- image_pipeline-1.6.4/image_rotate/cfg/ImageRotate.cfg	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/image_rotate/cfg/ImageRotate.cfg	2012-04-29 19:38:00.741790922 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2010, Willow Garage, Inc.
+diff -Naur image_pipeline-1.6.4/stereo_image_proc/cfg/Disparity.cfg image_pipeline/stereo_image_proc/cfg/Disparity.cfg
+--- image_pipeline-1.6.4/stereo_image_proc/cfg/Disparity.cfg	2011-12-05 23:07:11.000000000 +0100
++++ image_pipeline/stereo_image_proc/cfg/Disparity.cfg	2012-04-29 19:38:00.711790922 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python2
+ 
+ # Declare parameters that control stereo processing
+ 
