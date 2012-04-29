@@ -40,6 +40,8 @@ tar xvjf $PACKAGE_DIRECTORY/${STACK}-${VERSION}.tar.bz2
 cp -r $PACKAGE_DIRECTORY/tmp/${STACK}-${VERSION} $PACKAGE_DIRECTORY/tmp/$STACK
 /usr/share/ros-build-tools/fix-python-scripts.sh $PACKAGE_DIRECTORY/tmp/$STACK
 diff -Naur ${STACK}-${VERSION} $STACK > $PACKAGE_DIRECTORY/$STACK.patch || true
+STACK_DEPENDENCIES=$(/usr/share/ros-build-tools/get-stack-dependencies.py $STACK/stack.xml \
+    | sed 's/_/-/g' | sed 's/^/ros-electric-/g' | sed 's/ / ros-electric-/g')
 cd $PACKAGE_DIRECTORY
 rm -r $PACKAGE_DIRECTORY/tmp
 
@@ -52,6 +54,7 @@ sed -i "s?@STACK_URL@?$URL?g" $PACKAGE_DIRECTORY/PKGBUILD
 sed -i "s/@STACK_MD5@/$MD5/g" $PACKAGE_DIRECTORY/PKGBUILD
 sed -i "s/@STACK_PATCH_MD5@/$PATCH_MD5/g" $PACKAGE_DIRECTORY/PKGBUILD
 sed -i "s/@ROS_DISTRO@/$DISTRO/g" $PACKAGE_DIRECTORY/PKGBUILD
+sed -i "s/@ROS_STACK_DEPENDENCIES@/$STACK_DEPENDENCIES/g" $PACKAGE_DIRECTORY/PKGBUILD
 
 echo ""
 echo "PKGBUILD and patch created for stack $STACK."
