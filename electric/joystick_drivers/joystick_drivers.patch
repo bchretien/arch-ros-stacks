@@ -1,0 +1,76 @@
+diff -Naur joystick_drivers-1.6.4/joy/test/test_joy_msg_migration.py joystick_drivers/joy/test/test_joy_msg_migration.py
+--- joystick_drivers-1.6.4/joy/test/test_joy_msg_migration.py	2011-10-24 01:38:46.000000000 +0200
++++ joystick_drivers/joy/test/test_joy_msg_migration.py	2012-05-02 18:44:31.566773877 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur joystick_drivers-1.6.4/wiimote/nodes/ledTester.py joystick_drivers/wiimote/nodes/ledTester.py
+--- joystick_drivers-1.6.4/wiimote/nodes/ledTester.py	2011-10-24 01:38:46.000000000 +0200
++++ joystick_drivers/wiimote/nodes/ledTester.py	2012-05-02 18:44:31.550107199 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ import roslib; roslib.load_manifest('wiimote')
+ import rospy
+diff -Naur joystick_drivers-1.6.4/wiimote/nodes/rumbleTester.py joystick_drivers/wiimote/nodes/rumbleTester.py
+--- joystick_drivers-1.6.4/wiimote/nodes/rumbleTester.py	2011-10-24 01:38:46.000000000 +0200
++++ joystick_drivers/wiimote/nodes/rumbleTester.py	2012-05-02 18:44:31.556773877 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ # Test rumbler. Expect:
+ #
+diff -Naur joystick_drivers-1.6.4/wiimote/nodes/wiimote_node.py joystick_drivers/wiimote/nodes/wiimote_node.py
+--- joystick_drivers-1.6.4/wiimote/nodes/wiimote_node.py	2011-10-24 01:38:46.000000000 +0200
++++ joystick_drivers/wiimote/nodes/wiimote_node.py	2012-05-02 18:44:31.556773877 +0200
+@@ -27,7 +27,7 @@
+ #  Added calibrated nunchuk information, changed /joy to /wiijoy
+ #  Only publish on /wiimote/nunchuk if attached
+ ################################################################################
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ 
+ """The wiimote_node broadcasts four topics, and listens to messages that control
+ the Wiimote stick's rumble (vibration) and LEDs. Transmitted topics (@100Hz):
+diff -Naur joystick_drivers-1.6.4/wiimote/src/wiimote/WIIMote.py joystick_drivers/wiimote/src/wiimote/WIIMote.py
+--- joystick_drivers-1.6.4/wiimote/src/wiimote/WIIMote.py	2011-10-24 01:38:46.000000000 +0200
++++ joystick_drivers/wiimote/src/wiimote/WIIMote.py	2012-05-02 18:44:31.563440545 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ ################################################################################
+ #
+ # File:         WIIMote.py
+diff -Naur joystick_drivers-1.6.4/cwiid/cwiid-201.patch joystick_drivers/cwiid/cwiid-201.patch 
+--- joystick_drivers-1.6.4/cwiid/cwiid-201.patch	2011-10-24 01:38:46.000000000 +0200
++++ joystick_drivers/cwiid/cwiid-201.patch	2012-05-02 18:53:35.186775796 +0200
+@@ -58,3 +58,24 @@
+  LDFLAGS += -L@top_builddir@/libcwiid -rdynamic
+  INST_DIR = @bindir@
+  
++diff -ur configure.ac configure.ac.new                                          2012-05-02 18:52:28 johannes pts/6
++--- configure.ac	2008-06-24 21:43:05.000000000 +0200
+++++ configure.ac.new	2012-05-02 18:52:16.240108850 +0200
++@@ -47,7 +47,7 @@
++ 	[case $withval in 
++ 		yes)
++ 			REQUIRE_PYTHON=1
++-			PYTHON_NAME=python
+++			PYTHON_NAME=python2
++ 		;;
++ 		no)
++ 			REQUIRE_PYTHON=
++@@ -58,7 +58,7 @@
++ 			PYTHON_NAME=$withval
++ 		;;
++ 	esac],
++-	[REQUIRE_PYTHON=1; PYTHON_NAME=python])
+++	[REQUIRE_PYTHON=1; PYTHON_NAME=python2])
++ if test $REQUIRE_PYTHON; then
++ 	AC_CHECK_PROGS([PYTHON],$PYTHON_NAME)
++ 	if test $REQUIRE_PYTHON -a ! $PYTHON; then
