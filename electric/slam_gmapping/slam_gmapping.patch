@@ -1,0 +1,27 @@
+diff -Naur slam_gmapping-1.2.5/gmapping/test/test_map.py slam_gmapping/gmapping/test/test_map.py
+--- slam_gmapping-1.2.5/gmapping/test/test_map.py	2012-01-12 23:59:10.000000000 +0100
++++ slam_gmapping/gmapping/test/test_map.py	2012-05-02 17:49:32.133428976 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # Software License Agreement (BSD License)
+ #
+ # Copyright (c) 2008, Willow Garage, Inc.
+diff -Naur slam_gmapping-1.2.5/gmapping/gmapping-r39.patch slam_gmapping/gmapping/gmapping-r39.patch           
+--- slam_gmapping-1.2.5/gmapping/gmapping-r39.patch	2012-01-12 23:59:10.000000000 +0100
++++ slam_gmapping/gmapping/gmapping-r39.patch	2012-05-02 18:35:02.063438529 +0200
+@@ -609,3 +609,14 @@
+  #include <iostream>
+  #include <assert.h>
+  #include <sys/types.h>
++diff -ur .gridfastslam/gfs2rec.cpp ../../gmapping_export/gridfastslam/gfs2rec.cpp
++--- ./gridfastslam/gfs2rec.cpp	2012-05-02 18:32:17.263437944 +0200
+++++ ../../gmapping_export/gridfastslam/gfs2rec.cpp	2012-05-02 17:46:58.790095124 +0200
++@@ -145,7 +145,6 @@
++ 	virtual void read(istream& is){
++ 		is >> dim;
++ 		for (unsigned int i=0; i< dim; i++){
++-			unsigned int i;
++ 			is >> i;
++ 			indexes.push_back(i);
++ 		}
