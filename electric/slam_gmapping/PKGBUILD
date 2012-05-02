@@ -15,7 +15,7 @@ depends=(ros-electric-common-msgs ros-electric-geometry ros-electric-navigation 
 source=("https://code.ros.org/svn/release/download/stacks/slam_gmapping/slam_gmapping-1.2.5/slam_gmapping-1.2.5.tar.bz2"
         'slam_gmapping.patch')
 md5sums=('ce1ec4b2ac70bfe081d4f7f924f5721d' 
-         'cd0919020c389c1d5e725af56089ca8f')
+         '56a297968fdd538d465bb6415547cc26')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/electric/setup.bash
