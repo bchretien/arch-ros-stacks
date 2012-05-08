@@ -19,7 +19,7 @@ source=('fix-python-scripts.sh'
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
          '79ae7fb600e116623a42631d15d66a87'
          '5ec799e6cd3b2e4bb53f49b0f2a8e528'
-         'c410eb1eaa339bb6e2b6671280863cad'
+         'ac82eca7efc9f0ff7e8b976a83692868'
          'ddf9893c1eb397f870fa65c167d2b3bc'
          '161a411c0a2c4c8f621e968e1016bddb')
   

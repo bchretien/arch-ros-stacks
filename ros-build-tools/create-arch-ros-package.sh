@@ -2,8 +2,8 @@
 
 set -e
 
-if [ -z "$4" ]; then
-    echo "Usage: $0 <distro> <stack> <version> <stack-url>"
+if [ -z "$3" ]; then
+    echo "Usage: $0 <distro> <stack> <version>"
     exit 1
 fi
 
@@ -11,7 +11,7 @@ DISTRO=$1
 STACK=$2
 PACKAGE=$(echo $STACK | sed 's/_/-/g')
 VERSION=$3
-URL=$4
+URL=https://code.ros.org/svn/release/download/stacks/$STACK/$STACK-$VERSION/$STACK-$VERSION.tar.bz2
 
 PACKAGE_DIRECTORY=$(pwd)/$STACK
 
