@@ -1,0 +1,16 @@
+pkgname=libjson-java
+pkgver=2.4
+pkgrel=1
+pkgdesc='json lib for java'
+arch=('i686' 'x86_64')
+url='http://json-lib.sourceforge.net/'
+license=('Apache License V2.0')
+depends=('java-runtime')
+source=("http://downloads.sourceforge.net/project/json-lib/json-lib/json-lib-2.4/json-lib-2.4-jdk15.jar")
+md5sums=('f5db294d05b3d5a5bfb873455b0a8626')
+
+build() {
+    install -d -m755 ${pkgdir}/usr/share/java/
+    install -m644 ${srcdir}/json-lib-2.4-jdk15.jar \
+        ${pkgdir}/usr/share/java/json-lib.jar
+}
