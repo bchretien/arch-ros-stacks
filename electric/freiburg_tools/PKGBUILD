@@ -1,0 +1,33 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-freiburg-tools'
+pkgver='0.1.3'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+depends=(ros-electric-ros ros-electric-common ros-electric-common-msgs ros-electric-driver-common
+    ros-electric-geometry ros-electric-ros ros-electric-vision-opencv ros-electric-image-common
+    ros-electric-visualization-common gsl)
+
+source=("https://code.ros.org/svn/release/download/stacks/freiburg_tools/freiburg_tools-0.1.3/freiburg_tools-0.1.3.tar.bz2"
+        'freiburg_tools.patch')
+md5sums=('f2c55a3687647ff8743a1a01ff47689d' 
+         '107881e99c95434737e509923add42dc')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/freiburg_tools ] || ln -sf ../freiburg_tools-${pkgver} ${srcdir}/stacks/freiburg_tools
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/freiburg_tools.patch"
+  rosmake --no-rosdep -i freiburg_tools
+  install_ros_stack ${srcdir}/stacks/freiburg_tools /opt/ros/electric/stacks/freiburg_tools
+}
+
