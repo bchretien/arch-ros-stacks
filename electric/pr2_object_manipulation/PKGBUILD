@@ -1,0 +1,41 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-pr2-object-manipulation'
+pkgver='0.5.18'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-arm-navigation ros-electric-arm-navigation-experimental
+    ros-electric-assimp ros-electric-bond-core ros-electric-bullet ros-electric-common
+    ros-electric-common-msgs ros-electric-common-rosdeps ros-electric-driver-common
+    ros-electric-eigen ros-electric-filters ros-electric-geometry ros-electric-image-common
+    ros-electric-navigation ros-electric-object-manipulation ros-electric-orocos-kinematics-dynamics
+    ros-electric-perception-pcl ros-electric-pluginlib ros-electric-pr2-arm-navigation
+    ros-electric-pr2-common ros-electric-pr2-common-actions ros-electric-pr2-controllers
+    ros-electric-pr2-mechanism ros-electric-robot-model ros-electric-ros ros-electric-ros-comm
+    ros-electric-ros-realtime ros-electric-sql-database ros-electric-vision-opencv
+    ros-electric-visualization ros-electric-visualization-common)
+
+source=("https://code.ros.org/svn/release/download/stacks/pr2_object_manipulation/pr2_object_manipulation-0.5.18/pr2_object_manipulation-0.5.18.tar.bz2"
+        'pr2_object_manipulation.patch')
+md5sums=('4797fabc3917892b4cc01bff07af5975' 
+         '3922f377263e4c91d80598a03c46d3fa')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/pr2_object_manipulation ] || ln -sf ../pr2_object_manipulation-${pkgver} ${srcdir}/stacks/pr2_object_manipulation
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/pr2_object_manipulation.patch"
+  rosmake --no-rosdep -i pr2_object_manipulation
+  install_ros_stack ${srcdir}/stacks/pr2_object_manipulation /opt/ros/electric/stacks/pr2_object_manipulation
+}
+
