@@ -16,11 +16,9 @@ depends=(ros-electric-ros ros-electric-ros-comm
     cmake vtk qhull subversion ros-hdf5-cxx)
 
 source=("https://code.ros.org/svn/release/download/stacks/perception_pcl/perception_pcl-1.0.2/perception_pcl-1.0.2.tar.bz2"
-        'perception_pcl.patch'
-        'pcl.patch')
+  'perception_pcl.patch')
 md5sums=('b9285da944f6cbbbe8b17ae5ae31624e' 
-         '8ac144a0e1ed2596b8eed91b95b7b2f1'
-         '367cb93034585ed4f937ffe9882b86ee')
+  'f977f1fec7f0127bae6b072c1afbb59c')
 
 source /usr/share/ros-build-tools/stack-install-tools.sh
 source /opt/ros/electric/setup.bash
@@ -30,9 +28,8 @@ build() {
 
   mkdir -p ${srcdir}/stacks
   [ -L ${srcdir}/stacks/perception_pcl ] || ln -sf ../perception_pcl-${pkgver} ${srcdir}/stacks/perception_pcl
-  cd $srcdir/stacks; patch -p0 -i "$srcdir/perception_pcl.patch"
   rm -f $srcdir/stacks/perception_pcl/pcl/pcl.patch
-  cd $srcdir/stacks; patch -p0 -i "$srcdir/pcl.patch"
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/perception_pcl.patch"
   rosmake --no-rosdep -i perception_pcl
   install_ros_stack ${srcdir}/stacks/perception_pcl /opt/ros/electric/stacks/perception_pcl
 }
