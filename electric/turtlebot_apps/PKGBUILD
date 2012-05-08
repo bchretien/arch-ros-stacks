@@ -1,0 +1,32 @@
+
+pkgdesc='Fill me.'
+url='http://www.ros.org/'
+
+pkgname='ros-electric-turtlebot-apps'
+pkgver='0.9.2'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+#TODO: Fill in ROS stack dependencies and rosdep dependencies
+depends=(ros-electric-ros ros-electric-slam-gmapping ros-electric-joystick-drivers)
+
+source=("https://code.ros.org/svn/release/download/stacks/turtlebot_apps/turtlebot_apps-0.9.2/turtlebot_apps-0.9.2.tar.bz2"
+        'turtlebot_apps.patch')
+md5sums=('943931e64e6583159a789d27af37e03e' 
+         '53fe1b8fc35c3f5304681c5963701b7d')
+
+source /usr/share/ros-build-tools/stack-install-tools.sh
+source /opt/ros/electric/setup.bash
+
+build() {
+  export ROS_PACKAGE_PATH=${srcdir}/stacks:$ROS_PACKAGE_PATH
+
+  mkdir -p ${srcdir}/stacks
+  [ -L ${srcdir}/stacks/turtlebot_apps ] || ln -sf ../turtlebot_apps-${pkgver} ${srcdir}/stacks/turtlebot_apps
+  cd $srcdir/stacks; patch -p0 -i "$srcdir/turtlebot_apps.patch"
+  rosmake --no-rosdep -i turtlebot_apps
+  install_ros_stack ${srcdir}/stacks/turtlebot_apps /opt/ros/electric/stacks/turtlebot_apps
+}
+
