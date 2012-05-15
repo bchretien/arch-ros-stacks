@@ -1,0 +1,16 @@
+pkgname=java-ezmorph
+pkgver=1.0.6
+pkgrel=1
+pkgdesc='ezmorph'
+arch=('i686' 'x86_64')
+url='http://ezmorph.sourceforge.net/'
+license=('Apache License V2.0')
+depends=('java-runtime')
+source=("http://downloads.sourceforge.net/project/ezmorph/ezmorph/ezmorph-1.0.6/ezmorph-1.0.6.jar")
+md5sums=('1fa113c6aacf3a01af1449df77acd474')
+
+build() {
+    install -d -m755 ${pkgdir}/usr/share/java/
+    install -m644 ${srcdir}/ezmorph-1.0.6.jar \
+        ${pkgdir}/usr/share/java/ezmorph.jar
+}
