@@ -13,7 +13,7 @@ depends=()
 source=('fix-python-scripts.sh'
         'stack-install-tools.sh'
         'import-rosinstall.py'
-        'create-arch-ros-package.sh'
+        'create-arch-ros-package-legacy.sh'
         'PKGBUILD.rostemplate'
         'get-stack-dependencies.py')
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
@@ -26,7 +26,7 @@ md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
 build() {
   mkdir -p $pkgdir/usr/share/ros-build-tools
   for file in 'fix-python-scripts.sh' 'stack-install-tools.sh' 'import-rosinstall.py' \
-      'create-arch-ros-package.sh' 'PKGBUILD.rostemplate' 'get-stack-dependencies.py'
+      'create-arch-ros-package-legacy.sh' 'PKGBUILD.rostemplate' 'get-stack-dependencies.py'
   do
       cp $file $pkgdir/usr/share/ros-build-tools
   done
