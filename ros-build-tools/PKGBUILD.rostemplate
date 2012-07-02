@@ -9,8 +9,8 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-#TODO: Fill in ROS stack dependencies and rosdep dependencies
-depends=(@ROS_STACK_DEPENDENCIES@)
+ros_depends(@ROS_STACK_DEPENDENCIES)
+depends=(${ros_depends[@]})
 
 source=("@STACK_URL@"
         '@STACK_NAME@.patch')
