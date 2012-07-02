@@ -10,24 +10,30 @@ license=('BSD')
 makedepends=()
 depends=()
 
+pkg_destination_dir="/usr/share/ros-build-tools"
+
 source=('fix-python-scripts.sh'
-        'stack-install-tools.sh'
-        'import-rosinstall.py'
-        'create-arch-ros-package-legacy.sh'
-        'PKGBUILD.rostemplate'
-        'get-stack-dependencies.py')
+    'stack-install-tools.sh'
+    'import-rosinstall.py'
+    'create-arch-ros-package-legacy.sh'
+    'PKGBUILD.rostemplate'
+    'get-stack-dependencies.py'
+    'get-aur-ros-dependencies.sh'
+    'CMakeLists.txt.template')
+
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
-         '79ae7fb600e116623a42631d15d66a87'
-         '5ec799e6cd3b2e4bb53f49b0f2a8e528'
-         'ac82eca7efc9f0ff7e8b976a83692868'
-         'b0c5e2b65b0722e0288e010525193258'
-         '161a411c0a2c4c8f621e968e1016bddb')
-  
+    '79ae7fb600e116623a42631d15d66a87'
+    '5ec799e6cd3b2e4bb53f49b0f2a8e528'
+    'ac82eca7efc9f0ff7e8b976a83692868'
+    'b0c5e2b65b0722e0288e010525193258'
+    '161a411c0a2c4c8f621e968e1016bddb'
+    'e233066f45ce8865b2612523571f70fd'
+    'd7280f6da3ee5d1865601ac6339d12d3')
+
 build() {
-  mkdir -p $pkgdir/usr/share/ros-build-tools
-  for file in 'fix-python-scripts.sh' 'stack-install-tools.sh' 'import-rosinstall.py' \
-      'create-arch-ros-package-legacy.sh' 'PKGBUILD.rostemplate' 'get-stack-dependencies.py'
-  do
-      cp $file $pkgdir/usr/share/ros-build-tools
-  done
+    mkdir -p ${pkgdir}${pkg_destination_dir}
+    for file in "${source[@]}"; do
+        cp $file ${pkgdir}${pkg_destination_dir}/$file
+    done
 }
+
