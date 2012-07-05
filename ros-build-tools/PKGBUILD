@@ -17,9 +17,10 @@ source=('fix-python-scripts.sh'
     'import-rosinstall.py'
     'create-arch-ros-package-legacy.sh'
     'PKGBUILD.rostemplate'
-    'get-stack-dependencies.py'
-    'get-aur-ros-dependencies.sh'
-    'CMakeLists.txt.template')
+    'get_stack_dependencies.py'
+    'generate_stacks_makefile.py'
+    'CMakeLists.txt.template'
+    )
 
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
     '79ae7fb600e116623a42631d15d66a87'
@@ -27,7 +28,7 @@ md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
     'ac82eca7efc9f0ff7e8b976a83692868'
     'b0c5e2b65b0722e0288e010525193258'
     '161a411c0a2c4c8f621e968e1016bddb'
-    'e233066f45ce8865b2612523571f70fd'
+    'e0ac64d86ea8c9f11a64188210599733'
     'd7280f6da3ee5d1865601ac6339d12d3')
 
 build() {
