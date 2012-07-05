@@ -30,6 +30,7 @@
 import xml.dom.minidom as minidom
 import sys
 
+
 def main():
   if len(sys.argv) < 2:
     print('Usage: %s <stack.xml>' % sys.argv[0])
@@ -40,8 +41,15 @@ def main():
     print('Invalid stack.xml. No <stack> node found on toplevel.')
     return 1
   stack = top_level.childNodes[0]
-  print(*[n.getAttribute('stack')
-          for n in stack.childNodes if n.nodeName == 'depend'],
+  legacy_dependency_nodes = [n for n in stack.childNodes if n.nodeName == 'depend']
+  if legacy_dependency_nodes:
+    print(*[n.getAttribute('stack') for n in legacy_dependency_nodes],
          sep=' ', end='')
+  else:
+    dependencies = [n.firstChild.wholeText for n in stack.childNodes
+                    if n.nodeName == 'depends']
+    print(*dependencies, sep=' ', end='')
+
+
 if __name__ == '__main__':
   main()
