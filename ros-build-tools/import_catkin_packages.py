@@ -1,36 +1,46 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 
+from __future__ import print_function
+
+import catkin_pkg.package
 from optparse import OptionParser
 import os
 import os.path
 import subprocess
-import urllib.parse
-import urllib.request
+import urllib2
+import urlparse
 import yaml
 
 
 PKGBUILD_TEMPLATE = """
-pkgdesc='Fill me.'
+pkgdesc='%(description)s'
 url='http://www.ros.org/'
 
 pkgname='ros-%(distro)s-%(package_name)s'
 pkgver='%(package_version)s'
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('%(license)s')
 makedepends=('ros-build-tools')
 
 ros_depends=(%(ros_package_dependencies)s)
-depends=(${ros_depends[@]})
+depends=(${ros_depends[@]}
+  %(other_dependencies)s)
 
 source=()
 md5sums=()
 
 build() {
   source /opt/ros/%(distro)s/setup.bash
-  git clone -b release/%(package_name)s/${pkgver} %(package_url)s %(package_name)s
+  if [ -d ${srcdir}/%(package_name)s ]; then
+    GIT_DIR=${srcdir}/%(package_name)s/.git git fetch origin
+    GIT_DIR=${srcdir}/%(package_name)s/.git git reset --hard release/%(package_name)s/${pkgver}
+  else
+    git clone -b release/%(package_name)s/${pkgver} %(package_url)s ${srcdir}/%(package_name)s
+  fi
   mkdir ${srcdir}/build && cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/%(package_name)s
   cmake ${srcdir}/%(package_name)s -DCMAKE_INSTALL_PREFIX=/opt/ros/%(distro)s -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
 }
@@ -44,7 +54,7 @@ package() {
 class DistroDescription(object):
 
   def __init__(self, name, url):
-    stream = urllib.request.urlopen(url)
+    stream = urllib2.urlopen(url)
     self.name = name
     self._distro = yaml.load(stream)
     if self.name != self._distro['release-name']:
@@ -63,38 +73,88 @@ def list_packages(distro_description):
 
 ### From http://code.activestate.com/recipes/577058/ (r2)
 def query_yes_no(question, default="yes"):
-    """Ask a yes/no question via raw_input() and return their answer.
-    
-    "question" is a string that is presented to the user.
-    "default" is the presumed answer if the user just hits <Enter>.
-        It must be "yes" (the default), "no" or None (meaning
-        an answer is required of the user).
+  """Ask a yes/no question via raw_input() and return their answer.
+  
+  "question" is a string that is presented to the user.
+  "default" is the presumed answer if the user just hits <Enter>.
+      It must be "yes" (the default), "no" or None (meaning
+      an answer is required of the user).
 
-    The "answer" return value is one of "yes" or "no".
-    """
-    valid = {"yes":"yes",   "y":"yes",  "ye":"yes",
-             "no":"no",     "n":"no"}
-    if default == None:
-        prompt = " [y/n] "
-    elif default == "yes":
-        prompt = " [Y/n] "
-    elif default == "no":
-        prompt = " [y/N] "
-    else:
-        raise ValueError("invalid default answer: '%s'" % default)
-    while True:
-        print(question + prompt)
-        choice = input().lower()
-        if default is not None and choice == '':
-            return default
-        elif choice in valid.keys():
-            return valid[choice]
-        else:
-            print("Please respond with 'yes' or 'no' (or 'y' or 'n').")
+  The "answer" return value is one of "yes" or "no".
+  """
+  valid = {"yes":"yes",   "y":"yes",  "ye":"yes",
+           "no":"no",     "n":"no"}
+  if default == None:
+      prompt = " [y/n] "
+  elif default == "yes":
+      prompt = " [Y/n] "
+  elif default == "no":
+      prompt = " [y/N] "
+  else:
+      raise ValueError("invalid default answer: '%s'" % default)
+  while True:
+      print(question + prompt)
+      choice = raw_input().lower()
+      if default is not None and choice == '':
+          return default
+      elif choice in valid.keys():
+          return valid[choice]
+      else:
+          print("Please respond with 'yes' or 'no' (or 'y' or 'n').")
 
 
-def generate_pkgbuild(distro_description, package_name, directory):
+def parse_package_file(url):
+  """
+  Parses the package.xml file specified by `url`.
+  
+  Arguments:
+  - `url`: Valid URL pointing to a package.xml file.
+  """
+  return catkin_pkg.package.parse_package_string(
+    urllib2.urlopen(url).read())
+
+
+def github_raw_url(repo_url, path, commitish):
+  """
+  Returns the URL of the file blob corresponding to `path` in the
+  github repository `repo_url` in branch, commit or tag `commitish`.
+  """
+  url = urlparse.urlsplit(repo_url)
+  return 'https://raw.%(host)s%(repo_path)s/%(branch)s/%(path)s' % {
+    'host': url.hostname,
+    'repo_path': url.path.replace('.git', ''),
+    'branch': commitish,
+    'path': path
+    }
+
+
+def get_ros_dependencies(distro, package):
+  known_packages = distro.packages()
+  return list(set([ dependency.name for dependency in package.build_depends + package.run_depends
+                    if dependency.name in known_packages ]))
+
+
+def get_non_ros_dependencies(distro, package):
+  ros_dependencies = get_ros_dependencies(distro, package)
+  return list(set([ dependency.name for dependency in package.build_depends + package.run_depends
+                    if dependency.name not in ros_dependencies ]))
+
+
+def fix_python_dependencies(packages):
+  return [ package.replace('python-', 'python2-') for package in packages ]
+
+def generate_pkgbuild(distro_description, package_name, directory, exclude_dependencies=[]):
   package = distro_description.package(package_name)
+  package_version = package['version'].split('-')[0]
+  package_url = package['url']
+  package_description = parse_package_file(
+    github_raw_url(package_url, 'package.xml', 'release/catkin/' + package_version))
+  ros_dependencies = [ dependency
+                       for dependency in get_ros_dependencies(distro_description, package_description)
+                       if dependency not in exclude_dependencies ]
+  other_dependencies = [ dependency
+                         for dependency in get_non_ros_dependencies(distro_description, package_description)
+                         if dependency not in exclude_dependencies ]
   output_directory = os.path.join(directory, package_name)
   if not os.path.exists(output_directory):
     os.mkdir(output_directory)
@@ -106,10 +166,14 @@ def generate_pkgbuild(distro_description, package_name, directory):
   with open(os.path.join(output_directory, 'PKGBUILD'), 'w') as pkgbuild:
     template_substitutions = {
       'distro': distro_description.name,
+      'description': package_description.description,
+      'license': ', '.join(package_description.licenses),
       'package_name': package_name,
-      'package_version': package['version'].split('-')[0],
-      'package_url': package['url'],
-      'ros_package_dependencies': 'todo',}
+      'package_version': package_version,
+      'package_url': package_url,
+      'ros_package_dependencies': '\n  '.join(ros_dependencies),
+      'other_dependencies': '  \n  '.join(fix_python_dependencies(other_dependencies))
+      }
     pkgbuild.write(PKGBUILD_TEMPLATE % template_substitutions)
 
 
@@ -125,6 +189,10 @@ def main():
     '--distro-url', metavar='distro_url',
     default='https://raw.github.com/ros/rosdistro/master/releases/%s.yaml',
     help='The URL of the distro description. %s is replaced by the actual distro name')
+  parser.add_option(
+    '--exclude-dependencies', metavar='exclude_dependencies',
+    default='python-catkin-pkg',
+    help='Comma-separated list of (source) package dependencies to exclude from the generated PKGBUILD file.')
   options, args = parser.parse_args()
 
   distro_description = DistroDescription(
@@ -135,7 +203,8 @@ def main():
   elif args:
     for package in args:
       generate_pkgbuild(distro_description, package,
-                        os.path.abspath(options.output_directory))
+                        os.path.abspath(options.output_directory),
+                        exclude_dependencies=options.exclude_dependencies)
   else:
     parser.error('No packages specified.')
 
