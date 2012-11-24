@@ -18,7 +18,6 @@ source=('fix-python-scripts.sh'
     'PKGBUILD.rostemplate'
     'get_stack_dependencies.py'
     'generate_stacks_makefile.py'
-    'CMakeLists.txt.template'
     'generate-python-patch.sh'
     'import_catkin_packages.py')
 
@@ -28,7 +27,6 @@ md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
     'b0c5e2b65b0722e0288e010525193258'
     'd257f7f20384e894b0431ee61068aa96'
     'e0ac64d86ea8c9f11a64188210599733'
-    'd7280f6da3ee5d1865601ac6339d12d3'
     '8d6d7eb89a12c449497b209f1a06655b'
     '0bc91358f03e5632c4ddc8f15858ae22')
 
