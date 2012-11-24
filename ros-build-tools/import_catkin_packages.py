@@ -29,7 +29,7 @@ md5sums=()
 
 build() {
   source /opt/ros/%(distro)s/setup.bash
-  git clone -b release/%(package_name)s/%(package_version)s %(package_url)s %(package_name)s
+  git clone -b release/%(package_name)s/${pkgver} %(package_url)s %(package_name)s
   mkdir ${srcdir}/build && cd ${srcdir}/build
   cmake ${srcdir}/%(package_name)s -DCMAKE_INSTALL_PREFIX=/opt/ros/%(distro)s -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
