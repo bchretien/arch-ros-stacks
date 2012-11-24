@@ -5,11 +5,11 @@ url='http://www.ros.org/'
 pkgname='ros-electric-ros-comm'
 pkgver='1.6.6'
 arch=('i686' 'x86_64')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 makedepends=('ros-build-tools')
-depends=('ros-electric-ros' 'apr' 'apr-util' 'log4cxx' 'python-imaging'
-         'python-numpy' 'python2-matplotlib' 'python-paramiko')
+depends=('ros-electric-ros' 'apr' 'apr-util' 'log4cxx' 'python2-imaging'
+         'python2-numpy' 'python2-matplotlib' 'python2-paramiko')
 
 source=("https://code.ros.org/svn/release/download/stacks/ros_comm/ros_comm-1.6.6/ros_comm-1.6.6.tar.bz2"
         'ros_comm.patch')
