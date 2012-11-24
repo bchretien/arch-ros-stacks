@@ -19,7 +19,8 @@ source=('fix-python-scripts.sh'
     'get_stack_dependencies.py'
     'generate_stacks_makefile.py'
     'CMakeLists.txt.template'
-    'generate-python-patch.sh')
+    'generate-python-patch.sh'
+    'import_catkin_packages.py')
 
 md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
     '79ae7fb600e116623a42631d15d66a87'
@@ -28,7 +29,8 @@ md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
     'd257f7f20384e894b0431ee61068aa96'
     'e0ac64d86ea8c9f11a64188210599733'
     'd7280f6da3ee5d1865601ac6339d12d3'
-    '8d6d7eb89a12c449497b209f1a06655b')
+    '8d6d7eb89a12c449497b209f1a06655b'
+    '29e5087fc05aea02febeed9882a81d27')
 
 build() {
     mkdir -p ${pkgdir}${pkg_destination_dir}
