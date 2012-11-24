@@ -16,7 +16,7 @@ source=()
 md5sums=()
 
 build() {
-  git clone -b release/catkin/0.5.52 git://github.com/ros-gbp/catkin-release.git catkin
+  git clone -b release/catkin/${pkgver} git://github.com/ros-gbp/catkin-release.git catkin
   mkdir ${srcdir}/build && cd ${srcdir}/build
   cmake ${srcdir}/catkin -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
