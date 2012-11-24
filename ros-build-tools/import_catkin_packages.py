@@ -148,7 +148,7 @@ def generate_pkgbuild(distro_description, package_name, directory, exclude_depen
   package_version = package['version'].split('-')[0]
   package_url = package['url']
   package_description = parse_package_file(
-    github_raw_url(package_url, 'package.xml', 'release/catkin/' + package_version))
+    github_raw_url(package_url, 'package.xml', 'release/'+ package_name + '/' + package_version))
   ros_dependencies = [ dependency
                        for dependency in get_ros_dependencies(distro_description, package_description)
                        if dependency not in exclude_dependencies ]
