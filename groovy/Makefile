@@ -1,351 +1,387 @@
 
-all: urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz rviz/ros-groovy-rviz-1.9.16-1-x86_64.pkg.tar.xz collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz actionlib/ros-groovy-actionlib-1.9.9-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz roslisp/ros-groovy-roslisp-1.9.10-1-x86_64.pkg.tar.xz rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz
+all: ./genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz ./rosout/ros-groovy-rosout-1.9.32-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz ./class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz ./rosboost_cfg/ros-groovy-rosboost-cfg-1.9.33-1-x86_64.pkg.tar.xz ./tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz ./rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz ./visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz ./rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz ./resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz ./python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz ./urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz ./roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz ./std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./mk/ros-groovy-mk-1.9.33-1-x86_64.pkg.tar.xz ./pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz ./rosmake/ros-groovy-rosmake-1.9.33-1-x86_64.pkg.tar.xz ./laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz ./roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz ./rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz ./angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz ./topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz ./rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz ./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz ./urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz ./ros/ros-groovy-ros-1.9.33-1-x86_64.pkg.tar.xz ./rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz ./interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz ./roslisp/ros-groovy-roslisp-1.9.10-1-x86_64.pkg.tar.xz ./nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz ./roscreate/ros-groovy-roscreate-1.9.33-1-x86_64.pkg.tar.xz ./rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz ./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz ./opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz ./gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz ./actionlib/ros-groovy-actionlib-1.9.9-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz ./rviz/ros-groovy-rviz-1.9.16-1-x86_64.pkg.tar.xz ./collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz ./genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz ./actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz
 
-.PHONY : urdfdom_headers
-urdfdom_headers: urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz
+.PHONY : ./genlisp
+./genlisp: ./genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz
 
-urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz: console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz
-	cd urdfdom_headers; makepkg -i
+./genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
+	cd ./genlisp; makepkg -i
 
-.PHONY : rosgraph_msgs
-rosgraph_msgs: rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./rosout
+./rosout: ./rosout/ros-groovy-rosout-1.9.32-1-x86_64.pkg.tar.xz
 
-rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz: langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd rosgraph_msgs; makepkg -i
+./rosout/ros-groovy-rosout-1.9.32-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosout; makepkg -i
 
-.PHONY : urdfdom
-urdfdom: urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz
+.PHONY : ./genmsg
+./genmsg: ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
 
-urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz: console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz
-	cd urdfdom; makepkg -i
+./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./genmsg; makepkg -i
 
-.PHONY : roscpp
-roscpp: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./image_transport
+./image_transport: ./image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz
 
-roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz: xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
-	cd roscpp; makepkg -i
+./image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz: ./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz
+	cd ./image_transport; makepkg -i
 
-.PHONY : urdf
-urdf: urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz
+.PHONY : ./class_loader
+./class_loader: ./class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz
 
-urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz
-	cd urdf; makepkg -i
+./class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz: ./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./class_loader; makepkg -i
 
-.PHONY : xmlrpcpp
-xmlrpcpp: xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./rosboost_cfg
+./rosboost_cfg: ./rosboost_cfg/ros-groovy-rosboost-cfg-1.9.33-1-x86_64.pkg.tar.xz
 
-xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz: cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd xmlrpcpp; makepkg -i
+./rosboost_cfg/ros-groovy-rosboost-cfg-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosboost_cfg; makepkg -i
 
-.PHONY : topic_tools
-topic_tools: topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./tf
+./tf: ./tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz
 
-topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd topic_tools; makepkg -i
+./tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz: ./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz
+	cd ./tf; makepkg -i
 
-.PHONY : image_transport
-image_transport: image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz
+.PHONY : ./std_msgs
+./std_msgs: ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz
 
-image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz: message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz
-	cd image_transport; makepkg -i
+./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz: ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./std_msgs; makepkg -i
 
-.PHONY : rosconsole_bridge
-rosconsole_bridge: rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz
+.PHONY : ./rosconsole
+./rosconsole: ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
 
-rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz: console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
-	cd rosconsole_bridge; makepkg -i
+./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz: ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosconsole; makepkg -i
 
-.PHONY : rviz
-rviz: rviz/ros-groovy-rviz-1.9.16-1-x86_64.pkg.tar.xz
+.PHONY : ./rosbash
+./rosbash: ./rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz
 
-rviz/ros-groovy-rviz-1.9.16-1-x86_64.pkg.tar.xz: std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz
-	cd rviz; makepkg -i
+./rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosbash; makepkg -i
 
-.PHONY : collada_parser
-collada_parser: collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz
+.PHONY : ./rospy
+./rospy: ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz
 
-collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz
-	cd collada_parser; makepkg -i
+./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz ./genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz
+	cd ./rospy; makepkg -i
 
-.PHONY : nav_msgs
-nav_msgs: nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz
+.PHONY : ./rostest
+./rostest: ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz
 
-nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd nav_msgs; makepkg -i
+./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz: ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./rostest; makepkg -i
 
-.PHONY : actionlib_msgs
-actionlib_msgs: actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz
+.PHONY : ./rosbuild
+./rosbuild: ./rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz
 
-actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz: langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd actionlib_msgs; makepkg -i
+./rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosbuild; makepkg -i
 
-.PHONY : visualization_msgs
-visualization_msgs: visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz
+.PHONY : ./rosgraph
+./rosgraph: ./rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz
 
-visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd visualization_msgs; makepkg -i
+./rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosgraph; makepkg -i
 
-.PHONY : catkin
-catkin: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+.PHONY : ./geometry_msgs
+./geometry_msgs: ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz
 
-catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz: 
-	cd catkin; makepkg -i
+./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz: ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./geometry_msgs; makepkg -i
 
-.PHONY : rosconsole
-rosconsole: rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./visualization_msgs
+./visualization_msgs: ./visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz
 
-rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz: rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rosconsole; makepkg -i
+./visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./visualization_msgs; makepkg -i
 
-.PHONY : message_filters
-message_filters: message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./rosclean
+./rosclean: ./rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz
 
-message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz
-	cd message_filters; makepkg -i
+./rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosclean; makepkg -i
 
-.PHONY : gencpp
-gencpp: gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz
+.PHONY : ./resource_retriever
+./resource_retriever: ./resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz
 
-gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
-	cd gencpp; makepkg -i
+./resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./resource_retriever; makepkg -i
 
-.PHONY : actionlib
-actionlib: actionlib/ros-groovy-actionlib-1.9.9-1-x86_64.pkg.tar.xz
+.PHONY : ./python_qt_binding
+./python_qt_binding: ./python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz
 
-actionlib/ros-groovy-actionlib-1.9.9-1-x86_64.pkg.tar.xz: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz
-	cd actionlib; makepkg -i
+./python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz: ./rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./python_qt_binding; makepkg -i
 
-.PHONY : std_msgs
-std_msgs: std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz
+.PHONY : ./catkin
+./catkin: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
 
-std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz: langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd std_msgs; makepkg -i
+./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz: 
+	cd ./catkin; makepkg -i
 
-.PHONY : langs
-langs: langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+.PHONY : ./urdf_interface
+./urdf_interface: ./urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz
 
-langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz
-	cd langs; makepkg -i
+./urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz
+	cd ./urdf_interface; makepkg -i
 
-.PHONY : roslib
-roslib: roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz
+.PHONY : ./urdfdom_headers
+./urdfdom_headers: ./urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz
 
-roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz: rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd roslib; makepkg -i
+./urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz: ./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz
+	cd ./urdfdom_headers; makepkg -i
 
-.PHONY : image_geometry
-image_geometry: image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz
+.PHONY : ./roscpp_serialization
+./roscpp_serialization: ./roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz
 
-image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz
-	cd image_geometry; makepkg -i
+./roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz: ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz
+	cd ./roscpp_serialization; makepkg -i
 
-.PHONY : console_bridge
-console_bridge: console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz
+.PHONY : ./std_srvs
+./std_srvs: ./std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz
 
-console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd console_bridge; makepkg -i
+./std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz: ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./std_srvs; makepkg -i
 
-.PHONY : rosclean
-rosclean: rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz
+.PHONY : ./rostime
+./rostime: ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz
 
-rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rosclean; makepkg -i
+./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz: ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rostime; makepkg -i
 
-.PHONY : tf
-tf: tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz
+.PHONY : ./mk
+./mk: ./mk/ros-groovy-mk-1.9.33-1-x86_64.pkg.tar.xz
 
-tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz: message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz
-	cd tf; makepkg -i
+./mk/ros-groovy-mk-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./mk; makepkg -i
 
-.PHONY : interactive_markers
-interactive_markers: interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz
+.PHONY : ./pluginlib
+./pluginlib: ./pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz
 
-interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz: message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz
-	cd interactive_markers; makepkg -i
+./pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz: ./class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./pluginlib; makepkg -i
 
-.PHONY : roslisp
-roslisp: roslisp/ros-groovy-roslisp-1.9.10-1-x86_64.pkg.tar.xz
+.PHONY : ./roscpp_traits
+./roscpp_traits: ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz
 
-roslisp/ros-groovy-roslisp-1.9.10-1-x86_64.pkg.tar.xz: rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
-	cd roslisp; makepkg -i
+./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz: ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./roscpp_traits; makepkg -i
 
-.PHONY : rosbag
-rosbag: rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./rosmake
+./rosmake: ./rosmake/ros-groovy-rosmake-1.9.33-1-x86_64.pkg.tar.xz
 
-rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz: roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
-	cd rosbag; makepkg -i
+./rosmake/ros-groovy-rosmake-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosmake; makepkg -i
 
-.PHONY : rosunit
-rosunit: rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz
+.PHONY : ./laser_geometry
+./laser_geometry: ./laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz
 
-rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rosunit; makepkg -i
+./laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz: ./angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz ./tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz
+	cd ./laser_geometry; makepkg -i
 
-.PHONY : rosbash
-rosbash: rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz
+.PHONY : ./roslang
+./roslang: ./roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz
 
-rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rosbash; makepkg -i
+./roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
+	cd ./roslang; makepkg -i
 
-.PHONY : rospy
-rospy: rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./sensor_msgs
+./sensor_msgs: ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz
 
-rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz
-	cd rospy; makepkg -i
+./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./sensor_msgs; makepkg -i
 
-.PHONY : rostest
-rostest: rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./rospack
+./rospack: ./rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz
 
-rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz: rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz
-	cd rostest; makepkg -i
+./rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rospack; makepkg -i
 
-.PHONY : rosbuild
-rosbuild: rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz
+.PHONY : ./angles
+./angles: ./angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz
 
-rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rosbuild; makepkg -i
+./angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./angles; makepkg -i
 
-.PHONY : langs-dev
-langs-dev: langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz
+.PHONY : ./topic_tools
+./topic_tools: ./topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz
 
-langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz: gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz
-	cd langs-dev; makepkg -i
+./topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./topic_tools; makepkg -i
 
-.PHONY : genlisp
-genlisp: genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz
+.PHONY : ./rosconsole_bridge
+./rosconsole_bridge: ./rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz
 
-genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
-	cd genlisp; makepkg -i
+./rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz: ./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./rosconsole_bridge; makepkg -i
 
-.PHONY : roslang
-roslang: roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz
+.PHONY : ./roscpp
+./roscpp: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz
 
-roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
-	cd roslang; makepkg -i
+./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz: ./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz ./roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz ./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./roscpp; makepkg -i
 
-.PHONY : class_loader
-class_loader: class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz
+.PHONY : ./urdf
+./urdf: ./urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz
 
-class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz: console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd class_loader; makepkg -i
+./urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./rosconsole_bridge/ros-groovy-rosconsole-bridge-0.2.4-1-x86_64.pkg.tar.xz ./urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz ./collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz ./urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz
+	cd ./urdf; makepkg -i
 
-.PHONY : genpy
-genpy: genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz
+.PHONY : ./xmlrpcpp
+./xmlrpcpp: ./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz
 
-genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
-	cd genpy; makepkg -i
+./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz: ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./xmlrpcpp; makepkg -i
 
-.PHONY : std_srvs
-std_srvs: std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./urdfdom
+./urdfdom: ./urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz
 
-std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz: langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd std_srvs; makepkg -i
+./urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz: ./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz
+	cd ./urdfdom; makepkg -i
 
-.PHONY : genmsg
-genmsg: genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
+.PHONY : ./ros
+./ros: ./ros/ros-groovy-ros-1.9.33-1-x86_64.pkg.tar.xz
 
-genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd genmsg; makepkg -i
+./ros/ros-groovy-ros-1.9.33-1-x86_64.pkg.tar.xz: ./rosbash/ros-groovy-rosbash-1.9.33-1-x86_64.pkg.tar.xz ./roscreate/ros-groovy-roscreate-1.9.33-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./rosmake/ros-groovy-rosmake-1.9.33-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./mk/ros-groovy-mk-1.9.33-1-x86_64.pkg.tar.xz ./rosboost_cfg/ros-groovy-rosboost-cfg-1.9.33-1-x86_64.pkg.tar.xz ./rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz ./rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz ./roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz
+	cd ./ros; makepkg -i
 
-.PHONY : laser_geometry
-laser_geometry: laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz
+.PHONY : ./rosmaster
+./rosmaster: ./rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz
 
-laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz: angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz
-	cd laser_geometry; makepkg -i
+./rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./rosmaster; makepkg -i
 
-.PHONY : rosmaster
-rosmaster: rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./cpp_common
+./cpp_common: ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz
 
-rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz
-	cd rosmaster; makepkg -i
+./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./cpp_common; makepkg -i
 
-.PHONY : sensor_msgs
-sensor_msgs: sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz
+.PHONY : ./rosgraph_msgs
+./rosgraph_msgs: ./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
 
-sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd sensor_msgs; makepkg -i
+./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz: ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./rosgraph_msgs; makepkg -i
 
-.PHONY : rospack
-rospack: rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz
+.PHONY : ./interactive_markers
+./interactive_markers: ./interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz
 
-rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rospack; makepkg -i
+./interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz: ./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz ./tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz ./visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./interactive_markers; makepkg -i
 
-.PHONY : angles
-angles: angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz
+.PHONY : ./roslisp
+./roslisp: ./roslisp/ros-groovy-roslisp-1.9.10-1-x86_64.pkg.tar.xz
 
-angles/ros-groovy-angles-1.9.7-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd angles; makepkg -i
+./roslisp/ros-groovy-roslisp-1.9.10-1-x86_64.pkg.tar.xz: ./rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz ./roslang/ros-groovy-roslang-1.9.33-1-x86_64.pkg.tar.xz ./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./roslisp; makepkg -i
 
-.PHONY : rostime
-rostime: rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz
+.PHONY : ./nav_msgs
+./nav_msgs: ./nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz
 
-rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz: cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rostime; makepkg -i
+./nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./nav_msgs; makepkg -i
 
-.PHONY : pluginlib
-pluginlib: pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz
+.PHONY : ./roscreate
+./roscreate: ./roscreate/ros-groovy-roscreate-1.9.33-1-x86_64.pkg.tar.xz
 
-pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz: class_loader/ros-groovy-class-loader-0.1.11-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
-	cd pluginlib; makepkg -i
+./roscreate/ros-groovy-roscreate-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./roscreate; makepkg -i
 
-.PHONY : roscpp_traits
-roscpp_traits: roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz
+.PHONY : ./rosbag
+./rosbag: ./rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz
 
-roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz: rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd roscpp_traits; makepkg -i
+./rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./topic_tools/ros-groovy-topic-tools-1.9.32-1-x86_64.pkg.tar.xz ./roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz ./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./rosbag; makepkg -i
 
-.PHONY : python_qt_binding
-python_qt_binding: python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz
+.PHONY : ./langs-dev
+./langs-dev: ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz
 
-python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz: rosbuild/ros-groovy-rosbuild-1.9.33-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd python_qt_binding; makepkg -i
+./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz: ./gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genlisp/ros-groovy-genlisp-0.4.8-1-x86_64.pkg.tar.xz ./genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz
+	cd ./langs-dev; makepkg -i
 
-.PHONY : opencv2
-opencv2: opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz
+.PHONY : ./roslaunch
+./roslaunch: ./roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz
 
-opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd opencv2; makepkg -i
+./roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz: ./rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz ./rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./roslaunch; makepkg -i
 
-.PHONY : urdf_interface
-urdf_interface: urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz
+.PHONY : ./roslib
+./roslib: ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz
 
-urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz urdfdom/ros-groovy-urdfdom-0.2.5-1-x86_64.pkg.tar.xz
-	cd urdf_interface; makepkg -i
+./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz: ./rospack/ros-groovy-rospack-2.1.12-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./roslib; makepkg -i
 
-.PHONY : roscpp_serialization
-roscpp_serialization: roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz
+.PHONY : ./image_geometry
+./image_geometry: ./image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz
 
-roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz: rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz
-	cd roscpp_serialization; makepkg -i
+./image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz ./opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz
+	cd ./image_geometry; makepkg -i
 
-.PHONY : roslaunch
-roslaunch: roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./console_bridge
+./console_bridge: ./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz
 
-roslaunch/ros-groovy-roslaunch-1.9.32-1-x86_64.pkg.tar.xz: rosclean/ros-groovy-rosclean-1.9.33-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz rosmaster/ros-groovy-rosmaster-1.9.32-1-x86_64.pkg.tar.xz rosgraph_msgs/ros-groovy-rosgraph-msgs-1.9.32-1-x86_64.pkg.tar.xz
-	cd roslaunch; makepkg -i
+./console_bridge/ros-groovy-console-bridge-0.1.2-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./console_bridge; makepkg -i
 
-.PHONY : rosgraph
-rosgraph: rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz
+.PHONY : ./opencv2
+./opencv2: ./opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz
 
-rosgraph/ros-groovy-rosgraph-1.9.32-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd rosgraph; makepkg -i
+./opencv2/ros-groovy-opencv2-2.4.2-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./opencv2; makepkg -i
 
-.PHONY : geometry_msgs
-geometry_msgs: geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz
+.PHONY : ./rosunit
+./rosunit: ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz
 
-geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz: langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
-	cd geometry_msgs; makepkg -i
+./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
+	cd ./rosunit; makepkg -i
 
-.PHONY : resource_retriever
-resource_retriever: resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz
+.PHONY : ./message_filters
+./message_filters: ./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz
 
-resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz
-	cd resource_retriever; makepkg -i
+./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./xmlrpcpp/ros-groovy-xmlrpcpp-1.9.32-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rosunit/ros-groovy-rosunit-1.9.33-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz
+	cd ./message_filters; makepkg -i
 
-.PHONY : cpp_common
-cpp_common: cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz
+.PHONY : ./gencpp
+./gencpp: ./gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz
 
-cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz: catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz
-	cd cpp_common; makepkg -i
+./gencpp/ros-groovy-gencpp-0.4.9-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
+	cd ./gencpp; makepkg -i
+
+.PHONY : ./actionlib
+./actionlib: ./actionlib/ros-groovy-actionlib-1.9.9-1-x86_64.pkg.tar.xz
+
+./actionlib/ros-groovy-actionlib-1.9.9-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz ./rostest/ros-groovy-rostest-1.9.32-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz ./actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz
+	cd ./actionlib; makepkg -i
+
+.PHONY : ./langs
+./langs: ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+
+./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./roscpp_serialization/ros-groovy-roscpp-serialization-0.3.9-1-x86_64.pkg.tar.xz ./rostime/ros-groovy-rostime-0.3.9-1-x86_64.pkg.tar.xz ./cpp_common/ros-groovy-cpp-common-0.3.9-1-x86_64.pkg.tar.xz ./roscpp_traits/ros-groovy-roscpp-traits-0.3.9-1-x86_64.pkg.tar.xz ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz
+	cd ./langs; makepkg -i
+
+.PHONY : ./rviz
+./rviz: ./rviz/ros-groovy-rviz-1.9.16-1-x86_64.pkg.tar.xz
+
+./rviz/ros-groovy-rviz-1.9.16-1-x86_64.pkg.tar.xz: ./std_srvs/ros-groovy-std-srvs-1.9.32-1-x86_64.pkg.tar.xz ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./tf/ros-groovy-tf-1.9.23-1-x86_64.pkg.tar.xz ./rosconsole/ros-groovy-rosconsole-1.9.32-1-x86_64.pkg.tar.xz ./urdf_interface/ros-groovy-urdf-interface-1.9.28-1-x86_64.pkg.tar.xz ./sensor_msgs/ros-groovy-sensor-msgs-1.9.9-1-x86_64.pkg.tar.xz ./geometry_msgs/ros-groovy-geometry-msgs-1.9.9-1-x86_64.pkg.tar.xz ./image_geometry/ros-groovy-image-geometry-1.9.10-1-x86_64.pkg.tar.xz ./pluginlib/ros-groovy-pluginlib-1.9.10-1-x86_64.pkg.tar.xz ./urdf/ros-groovy-urdf-1.9.28-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./rosbag/ros-groovy-rosbag-1.9.32-1-x86_64.pkg.tar.xz ./python_qt_binding/ros-groovy-python-qt-binding-0.2.4-1-x86_64.pkg.tar.xz ./image_transport/ros-groovy-image-transport-1.9.19-1-x86_64.pkg.tar.xz ./message_filters/ros-groovy-message-filters-1.9.32-1-x86_64.pkg.tar.xz ./interactive_markers/ros-groovy-interactive-markers-1.9.2-1-x86_64.pkg.tar.xz ./roslib/ros-groovy-roslib-1.9.33-1-x86_64.pkg.tar.xz ./visualization_msgs/ros-groovy-visualization-msgs-1.9.9-1-x86_64.pkg.tar.xz ./laser_geometry/ros-groovy-laser-geometry-1.5.5-1-x86_64.pkg.tar.xz ./resource_retriever/ros-groovy-resource-retriever-1.9.28-1-x86_64.pkg.tar.xz ./rospy/ros-groovy-rospy-1.9.32-1-x86_64.pkg.tar.xz ./nav_msgs/ros-groovy-nav-msgs-1.9.9-1-x86_64.pkg.tar.xz
+	cd ./rviz; makepkg -i
+
+.PHONY : ./collada_parser
+./collada_parser: ./collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz
+
+./collada_parser/ros-groovy-collada-parser-1.9.28-1-x86_64.pkg.tar.xz: ./roscpp/ros-groovy-roscpp-1.9.32-1-x86_64.pkg.tar.xz ./urdfdom_headers/ros-groovy-urdfdom-headers-0.2.1-1-x86_64.pkg.tar.xz
+	cd ./collada_parser; makepkg -i
+
+.PHONY : ./genpy
+./genpy: ./genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz
+
+./genpy/ros-groovy-genpy-0.4.8-1-x86_64.pkg.tar.xz: ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz
+	cd ./genpy; makepkg -i
+
+.PHONY : ./actionlib_msgs
+./actionlib_msgs: ./actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz
+
+./actionlib_msgs/ros-groovy-actionlib-msgs-1.9.9-1-x86_64.pkg.tar.xz: ./langs-dev/ros-groovy-langs-dev-0.2.6-1-x86_64.pkg.tar.xz ./catkin/ros-groovy-catkin-0.5.52-1-x86_64.pkg.tar.xz ./genmsg/ros-groovy-genmsg-0.4.14-1-x86_64.pkg.tar.xz ./std_msgs/ros-groovy-std-msgs-0.5.5-1-x86_64.pkg.tar.xz ./langs/ros-groovy-langs-0.4.6-1-x86_64.pkg.tar.xz
+	cd ./actionlib_msgs; makepkg -i
 

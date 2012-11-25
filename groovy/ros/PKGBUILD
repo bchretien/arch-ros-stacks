@@ -1,0 +1,28 @@
+
+pkgdesc="ROS packaging system"
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-ros'
+pkgver='1.9.33'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-rosbash
+  ros-groovy-roscreate
+  ros-groovy-catkin
+  ros-groovy-rosmake
+  ros-groovy-roslib
+  ros-groovy-rosunit
+  ros-groovy-mk
+  ros-groovy-rosboost-cfg
+  ros-groovy-rosclean
+  ros-groovy-rosbuild
+  ros-groovy-roslang)
+depends=(${ros_depends[@]}
+  )
+
+source=()
+md5sums=()
+
