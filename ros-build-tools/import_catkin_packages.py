@@ -117,7 +117,7 @@ package() {
       'package_version': self.version,
       'package_url': self.repository_url,
       'license': ', '.join(self.licenses),
-      'description': self.description.replace('"', '\\"'),
+      'description': self.description.replace('"', '\\"').replace('`', '\`'),
       'ros_package_dependencies': '\n  '.join(ros_dependencies),
       'other_dependencies': '\n  '.join(other_dependencies)
       }

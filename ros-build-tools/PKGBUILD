@@ -28,7 +28,7 @@ md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
     'd257f7f20384e894b0431ee61068aa96'
     'e82acbb6ca9bc420ef84a8c1b7cff346'
     '8d6d7eb89a12c449497b209f1a06655b'
-    'd9ee0e38f8ab520e3922f338eb0680c0')
+    '2c655ccba586d41c1105efe8f4c0cf42')
 
 build() {
     mkdir -p ${pkgdir}${pkg_destination_dir}
