@@ -159,7 +159,7 @@ def generate_pkgbuild(distro_description, package_name, directory, exclude_depen
   if not os.path.exists(output_directory):
     os.mkdir(output_directory)
   if os.path.exists(os.path.join(output_directory, 'PKGBUILD')):
-    if not query_yes_no(
+    if not force and not query_yes_no(
       "Directory '%s' already contains a PKGBUILD file. Overwrite?" % (
         output_directory)):
       return
@@ -193,6 +193,8 @@ def main():
     '--exclude-dependencies', metavar='exclude_dependencies',
     default='python-catkin-pkg',
     help='Comma-separated list of (source) package dependencies to exclude from the generated PKGBUILD file.')
+  parser.add_option('-f', '--force', dest='force', action='store_true', default=False,
+                    help='Always overwrite exiting PKGBUILD files.')
   options, args = parser.parse_args()
 
   distro_description = DistroDescription(
@@ -204,7 +206,8 @@ def main():
     for package in args:
       generate_pkgbuild(distro_description, package,
                         os.path.abspath(options.output_directory),
-                        exclude_dependencies=options.exclude_dependencies)
+                        exclude_dependencies=options.exclude_dependencies,
+                        force=options.force)
   else:
     parser.error('No packages specified.')
 
