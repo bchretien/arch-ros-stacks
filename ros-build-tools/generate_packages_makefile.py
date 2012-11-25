@@ -5,10 +5,12 @@ import subprocess
 import sys
 
 
-MAKEFILE_TARGET = """%(package)s/.built: %(dependency_string)s
-\tcd %(package)s; makepkg -i
-\ttouch %(package)s/.built
+MAKEFILE_TARGET = """
+.PHONY : %(package)s
+%(package)s: %(package)s/%(output_file)s
 
+%(package)s/%(output_file)s: %(dependency_string)s
+\tcd %(package)s; makepkg -i
 """
 
 
@@ -22,10 +24,11 @@ class InvalidPackage(Exception):
 
 class Dependency(object):
 
-  def __init__(self, directory_name, package_name, dependencies):
+  def __init__(self, directory_name, package_name, dependencies, output_file):
     self.directory_name = directory_name
     self.package_name = package_name
     self.dependencies = dependencies
+    self.output_file = output_file
 
 
 class DependencyCache(object):
@@ -41,11 +44,15 @@ class DependencyCache(object):
     if len(aur_package_name) == 0:
       raise InvalidPackage(name)
     dependencies = get_dependencies(pkgbuild_file)
+    output_file = get_pkgbuild_output_file(pkgbuild_file)
     self._dependencies[aur_package_name] = Dependency(
-      name, aur_package_name, dependencies)
+      name, aur_package_name, dependencies, output_file)
 
   def get_packages(self):
     return list(self._dependencies.keys())
+
+  def get_package(self, name):
+    return self._dependencies[name]
 
   def get_package_directory_name(self, name):
     return self._dependencies[name].directory_name
@@ -74,6 +81,13 @@ def get_pkgbuild_variable(pkgbuild, variable, is_array=False):
       return shell_process.stdout.readline().decode().strip()
 
 
+def get_pkgbuild_output_file(pkgbuild):
+  with subprocess.Popen(
+      'source %s && echo ${pkgname}-${pkgver}-${pkgrel}-${HOSTTYPE}.pkg.tar.xz' % (pkgbuild),
+      shell=True, stdout=subprocess.PIPE) as shell_process:
+    return shell_process.stdout.readline().decode().strip()
+
+
 def get_dependencies(pkgbuild):
   return get_pkgbuild_variable(pkgbuild, 'depends', is_array=True)
 
@@ -83,12 +97,14 @@ def get_package_name(pkgbuild):
 
 
 def generate_makefile(cache):
-  makefile = ''
+  makefile = """
+all: %s
+""" % ' '.join([cache.get_package_directory_name(package) for package in cache.get_packages()])
+
   for package in cache.get_packages():
-    dependency_string = ''
-    for dependency in cache.get_dependencies(package):
-      dependency_string += dependency.directory_name + '/.built '
+    dependency_string = ' '.join([dependency.directory_name for dependency in cache.get_dependencies(package)])
     makefile += MAKEFILE_TARGET % {'package': cache.get_package_directory_name(package),
+                                   'output_file': cache.get_package(package).output_file,
                                    'dependency_string': dependency_string}
   return makefile
   
