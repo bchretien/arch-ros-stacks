@@ -68,7 +68,7 @@ class PackageBase(object):
 
 class Package(PackageBase):
   BUILD_TEMPLATE = """
-pkgdesc='%(description)s'
+pkgdesc="%(description)s"
 url='http://www.ros.org/'
 
 pkgname='ros-%(distro)s-%(arch_package_name)s'
@@ -117,7 +117,7 @@ package() {
       'package_version': self.version,
       'package_url': self.repository_url,
       'license': ', '.join(self.licenses),
-      'description': self.description,
+      'description': self.description.replace('"', '\\"'),
       'ros_package_dependencies': '\n  '.join(ros_dependencies),
       'other_dependencies': '\n  '.join(other_dependencies)
       }
@@ -125,7 +125,7 @@ package() {
 
 class MetaPackage(PackageBase):
   BUILD_TEMPLATE = """
-pkgdesc='%(description)s'
+pkgdesc="%(description)s"
 url='http://www.ros.org/'
 
 pkgname='ros-%(distro)s-%(arch_package_name)s'
@@ -160,7 +160,7 @@ md5sums=()
       'package_name': self.name,
       'package_version': self.version,
       'license': ', '.join(self.licenses),
-      'description': self.description,
+      'description': self.description.replace('"', '\"'),
       'ros_package_dependencies': '\n  '.join(ros_dependencies),
       'other_dependencies': '\n  '.join(other_dependencies)
       }
@@ -172,6 +172,7 @@ class DistroDescription(object):
     stream = urllib2.urlopen(url)
     self.name = name
     self._distro = yaml.load(stream)
+    self._package_cache = {}
     if self.name != self._distro['release-name']:
       raise 'ROS distro names do not match (%s != %s)' % (self.name, self._distro['release-name'])
 
@@ -184,16 +185,23 @@ class DistroDescription(object):
     else:
       return packages
 
+  def is_package(self, name):
+    return self._get_package_data(name) != None
+
   def package(self, name):
     package_data = self._get_package_data(name)
     if not package_data:
       raise 'Unable to find package `%s`' % name
+    if self._package_cache.get(name):
+      return self._package_cache[name]
     url = package_data['url']
     version = package_data['version'].split('-')[0]
     if self._is_meta_package(name):
-      return MetaPackage(self, url, name, version)
+      package = MetaPackage(self, url, name, version)
     else:
-      return Package(self, url, name, version)
+      package = Package(self, url, name, version)
+    self._package_cache[name] = package
+    return package
 
   def meta_package_package_names(self, name):
     return self._distro['repositories'][name]['packages'].keys()
@@ -263,23 +271,38 @@ def github_raw_url(repo_url, path, commitish):
     }
 
 
-def generate_pkgbuild(distro_description, package, directory, force=False,
-                      exclude_dependencies=[]):
+def generate_pkgbuild(distro, package, directory, force=False,
+                      no_overwrite=False, recursive=False, exclude_dependencies=[],
+                      generated=None):
+  if generated is None:
+    generated = []
+  elif package in generated:
+    return
   if package.packages:
     for child_package in package.packages:
-      generate_pkgbuild(distro_description, child_package, directory,
-                        force, exclude_dependencies)
-  print('Generating PKGBUILD for package %s.' % package.name)
+      generate_pkgbuild(distro, child_package, directory,
+                        force=force, exclude_dependencies=exclude_dependencies,
+                        no_overwrite=no_overwrite, recursive=recursive)
+  if recursive:
+    for dependency in package.dependencies:
+      if distro.is_package(dependency):
+        generate_pkgbuild(distro, distro.package(dependency), directory,
+                          force=force, no_overwrite=no_overwrite, recursive=recursive,
+                          exclude_dependencies=exclude_dependencies)
   output_directory = os.path.join(directory, package.name)
   if not os.path.exists(output_directory):
     os.mkdir(output_directory)
   if os.path.exists(os.path.join(output_directory, 'PKGBUILD')):
+    if no_overwrite:
+      return
     if not force and not query_yes_no(
       "Directory '%s' already contains a PKGBUILD file. Overwrite?" % (
         output_directory)):
       return
+  print('Generating PKGBUILD for package %s.' % package.name)
   with open(os.path.join(output_directory, 'PKGBUILD'), 'w') as pkgbuild:
     pkgbuild.write(package.generate(exclude_dependencies))
+  generated.append(package)
 
 
 def main():
@@ -300,19 +323,24 @@ def main():
     help='Comma-separated list of (source) package dependencies to exclude from the generated PKGBUILD file.')
   parser.add_option('-f', '--force', dest='force', action='store_true', default=False,
                     help='Always overwrite exiting PKGBUILD files.')
+  parser.add_option('-n', '--no-overwrite', dest='no_overwrite', action='store_true', default=False,
+                    help='Do not overwrite PKGBUILD files.')
+  parser.add_option('--recursive', dest='recursive', action='store_true', default=False,
+                    help='Recursively import dependencies')
   options, args = parser.parse_args()
 
-  distro_description = DistroDescription(
+  distro = DistroDescription(
     options.distro, url=options.distro_url % options.distro)
   if options.list_packages:
-    list_packages(distro_description)
+    list_packages(distro)
     return
   elif args:
     for package in args:
-      generate_pkgbuild(distro_description, distro_description.package(package),
+      generate_pkgbuild(distro, distro.package(package),
                         os.path.abspath(options.output_directory),
                         exclude_dependencies=options.exclude_dependencies.split(','),
-                        force=options.force)
+                        force=options.force, no_overwrite=options.no_overwrite,
+                        recursive=options.recursive)
   else:
     parser.error('No packages specified.')
 
