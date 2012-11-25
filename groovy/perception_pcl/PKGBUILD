@@ -1,0 +1,23 @@
+
+pkgdesc="<p>
+  PCL (Point Cloud Library) ROS interface stack. PCL-ROS is the preferred
+  bridge for 3D applications involving n-D Point Clouds and 3D geometry
+  processing in ROS.
+</p>"
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-perception-pcl'
+pkgver='1.0.17'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-pcl-ros
+  ros-groovy-catkin)
+depends=(${ros_depends[@]}
+  )
+
+source=()
+md5sums=()
+

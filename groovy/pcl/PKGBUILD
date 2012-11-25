@@ -1,0 +1,58 @@
+
+pkgdesc="The Point Cloud Library (or PCL) for point cloud processing - development
+    The PCL framework contains numerous state-of-the art algorithms including
+    filtering, feature estimation, surface reconstruction, registration, model
+    fitting and segmentation."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-pcl'
+pkgver='1.6.0'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-roscpp
+  ros-groovy-sensor-msgs
+  ros-groovy-topic-tools
+  ros-groovy-roscpp-serialization
+  ros-groovy-rostime
+  ros-groovy-rosconsole
+  ros-groovy-cpp-common
+  ros-groovy-flann
+  ros-groovy-std-msgs
+  ros-groovy-roscpp-traits
+  ros-groovy-rosbag)
+depends=(${ros_depends[@]}
+  eigen
+  libmysqlclient
+  qhull
+  vtk
+  libusb-compat
+  boost
+  openmpi
+  python2-sphinx)
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/pcl ]; then
+    cd ${srcdir}/pcl
+    git fetch origin
+    git reset --hard release/pcl/${pkgver}
+  else
+    git clone -b release/pcl/${pkgver} git://github.com/ros-gbp/pcl-release.git ${srcdir}/pcl
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/pcl
+  cmake ${srcdir}/pcl -DUSE_ROS=ON -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}

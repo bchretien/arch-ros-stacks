@@ -1,0 +1,48 @@
+
+pkgdesc="FLANN is a library for performing fast approximate
+    nearest neighbor searches in high dimensional spaces.
+    It contains a collection of algorithms we found to work
+    best for nearest neighbor search and a system for
+    automatically choosing the best algorithm and optimum
+    parameters depending on the dataset."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-flann'
+pkgver='1.7.1'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=()
+depends=(${ros_depends[@]}
+  python2-numpy
+  cmake
+  python2
+  gtest
+  intel-tbb
+  boost)
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/flann ]; then
+    cd ${srcdir}/flann
+    git fetch origin
+    git reset --hard release/flann/${pkgver}
+  else
+    git clone -b release/flann/${pkgver} git://github.com/ros-gbp/flann-release.git ${srcdir}/flann
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/flann
+  cmake ${srcdir}/flann -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}
