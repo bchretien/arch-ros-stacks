@@ -6,7 +6,7 @@ import sys
 
 
 MAKEFILE_TARGET = """%(package)s/.built: %(dependency_string)s
-\tcd %(package)s; makepkg -i -f
+\tcd %(package)s; makepkg -i
 \ttouch %(package)s/.built
 
 """
@@ -20,7 +20,7 @@ class InvalidPackage(Exception):
     return repr(self.package)
 
 
-class RosDependency(object):
+class Dependency(object):
 
   def __init__(self, directory_name, package_name, dependencies):
     self.directory_name = directory_name
@@ -28,7 +28,7 @@ class RosDependency(object):
     self.dependencies = dependencies
 
 
-class RosDependencyCache(object):
+class DependencyCache(object):
 
   def __init__(self):
     self._dependencies = {}
@@ -40,9 +40,9 @@ class RosDependencyCache(object):
     aur_package_name = get_package_name(pkgbuild_file)
     if len(aur_package_name) == 0:
       raise InvalidPackage(name)
-    ros_dependencies = get_ros_dependencies(pkgbuild_file)
-    self._dependencies[aur_package_name] = RosDependency(
-      name, aur_package_name, ros_dependencies)
+    dependencies = get_dependencies(pkgbuild_file)
+    self._dependencies[aur_package_name] = Dependency(
+      name, aur_package_name, dependencies)
 
   def get_packages(self):
     return list(self._dependencies.keys())
@@ -74,8 +74,8 @@ def get_pkgbuild_variable(pkgbuild, variable, is_array=False):
       return shell_process.stdout.readline().decode().strip()
 
 
-def get_ros_dependencies(pkgbuild):
-  return get_pkgbuild_variable(pkgbuild, 'ros_depends', is_array=True)
+def get_dependencies(pkgbuild):
+  return get_pkgbuild_variable(pkgbuild, 'depends', is_array=True)
 
 
 def get_package_name(pkgbuild):
@@ -98,7 +98,7 @@ def main():
     print('Usage: %s <AUR package>*' % sys.argv[0])
     return 1
 
-  dependency_cache = RosDependencyCache()
+  dependency_cache = DependencyCache()
   for arg in sys.argv[1:]:
     dependency_cache.add_package_directory(arg)
 

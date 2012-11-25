@@ -17,7 +17,7 @@ source=('fix-python-scripts.sh'
     'create-arch-ros-package-legacy.sh'
     'PKGBUILD.rostemplate'
     'get_stack_dependencies.py'
-    'generate_stacks_makefile.py'
+    'generate_packages_makefile.py'
     'generate-python-patch.sh'
     'import_catkin_packages.py')
 
