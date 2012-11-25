@@ -276,19 +276,21 @@ def generate_pkgbuild(distro, package, directory, force=False,
                       generated=None):
   if generated is None:
     generated = []
-  elif package in generated:
+  elif package.name in generated:
     return
   if package.packages:
     for child_package in package.packages:
       generate_pkgbuild(distro, child_package, directory,
                         force=force, exclude_dependencies=exclude_dependencies,
-                        no_overwrite=no_overwrite, recursive=recursive)
+                        no_overwrite=no_overwrite, recursive=recursive,
+                        generated=generated)
   if recursive:
     for dependency in package.dependencies:
       if distro.is_package(dependency):
         generate_pkgbuild(distro, distro.package(dependency), directory,
                           force=force, no_overwrite=no_overwrite, recursive=recursive,
-                          exclude_dependencies=exclude_dependencies)
+                          exclude_dependencies=exclude_dependencies,
+                          generated=generated)
   output_directory = os.path.join(directory, package.name)
   if not os.path.exists(output_directory):
     os.mkdir(output_directory)
@@ -302,7 +304,7 @@ def generate_pkgbuild(distro, package, directory, force=False,
   print('Generating PKGBUILD for package %s.' % package.name)
   with open(os.path.join(output_directory, 'PKGBUILD'), 'w') as pkgbuild:
     pkgbuild.write(package.generate(exclude_dependencies))
-  generated.append(package)
+  generated.append(package.name)
 
 
 def main():
