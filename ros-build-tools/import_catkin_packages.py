@@ -17,7 +17,7 @@ PKGBUILD_TEMPLATE = """
 pkgdesc='%(description)s'
 url='http://www.ros.org/'
 
-pkgname='ros-%(distro)s-%(package_name)s'
+pkgname='ros-%(distro)s-%(arch_package_name)s'
 pkgver='%(package_version)s'
 arch=('i686' 'x86_64')
 pkgrel=1
@@ -128,6 +128,10 @@ def github_raw_url(repo_url, path, commitish):
     }
 
 
+def get_arch_package_name(name):
+  return name.replace('_', '-')
+
+
 def get_ros_dependencies(distro, package):
   known_packages = distro.packages()
   return list(set([ dependency.name for dependency in package.build_depends + package.run_depends
@@ -143,7 +147,9 @@ def get_non_ros_dependencies(distro, package):
 def fix_python_dependencies(packages):
   return [ package.replace('python-', 'python2-') for package in packages ]
 
-def generate_pkgbuild(distro_description, package_name, directory, exclude_dependencies=[]):
+def generate_pkgbuild(distro_description, package_name, directory,
+                      exclude_dependencies=[], force=False):
+  arch_package_name = get_arch_package_name(package_name)
   package = distro_description.package(package_name)
   package_version = package['version'].split('-')[0]
   package_url = package['url']
@@ -168,6 +174,7 @@ def generate_pkgbuild(distro_description, package_name, directory, exclude_depen
       'distro': distro_description.name,
       'description': package_description.description,
       'license': ', '.join(package_description.licenses),
+      'arch_package_name': arch_package_name,
       'package_name': package_name,
       'package_version': package_version,
       'package_url': package_url,
