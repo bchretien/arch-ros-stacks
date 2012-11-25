@@ -1,0 +1,33 @@
+diff --git a/src/rviz/ogre_helpers/ogre_logging.cpp b/src/rviz/ogre_helpers/ogre_logging.cpp
+index b031e35..0d12c44 100644
+--- a/src/rviz/ogre_helpers/ogre_logging.cpp
++++ b/src/rviz/ogre_helpers/ogre_logging.cpp
+@@ -43,13 +43,14 @@ public:
+   RosLogListener(): min_lml(Ogre::LML_CRITICAL) {};
+   virtual ~RosLogListener() {}
+ 
+-  virtual void messageLogged( const Ogre::String& message, Ogre::LogMessageLevel lml, bool maskDebug, const Ogre::String &logName )
++  virtual void messageLogged( const Ogre::String& message, Ogre::LogMessageLevel lml, bool maskDebug, const Ogre::String &logName, bool& )
+   {
+     if ( lml >= min_lml )
+     {
+       ROS_LOG((ros::console::levels::Level)(lml-1), ROSCONSOLE_DEFAULT_NAME, "%s", message.c_str() );
+     }
+   }
++
+   Ogre::LogMessageLevel min_lml;
+ };
+ 
+diff --git a/src/rviz/ogre_helpers/point_cloud.cpp b/src/rviz/ogre_helpers/point_cloud.cpp
+index 3895a2e..f0525ea 100644
+--- a/src/rviz/ogre_helpers/point_cloud.cpp
++++ b/src/rviz/ogre_helpers/point_cloud.cpp
+@@ -824,7 +824,7 @@ Ogre::Real PointCloudRenderable::getSquaredViewDepth(const Ogre::Camera* cam) co
+ 
+ void PointCloudRenderable::getWorldTransforms(Ogre::Matrix4* xform) const
+ {
+-   *xform = m_matWorldTransform * parent_->getParentNode()->_getFullTransform();
++   *xform = mWorldTransform * parent_->getParentNode()->_getFullTransform();
+ }
+ 
+ const Ogre::LightList& PointCloudRenderable::getLights() const
