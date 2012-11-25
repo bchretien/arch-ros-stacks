@@ -11,11 +11,11 @@ makedepends=('ros-build-tools')
 
 ros_depends=()
 depends=(${ros_depends[@]}
-  cmake  
-  python2-empy  
-  python2-argparse  
-  gtest  
-  python2-nose)
+  cmake
+  python2-nose
+  python2-empy
+  gtest
+  python2-argparse)
 
 source=()
 md5sums=()
@@ -30,7 +30,7 @@ build() {
   fi
   mkdir ${srcdir}/build && cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/catkin
-  cmake ${srcdir}/catkin -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  cmake ${srcdir}/catkin -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
 }
 
