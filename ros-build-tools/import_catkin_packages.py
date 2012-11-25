@@ -86,14 +86,16 @@ source=()
 md5sums=()
 
 build() {
-  source /opt/ros/%(distro)s/setup.bash
+  [ -f /opt/ros/%(distro)s/setup.bash ] && source /opt/ros/%(distro)s/setup.bash
   if [ -d ${srcdir}/%(package_name)s ]; then
-    GIT_DIR=${srcdir}/%(package_name)s/.git git fetch origin
-    GIT_DIR=${srcdir}/%(package_name)s/.git git reset --hard release/%(package_name)s/${pkgver}
+    cd ${srcdir}/%(package_name)s
+    git fetch origin
+    git reset --hard release/%(package_name)s/${pkgver}
   else
     git clone -b release/%(package_name)s/${pkgver} %(package_url)s ${srcdir}/%(package_name)s
   fi
-  mkdir ${srcdir}/build && cd ${srcdir}/build
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/%(package_name)s
   cmake ${srcdir}/%(package_name)s -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/%(distro)s -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
