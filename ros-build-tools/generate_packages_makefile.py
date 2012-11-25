@@ -20,6 +20,14 @@ class InvalidPackage(Exception):
     return repr(self.package)
 
 
+class RosDependency(object):
+
+  def __init__(self, directory_name, package_name, dependencies):
+    self.directory_name = directory_name
+    self.package_name = package_name
+    self.dependencies = dependencies
+
+
 class RosDependencyCache(object):
 
   def __init__(self):
@@ -33,10 +41,14 @@ class RosDependencyCache(object):
     if len(aur_package_name) == 0:
       raise InvalidPackage(name)
     ros_dependencies = get_ros_dependencies(pkgbuild_file)
-    self._dependencies[aur_package_name] = ros_dependencies
+    self._dependencies[aur_package_name] = RosDependency(
+      name, aur_package_name, ros_dependencies)
 
   def get_packages(self):
     return list(self._dependencies.keys())
+
+  def get_package_directory_name(self, name):
+    return self._dependencies[name].directory_name
 
   def get_dependencies(self, package_name, remove_unknown=True):
     package_dependencies = self._dependencies.get(package_name)
@@ -44,7 +56,7 @@ class RosDependencyCache(object):
       raise InvalidPackage(package_name)
     if not remove_unknown:
       return package_dependencies
-    return [dependency for dependency in package_dependencies
+    return [self._dependencies[dependency] for dependency in package_dependencies.dependencies
             if self._dependencies.get(dependency)]
 
 
@@ -75,8 +87,8 @@ def generate_makefile(cache):
   for package in cache.get_packages():
     dependency_string = ''
     for dependency in cache.get_dependencies(package):
-      dependency_string += dependency + '/.built '
-    makefile += MAKEFILE_TARGET % {'package': package,
+      dependency_string += dependency.directory_name + '/.built '
+    makefile += MAKEFILE_TARGET % {'package': cache.get_package_directory_name(package),
                                    'dependency_string': dependency_string}
   return makefile
   
