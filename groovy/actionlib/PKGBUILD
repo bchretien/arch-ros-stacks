@@ -1,0 +1,50 @@
+
+pkgdesc="The actionlib stack provides a standardized interface for
+    interfacing with preemptable tasks. Examples of this include moving
+    the base to a target location, performing a laser scan and returning
+    the resulting point cloud, detecting the handle of a door, etc."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-actionlib'
+pkgver='1.9.9'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-roscpp
+  ros-groovy-catkin
+  ros-groovy-genmsg
+  ros-groovy-rostime
+  ros-groovy-rosconsole
+  ros-groovy-rospy
+  ros-groovy-cpp-common
+  ros-groovy-roscpp-traits
+  ros-groovy-rostest
+  ros-groovy-langs-dev
+  ros-groovy-langs
+  ros-groovy-actionlib-msgs)
+depends=(${ros_depends[@]}
+  boost)
+
+source=()
+md5sums=()
+
+build() {
+  source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/actionlib ]; then
+    GIT_DIR=${srcdir}/actionlib/.git git fetch origin
+    GIT_DIR=${srcdir}/actionlib/.git git reset --hard release/actionlib/${pkgver}
+  else
+    git clone -b release/actionlib/${pkgver} git://github.com/ros-gbp/actionlib-release.git ${srcdir}/actionlib
+  fi
+  mkdir ${srcdir}/build && cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/actionlib
+  cmake ${srcdir}/actionlib -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}

@@ -1,5 +1,5 @@
 
-pkgdesc='Low-level build system macros and infrastructure for ROS.'
+pkgdesc="Low-level build system macros and infrastructure for ROS."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-catkin'
@@ -21,14 +21,16 @@ source=()
 md5sums=()
 
 build() {
-  source /opt/ros/groovy/setup.bash
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/catkin ]; then
-    GIT_DIR=${srcdir}/catkin/.git git fetch origin
-    GIT_DIR=${srcdir}/catkin/.git git reset --hard release/catkin/${pkgver}
+    cd ${srcdir}/catkin
+    git fetch origin
+    git reset --hard release/catkin/${pkgver}
   else
     git clone -b release/catkin/${pkgver} git://github.com/ros-gbp/catkin-release.git ${srcdir}/catkin
   fi
-  mkdir ${srcdir}/build && cd ${srcdir}/build
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/catkin
   cmake ${srcdir}/catkin -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
