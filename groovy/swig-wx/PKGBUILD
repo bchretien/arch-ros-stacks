@@ -1,0 +1,36 @@
+
+pkgdesc="ros-groovy-swig-wx"
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-swig-wx'
+pkgver='1.3.29'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+depends=(bison bison++)
+
+source=()
+md5sums=()
+
+_git_branch="debian/ros-groovy-swig-wx_${pkgver}_quantal"
+
+build() {
+  if [ -d ${srcdir}/swig-wx ]; then
+    cd ${srcdir}/swig-wx
+    git fetch origin
+    git reset --hard ${_git_branch} 
+  else
+    git clone -b ${_git_branch} git://github.com/wg-debs/swig-wx ${srcdir}/swig-wx
+  fi
+  cd ${srcdir}/swig-wx
+  ./autogen.sh
+  ./configure --prefix=/opt/ros/groovy --datadir=/opt/ros/groovy/share
+  make
+}
+
+package() {
+  cd "${srcdir}/swig-wx"
+  make DESTDIR="${pkgdir}" install
+}

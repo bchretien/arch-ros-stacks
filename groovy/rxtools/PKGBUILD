@@ -1,0 +1,54 @@
+
+pkgdesc="rxtools is two things.
+    First it is a library of GUI widgets, written in wxWidgets, that can be embedded in other applications. Second, it is a set of GUI applications that view and manage ROS state.
+    These GUI applications include <tt>rxconsole</tt> and <tt>rxplot</tt>.
+
+    Pieces of rxtools use some icons from the <a href=\"http://www.famfamfam.com/lab/icons/silk/\">Silk icon pack from famfamfam</a>.
+    These icons have a separate Creative Commons Attribution 2.5 License.
+    The source code for the software in this package is BSD."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-rxtools'
+pkgver='1.9.9'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD, Creative Commons')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-roscpp
+  ros-groovy-catkin
+  ros-groovy-xdot
+  ros-groovy-roslib
+  ros-groovy-wxpython-swig-interface
+  ros-groovy-rospy
+  ros-groovy-swig-wx
+  ros-groovy-rosgraph-msgs)
+depends=(${ros_depends[@]}
+  python2-matplotlib
+  pygtk
+  wxpython
+  wxgtk)
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/rxtools ]; then
+    cd ${srcdir}/rxtools
+    git fetch origin
+    git reset --hard release/rxtools/${pkgver}
+  else
+    git clone -b release/rxtools/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/rxtools
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/rxtools
+  cmake ${srcdir}/rxtools -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}

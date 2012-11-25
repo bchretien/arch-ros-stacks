@@ -1,0 +1,43 @@
+
+pkgdesc="Interface files used with SWIG to allow use of custom C++ widgets with wxPython code.
+
+    These interface files were pulled from wxPython 2.8.1, because at the time that was the target version (since we were using Ubuntu Feisty).
+    We will probably continue to use these interface files until they no longer work for some reason.
+
+    The ideal situation would be if these were installed in system installs along with wxPython, but unfortunately they are not."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-wxpython-swig-interface'
+pkgver='1.9.9'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('wxWindows')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-catkin)
+depends=(${ros_depends[@]}
+  wxpython)
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/wxpython_swig_interface ]; then
+    cd ${srcdir}/wxpython_swig_interface
+    git fetch origin
+    git reset --hard release/wxpython_swig_interface/${pkgver}
+  else
+    git clone -b release/wxpython_swig_interface/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/wxpython_swig_interface
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/wxpython_swig_interface
+  cmake ${srcdir}/wxpython_swig_interface -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}
