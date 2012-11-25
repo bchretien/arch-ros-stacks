@@ -48,8 +48,11 @@ class DependencyCache(object):
     self._dependencies[aur_package_name] = Dependency(
       name, aur_package_name, dependencies, output_file)
 
-  def get_packages(self):
+  def get_package_names(self):
     return list(self._dependencies.keys())
+
+  def get_packages(self):
+    return list(self._dependencies.values())
 
   def get_package(self, name):
     return self._dependencies[name]
@@ -99,10 +102,12 @@ def get_package_name(pkgbuild):
 def generate_makefile(cache):
   makefile = """
 all: %s
-""" % ' '.join([cache.get_package_directory_name(package) for package in cache.get_packages()])
+""" % ' '.join(['%s/%s' % (package.directory_name, package.output_file)
+                for package in cache.get_packages()])
 
-  for package in cache.get_packages():
-    dependency_string = ' '.join([dependency.directory_name for dependency in cache.get_dependencies(package)])
+  for package in cache.get_package_names():
+    dependency_string = ' '.join(['%s/%s' % (dependency.directory_name, dependency.output_file)
+                                  for dependency in cache.get_dependencies(package)])
     makefile += MAKEFILE_TARGET % {'package': cache.get_package_directory_name(package),
                                    'output_file': cache.get_package(package).output_file,
                                    'dependency_string': dependency_string}
