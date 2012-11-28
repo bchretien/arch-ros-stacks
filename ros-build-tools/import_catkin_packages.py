@@ -89,7 +89,7 @@ build() {
   [ -f /opt/ros/%(distro)s/setup.bash ] && source /opt/ros/%(distro)s/setup.bash
   if [ -d ${srcdir}/%(package_name)s ]; then
     cd ${srcdir}/%(package_name)s
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/%(package_name)s/${pkgver}
   else
     git clone -b release/%(package_name)s/${pkgver} %(package_url)s ${srcdir}/%(package_name)s
