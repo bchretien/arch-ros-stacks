@@ -1,0 +1,43 @@
+
+pkgdesc="The State Machine Compiler (SMC) from http://smc.sourceforge.net/
+    converts a language-independent description of a state machine
+    into the source code to support that state machine.
+
+    This package contains the libraries that a compiled state machine
+    depends on, but it does not contain the compiler itself."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-smclib'
+pkgver='1.7.6'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('Mozilla Public License Version 1.1')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-catkin)
+depends=(${ros_depends[@]}
+  )
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/smclib ]; then
+    cd ${srcdir}/smclib
+    git fetch origin --tags
+    git reset --hard release/smclib/${pkgver}
+  else
+    git clone -b release/smclib/${pkgver} git://github.com/ros-gbp/bond_core-release.git ${srcdir}/smclib
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/smclib
+  cmake ${srcdir}/smclib -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}
