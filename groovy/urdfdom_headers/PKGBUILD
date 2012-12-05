@@ -9,7 +9,8 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-console-bridge)
+ros_depends=(ros-groovy-console-bridge
+  ros-groovy-catkin)
 depends=(${ros_depends[@]}
   boost
   tinyxml)
@@ -21,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/urdfdom_headers ]; then
     cd ${srcdir}/urdfdom_headers
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/urdfdom_headers/${pkgver}
   else
     git clone -b release/urdfdom_headers/${pkgver} git://github.com/ros-gbp/urdfdom_headers-release.git ${srcdir}/urdfdom_headers

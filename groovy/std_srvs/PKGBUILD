@@ -3,7 +3,7 @@ pkgdesc="Common service definitions. Currently just the 'Empty' service."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-std-srvs'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -23,7 +23,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/std_srvs ]; then
     cd ${srcdir}/std_srvs
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/std_srvs/${pkgver}
   else
     git clone -b release/std_srvs/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/std_srvs

@@ -29,7 +29,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/pcl_ros ]; then
     cd ${srcdir}/pcl_ros
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/pcl_ros/${pkgver}
   else
     git clone -b release/pcl_ros/${pkgver} git://github.com/ros-gbp/perception_pcl-release.git ${srcdir}/pcl_ros

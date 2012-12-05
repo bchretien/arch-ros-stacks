@@ -30,7 +30,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/opencv2 ]; then
     cd ${srcdir}/opencv2
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/opencv2/${pkgver}
   else
     git clone -b release/opencv2/${pkgver} git://github.com/ros-gbp/opencv2-release.git ${srcdir}/opencv2

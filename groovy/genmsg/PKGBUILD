@@ -20,7 +20,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/genmsg ]; then
     cd ${srcdir}/genmsg
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/genmsg/${pkgver}
   else
     git clone -b release/genmsg/${pkgver} git://github.com/ros-gbp/genmsg-release.git ${srcdir}/genmsg

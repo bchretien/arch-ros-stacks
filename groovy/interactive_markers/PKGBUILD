@@ -29,7 +29,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/interactive_markers ]; then
     cd ${srcdir}/interactive_markers
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/interactive_markers/${pkgver}
   else
     git clone -b release/interactive_markers/${pkgver} git://github.com/ros-gbp/interactive_markers-release.git ${srcdir}/interactive_markers

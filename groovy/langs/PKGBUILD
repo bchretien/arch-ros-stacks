@@ -25,7 +25,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/langs ]; then
     cd ${srcdir}/langs
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/langs/${pkgver}
   else
     git clone -b release/langs/${pkgver} git://github.com/ros-gbp/langs-release.git ${srcdir}/langs

@@ -13,7 +13,7 @@ pkgdesc="This stack provides Python bindings for Qt.
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-python-qt-binding'
-pkgver='0.2.4'
+pkgver='0.2.5'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD, LGPL, GPL')
@@ -31,7 +31,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/python_qt_binding ]; then
     cd ${srcdir}/python_qt_binding
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/python_qt_binding/${pkgver}
   else
     git clone -b release/python_qt_binding/${pkgver} git://github.com/ros-gbp/python_qt_binding-release.git ${srcdir}/python_qt_binding

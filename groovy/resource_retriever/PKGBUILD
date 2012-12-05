@@ -8,7 +8,7 @@ pkgdesc="This package retrieves data from url-format files such as http://,
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-resource-retriever'
-pkgver='1.9.28'
+pkgver='1.9.29'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -27,7 +27,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/resource_retriever ]; then
     cd ${srcdir}/resource_retriever
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/resource_retriever/${pkgver}
   else
     git clone -b release/resource_retriever/${pkgver} git://github.com/ros-gbp/robot_model-release.git ${srcdir}/resource_retriever

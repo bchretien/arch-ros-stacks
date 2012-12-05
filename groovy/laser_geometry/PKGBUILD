@@ -27,7 +27,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/laser_geometry ]; then
     cd ${srcdir}/laser_geometry
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/laser_geometry/${pkgver}
   else
     git clone -b release/laser_geometry/${pkgver} git://github.com/ros-gbp/laser_geometry-release.git ${srcdir}/laser_geometry

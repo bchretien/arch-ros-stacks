@@ -1,6 +1,5 @@
 
-pkgdesc="Lightweight tool for forwarding output from libraries to other
-  logging systems."
+pkgdesc="Lightweight tool for forwarding output from libraries to other logging systems."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-console-bridge'
@@ -21,7 +20,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/console_bridge ]; then
     cd ${srcdir}/console_bridge
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/console_bridge/${pkgver}
   else
     git clone -b release/console_bridge/${pkgver} git://github.com/ros-gbp/console_bridge-release.git ${srcdir}/console_bridge

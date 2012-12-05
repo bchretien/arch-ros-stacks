@@ -36,7 +36,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rxtools ]; then
     cd ${srcdir}/rxtools
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rxtools/${pkgver}
   else
     git clone -b release/rxtools/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/rxtools

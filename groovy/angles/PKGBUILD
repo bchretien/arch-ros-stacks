@@ -11,7 +11,7 @@ pkgdesc="This package provides a set of simple math utilities to work
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-angles'
-pkgver='1.9.7'
+pkgver='1.9.8'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -28,7 +28,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/angles ]; then
     cd ${srcdir}/angles
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/angles/${pkgver}
   else
     git clone -b release/angles/${pkgver} git://github.com/ros-gbp/geometry_angles_utils-release.git ${srcdir}/angles

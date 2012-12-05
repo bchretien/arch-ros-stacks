@@ -5,7 +5,7 @@ pkgdesc="A collection of .mk include files for building ROS architectural elemen
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-mk'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -22,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/mk ]; then
     cd ${srcdir}/mk
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/mk/${pkgver}
   else
     git clone -b release/mk/${pkgver} git://github.com/ros-gbp/ros-release.git ${srcdir}/mk

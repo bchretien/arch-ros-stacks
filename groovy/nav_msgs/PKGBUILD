@@ -26,7 +26,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/nav_msgs ]; then
     cd ${srcdir}/nav_msgs
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/nav_msgs/${pkgver}
   else
     git clone -b release/nav_msgs/${pkgver} git://github.com/ros-gbp/common_msgs-release.git ${srcdir}/nav_msgs

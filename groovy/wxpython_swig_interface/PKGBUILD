@@ -25,7 +25,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/wxpython_swig_interface ]; then
     cd ${srcdir}/wxpython_swig_interface
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/wxpython_swig_interface/${pkgver}
   else
     git clone -b release/wxpython_swig_interface/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/wxpython_swig_interface

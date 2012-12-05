@@ -21,7 +21,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/genlisp ]; then
     cd ${srcdir}/genlisp
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/genlisp/${pkgver}
   else
     git clone -b release/genlisp/${pkgver} git://github.com/ros-gbp/genlisp-release.git ${srcdir}/genlisp

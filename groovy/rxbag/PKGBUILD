@@ -29,7 +29,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rxbag ]; then
     cd ${srcdir}/rxbag
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rxbag/${pkgver}
   else
     git clone -b release/rxbag/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/rxbag

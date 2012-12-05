@@ -3,7 +3,7 @@ pkgdesc="The class_loader package is a ROS-independent package for loading plugi
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-class-loader'
-pkgver='0.1.11'
+pkgver='0.1.13'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -14,19 +14,18 @@ ros_depends=(ros-groovy-console-bridge
 depends=(${ros_depends[@]}
   poco)
 
-source=(class_loader.patch)
-md5sums=(99f6a4007e97548b84e6ae40083aa493)
+source=()
+md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/class_loader ]; then
     cd ${srcdir}/class_loader
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/class_loader/${pkgver}
   else
     git clone -b release/class_loader/${pkgver} git://github.com/ros-gbp/class_loader-release.git ${srcdir}/class_loader
   fi
-  cd ${srcdir}/class_loader && patch -p1 < ${srcdir}/class_loader.patch
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/class_loader

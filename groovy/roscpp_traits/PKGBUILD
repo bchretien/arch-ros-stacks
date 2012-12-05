@@ -24,7 +24,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/roscpp_traits ]; then
     cd ${srcdir}/roscpp_traits
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/roscpp_traits/${pkgver}
   else
     git clone -b release/roscpp_traits/${pkgver} git://github.com/ros-gbp/roscpp_core-release.git ${srcdir}/roscpp_traits

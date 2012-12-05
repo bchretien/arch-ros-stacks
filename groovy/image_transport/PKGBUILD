@@ -5,7 +5,7 @@ pkgdesc="image_transport should always be used to subscribe to and publish image
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-image-transport'
-pkgver='1.9.19'
+pkgver='1.9.20'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -28,7 +28,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/image_transport ]; then
     cd ${srcdir}/image_transport
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/image_transport/${pkgver}
   else
     git clone -b release/image_transport/${pkgver} git://github.com/ros-gbp/image_common-release.git ${srcdir}/image_transport

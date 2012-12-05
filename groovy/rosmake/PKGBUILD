@@ -4,7 +4,7 @@ pkgdesc="rosmake is a ros dependency aware build tool which can be used to
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosmake'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -21,7 +21,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosmake ]; then
     cd ${srcdir}/rosmake
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosmake/${pkgver}
   else
     git clone -b release/rosmake/${pkgver} git://github.com/ros-gbp/ros-release.git ${srcdir}/rosmake

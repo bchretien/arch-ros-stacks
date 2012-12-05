@@ -32,7 +32,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/tf ]; then
     cd ${srcdir}/tf
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/tf/${pkgver}
   else
     git clone -b release/tf/${pkgver} git://github.com/ros-gbp/geometry-release.git ${srcdir}/tf

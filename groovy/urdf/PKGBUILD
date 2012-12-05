@@ -6,7 +6,7 @@ pkgdesc="This package contains a C++ parser for the Unified Robot Description
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-urdf'
-pkgver='1.9.28'
+pkgver='1.9.29'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -28,7 +28,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/urdf ]; then
     cd ${srcdir}/urdf
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/urdf/${pkgver}
   else
     git clone -b release/urdf/${pkgver} git://github.com/ros-gbp/robot_model-release.git ${srcdir}/urdf

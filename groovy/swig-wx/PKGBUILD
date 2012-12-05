@@ -1,36 +1,43 @@
 
-pkgdesc="ros-groovy-swig-wx"
+pkgdesc="This is a special version of swig needed by wxPython,
+    which is SWIG version 1.3.29 plus some custom patches
+    (explained at http://wxpython.org/builddoc.php).
+    The patched latest version of wxPython SWIG is available at
+    http://wxpython.wxcommunity.com/tools/"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-swig-wx'
 pkgver='1.3.29'
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('GPL')
 makedepends=('ros-build-tools')
 
-depends=(bison bison++)
+ros_depends=()
+depends=(${ros_depends[@]}
+  autoconf
+  automake)
 
 source=()
 md5sums=()
 
-_git_branch="debian/ros-groovy-swig-wx_${pkgver}_quantal"
-
 build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/swig-wx ]; then
     cd ${srcdir}/swig-wx
-    git fetch origin
-    git reset --hard ${_git_branch} 
+    git fetch origin --tags
+    git reset --hard release/swig-wx/${pkgver}
   else
-    git clone -b ${_git_branch} git://github.com/wg-debs/swig-wx ${srcdir}/swig-wx
+    git clone -b release/swig-wx/${pkgver} git://github.com/ros-gbp/swig-wx-release.git ${srcdir}/swig-wx
   fi
-  cd ${srcdir}/swig-wx
-  ./autogen.sh
-  ./configure --prefix=/opt/ros/groovy --datadir=/opt/ros/groovy/share
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/swig-wx
+  cmake ${srcdir}/swig-wx -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
 }
 
 package() {
-  cd "${srcdir}/swig-wx"
-  make DESTDIR="${pkgdir}" install
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
 }

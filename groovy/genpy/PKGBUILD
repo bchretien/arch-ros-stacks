@@ -21,7 +21,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/genpy ]; then
     cd ${srcdir}/genpy
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/genpy/${pkgver}
   else
     git clone -b release/genpy/${pkgver} git://github.com/ros-gbp/genpy-release.git ${srcdir}/genpy

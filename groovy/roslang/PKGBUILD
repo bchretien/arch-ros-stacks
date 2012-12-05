@@ -4,7 +4,7 @@ pkgdesc="roslang is a common package that all <a href=\"http://www.ros.org/wiki/
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-roslang'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -22,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/roslang ]; then
     cd ${srcdir}/roslang
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/roslang/${pkgver}
   else
     git clone -b release/roslang/${pkgver} git://github.com/ros-gbp/ros-release.git ${srcdir}/roslang

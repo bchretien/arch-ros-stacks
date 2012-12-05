@@ -6,7 +6,7 @@ pkgdesc="XmlRpc++ is a C++ implementation of the XML-RPC protocol. This version 
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-xmlrpcpp'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('LGPL')
@@ -24,7 +24,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/xmlrpcpp ]; then
     cd ${srcdir}/xmlrpcpp
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/xmlrpcpp/${pkgver}
   else
     git clone -b release/xmlrpcpp/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/xmlrpcpp

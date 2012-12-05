@@ -3,7 +3,7 @@ pkgdesc="Integration test suite based on roslaunch that is compatible with xUnit
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rostest'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -23,7 +23,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rostest ]; then
     cd ${srcdir}/rostest
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rostest/${pkgver}
   else
     git clone -b release/rostest/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/rostest

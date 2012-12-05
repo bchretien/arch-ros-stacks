@@ -14,7 +14,7 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=()
+ros_depends=(ros-groovy-catkin)
 depends=(${ros_depends[@]}
   python2-numpy
   cmake
@@ -30,7 +30,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/flann ]; then
     cd ${srcdir}/flann
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/flann/${pkgver}
   else
     git clone -b release/flann/${pkgver} git://github.com/ros-gbp/flann-release.git ${srcdir}/flann

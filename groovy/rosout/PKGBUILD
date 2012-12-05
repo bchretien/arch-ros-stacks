@@ -3,7 +3,7 @@ pkgdesc="System-wide logging mechanism for messages sent to the /rosout topic."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosout'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -21,7 +21,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosout ]; then
     cd ${srcdir}/rosout
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosout/${pkgver}
   else
     git clone -b release/rosout/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/rosout

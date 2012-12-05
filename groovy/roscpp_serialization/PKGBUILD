@@ -26,7 +26,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/roscpp_serialization ]; then
     cd ${srcdir}/roscpp_serialization
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/roscpp_serialization/${pkgver}
   else
     git clone -b release/roscpp_serialization/${pkgver} git://github.com/ros-gbp/roscpp_core-release.git ${srcdir}/roscpp_serialization

@@ -3,7 +3,7 @@ pkgdesc="Lisp client library for ROS, the Robot Operating System."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-roslisp'
-pkgver='1.9.10'
+pkgver='1.9.11'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -21,14 +21,16 @@ source=()
 md5sums=()
 
 build() {
-  source /opt/ros/groovy/setup.bash
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/roslisp ]; then
-    GIT_DIR=${srcdir}/roslisp/.git git fetch origin
-    GIT_DIR=${srcdir}/roslisp/.git git reset --hard release/roslisp/${pkgver}
+    cd ${srcdir}/roslisp
+    git fetch origin --tags
+    git reset --hard release/roslisp/${pkgver}
   else
     git clone -b release/roslisp/${pkgver} git://github.com/wg-debs/roslisp-release.git ${srcdir}/roslisp
   fi
-  mkdir ${srcdir}/build && cd ${srcdir}/build
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/roslisp
   cmake ${srcdir}/roslisp -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make

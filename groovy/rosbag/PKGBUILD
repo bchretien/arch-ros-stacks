@@ -5,7 +5,7 @@ pkgdesc="This is a set of tools for recording from and playing back to ROS
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosbag'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -40,7 +40,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosbag ]; then
     cd ${srcdir}/rosbag
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosbag/${pkgver}
   else
     git clone -b release/rosbag/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/rosbag

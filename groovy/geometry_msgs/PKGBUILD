@@ -27,7 +27,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/geometry_msgs ]; then
     cd ${srcdir}/geometry_msgs
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/geometry_msgs/${pkgver}
   else
     git clone -b release/geometry_msgs/${pkgver} git://github.com/ros-gbp/common_msgs-release.git ${srcdir}/geometry_msgs

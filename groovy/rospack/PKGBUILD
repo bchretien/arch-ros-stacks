@@ -3,7 +3,7 @@ pkgdesc="ROS Package Tool"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rospack'
-pkgver='2.1.12'
+pkgver='2.1.14'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -23,7 +23,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rospack ]; then
     cd ${srcdir}/rospack
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rospack/${pkgver}
   else
     git clone -b release/rospack/${pkgver} git://github.com/ros-gbp/rospack-release.git ${srcdir}/rospack

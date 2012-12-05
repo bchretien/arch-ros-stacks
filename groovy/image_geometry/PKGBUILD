@@ -25,7 +25,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/image_geometry ]; then
     cd ${srcdir}/image_geometry
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/image_geometry/${pkgver}
   else
     git clone -b release/image_geometry/${pkgver} git://github.com/ros-gbp/vision_opencv-release.git ${srcdir}/image_geometry

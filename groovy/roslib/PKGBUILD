@@ -4,7 +4,7 @@ pkgdesc="Base dependencies and support libraries for ROS.
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-roslib'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -22,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/roslib ]; then
     cd ${srcdir}/roslib
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/roslib/${pkgver}
   else
     git clone -b release/roslib/${pkgver} git://github.com/ros-gbp/ros-release.git ${srcdir}/roslib

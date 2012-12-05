@@ -25,14 +25,16 @@ source=()
 md5sums=()
 
 build() {
-  source /opt/ros/groovy/setup.bash
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/actionlib_msgs ]; then
-    GIT_DIR=${srcdir}/actionlib_msgs/.git git fetch origin
-    GIT_DIR=${srcdir}/actionlib_msgs/.git git reset --hard release/actionlib_msgs/${pkgver}
+    cd ${srcdir}/actionlib_msgs
+    git fetch origin --tags
+    git reset --hard release/actionlib_msgs/${pkgver}
   else
     git clone -b release/actionlib_msgs/${pkgver} git://github.com/ros-gbp/common_msgs-release.git ${srcdir}/actionlib_msgs
   fi
-  mkdir ${srcdir}/build && cd ${srcdir}/build
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/actionlib_msgs
   cmake ${srcdir}/actionlib_msgs -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make

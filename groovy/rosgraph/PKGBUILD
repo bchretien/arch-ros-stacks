@@ -5,7 +5,7 @@ pkgdesc="rosgraph contains the rosgraph command-line tool, which prints
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosgraph'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -22,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosgraph ]; then
     cd ${srcdir}/rosgraph
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosgraph/${pkgver}
   else
     git clone -b release/rosgraph/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/rosgraph

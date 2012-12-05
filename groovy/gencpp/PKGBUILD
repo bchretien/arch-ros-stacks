@@ -21,7 +21,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/gencpp ]; then
     cd ${srcdir}/gencpp
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/gencpp/${pkgver}
   else
     git clone -b release/gencpp/${pkgver} git://github.com/ros-gbp/gencpp-release.git ${srcdir}/gencpp

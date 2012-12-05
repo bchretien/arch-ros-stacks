@@ -23,7 +23,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/urdfdom ]; then
     cd ${srcdir}/urdfdom
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/urdfdom/${pkgver}
   else
     git clone -b release/urdfdom/${pkgver} git://github.com/ros-gbp/urdfdom-release.git ${srcdir}/urdfdom

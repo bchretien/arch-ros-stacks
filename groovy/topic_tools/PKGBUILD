@@ -7,7 +7,7 @@ pkgdesc="Tools for directing, throttling, selecting, and otherwise messing with
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-topic-tools'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -34,7 +34,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/topic_tools ]; then
     cd ${srcdir}/topic_tools
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/topic_tools/${pkgver}
   else
     git clone -b release/topic_tools/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/topic_tools

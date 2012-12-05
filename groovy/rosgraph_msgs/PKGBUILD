@@ -3,7 +3,7 @@ pkgdesc="Messages relating to the ROS Computation Graph. These are generally con
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosgraph-msgs'
-pkgver='1.9.32'
+pkgver='1.9.33'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -24,7 +24,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosgraph_msgs ]; then
     cd ${srcdir}/rosgraph_msgs
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosgraph_msgs/${pkgver}
   else
     git clone -b release/rosgraph_msgs/${pkgver} git://github.com/ros-gbp/ros_comm-release.git ${srcdir}/rosgraph_msgs

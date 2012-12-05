@@ -26,7 +26,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rxgraph ]; then
     cd ${srcdir}/rxgraph
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rxgraph/${pkgver}
   else
     git clone -b release/rxgraph/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/rxgraph

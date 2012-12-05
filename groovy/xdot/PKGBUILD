@@ -24,7 +24,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/xdot ]; then
     cd ${srcdir}/xdot
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/xdot/${pkgver}
   else
     git clone -b release/xdot/${pkgver} git://github.com/ros-gbp/rx-release.git ${srcdir}/xdot

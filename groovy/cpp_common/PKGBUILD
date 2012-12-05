@@ -25,7 +25,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/cpp_common ]; then
     cd ${srcdir}/cpp_common
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/cpp_common/${pkgver}
   else
     git clone -b release/cpp_common/${pkgver} git://github.com/ros-gbp/roscpp_core-release.git ${srcdir}/cpp_common

@@ -3,7 +3,7 @@ pkgdesc="This package offers a macro definition that makes it such that the outp
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosconsole-bridge'
-pkgver='0.2.4'
+pkgver='0.2.5'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -22,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosconsole_bridge ]; then
     cd ${srcdir}/rosconsole_bridge
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosconsole_bridge/${pkgver}
   else
     git clone -b release/rosconsole_bridge/${pkgver} git://github.com/ros-gbp/rosconsole_bridge-release.git ${srcdir}/rosconsole_bridge

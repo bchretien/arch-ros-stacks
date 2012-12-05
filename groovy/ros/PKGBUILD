@@ -3,7 +3,7 @@ pkgdesc="ROS packaging system"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-ros'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')

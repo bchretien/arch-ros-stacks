@@ -3,7 +3,7 @@ pkgdesc="Contains scripts used by the rosboost-cfg tool for determining cflags/l
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rosboost-cfg'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -20,7 +20,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/rosboost_cfg ]; then
     cd ${srcdir}/rosboost_cfg
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/rosboost_cfg/${pkgver}
   else
     git clone -b release/rosboost_cfg/${pkgver} git://github.com/ros-gbp/ros-release.git ${srcdir}/rosboost_cfg

@@ -5,7 +5,7 @@ pkgdesc="roscreate contains a tool that assists in the creation of ROS filesyste
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-roscreate'
-pkgver='1.9.33'
+pkgver='1.9.34'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -22,7 +22,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/roscreate ]; then
     cd ${srcdir}/roscreate
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/roscreate/${pkgver}
   else
     git clone -b release/roscreate/${pkgver} git://github.com/ros-gbp/ros-release.git ${srcdir}/roscreate

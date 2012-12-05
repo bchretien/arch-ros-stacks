@@ -24,7 +24,7 @@ build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/catkin ]; then
     cd ${srcdir}/catkin
-    git fetch origin
+    git fetch origin --tags
     git reset --hard release/catkin/${pkgver}
   else
     git clone -b release/catkin/${pkgver} git://github.com/ros-gbp/catkin-release.git ${srcdir}/catkin
