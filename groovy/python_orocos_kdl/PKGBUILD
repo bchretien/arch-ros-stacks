@@ -1,0 +1,39 @@
+
+pkgdesc="python_orocos_kdl"
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-python-orocos-kdl'
+pkgver='1.1.99'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('GPL')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-orocos-kdl
+  ros-groovy-catkin)
+depends=(${ros_depends[@]}
+  python2-sip)
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/python_orocos_kdl ]; then
+    cd ${srcdir}/python_orocos_kdl
+    git fetch origin --tags
+    git reset --hard release/python_orocos_kdl/${pkgver}
+  else
+    git clone -b release/python_orocos_kdl/${pkgver} git://github.com/ros-gbp/orocos_kdl-release.git ${srcdir}/python_orocos_kdl
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/python_orocos_kdl
+  cmake ${srcdir}/python_orocos_kdl -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}
