@@ -1,0 +1,38 @@
+
+pkgdesc="ROS communications-related packages, including core client libraries (roscpp, rospy) and graph introspection tools (rostopic, rosnode, rosservice, rosparam)."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-ros-comm'
+pkgver='1.9.34'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-rosparam
+  ros-groovy-std-srvs
+  ros-groovy-roscpp
+  ros-groovy-xmlrpcpp
+  ros-groovy-topic-tools
+  ros-groovy-rostopic
+  ros-groovy-ros
+  ros-groovy-rosgraph
+  ros-groovy-roswtf
+  ros-groovy-message-filters
+  ros-groovy-roslaunch
+  ros-groovy-rosconsole
+  ros-groovy-rospy
+  ros-groovy-rosmsg
+  ros-groovy-rosnode
+  ros-groovy-rostest
+  ros-groovy-rosout
+  ros-groovy-rosbag
+  ros-groovy-rosservice
+  ros-groovy-rosmaster
+  ros-groovy-rosgraph-msgs)
+depends=(${ros_depends[@]}
+  )
+
+source=()
+md5sums=()
+
