@@ -1,0 +1,38 @@
+
+pkgdesc="The OctoMap library implements a 3D occupancy grid mapping approach, providing data structures and mapping algorithms in C++. The map implementation is based on an octree. See http://octomap.sf.net for details."
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-octomap'
+pkgver='1.5.2'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+ros_depends=(ros-groovy-catkin)
+depends=(${ros_depends[@]}
+  cmake)
+
+source=()
+md5sums=()
+
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/octomap ]; then
+    cd ${srcdir}/octomap
+    git fetch origin --tags
+    git reset --hard release/octomap/${pkgver}
+  else
+    git clone -b release/octomap/${pkgver} git://github.com/ros-gbp/octomap-release.git ${srcdir}/octomap
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/octomap
+  cmake ${srcdir}/octomap -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}
