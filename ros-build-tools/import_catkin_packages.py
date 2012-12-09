@@ -280,6 +280,7 @@ def generate_pkgbuild(distro, package, directory, force=False,
     generated = []
   elif package.name in generated:
     return
+  generated.append(package.name)  
   if package.packages:
     for child_package in package.packages:
       generate_pkgbuild(distro, child_package, directory,
@@ -306,7 +307,6 @@ def generate_pkgbuild(distro, package, directory, force=False,
   print('Generating PKGBUILD for package %s.' % package.name)
   with open(os.path.join(output_directory, 'PKGBUILD'), 'w') as pkgbuild:
     pkgbuild.write(package.generate(exclude_dependencies))
-  generated.append(package.name)
 
 
 def main():
