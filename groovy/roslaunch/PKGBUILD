@@ -17,6 +17,7 @@ makedepends=('ros-build-tools')
 
 ros_depends=(ros-groovy-rosclean
   ros-groovy-catkin
+  ros-groovy-ros-pkg
   ros-groovy-rosmaster
   ros-groovy-rosgraph-msgs)
 depends=(${ros_depends[@]}
