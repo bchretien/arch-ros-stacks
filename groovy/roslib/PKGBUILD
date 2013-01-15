@@ -6,7 +6,7 @@ url='http://www.ros.org/'
 pkgname='ros-groovy-roslib'
 pkgver='1.9.34'
 arch=('i686' 'x86_64')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 makedepends=('ros-build-tools')
 
@@ -30,6 +30,9 @@ build() {
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/roslib
+  sed -i ${srcdir}/roslib/env-hooks/10.ros.sh.em -f - <<'==='
+s/python -c/python2 -c/
+===
   cmake ${srcdir}/roslib -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
 }
