@@ -21,15 +21,6 @@ source=('fix-python-scripts.sh'
     'generate-python-patch.sh'
     'import_catkin_packages.py')
 
-md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
-    '79ae7fb600e116623a42631d15d66a87'
-    'ac82eca7efc9f0ff7e8b976a83692868'
-    'b0c5e2b65b0722e0288e010525193258'
-    'd257f7f20384e894b0431ee61068aa96'
-    '563c9d1320a3a997db25d3087303dcfb'
-    '8d6d7eb89a12c449497b209f1a06655b'
-    '22ae55e480e1a028212a173c22a97ffa')
-
 build() {
     mkdir -p ${pkgdir}${pkg_destination_dir}
     for file in "${source[@]}"; do
@@ -37,3 +28,11 @@ build() {
     done
 }
 
+md5sums=('b2b4fd23abb8e9e7382ef9aeab2542f5'
+         '79ae7fb600e116623a42631d15d66a87'
+         'ac82eca7efc9f0ff7e8b976a83692868'
+         'b0c5e2b65b0722e0288e010525193258'
+         'd257f7f20384e894b0431ee61068aa96'
+         '563c9d1320a3a997db25d3087303dcfb'
+         '8d6d7eb89a12c449497b209f1a06655b'
+         '85fc98bd9df02afa0d8a27c01db78c66')
