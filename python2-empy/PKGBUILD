@@ -1,5 +1,5 @@
 # Contributor: Andrew Conkling <andrewski@fr.st>, Lorenz Moesenlechner <moesenle@gmail.com>
-pkgname=python-empy
+pkgname=python2-empy
 realname=empy
 pkgver=3.3
 pkgrel=2
