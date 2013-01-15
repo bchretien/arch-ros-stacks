@@ -15,7 +15,8 @@ depends=(${ros_depends[@]}
   python2-nose
   python2-empy
   gtest
-  python2-argparse)
+  python2-argparse
+  ros-groovy-catkin_pkg)
 
 source=()
 md5sums=()
