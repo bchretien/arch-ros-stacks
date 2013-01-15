@@ -1,0 +1,43 @@
+# Maintainer: Robert Knauer <robert@privatdemail.net>
+# Contributor: Rodrigo Grumiche Silva <grumiche at integrityit dot com dot br>
+# Contributor: nozog
+# Contributor: davidhjelm
+# Contributor: Ray Kohler <ataraxia937 at gmail dot com>
+# Contributor: Nathan Owe < ndowens04 at gmail dot com>
+
+pkgname=poco
+pkgver=1.4.4
+pkgrel=4
+pkgdesc="C++ class libraries for network-centric, portable applications, complete edition"
+arch=('i686' 'x86_64')
+url="http://www.pocoproject.org/"
+license=('custom:boost')
+depends=('unixodbc' 'libmysqlclient' 'openssl')
+makedepends=('gcc' 'make' 'unixodbc' 'libmysqlclient' 'openssl' 'chrpath')
+source=(
+  "${pkgname}-${pkgver}-all.tar.gz"::"https://sourceforge.net/projects/${pkgname}/files/sources/${pkgname}-${pkgver}/${pkgname}-${pkgver}-all.tar.gz/download"
+)
+sha256sums=(
+  '3e57945376a8e16dbf1860a34b862b78b1d2f93c08d6c88e88f987c1a63d4893'
+)
+
+build()
+{
+  cd "${srcdir}/${pkgname}-${pkgver}-all"
+  ./configure --prefix=/usr --no-samples --no-tests
+  make ODBCLIBDIR="/usr/lib"
+}
+
+package()
+{
+  cd "${srcdir}/${pkgname}-${pkgver}-all"
+  make ODBCLIBDIR="/usr/lib" DESTDIR="${pkgdir}" install
+  install -Dm644 'LICENSE' "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  # remove rpath information from binaries
+  chrpath -d "${pkgdir}/usr/bin/cpspc"
+  chrpath -d "${pkgdir}/usr/bin/cpspcd"
+  chrpath -d "${pkgdir}/usr/bin/f2cpspd"
+  chrpath -d "${pkgdir}/usr/bin/f2cpsp"
+  # remove debugging libraries
+  rm "${pkgdir}/usr/lib/libPoco"*"d.so"*
+}
