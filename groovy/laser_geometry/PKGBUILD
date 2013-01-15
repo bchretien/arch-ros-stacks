@@ -18,7 +18,7 @@ ros_depends=(ros-groovy-angles
   ros-groovy-tf)
 depends=(${ros_depends[@]}
   boost
-  eigen)
+  eigen3)
 
 source=()
 md5sums=()
