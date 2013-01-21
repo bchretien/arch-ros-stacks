@@ -3,10 +3,11 @@ pkgdesc="ROS Package Tool"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rospack'
-pkgver='2.1.14'
+pkgver='2.1.16'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
+depends=('tinyxml')
 makedepends=('ros-build-tools')
 
 ros_depends=(ros-groovy-catkin)
