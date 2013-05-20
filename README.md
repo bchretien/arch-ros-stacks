@@ -1,5 +1,3 @@
-This is a fork of moesenle's very nice arch-ros-stacks.
+This is a fork of hauptmech's fork of moesenle's very nice arch-ros-stacks.
 
-I'm creating a repo for another architecture so the changes I've made 
-reflect what's needed to compile on a clean chroot and dump the 
-relsulting binaries in a collection directory.
+I'm working on finally getting working groovy packages for arch. Pray for me...
