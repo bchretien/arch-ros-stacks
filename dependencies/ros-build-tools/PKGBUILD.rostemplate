@@ -2,7 +2,7 @@
 pkgdesc='Fill me.'
 url='http://www.ros.org/'
 
-pkgname='ros-electric-@PACKAGE_NAME@'
+pkgname='ros-groovy-@PACKAGE_NAME@'
 pkgver='@STACK_VERSION@'
 arch=('i686' 'x86_64')
 pkgrel=1

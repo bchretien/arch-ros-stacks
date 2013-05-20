@@ -21,16 +21,12 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-catkin
+depends=(ros-groovy-catkin
   ros-groovy-roslib
   ros-groovy-std-msgs
   ros-groovy-rosgraph
-  ros-groovy-genpy)
-depends=(${ros_depends[@]}
+  ros-groovy-genpy
   python2-numpy)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

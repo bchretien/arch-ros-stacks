@@ -17,7 +17,7 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-xmlrpcpp
+depends=(ros-groovy-xmlrpcpp
   ros-groovy-catkin
   ros-groovy-genmsg
   ros-groovy-roscpp-serialization
@@ -31,12 +31,8 @@ ros_depends=(ros-groovy-xmlrpcpp
   ros-groovy-langs-dev
   ros-groovy-langs
   ros-groovy-roslang
-  ros-groovy-rosgraph-msgs)
-depends=(${ros_depends[@]}
+  ros-groovy-rosgraph-msgs
   pkg-config)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

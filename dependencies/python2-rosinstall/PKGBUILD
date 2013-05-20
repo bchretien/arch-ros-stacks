@@ -16,6 +16,9 @@ source=("http://pr.willowgarage.com/downloads/$pkgname/$pkgname-$pkgver.tar.gz")
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
   sed -i 's/env python /env python2 /' src/rosinstall/setupfiles.py
+}
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
   python2 setup.py install --root=$pkgdir --optimize=1
 }
 md5sums=('b74b3eda4ded5004c2089aa66ccd5843')

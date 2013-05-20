@@ -9,14 +9,13 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=()
-depends=(${ros_depends[@]}
+depends=(
   cmake
   python2-nose
   python2-empy
   gtest
   python2-argparse
-  ros-groovy-catkin_pkg)
+  python2-catkin_pkg)
 
 source=()
 md5sums=()

@@ -9,17 +9,13 @@ pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-roscpp
+depends=(ros-groovy-roscpp
   ros-groovy-xmlrpcpp
   ros-groovy-rosconsole
   ros-groovy-rosunit
   ros-groovy-catkin
-  ros-groovy-rostest)
-depends=(${ros_depends[@]}
+  ros-groovy-rostest
   boost)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
