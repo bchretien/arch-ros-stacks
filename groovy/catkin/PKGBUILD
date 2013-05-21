@@ -5,7 +5,7 @@ url='http://www.ros.org/'
 pkgname='ros-groovy-catkin'
 pkgver='0.5.52'
 arch=('i686' 'x86_64')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 makedepends=('ros-build-tools')
 
@@ -14,7 +14,6 @@ depends=(
   python2-nose
   python2-empy
   gtest
-  python2-argparse
   python2-catkin_pkg)
 
 source=()
