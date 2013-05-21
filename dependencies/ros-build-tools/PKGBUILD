@@ -1,11 +1,12 @@
-# Maintainer: Lorenz Moesenlechner <moesenle@gmail.com>
+# Maintainer: Sean Greenslade <zootboysean@gmail.com>
 
 pkgdesc='Utilities for building arch packages for ROS stacks.'
+url=http://www.ros.org
 
 pkgname='ros-build-tools'
 pkgver='0.0.1'
 arch=('i686' 'x86_64')
-pkgrel=2
+pkgrel=3
 license=('BSD')
 makedepends=()
 depends=()
