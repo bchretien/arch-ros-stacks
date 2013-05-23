@@ -4,7 +4,7 @@ url='http://www.ros.org/'
 pkgname='ros-groovy-catkin'
 pkgver='0.5.65'
 arch=('i686' 'x86_64')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 makedepends=('ros-build-tools')
 

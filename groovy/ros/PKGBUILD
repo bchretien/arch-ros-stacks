@@ -1,11 +1,11 @@
 
-pkgdesc="ROS packaging system"
+pkgdesc="ROS packaging system - the bare bones of ROS."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-ros'
 pkgver='1.9.34'
 arch=('i686' 'x86_64')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 makedepends=('ros-build-tools')
 
@@ -21,3 +21,6 @@ depends=(ros-groovy-rosbash
   ros-groovy-rosbuild
   ros-groovy-roslang)
 
+package(){
+	return 0
+}
