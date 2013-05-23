@@ -1,9 +1,8 @@
-
-pkgdesc="Low-level build system macros and infrastructure for ROS."
+pkgdesc="ROS - Low-level build system macros and infrastructure."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-catkin'
-pkgver='0.5.52'
+pkgver='0.5.65'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -14,20 +13,16 @@ depends=(
   python2-nose
   python2-empy
   gtest
-  python2-argparse
   python2-catkin_pkg)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/catkin ]; then
     cd ${srcdir}/catkin
     git fetch origin --tags
-    git reset --hard release/catkin/${pkgver}
+    git reset --hard release/groovy/catkin/${pkgver}-3
   else
-    git clone -b release/catkin/${pkgver} git://github.com/ros-gbp/catkin-release.git ${srcdir}/catkin
+    git clone -b release/groovy/catkin/${pkgver}-3 git://github.com/ros-gbp/catkin-release.git ${srcdir}/catkin
   fi
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build

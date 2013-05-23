@@ -1,23 +1,17 @@
-
-pkgdesc="diagnostic_updater contains tools for easily updating diagnostics. it is commonly used in device drivers to keep track of the status of output topics, device status, etc."
+pkgdesc="ROS - tools for easily updating diagnostics."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-diagnostic-updater'
-pkgver='1.7.7'
+pkgver='1.7.10'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-diagnostic-msgs
+depends=(ros-groovy-diagnostic-msgs
   ros-groovy-roscpp
   ros-groovy-rostest
   ros-groovy-std-msgs)
-depends=(${ros_depends[@]}
-  )
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

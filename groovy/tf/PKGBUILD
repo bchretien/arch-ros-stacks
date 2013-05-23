@@ -1,19 +1,14 @@
-
-pkgdesc="tf is a package that lets the user keep track of multiple coordinate
-frames over time. tf maintains the relationship between coordinate
-frames in a tree structure buffered in time, and lets the user
-transform points, vectors, etc between any two coordinate frames at
-any desired point in time."
+pkgdesc="ROS - Frame transformation library."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-tf'
-pkgver='1.9.23'
+pkgver='1.9.28'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-message-filters
+depends=(ros-groovy-message-filters
   ros-groovy-roscpp
   ros-groovy-sensor-msgs
   ros-groovy-rostime
@@ -22,18 +17,13 @@ ros_depends=(ros-groovy-message-filters
   ros-groovy-std-msgs
   ros-groovy-rostest
   ros-groovy-geometry-msgs)
-depends=(${ros_depends[@]}
-  )
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/tf ]; then
     cd ${srcdir}/tf
-    git fetch origin --tags
-    git reset --hard release/tf/${pkgver}
+#    git fetch origin --tags
+#    git reset --hard release/tf/${pkgver}
   else
     git clone -b release/tf/${pkgver} git://github.com/ros-gbp/geometry-release.git ${srcdir}/tf
   fi

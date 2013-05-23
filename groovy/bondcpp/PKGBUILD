@@ -1,25 +1,19 @@
-
-pkgdesc="C++ implementation of bond, a mechanism for checking when
-    another process has terminated."
+pkgdesc="ROS - C++ implementation of bond."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-bondcpp'
-pkgver='1.7.6'
+pkgver='1.7.10'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-roscpp
+depends=(ros-groovy-roscpp
   ros-groovy-catkin
   ros-groovy-bond
-  ros-groovy-smclib)
-depends=(${ros_depends[@]}
+  ros-groovy-smclib
   boost
   uuid)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

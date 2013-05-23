@@ -1,35 +1,26 @@
-
-pkgdesc="The nodelet package is designed to provide a way to run multiple
-    algorithms in the same process with zero copy transport between
-    algorithms.
-
-    This package provides both the nodelet base class needed for
-    implementing a nodelet, as well as the NodeletLoader class used
-    for instantiating nodelets."
+pkgdesc="ROS - provides a way to run multiple algorithms in the same process."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-nodelet'
-pkgver='1.7.7'
+pkgver='1.7.14'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-bondcpp
+depends=(ros-groovy-bondcpp
   ros-groovy-roscpp
   ros-groovy-genmsg
   ros-groovy-pluginlib
   ros-groovy-rosconsole
   ros-groovy-rospy
   ros-groovy-langs-dev
-  ros-groovy-langs)
-depends=(${ros_depends[@]}
+  ros-groovy-langs
   boost
   uuid
   tinyxml)
 
-source=(nodelet.patch)
-md5sums=(d4f47356ae157b81045b3c7156d3a834)
+source=(includefix.patch)
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
@@ -40,7 +31,9 @@ build() {
   else
     git clone -b release/nodelet/${pkgver} git://github.com/ros-gbp/nodelet_core-release.git ${srcdir}/nodelet
   fi
-  cd ${srcdir}/nodelet && patch -p1 < ${srcdir}/nodelet.patch
+  cd ${srcdir}
+  patch -Np1 -i includefix.patch
+  cd ${srcdir}/nodelet 
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/nodelet
@@ -52,3 +45,4 @@ package() {
   cd "${srcdir}/build"
   make DESTDIR="${pkgdir}/" install
 }
+md5sums=('c35603af609da93b5fd3ee24e690d6dd')

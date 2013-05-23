@@ -9,12 +9,12 @@ license=('BSD')
 makedepends=('ros-build-tools')
 
 depends=(ros-groovy-catkin
-  ros-groovy-genmsg
-  ros-groovy-std-msgs
-  ros-groovy-langs-dev
+  eigen2
+  ros-groovy-message-generation
   ros-groovy-sensor-msgs
-  ros-groovy-langs)
-
+  ros-groovy-std-msgs
+  ros-groovy-message-runtime
+)
 source=(deps.patch)
 
 build() {
@@ -29,7 +29,7 @@ build() {
   
   # Ptching.
   cd ${srcdir}
-  patch -Np1 -i deps.patch
+#  patch -Np1 -i deps.patch
 
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build

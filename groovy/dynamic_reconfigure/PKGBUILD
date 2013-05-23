@@ -1,28 +1,22 @@
-
-pkgdesc="This unary stack contains the dynamic_reconfigure package which provides a means to change
-    node parameters at any time without having to restart the node."
+pkgdesc="ROS - provides a means to change node parameters."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-dynamic-reconfigure'
-pkgver='1.5.23'
+pkgver='1.5.31'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-roscpp
+depends=(ros-groovy-roscpp
   ros-groovy-catkin
   ros-groovy-genmsg
   ros-groovy-roslib
   ros-groovy-rospy
   ros-groovy-std-msgs
   ros-groovy-langs-dev
-  ros-groovy-rosservice)
-depends=(${ros_depends[@]}
+  ros-groovy-rosservice
   boost)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
