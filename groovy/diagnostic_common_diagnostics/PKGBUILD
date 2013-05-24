@@ -1,22 +1,17 @@
-
-pkgdesc="diagnostic_common_diagnostics"
+pkgdesc="ROS - diagnostic_common_diagnostics"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-diagnostic-common-diagnostics'
-pkgver='1.7.7'
+pkgver='1.7.10'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-diagnostic-updater
+depends=(ros-groovy-diagnostic-updater
   ros-groovy-rospy
-  ros-groovy-tf)
-depends=(${ros_depends[@]}
+  ros-groovy-tf
   hddtemp)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

@@ -1,20 +1,15 @@
-
-pkgdesc="Convex Decomposition Tool for Robot Model"
+pkgdesc="ROS - Convex Decomposition Tool for Robot Model"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-convex-decomposition'
-pkgver='0.1.7'
+pkgver='0.1.9'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('MIT')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-catkin)
-depends=(${ros_depends[@]}
+depends=(ros-groovy-catkin
   unzip)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

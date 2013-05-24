@@ -1,29 +1,17 @@
-
-pkgdesc="This package contains a set of conversion functions to convert
-common tf datatypes (point, vector, pose, etc) into semantically
-identical datatypes used by other libraries. The conversion functions
-make it easier for users of the transform library (tf) to work with
-the datatype of their choice. Currently this package has support for
-the Kinematics and Dynamics Library (KDL) and the Eigen matrix
-library. This package is stable, and will get integrated into tf in
-the next major release cycle (see roadmap)."
+pkgdesc="ROS - tf conversion libraries."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-tf-conversions'
-pkgver='1.9.23'
+pkgver='1.9.29'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-geometry-msgs
+depends=(ros-groovy-geometry-msgs
   ros-groovy-kdl-conversions
-  ros-groovy-tf)
-depends=(${ros_depends[@]}
+  ros-groovy-tf
   eigen)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

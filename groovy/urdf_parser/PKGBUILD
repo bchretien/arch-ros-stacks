@@ -1,16 +1,8 @@
-
-pkgdesc="This package is DEPRECATED. Please use the urdfdom dependency directly instead of this package.
-
-    This package contains a C++ parser for the Unified Robot
-    Description Format (URDF), which is an XML format for representing
-    a robot model.  The parser reads a URDF XML robot description, and
-    creates a C++ URDF model. Although it is possible to directly use
-    this parser when working with URDF robot descriptions, the
-    preferred user API is found in the urdf package."
+pkgdesc="ROS - urdf parser."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-urdf-parser'
-pkgver='1.9.29'
+pkgver='1.9.35'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -29,9 +21,9 @@ build() {
   if [ -d ${srcdir}/urdf_parser ]; then
     cd ${srcdir}/urdf_parser
     git fetch origin --tags
-    git reset --hard release/urdf_parser/${pkgver}
+    git reset --hard release/groovy/urdf_parser/${pkgver}-0
   else
-    git clone -b release/urdf_parser/${pkgver} git://github.com/ros-gbp/robot_model-release.git ${srcdir}/urdf_parser
+    git clone -b release/groovy/urdf_parser/${pkgver}-0 git://github.com/ros-gbp/robot_model-release.git ${srcdir}/urdf_parser
   fi
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build

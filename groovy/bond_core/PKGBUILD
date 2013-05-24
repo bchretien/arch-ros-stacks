@@ -1,0 +1,18 @@
+pkgdesc="ROS - bond_core metapackage"
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-bond-core'
+pkgver='1.7.10'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+
+depends=(ros-groovy-bond
+  ros-groovy-bondcpp
+  ros-groovy-bondpy
+  ros-groovy-smclib)
+
+package() {
+  return 0
+}

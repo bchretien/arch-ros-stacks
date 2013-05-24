@@ -1,19 +1,14 @@
-
-pkgdesc="<tt>robot_model</tt> contains packages for modeling various
-    aspects of robot information, specified in the Xml Robot
-    Description Format (URDF). The core package of this stack
-    is <a href="http://ros.org/wiki/urdf">urdf</a>, which parses URDF files, and constructs an
-    object model (C++) of the robot."
+pkgdesc="ROS - robot model metapackage."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-robot-model'
-pkgver='1.9.29'
+pkgver='1.9.35'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD, GPL, MIT')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-common-msgs
+depends=(ros-groovy-common-msgs
   ros-groovy-catkin
   ros-groovy-resource-retriever
   ros-groovy-ros
@@ -33,13 +28,13 @@ ros_depends=(ros-groovy-common-msgs
   ros-groovy-collada-parser
   ros-groovy-kdl-parser
   ros-groovy-urdfdom-headers
-  ros-groovy-urdfdom)
-depends=(${ros_depends[@]}
+  ros-groovy-urdfdom
   assimp
   collada-dom
   curl
   graphviz)
 
-source=()
-md5sums=()
+package() {
+  return 0
+}
 

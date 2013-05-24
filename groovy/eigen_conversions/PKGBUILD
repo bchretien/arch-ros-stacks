@@ -1,24 +1,17 @@
-
-pkgdesc="Conversion functions between:
-      - Eigen and KDL
-      - Eigen and geometry_msgs."
+pkgdesc="ROS - Conversion functions between: Eigen and KDL; Eigen and geometry_msgs."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-eigen-conversions'
-pkgver='1.9.23'
+pkgver='1.9.29'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-orocos-kdl
+depends=(ros-groovy-orocos-kdl
   ros-groovy-geometry-msgs
-  ros-groovy-std-msgs)
-depends=(${ros_depends[@]}
-  eigen)
-
-source=()
-md5sums=()
+  ros-groovy-std-msgs
+  eigen3)
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

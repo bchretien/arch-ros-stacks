@@ -1,18 +1,14 @@
-
-pkgdesc="The actionlib stack provides a standardized interface for
-    interfacing with preemptable tasks. Examples of this include moving
-    the base to a target location, performing a laser scan and returning
-    the resulting point cloud, detecting the handle of a door, etc."
+pkgdesc="ROS - actionlib stack."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-actionlib'
-pkgver='1.9.9'
+pkgver='1.9.11'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-roscpp
+depends=(ros-groovy-roscpp
   ros-groovy-catkin
   ros-groovy-genmsg
   ros-groovy-rostime
@@ -23,12 +19,8 @@ ros_depends=(ros-groovy-roscpp
   ros-groovy-rostest
   ros-groovy-langs-dev
   ros-groovy-langs
-  ros-groovy-actionlib-msgs)
-depends=(${ros_depends[@]}
+  ros-groovy-actionlib-msgs
   boost)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

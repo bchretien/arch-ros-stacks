@@ -1,24 +1,19 @@
-
-pkgdesc="Parser for Semantic Robot Description Format (SRDF)."
+pkgdesc="ROS - Parser for Semantic Robot Description Format (SRDF)."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-srdfdom'
-pkgver='0.2.2'
+pkgver='0.2.4'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-urdfdom-headers
+depends=(ros-groovy-urdfdom-headers
   ros-groovy-catkin
-  ros-groovy-console-bridge)
-depends=(${ros_depends[@]}
+  ros-groovy-console-bridge
   boost
   tinyxml
   pkg-config)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
