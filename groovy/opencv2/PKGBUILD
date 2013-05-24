@@ -1,16 +1,14 @@
-
-pkgdesc="OpenCV"
+pkgdesc="ROS - OpenCV"
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-opencv2'
-pkgver='2.4.2'
+pkgver='2.4.5'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-catkin)
-depends=(${ros_depends[@]}
+depends=(ros-groovy-catkin
   v4l-utils
   texlive-core
   python2-numpy
@@ -23,17 +21,14 @@ depends=(${ros_depends[@]}
   libpng12
   libtiff)
 
-source=()
-md5sums=()
-
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
   if [ -d ${srcdir}/opencv2 ]; then
     cd ${srcdir}/opencv2
     git fetch origin --tags
-    git reset --hard release/opencv2/${pkgver}
+    git reset --hard release/groovy/opencv2/${pkgver}-2
   else
-    git clone -b release/opencv2/${pkgver} git://github.com/ros-gbp/opencv2-release.git ${srcdir}/opencv2
+    git clone -b release/groovy/opencv2/${pkgver}-2 git://github.com/ros-gbp/opencv2-release.git ${srcdir}/opencv2
   fi
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build

@@ -1,15 +1,14 @@
-
-pkgdesc="3D visualization tool for ROS."
+pkgdesc="ROS - 3D visualization tool."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rviz'
-pkgver='1.9.16'
+pkgver='1.9.24'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD, Creative Commons')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-std-srvs
+depends=(ros-groovy-std-srvs
   ros-groovy-roscpp
   ros-groovy-tf
   ros-groovy-rosconsole
@@ -30,16 +29,14 @@ ros_depends=(ros-groovy-std-srvs
   ros-groovy-laser-geometry
   ros-groovy-resource-retriever
   ros-groovy-rospy
-  ros-groovy-nav-msgs)
-depends=(${ros_depends[@]}
-  eigen
+  ros-groovy-nav-msgs
+  eigen3
   ogre
-  qt
+  qt4
   assimp
-  yaml-cpp)
-
-source=(rviz.patch)
-md5sums=(b515940e9da8bb95bace912cbfc74d38)
+  yaml-cpp0.3
+  python2-pyqt
+)
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
@@ -50,7 +47,7 @@ build() {
   else
     git clone -b release/rviz/${pkgver} git://github.com/ros-gbp/rviz-release.git ${srcdir}/rviz
   fi
-  cd ${srcdir}/rviz && patch -p1 < ${srcdir}/rviz.patch
+  cd ${srcdir}/rviz 
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/rviz

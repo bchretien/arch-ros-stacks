@@ -1,28 +1,20 @@
-
-pkgdesc="image_transport should always be used to subscribe to and publish images. It provides transparent
-     support for transporting images in low-bandwidth compressed formats. Examples (provided by separate
-     plugin packages) include JPEG/PNG compression and Theora streaming video."
+pkgdesc="ROS - provides transparent support for transporting images."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-image-transport'
-pkgver='1.9.20'
+pkgver='1.10.3'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-message-filters
+depends=(ros-groovy-message-filters
   ros-groovy-roscpp
   ros-groovy-catkin
   ros-groovy-pluginlib
   ros-groovy-roslib
   ros-groovy-rosconsole
   ros-groovy-sensor-msgs)
-depends=(${ros_depends[@]}
-  )
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

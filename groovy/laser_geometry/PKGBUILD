@@ -1,27 +1,19 @@
-
-pkgdesc="This package contains a class for converting from a 2D laser scan as defined by
-    sensor_msgs/LaserScan into a point cloud as defined by sensor_msgs/PointCloud
-    or sensor_msgs/PointCloud2. In particular, it contains functionality to account
-    for the skew resulting from moving robots or tilting laser scanners."
+pkgdesc="ROS - converts laser scans to point clouds."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-laser-geometry'
-pkgver='1.5.5'
+pkgver='1.5.8'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-angles
+depends=(ros-groovy-angles
   ros-groovy-roscpp
   ros-groovy-sensor-msgs
-  ros-groovy-tf)
-depends=(${ros_depends[@]}
+  ros-groovy-tf
   boost
   eigen3)
-
-source=()
-md5sums=()
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash

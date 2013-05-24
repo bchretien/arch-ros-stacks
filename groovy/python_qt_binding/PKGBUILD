@@ -1,28 +1,16 @@
-
-pkgdesc="This stack provides Python bindings for Qt.
-    There are two providers: pyside and pyqt.  PySide is released under
-    the LGPL.  PyQt is released under the GPL.
-
-    Both the bindings and tools to build bindings are included from each
-    available provider.  For PySide, it is called &quot;Shiboken&quot;.  For PyQt,
-    this is called &quot;SIP&quot;.
-
-    Also provided is adapter code to make the user's Python code
-    independent of which binding provider was actually used which makes
-    it very easy to switch between these."
+pkgdesc="ROS - This stack provides Python bindings for Qt."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-python-qt-binding'
-pkgver='0.2.5'
+pkgver='0.2.8'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD, LGPL, GPL')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-groovy-rosbuild
-  ros-groovy-catkin)
-depends=(${ros_depends[@]}
-  qt)
+depends=(ros-groovy-rosbuild
+  ros-groovy-catkin
+  qt5-base)
 
 source=(python_qt_binding.patch)
 md5sums=(5015328fb28788a2c192cf8a8dfccbd1)
@@ -36,7 +24,8 @@ build() {
   else
     git clone -b release/python_qt_binding/${pkgver} git://github.com/ros-gbp/python_qt_binding-release.git ${srcdir}/python_qt_binding
   fi
-  cd ${srcdir}/python_qt_binding && patch -p1 < ${srcdir}/python_qt_binding.patch
+  cd ${srcdir}/python_qt_binding
+#patch -p1 < ${srcdir}/python_qt_binding.patch
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/python_qt_binding
