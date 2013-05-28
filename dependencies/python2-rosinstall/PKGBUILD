@@ -5,11 +5,11 @@ url='http://www.ros.org/'
 
 pkgname='python2-rosinstall'
 pkgver='0.6.22'
-pkgrel='1'
+pkgrel='2'
 arch=('i686' 'x86_64')
 license=('BSD')
 depends=('python2' 'cmake' 'wget' 'vcstools'
-  'git' 'python2-distribute' 'python2-yaml')
+  'git' 'python2-distribute' 'python2-yaml' 'python2-dateutil')
 
 source=("http://pr.willowgarage.com/downloads/rosinstall/rosinstall-$pkgver.tar.gz")
 
