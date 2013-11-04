@@ -1,10 +1,9 @@
 
-pkgdesc="This package provides a set of typedef's that allow
-  using Eigen datatypes in STL containers"
+pkgdesc="ROS - Provides a set of typedef's that allow using Eigen datatypes in STL containers."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-eigen-stl-containers'
-pkgver='0.1.2'
+pkgver='0.1.4'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -12,7 +11,7 @@ makedepends=('ros-build-tools')
 
 ros_depends=(ros-groovy-catkin)
 depends=(${ros_depends[@]}
-  eigen)
+  eigen3)
 
 source=()
 md5sums=()
@@ -22,9 +21,9 @@ build() {
   if [ -d ${srcdir}/eigen_stl_containers ]; then
     cd ${srcdir}/eigen_stl_containers
     git fetch origin --tags
-    git reset --hard release/eigen_stl_containers/${pkgver}
+    git reset --hard release/groovy/eigen_stl_containers/${pkgver}-0
   else
-    git clone -b release/eigen_stl_containers/${pkgver} git://github.com/ros-gbp/eigen_stl_containers-release.git ${srcdir}/eigen_stl_containers
+    git clone -b release/groovy/eigen_stl_containers/${pkgver}-0 git://github.com/ros-gbp/eigen_stl_containers-release.git ${srcdir}/eigen_stl_containers
   fi
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
