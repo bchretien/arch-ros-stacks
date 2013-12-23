@@ -1,9 +1,9 @@
 
-pkgdesc="This package contains generic definitions of geometric shapes and bodies."
+pkgdesc="ROS - Contains generic definitions of geometric shapes and bodies."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-geometric-shapes'
-pkgver='0.1.10'
+pkgver='0.3.4'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -21,25 +21,31 @@ depends=(${ros_depends[@]}
   assimp
   qhull
   boost
-  eigen)
+  eigen3)
 
-source=(geometric_shapes.patch)
-md5sums=(120d02a936a6d80412f3d0e809f802f1)
+source=()
+md5sums=('SKIP')
 
 build() {
   [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+
   if [ -d ${srcdir}/geometric_shapes ]; then
     cd ${srcdir}/geometric_shapes
     git fetch origin --tags
-    git reset --hard release/geometric_shapes/${pkgver}
+    git reset --hard release/groovy/geometric_shapes/${pkgver}-0
   else
-    git clone -b release/geometric_shapes/${pkgver} git://github.com/ros-gbp/geometric_shapes-release.git ${srcdir}/geometric_shapes
+    git clone -b release/groovy/geometric_shapes/${pkgver}-0 git://github.com/ros-gbp/geometric_shapes-release.git ${srcdir}/geometric_shapes
   fi
-  cd ${srcdir}/geometric_shapes && patch -p1 < ${srcdir}/geometric_shapes.patch
+
+  #cd ${srcdir}/geometric_shapes && patch -p1 < ${srcdir}/geometric_shapes.patch
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
+
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/geometric_shapes
-  cmake ${srcdir}/geometric_shapes -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF
+
+  cmake ${srcdir}/geometric_shapes -DCATKIN_BUILD_BINARY_PACKAGE=ON \
+                                   -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy \
+                                   -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
 }
 
