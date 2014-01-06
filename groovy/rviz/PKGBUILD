@@ -2,9 +2,10 @@ pkgdesc="ROS - 3D visualization tool."
 url='http://www.ros.org/'
 
 pkgname='ros-groovy-rviz'
-pkgver='1.9.29'
+pkgver='1.9.33'
+_micro=0
 arch=('i686' 'x86_64')
-pkgrel=2
+pkgrel=1
 license=('BSD, Creative Commons')
 makedepends=('ros-build-tools')
 
@@ -44,9 +45,9 @@ build() {
   if [ -d ${srcdir}/rviz ]; then
     cd ${srcdir}/rviz
     git fetch origin --tags
-    git reset --hard release/groovy/rviz/${pkgver}-2
+    git reset --hard release/groovy/rviz/${pkgver}-${_micro}
   else
-    git clone -b release/groovy/rviz/${pkgver}-2 git://github.com/ros-gbp/rviz-release.git ${srcdir}/rviz
+    git clone -b release/groovy/rviz/${pkgver}-${_micro} git://github.com/ros-gbp/rviz-release.git ${srcdir}/rviz
   fi
 
   cd ${srcdir}/rviz
