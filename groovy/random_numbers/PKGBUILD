@@ -1,6 +1,5 @@
-
-pkgdesc="This package generates random floating point values, integers, quaternions using boost libraries."
-url='http://www.ros.org/'
+pkgdesc="ROS - Generate random floating point values, integers, quaternions using boost libraries."
+url='https://github.com/ros-gbp/random_numbers-release'
 
 pkgname='ros-groovy-random-numbers'
 pkgver='0.1.3'
