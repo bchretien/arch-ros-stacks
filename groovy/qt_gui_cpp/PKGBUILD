@@ -27,7 +27,8 @@ build() {
     git clone -b release/groovy/qt_gui_cpp/${pkgver}-0 git://github.com/ros-gbp/qt_gui_core-release.git ${srcdir}/qt_gui_cpp
   fi
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
- 
+
+  cd ${srcdir}/qt_gui_cpp
   patch -Np1 < ${srcdir}/sip.patch
   
   cd ${srcdir}/build
