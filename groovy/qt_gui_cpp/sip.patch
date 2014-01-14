@@ -1,0 +1,12 @@
+diff --git a/src/qt_gui_cpp_sip/CMakeLists.txt b/src/qt_gui_cpp_sip/CMakeLists.txt
+index 936452a..5d62bba 100644
+--- a/src/qt_gui_cpp_sip/CMakeLists.txt
++++ b/src/qt_gui_cpp_sip/CMakeLists.txt
+@@ -47,6 +47,7 @@ if(sip_helper_FOUND)
+     LIBRARY_DIR ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_PYTHON_DESTINATION}
+     DEPENDS ${qt_gui_cpp_sip_DEPENDENT_FILES}
+     DEPENDENCIES qt_gui_cpp
++    SIP_CONFIGURE /opt/ros/groovy/share/python_qt_binding/cmake/sip_configure.py
+   )
+ 
+   if(APPLE)
