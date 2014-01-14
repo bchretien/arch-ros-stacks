@@ -1,0 +1,46 @@
+pkgdesc="ROS - qt_gui_cpp"
+url='http://www.ros.org/'
+
+pkgname='ros-groovy-qt-gui-cpp'
+pkgver='0.2.18'
+arch=('i686' 'x86_64')
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools')
+source=(sip.patch)
+
+depends=(
+  python2-rospkg
+  ros-groovy-catkin
+  ros-groovy-qt-gui
+  ros-groovy-pluginlib
+  ros-groovy-python-qt-binding
+  qt4
+)
+build() {
+  [ -f /opt/ros/groovy/setup.bash ] && source /opt/ros/groovy/setup.bash
+  if [ -d ${srcdir}/qt_gui_cpp ]; then
+    cd ${srcdir}/qt_gui_cpp
+    git fetch origin --tags
+    git reset --hard release/groovy/qt_gui_cpp/${pkgver}-0
+  else
+    git clone -b release/groovy/qt_gui_cpp/${pkgver}-0 git://github.com/ros-gbp/qt_gui_core-release.git ${srcdir}/qt_gui_cpp
+  fi
+  [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
+
+  cd ${srcdir}/qt_gui_cpp
+  patch -Np1 < ${srcdir}/sip.patch
+  
+  cd ${srcdir}/build
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/qt_gui_cpp
+  cmake ${srcdir}/qt_gui_cpp -DCATKIN_BUILD_BINARY_PACKAGE=ON -DCMAKE_INSTALL_PREFIX=/opt/ros/groovy -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so -DSETUPTOOLS_DEB_LAYOUT=OFF -DSIP_CONFIGURE=/opt/ros/groovy/share/python_qt_binding/cmake/sip_configure.py
+  make
+}
+
+package() {
+  cd "${srcdir}/build"
+  make DESTDIR="${pkgdir}/" install
+}
+md5sums=()
+md5sums=('1efd1930c8b8eb4d7c8f6b8bb9fb058a')
+md5sums=('eac6e3955135ad341d38acfb852eb856')
