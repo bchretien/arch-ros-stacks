@@ -10,7 +10,7 @@ license=('BSD')
 makedepends=('ros-build-tools')
 
 ros_depends=(ros-hydro-catkin)
-depends=(${ros_depends})
+depends=(${ros_depends[@]})
 
 _tag=release/hydro/rosmake/${pkgver}-0
 _dir=rosmake

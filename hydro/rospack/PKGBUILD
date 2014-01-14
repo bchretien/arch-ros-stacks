@@ -5,12 +5,12 @@ url='http://www.ros.org/'
 pkgname='ros-hydro-rospack'
 pkgver='2.1.22'
 arch=('i686' 'x86_64')
-pkgrel=2
+pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
 ros_depends=()
-depends=(${ros_depends}
+depends=(${ros_depends[@]}
   tinyxml
   pkg-config
   python2

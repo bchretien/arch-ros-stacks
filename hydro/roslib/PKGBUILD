@@ -11,7 +11,8 @@ makedepends=('ros-build-tools')
 
 ros_depends=(ros-hydro-rospack
   ros-hydro-catkin)
-depends=(${ros_depends})
+depends=(${ros_depends[@]}
+  boost)
 
 _tag=release/hydro/roslib/${pkgver}-0
 _dir=roslib

@@ -20,7 +20,7 @@ ros_depends=(ros-hydro-rosbash
   ros-hydro-rosbuild
   ros-hydro-catkin
   ros-hydro-mk)
-depends=(${ros_depends})
+depends=(${ros_depends[@]})
 
 source=()
 md5sums=()
