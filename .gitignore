@@ -3,3 +3,11 @@ src/
 *.pkg.tar.xz
 *.tar.bz2
 *.tar.gz
+groovy/*/**
+!groovy/*/PKGBUILD
+!groovy/*/*.patch
+!groovy/*/*.install
+hydro/*/**
+!hydro/*/PKGBUILD
+!hydro/*/*.patch
+!hydro/*/*.install
