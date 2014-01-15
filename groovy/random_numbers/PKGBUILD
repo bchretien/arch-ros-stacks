@@ -1,5 +1,5 @@
 pkgdesc="ROS - Generate random floating point values, integers, quaternions using boost libraries."
-url='https://github.com/ros-gbp/random_numbers-release'
+url='http://www.ros.org/'
 
 pkgname='ros-groovy-random-numbers'
 pkgver='0.1.3'

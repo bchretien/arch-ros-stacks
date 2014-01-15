@@ -3,6 +3,7 @@ url='http://www.ros.org/'
 
 pkgname='ros-groovy-urdfdom-headers'
 pkgver='0.2.3'
+_micro=2
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
@@ -18,9 +19,9 @@ build() {
   if [ -d ${srcdir}/urdfdom_headers ]; then
     cd ${srcdir}/urdfdom_headers
     git fetch origin --tags
-    git reset --hard release/groovy/urdfdom_headers/${pkgver}-2
+    git reset --hard release/groovy/urdfdom_headers/${pkgver}-${_micro}
   else
-    git clone -b release/groovy/urdfdom_headers/${pkgver}-2 git://github.com/ros-gbp/urdfdom_headers-release.git ${srcdir}/urdfdom_headers
+    git clone -b release/groovy/urdfdom_headers/${pkgver}-${_micro} git://github.com/ros-gbp/urdfdom_headers-release.git ${srcdir}/urdfdom_headers
   fi
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
   cd ${srcdir}/build
