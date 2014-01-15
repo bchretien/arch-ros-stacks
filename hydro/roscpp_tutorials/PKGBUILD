@@ -1,22 +1,26 @@
 
-pkgdesc="ROS - roscpp_serialization contains the code for serialization as described in MessagesSerializationAndAdaptingTypes."
+pkgdesc="ROS - This package attempts to show the features of ROS step-by-step, including using messages, servers, parameters, etc."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-roscpp-serialization'
-pkgver='0.3.17'
+pkgname='ros-hydro-roscpp-tutorials'
+pkgver='0.4.3'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-roscpp-traits
-  ros-hydro-cpp-common)
+ros_depends=(ros-hydro-message-generation
+  ros-hydro-rosconsole
+  ros-hydro-message-runtime
+  ros-hydro-roscpp-serialization
+  ros-hydro-roscpp
+  ros-hydro-rostime
+  ros-hydro-std-msgs)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/roscpp_serialization/${pkgver}-0
-_dir=roscpp_serialization
-source=("${_dir}"::"git+https://github.com/ros-gbp/roscpp_core-release.git"#tag=${_tag})
+_tag=release/hydro/roscpp_tutorials/${pkgver}-0
+_dir=roscpp_tutorials
+source=("${_dir}"::"git+https://github.com/ros-gbp/ros_tutorials-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

@@ -1,22 +1,22 @@
 
-pkgdesc="ROS - roscpp_serialization contains the code for serialization as described in MessagesSerializationAndAdaptingTypes."
+pkgdesc="ROS - Messages relating to the ROS Computation Graph. These are generally considered to be low-level messages that end users do not interact with."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-roscpp-serialization'
-pkgver='0.3.17'
+pkgname='ros-hydro-rosgraph-msgs'
+pkgver='1.9.52'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-roscpp-traits
-  ros-hydro-cpp-common)
+ros_depends=(ros-hydro-message-runtime
+  ros-hydro-message-generation
+  ros-hydro-std-msgs)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/roscpp_serialization/${pkgver}-0
-_dir=roscpp_serialization
-source=("${_dir}"::"git+https://github.com/ros-gbp/roscpp_core-release.git"#tag=${_tag})
+_tag=release/hydro/rosgraph_msgs/${pkgver}-0
+_dir=rosgraph_msgs
+source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
