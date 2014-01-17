@@ -1,27 +1,34 @@
 
-pkgdesc="ROS - ROS console output library."
+pkgdesc="ROS - sound_play provides a ROS node that translates commands on a ROS topic (robotsound) into sounds."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-rosconsole'
-pkgver='1.9.53'
+pkgname='ros-hydro-sound-play'
+pkgver='0.2.4'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 makedepends=('cmake' 'ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-cpp-common
-  ros-hydro-rosunit)
+ros_depends=(ros-hydro-audio-common-msgs
+  ros-hydro-rospy
+  ros-hydro-message-runtime
+  ros-hydro-message-generation
+  ros-hydro-roscpp
+  ros-hydro-roslib
+  ros-hydro-diagnostic-msgs)
 depends=(${ros_depends[@]}
-  apr
-  apr-util
-  boost
-  log4cxx)
+  gstreamer0.10-base-plugins
+  gstreamer0.10-ugly-plugins
+  gstreamer0.10
+  festival
+  gstreamer0.10-python
+  gstreamer0.10-good-plugins
+  festival-english)
 
-_tag=release/hydro/rosconsole/${pkgver}-${_pkgver_patch}
-_dir=rosconsole
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/sound_play/${pkgver}-${_pkgver_patch}
+_dir=sound_play
+source=("${_dir}"::"git+https://github.com/ros-gbp/audio_common-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

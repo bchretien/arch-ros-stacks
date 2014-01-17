@@ -1,27 +1,21 @@
 
-pkgdesc="ROS - ROS console output library."
+pkgdesc="ROS - This is an implementation of the EtherCAT master protocol for the PR2 robot based on the work done at Flanders' Mechatronics Technology Centre."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-rosconsole'
-pkgver='1.9.53'
-_pkgver_patch=0
+pkgname='ros-hydro-eml'
+pkgver='0.36.0'
+_pkgver_patch=3
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('Binary Only')
 makedepends=('cmake' 'ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-cpp-common
-  ros-hydro-rosunit)
-depends=(${ros_depends[@]}
-  apr
-  apr-util
-  boost
-  log4cxx)
+ros_depends=(ros-hydro-catkin)
+depends=(${ros_depends[@]})
 
-_tag=release/hydro/rosconsole/${pkgver}-${_pkgver_patch}
-_dir=rosconsole
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/eml/${pkgver}-${_pkgver_patch}
+_dir=eml
+source=("${_dir}"::"git+https://github.com/ros-gbp/eml-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

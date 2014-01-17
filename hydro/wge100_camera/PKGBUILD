@@ -1,27 +1,34 @@
 
-pkgdesc="ROS - ROS console output library."
+pkgdesc="ROS - A ROS node and assorted tools to provide access to the WGE100 camera used in the forearms and the stereo cameras of the PR2 robot."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-rosconsole'
-pkgver='1.9.53'
+pkgname='ros-hydro-wge100-camera'
+pkgver='1.8.2'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('GPL,BSD')
 makedepends=('cmake' 'ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-cpp-common
-  ros-hydro-rosunit)
-depends=(${ros_depends[@]}
-  apr
-  apr-util
-  boost
-  log4cxx)
+ros_depends=(ros-hydro-message-generation
+  ros-hydro-rospy
+  ros-hydro-message-runtime
+  ros-hydro-sensor-msgs
+  ros-hydro-camera-calibration-parsers
+  ros-hydro-driver-base
+  ros-hydro-image-transport
+  ros-hydro-roscpp
+  ros-hydro-self-test
+  ros-hydro-dynamic-reconfigure
+  ros-hydro-diagnostic-updater
+  ros-hydro-timestamp-tools
+  ros-hydro-std-msgs
+  ros-hydro-rostest)
+depends=(${ros_depends[@]})
 
-_tag=release/hydro/rosconsole/${pkgver}-${_pkgver_patch}
-_dir=rosconsole
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/wge100_camera/${pkgver}-${_pkgver_patch}
+_dir=wge100_camera
+source=("${_dir}"::"git+https://github.com/ros-drivers-gbp/wge100_driver-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

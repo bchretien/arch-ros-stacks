@@ -1,27 +1,30 @@
 
-pkgdesc="ROS - ROS console output library."
+pkgdesc="ROS - A driver for IMUs compatible the microstrain 3DM-GX2 and 3DM-GX3 protocol."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-rosconsole'
-pkgver='1.9.53'
+pkgname='ros-hydro-microstrain-3dmgx2-imu'
+pkgver='1.5.12'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('LGPL')
 makedepends=('cmake' 'ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-cpp-common
-  ros-hydro-rosunit)
+ros_depends=(ros-hydro-message-generation
+  ros-hydro-std-srvs
+  ros-hydro-message-runtime
+  ros-hydro-sensor-msgs
+  ros-hydro-diagnostic-updater
+  ros-hydro-roscpp
+  ros-hydro-self-test
+  ros-hydro-tf
+  ros-hydro-std-msgs)
 depends=(${ros_depends[@]}
-  apr
-  apr-util
-  boost
   log4cxx)
 
-_tag=release/hydro/rosconsole/${pkgver}-${_pkgver_patch}
-_dir=rosconsole
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/microstrain_3dmgx2_imu/${pkgver}-${_pkgver_patch}
+_dir=microstrain_3dmgx2_imu
+source=("${_dir}"::"git+https://github.com/ros-gbp/microstrain_3dmgx2_imu-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

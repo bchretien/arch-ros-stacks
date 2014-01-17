@@ -1,27 +1,23 @@
 
-pkgdesc="ROS - ROS console output library."
+pkgdesc="ROS - This package contains a recent version of the Bayesian Filtering Library (BFL), distributed by the Orocos Project."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-rosconsole'
-pkgver='1.9.53'
-_pkgver_patch=0
+pkgname='ros-hydro-bfl'
+pkgver='0.7.0'
+_pkgver_patch=3
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('LGPL')
 makedepends=('cmake' 'ros-build-tools')
 
-ros_depends=(ros-hydro-rostime
-  ros-hydro-cpp-common
-  ros-hydro-rosunit)
+ros_depends=(ros-hydro-catkin)
 depends=(${ros_depends[@]}
-  apr
-  apr-util
   boost
-  log4cxx)
+  cppunit)
 
-_tag=release/hydro/rosconsole/${pkgver}-${_pkgver_patch}
-_dir=rosconsole
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/bfl/${pkgver}-${_pkgver_patch}
+_dir=bfl
+source=("${_dir}"::"git+https://github.com/ros-gbp/bfl-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
