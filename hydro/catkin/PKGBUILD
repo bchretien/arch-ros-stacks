@@ -5,7 +5,7 @@ url='http://www.ros.org/'
 pkgname='ros-hydro-catkin'
 pkgver='0.5.79'
 arch=('i686' 'x86_64')
-pkgrel=3
+pkgrel=4
 license=('BSD')
 makedepends=('ros-build-tools')
 
@@ -15,7 +15,8 @@ depends=(${ros_depends[@]}
   python2-empy
   gtest
   cmake
-  python2-catkin_pkg)
+  python2-catkin_pkg
+  git)
 
 _tag=release/hydro/catkin/${pkgver}-0
 _dir=catkin
