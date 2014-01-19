@@ -6,7 +6,7 @@ pkgver='0.1.25'
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
-makedepends=('ros-build-tools')
+makedepends=('ros-build-tools' 'git')
 
 _tag=${pkgver}
 _dir=catkin
@@ -16,10 +16,13 @@ md5sums=('SKIP')
 build() {
   # Fix Python3 error
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/${_dir}
+
+  cd ${srcdir}/${_dir}
+  python2 setup.py build
 }
 
 package() {
-  cd ${srcdir}/catkin
-  python2 setup.py install --prefix=$pkgdir/usr
+  cd ${srcdir}/${_dir}
+  python2 setup.py install -O2 --skip-build --prefix=/usr --root=${pkgdir}
 }
 
