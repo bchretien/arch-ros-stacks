@@ -6,7 +6,7 @@ pkgname='ros-hydro-catkin'
 pkgver='0.5.79'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
-pkgrel=5
+pkgrel=6
 license=('BSD')
 
 ros_makedepends=()
@@ -21,6 +21,7 @@ ros_depends=()
 depends=(${ros_depends[@]}
   cmake
   python2
+  python2-catkin_pkg
   python2-empy
   python2-nose
   gtest)
