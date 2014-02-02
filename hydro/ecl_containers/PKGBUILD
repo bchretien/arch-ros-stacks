@@ -1,29 +1,41 @@
 
-pkgdesc="ROS - camera_calibration_parsers contains routines for reading and writing camera calibration parameters."
+pkgdesc="ROS - The containers included here are intended to extend the stl containers."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-camera-calibration-parsers'
-pkgver='1.11.1'
+pkgname='ros-hydro-ecl-containers'
+pkgver='0.60.6'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-sensor-msgs
+ros_makedepends=(ros-hydro-ecl-mpl
+  ros-hydro-ecl-license
+  ros-hydro-ecl-utilities
+  ros-hydro-ecl-formatters
   ros-hydro-catkin
-  ros-hydro-rosconsole)
+  ros-hydro-ecl-converters
+  ros-hydro-ecl-type-traits
+  ros-hydro-ecl-errors
+  ros-hydro-ecl-config
+  ros-hydro-ecl-exceptions)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]}
-  boost
-  yaml-cpp)
+  ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-sensor-msgs)
-depends=(${ros_depends[@]}
-  yaml-cpp)
+ros_depends=(ros-hydro-ecl-mpl
+  ros-hydro-ecl-license
+  ros-hydro-ecl-utilities
+  ros-hydro-ecl-formatters
+  ros-hydro-ecl-converters
+  ros-hydro-ecl-type-traits
+  ros-hydro-ecl-errors
+  ros-hydro-ecl-config
+  ros-hydro-ecl-exceptions)
+depends=(${ros_depends[@]})
 
-_tag=release/hydro/camera_calibration_parsers/${pkgver}-${_pkgver_patch}
-_dir=camera_calibration_parsers
-source=("${_dir}"::"git+https://github.com/ros-gbp/image_common-release.git"#tag=${_tag})
+_tag=release/hydro/ecl_containers/${pkgver}-${_pkgver_patch}
+_dir=ecl_containers
+source=("${_dir}"::"git+https://github.com/yujinrobot-release/ecl_core-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

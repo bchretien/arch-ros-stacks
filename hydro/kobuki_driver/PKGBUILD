@@ -1,29 +1,37 @@
 
-pkgdesc="ROS - camera_calibration_parsers contains routines for reading and writing camera calibration parameters."
+pkgdesc="ROS - C++ driver library for Kobuki: Pure C++ driver library for Kobuki."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-camera-calibration-parsers'
-pkgver='1.11.1'
+pkgname='ros-hydro-kobuki-driver'
+pkgver='0.5.3'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-sensor-msgs
+ros_makedepends=(ros-hydro-ecl-devices
+  ros-hydro-ecl-sigslots
+  ros-hydro-ecl-converters
   ros-hydro-catkin
-  ros-hydro-rosconsole)
+  ros-hydro-ecl-mobile-robot
+  ros-hydro-ecl-geometry
+  ros-hydro-ecl-time
+  ros-hydro-ecl-command-line)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]}
-  boost
-  yaml-cpp)
+  ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-sensor-msgs)
-depends=(${ros_depends[@]}
-  yaml-cpp)
+ros_depends=(ros-hydro-ecl-devices
+  ros-hydro-ecl-sigslots
+  ros-hydro-ecl-converters
+  ros-hydro-ecl-mobile-robot
+  ros-hydro-ecl-geometry
+  ros-hydro-ecl-time
+  ros-hydro-ecl-command-line)
+depends=(${ros_depends[@]})
 
-_tag=release/hydro/camera_calibration_parsers/${pkgver}-${_pkgver_patch}
-_dir=camera_calibration_parsers
-source=("${_dir}"::"git+https://github.com/ros-gbp/image_common-release.git"#tag=${_tag})
+_tag=release/hydro/kobuki_driver/${pkgver}-${_pkgver_patch}
+_dir=kobuki_driver
+source=("${_dir}"::"git+https://github.com/yujinrobot-release/kobuki_core-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
