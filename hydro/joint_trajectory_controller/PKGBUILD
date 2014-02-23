@@ -1,33 +1,51 @@
 
-pkgdesc="ROS - control_msgs contains base messages and actions useful for controlling robots."
+pkgdesc="ROS - Controller for executing joint-space trajectories on a group of joints."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-control-msgs'
-pkgver='1.2.0'
+pkgname='ros-hydro-joint-trajectory-controller'
+pkgver='0.6.0'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-message-generation
+ros_makedepends=(ros-hydro-control-toolbox
+  ros-hydro-xacro
   ros-hydro-trajectory-msgs
-  ros-hydro-geometry-msgs
+  ros-hydro-controller-manager
+  ros-hydro-hardware-interface
+  ros-hydro-realtime-tools
+  ros-hydro-roscpp
+  ros-hydro-angles
   ros-hydro-catkin
-  ros-hydro-actionlib-msgs
-  ros-hydro-std-msgs)
+  ros-hydro-control-msgs
+  ros-hydro-actionlib
+  ros-hydro-cmake-modules
+  ros-hydro-urdf
+  ros-hydro-controller-interface
+  ros-hydro-rostest)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-actionlib-msgs
-  ros-hydro-message-runtime
-  ros-hydro-geometry-msgs
-  ros-hydro-std-msgs
-  ros-hydro-trajectory-msgs)
+ros_depends=(ros-hydro-control-toolbox
+  ros-hydro-xacro
+  ros-hydro-trajectory-msgs
+  ros-hydro-controller-manager
+  ros-hydro-realtime-tools
+  ros-hydro-roscpp
+  ros-hydro-angles
+  ros-hydro-control-msgs
+  ros-hydro-actionlib
+  ros-hydro-hardware-interface
+  ros-hydro-urdf
+  ros-hydro-rqt-plot
+  ros-hydro-controller-interface
+  ros-hydro-rostest)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/control_msgs/${pkgver}-${_pkgver_patch}
-_dir=control_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/control_msgs-release.git"#tag=${_tag})
+_tag=release/hydro/joint_trajectory_controller/${pkgver}-${_pkgver_patch}
+_dir=joint_trajectory_controller
+source=("${_dir}"::"git+https://github.com/ros-gbp/ros_controllers-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

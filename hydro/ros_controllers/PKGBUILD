@@ -1,30 +1,31 @@
 
-pkgdesc="ROS - This package defines messages for defining robot trajectories."
+pkgdesc="ROS - Library of ros controllers."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-trajectory-msgs'
-pkgver='1.10.4'
+pkgname='ros-hydro-ros-controllers'
+pkgver='0.6.0'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-message-generation
-  ros-hydro-catkin
-  ros-hydro-geometry-msgs
-  ros-hydro-std-msgs)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-message-runtime
-  ros-hydro-geometry-msgs
-  ros-hydro-rosbag-migration-rule
-  ros-hydro-std-msgs)
+ros_depends=(ros-hydro-velocity-controllers
+  ros-hydro-force-torque-sensor-controller
+  ros-hydro-effort-controllers
+  ros-hydro-forward-command-controller
+  ros-hydro-joint-trajectory-controller
+  ros-hydro-position-controllers
+  ros-hydro-imu-sensor-controller
+  ros-hydro-joint-state-controller)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/trajectory_msgs/${pkgver}-${_pkgver_patch}
-_dir=trajectory_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/common_msgs-release.git"#tag=${_tag})
+_tag=release/hydro/ros_controllers/${pkgver}-${_pkgver_patch}
+_dir=ros_controllers
+source=("${_dir}"::"git+https://github.com/ros-gbp/ros_controllers-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

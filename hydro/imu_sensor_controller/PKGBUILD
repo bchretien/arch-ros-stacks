@@ -1,30 +1,35 @@
 
-pkgdesc="ROS - This package defines messages for defining robot trajectories."
+pkgdesc="ROS - Controller to publish state of IMU sensors."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-trajectory-msgs'
-pkgver='1.10.4'
+pkgname='ros-hydro-imu-sensor-controller'
+pkgver='0.6.0'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-message-generation
+ros_makedepends=(ros-hydro-sensor-msgs
+  ros-hydro-realtime-tools
+  ros-hydro-roscpp
   ros-hydro-catkin
-  ros-hydro-geometry-msgs
-  ros-hydro-std-msgs)
+  ros-hydro-hardware-interface
+  ros-hydro-controller-interface
+  ros-hydro-pluginlib)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-message-runtime
-  ros-hydro-geometry-msgs
-  ros-hydro-rosbag-migration-rule
-  ros-hydro-std-msgs)
+ros_depends=(ros-hydro-sensor-msgs
+  ros-hydro-realtime-tools
+  ros-hydro-roscpp
+  ros-hydro-hardware-interface
+  ros-hydro-controller-interface
+  ros-hydro-pluginlib)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/trajectory_msgs/${pkgver}-${_pkgver_patch}
-_dir=trajectory_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/common_msgs-release.git"#tag=${_tag})
+_tag=release/hydro/imu_sensor_controller/${pkgver}-${_pkgver_patch}
+_dir=imu_sensor_controller
+source=("${_dir}"::"git+https://github.com/ros-gbp/ros_controllers-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
