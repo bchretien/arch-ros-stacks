@@ -3,10 +3,10 @@ pkgdesc="ROS - 3D visualization tool for ROS."
 url='http://www.ros.org/'
 
 pkgname='ros-hydro-rviz'
-pkgver='1.10.11'
+pkgver='1.10.12'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
-pkgrel=2
+pkgrel=1
 license=('BSD, Creative Commons')
 
 ros_makedepends=(ros-hydro-rosconsole
@@ -76,20 +76,13 @@ depends=(${ros_depends[@]}
 
 _tag=release/hydro/rviz/${pkgver}-${_pkgver_patch}
 _dir=rviz
-source=("${_dir}"::"git+https://github.com/ros-gbp/rviz-release.git"#tag=${_tag}
-        "shiboken.patch")
-md5sums=('SKIP'
-         '2b9cfc10ef1314050d2af6cb271831de')
+source=("${_dir}"::"git+https://github.com/ros-gbp/rviz-release.git"#tag=${_tag})
+md5sums=('SKIP')
 
 build() {
   # Use ROS environment variables
   /usr/share/ros-build-tools/clear-ros-env.sh
   [ -f /opt/ros/hydro/setup.bash ] && source /opt/ros/hydro/setup.bash
-
-  # Apply patch
-  msg "Patching source code"
-  cd ${srcdir}/${_dir}
-  git apply ${srcdir}/shiboken.patch
 
   # Create build directory
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
