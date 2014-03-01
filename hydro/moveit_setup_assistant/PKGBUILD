@@ -3,30 +3,43 @@ pkgdesc="ROS - Generates a configuration package that makes it easy to use MoveI
 url='http://www.ros.org/'
 
 pkgname='ros-hydro-moveit-setup-assistant'
-pkgver='0.5.7'
+pkgver='0.5.8'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
-pkgrel=3
+pkgrel=1
 license=('BSD')
-makedepends=('cmake' 'ros-build-tools')
+
+ros_makedepends=(ros-hydro-moveit-ros-planning
+  ros-hydro-catkin
+  ros-hydro-moveit-ros-visualization
+  ros-hydro-moveit-core)
+makedepends=('cmake' 'git' 'ros-build-tools'
+  ${ros_makedepends[@]}
+  yaml-cpp)
 
 ros_depends=(ros-hydro-moveit-ros-planning
   ros-hydro-xacro
   ros-hydro-moveit-ros-visualization
   ros-hydro-moveit-core)
 depends=(${ros_depends[@]}
-  yaml-cpp0.3
-  ogre-1.8)
+  yaml-cpp)
 
 _tag=release/hydro/moveit_setup_assistant/${pkgver}-${_pkgver_patch}
 _dir=moveit_setup_assistant
-source=("${_dir}"::"git+https://github.com/ros-gbp/moveit_setup_assistant-release.git"#tag=${_tag})
-md5sums=('SKIP')
+source=("${_dir}"::"git+https://github.com/ros-gbp/moveit_setup_assistant-release.git"#tag=${_tag}
+        'yamlcpp.patch')
+md5sums=('SKIP'
+         'e8e56ba7eb5e661608b85c1a79ddf9c1')
 
 build() {
   # Use ROS environment variables
   /usr/share/ros-build-tools/clear-ros-env.sh
   [ -f /opt/ros/hydro/setup.bash ] && source /opt/ros/hydro/setup.bash
+
+  # Apply patch
+  msg "Patching source code"
+  cd ${srcdir}/${_dir}
+  git apply ${srcdir}/yamlcpp.patch
 
   # Create build directory
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
@@ -34,10 +47,6 @@ build() {
 
   # Fix Python2/Python3 conflicts
   /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/${_dir}
-
-  # Adapt paths for Ogre 1.8
-  export PKG_CONFIG_PATH="/opt/OGRE-1.8/lib/pkgconfig:$PKG_CONFIG_PATH"
-  export LD_LIBRARY_PATH="/opt/OGRE-1.8/lib:$LD_LIBRARY_PATH"
 
   # Build project
   cmake ${srcdir}/${_dir} \
@@ -47,8 +56,7 @@ build() {
         -DPYTHON_EXECUTABLE=/usr/bin/python2 \
         -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 \
         -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so \
-        -DSETUPTOOLS_DEB_LAYOUT=OFF \
-        -DCMAKE_LIBRARY_PATH="/opt/OGRE-1.8/lib"
+        -DSETUPTOOLS_DEB_LAYOUT=OFF
   make
 }
 
