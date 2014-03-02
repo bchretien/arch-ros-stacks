@@ -1,29 +1,39 @@
 
-pkgdesc="ROS - camera_calibration_parsers contains routines for reading and writing camera calibration parameters."
+pkgdesc="ROS - A ROS camera driver that uses gstreamer to connect to devices such as webcams."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-camera-calibration-parsers'
-pkgver='1.11.1'
+pkgname='ros-hydro-gscam'
+pkgver='0.1.3'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
-pkgrel=2
+pkgrel=1
 license=('BSD')
 
 ros_makedepends=(ros-hydro-sensor-msgs
+  ros-hydro-nodelet
+  ros-hydro-camera-calibration-parsers
+  ros-hydro-image-transport
+  ros-hydro-roscpp
+  ros-hydro-opencv2
   ros-hydro-catkin
-  ros-hydro-rosconsole)
+  ros-hydro-camera-info-manager)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
-  boost
-  yaml-cpp)
+  gstreamer0.10-base-plugins
+  gstreamer0.10)
 
-ros_depends=(ros-hydro-sensor-msgs)
-depends=(${ros_depends[@]}
-  yaml-cpp)
+ros_depends=(ros-hydro-sensor-msgs
+  ros-hydro-nodelet
+  ros-hydro-camera-calibration-parsers
+  ros-hydro-image-transport
+  ros-hydro-roscpp
+  ros-hydro-opencv2
+  ros-hydro-camera-info-manager)
+depends=(${ros_depends[@]})
 
-_tag=release/hydro/camera_calibration_parsers/${pkgver}-${_pkgver_patch}
-_dir=camera_calibration_parsers
-source=("${_dir}"::"git+https://github.com/ros-gbp/image_common-release.git"#tag=${_tag})
+_tag=release/hydro/gscam/${pkgver}-${_pkgver_patch}
+_dir=gscam
+source=("${_dir}"::"git+https://github.com/ros-drivers-gbp/gscam-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
