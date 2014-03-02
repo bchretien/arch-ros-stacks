@@ -1,32 +1,40 @@
 
-pkgdesc="ROS - common_msgs contains messages that are widely used by other ROS packages."
+pkgdesc="ROS - A set of generic cells to interact with ROS."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-common-msgs'
-pkgver='1.10.6'
+pkgname='ros-hydro-ecto-ros'
+pkgver='0.3.23'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-catkin)
-makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]})
-
-ros_depends=(ros-hydro-shape-msgs
-  ros-hydro-trajectory-msgs
-  ros-hydro-sensor-msgs
+ros_makedepends=(ros-hydro-common-msgs
+  ros-hydro-message-generation
+  ros-hydro-ros-comm
   ros-hydro-geometry-msgs
+  ros-hydro-ecto
+  ros-hydro-opencv2
   ros-hydro-nav-msgs
-  ros-hydro-actionlib-msgs
-  ros-hydro-visualization-msgs
-  ros-hydro-diagnostic-msgs
-  ros-hydro-stereo-msgs)
-depends=(${ros_depends[@]})
+  ros-hydro-catkin
+  ros-hydro-std-msgs)
+makedepends=('cmake' 'git' 'ros-build-tools'
+  ${ros_makedepends[@]}
+  eigen3)
 
-_tag=release/hydro/common_msgs/${pkgver}-${_pkgver_patch}
-_dir=common_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/common_msgs-release.git"#tag=${_tag})
+ros_depends=(ros-hydro-message-generation
+  ros-hydro-message-runtime
+  ros-hydro-ros-comm
+  ros-hydro-geometry-msgs
+  ros-hydro-ecto
+  ros-hydro-opencv2
+  ros-hydro-std-msgs)
+depends=(${ros_depends[@]}
+  eigen3)
+
+_tag=release/hydro/ecto_ros/${pkgver}-${_pkgver_patch}
+_dir=ecto_ros
+source=("${_dir}"::"git+https://github.com/ros-gbp/ecto_ros-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

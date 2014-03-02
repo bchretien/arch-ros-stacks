@@ -1,9 +1,9 @@
 
-pkgdesc="ROS - common_msgs contains messages that are widely used by other ROS packages."
+pkgdesc="ROS - Ecto is a hybrid C++/Python development framework for constructing and maintaining pipelines."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-common-msgs'
-pkgver='1.10.6'
+pkgname='ros-hydro-ecto'
+pkgver='0.6.2'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
@@ -11,22 +11,16 @@ license=('BSD')
 
 ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]})
+  ${ros_makedepends[@]}
+  boost)
 
-ros_depends=(ros-hydro-shape-msgs
-  ros-hydro-trajectory-msgs
-  ros-hydro-sensor-msgs
-  ros-hydro-geometry-msgs
-  ros-hydro-nav-msgs
-  ros-hydro-actionlib-msgs
-  ros-hydro-visualization-msgs
-  ros-hydro-diagnostic-msgs
-  ros-hydro-stereo-msgs)
-depends=(${ros_depends[@]})
+ros_depends=()
+depends=(${ros_depends[@]}
+  boost)
 
-_tag=release/hydro/common_msgs/${pkgver}-${_pkgver_patch}
-_dir=common_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/common_msgs-release.git"#tag=${_tag})
+_tag=release/hydro/ecto/${pkgver}-${_pkgver_patch}
+_dir=ecto
+source=("${_dir}"::"git+https://github.com/ros-gbp/ecto-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

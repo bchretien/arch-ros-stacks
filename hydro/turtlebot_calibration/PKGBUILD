@@ -1,32 +1,38 @@
 
-pkgdesc="ROS - common_msgs contains messages that are widely used by other ROS packages."
+pkgdesc="ROS - turtlebot_calibration."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-common-msgs'
-pkgver='1.10.6'
+pkgname='ros-hydro-turtlebot-calibration'
+pkgver='2.2.4'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-catkin)
+ros_makedepends=(ros-hydro-message-generation
+  ros-hydro-rospy
+  ros-hydro-python-orocos-kdl
+  ros-hydro-sensor-msgs
+  ros-hydro-geometry-msgs
+  ros-hydro-catkin
+  ros-hydro-nav-msgs
+  ros-hydro-std-msgs)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-shape-msgs
-  ros-hydro-trajectory-msgs
+ros_depends=(ros-hydro-rospy
+  ros-hydro-message-runtime
   ros-hydro-sensor-msgs
   ros-hydro-geometry-msgs
   ros-hydro-nav-msgs
-  ros-hydro-actionlib-msgs
-  ros-hydro-visualization-msgs
-  ros-hydro-diagnostic-msgs
-  ros-hydro-stereo-msgs)
+  ros-hydro-python-orocos-kdl
+  ros-hydro-turtlebot-bringup
+  ros-hydro-std-msgs)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/common_msgs/${pkgver}-${_pkgver_patch}
-_dir=common_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/common_msgs-release.git"#tag=${_tag})
+_tag=release/hydro/turtlebot_calibration/${pkgver}-${_pkgver_patch}
+_dir=turtlebot_calibration
+source=("${_dir}"::"git+https://github.com/turtlebot-release/turtlebot_apps-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

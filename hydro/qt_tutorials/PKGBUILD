@@ -1,38 +1,46 @@
 
-pkgdesc="ROS - common_msgs contains messages that are widely used by other ROS packages."
+pkgdesc="ROS - Example qt programs, generated from code similar to that used by the roscreate-qt-pkg script and styled on roscpp_tutorials."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-common-msgs'
-pkgver='1.10.6'
+pkgname='ros-hydro-qt-tutorials'
+pkgver='0.2.3'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-catkin)
+ros_makedepends=(ros-hydro-qt-build
+  ros-hydro-roscpp
+  ros-hydro-message-generation
+  ros-hydro-catkin
+  ros-hydro-std-msgs)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]})
+  ${ros_makedepends[@]}
+  qt4)
 
-ros_depends=(ros-hydro-shape-msgs
-  ros-hydro-trajectory-msgs
-  ros-hydro-sensor-msgs
-  ros-hydro-geometry-msgs
-  ros-hydro-nav-msgs
-  ros-hydro-actionlib-msgs
-  ros-hydro-visualization-msgs
-  ros-hydro-diagnostic-msgs
-  ros-hydro-stereo-msgs)
-depends=(${ros_depends[@]})
+ros_depends=(ros-hydro-qt-build
+  ros-hydro-message-runtime
+  ros-hydro-std-msgs
+  ros-hydro-roscpp)
+depends=(${ros_depends[@]}
+  qt4)
 
-_tag=release/hydro/common_msgs/${pkgver}-${_pkgver_patch}
-_dir=common_msgs
-source=("${_dir}"::"git+https://github.com/ros-gbp/common_msgs-release.git"#tag=${_tag})
-md5sums=('SKIP')
+_tag=release/hydro/qt_tutorials/${pkgver}-${_pkgver_patch}
+_dir=qt_tutorials
+source=("${_dir}"::"git+https://github.com/yujinrobot-release/qt_ros-release.git"#tag=${_tag}
+        'moc.patch')
+md5sums=('SKIP'
+         '0ae2bcc9cf1b0d3e2d048c47af344090')
 
 build() {
   # Use ROS environment variables
   /usr/share/ros-build-tools/clear-ros-env.sh
   [ -f /opt/ros/hydro/setup.bash ] && source /opt/ros/hydro/setup.bash
+
+  # Apply patch
+  msg "Patching source code"
+  cd ${srcdir}/${_dir}
+  git apply ${srcdir}/moc.patch
 
   # Create build directory
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
