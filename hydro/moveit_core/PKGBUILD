@@ -25,6 +25,7 @@ ros_makedepends=(ros-hydro-srdfdom
   ros-hydro-urdfdom
   ros-hydro-eigen-stl-containers
   ros-hydro-kdl-parser
+  ros-hydro-cmake-modules
   ros-hydro-shape-tools
   ros-hydro-rostime
   ros-hydro-console-bridge
