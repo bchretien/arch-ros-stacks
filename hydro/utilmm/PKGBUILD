@@ -1,35 +1,26 @@
 
-pkgdesc="ROS - Low-level build system macros and infrastructure for ROS."
+pkgdesc="ROS - This library is a collection of useful C++ classes."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-catkin'
-pkgver='0.5.86'
+pkgname='ros-hydro-utilmm'
+pkgver='2.7.0'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
+license=('CeCILL-B (BSD-like)')
 
 ros_makedepends=()
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
-  gtest
-  python2-nose
-  python2-catkin_pkg
-  python2-empy
-  python2)
+  boost)
 
-ros_depends=()
+ros_depends=(ros-hydro-catkin)
 depends=(${ros_depends[@]}
-  cmake
-  python2-nose
-  python2-empy
-  gtest
-  python2-catkin_pkg
-  python2)
+  boost)
 
-_tag=release/hydro/catkin/${pkgver}-${_pkgver_patch}
-_dir=catkin
-source=("${_dir}"::"git+https://github.com/ros-gbp/catkin-release.git"#tag=${_tag})
+_tag=release/hydro/utilmm/${pkgver}-${_pkgver_patch}
+_dir=utilmm
+source=("${_dir}"::"git+https://github.com/orocos-gbp/utilmm-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
@@ -47,7 +38,7 @@ build() {
   # Build project
   cmake ${srcdir}/${_dir} \
         -DCMAKE_BUILD_TYPE=Release \
-        -DCATKIN_BUILD_BINARY_PACKAGE=OFF \
+        -DCATKIN_BUILD_BINARY_PACKAGE=ON \
         -DCMAKE_INSTALL_PREFIX=/opt/ros/hydro \
         -DPYTHON_EXECUTABLE=/usr/bin/python2 \
         -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 \
