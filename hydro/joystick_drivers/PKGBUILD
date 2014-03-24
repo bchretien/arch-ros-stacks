@@ -1,43 +1,27 @@
 
-pkgdesc="ROS - roscpp is a C++ implementation of ROS."
+pkgdesc="ROS - This metapackage depends on packages for interfacing common joysticks and human input devices with ROS."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-roscpp'
-pkgver='1.10.2'
+pkgname='ros-hydro-joystick-drivers'
+pkgver='1.9.10'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-message-generation
-  ros-hydro-roslang
-  ros-hydro-xmlrpcpp
-  ros-hydro-rosconsole
-  ros-hydro-roscpp-serialization
-  ros-hydro-cpp-common
-  ros-hydro-rosgraph-msgs
-  ros-hydro-roscpp-traits
-  ros-hydro-catkin
-  ros-hydro-rostime
-  ros-hydro-std-msgs)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]}
-  pkg-config)
+  ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-xmlrpcpp
-  ros-hydro-rosconsole
-  ros-hydro-message-runtime
-  ros-hydro-roscpp-serialization
-  ros-hydro-cpp-common
-  ros-hydro-rosgraph-msgs
-  ros-hydro-roscpp-traits
-  ros-hydro-rostime
-  ros-hydro-std-msgs)
+ros_depends=(ros-hydro-joy
+  ros-hydro-wiimote
+  ros-hydro-ps3joy
+  ros-hydro-spacenav-node)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/roscpp/${pkgver}-${_pkgver_patch}
-_dir=roscpp
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/joystick_drivers/${pkgver}-${_pkgver_patch}
+_dir=joystick_drivers
+source=("${_dir}"::"git+https://github.com/ros-gbp/joystick_drivers-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

@@ -1,43 +1,34 @@
 
-pkgdesc="ROS - roscpp is a C++ implementation of ROS."
+pkgdesc="ROS - ROS interface to the 3Dconnexion SpaceNavigator 6DOF joystick."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-roscpp'
-pkgver='1.10.2'
+pkgname='ros-hydro-spacenav-node'
+pkgver='1.9.10'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-message-generation
-  ros-hydro-roslang
-  ros-hydro-xmlrpcpp
-  ros-hydro-rosconsole
-  ros-hydro-roscpp-serialization
-  ros-hydro-cpp-common
-  ros-hydro-rosgraph-msgs
-  ros-hydro-roscpp-traits
+ros_makedepends=(ros-hydro-roscpp
+  ros-hydro-geometry-msgs
   ros-hydro-catkin
-  ros-hydro-rostime
-  ros-hydro-std-msgs)
+  ros-hydro-sensor-msgs)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
-  pkg-config)
+  libspnav
+  libx11)
 
-ros_depends=(ros-hydro-xmlrpcpp
-  ros-hydro-rosconsole
-  ros-hydro-message-runtime
-  ros-hydro-roscpp-serialization
-  ros-hydro-cpp-common
-  ros-hydro-rosgraph-msgs
-  ros-hydro-roscpp-traits
-  ros-hydro-rostime
-  ros-hydro-std-msgs)
-depends=(${ros_depends[@]})
+ros_depends=(ros-hydro-roscpp
+  ros-hydro-geometry-msgs
+  ros-hydro-sensor-msgs)
+depends=(${ros_depends[@]}
+  spacenavd
+  libspnav
+  libx11)
 
-_tag=release/hydro/roscpp/${pkgver}-${_pkgver_patch}
-_dir=roscpp
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/spacenav_node/${pkgver}-${_pkgver_patch}
+_dir=spacenav_node
+source=("${_dir}"::"git+https://github.com/ros-gbp/joystick_drivers-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
