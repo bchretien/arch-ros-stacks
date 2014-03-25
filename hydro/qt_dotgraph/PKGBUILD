@@ -3,10 +3,10 @@ pkgdesc="ROS - qt_dotgraph provides helpers to work with dot graphs."
 url='http://www.ros.org/'
 
 pkgname='ros-hydro-qt-dotgraph'
-pkgver='0.2.20'
+pkgver='0.2.22'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
-pkgrel=2
+pkgrel=1
 license=('BSD')
 
 ros_makedepends=(ros-hydro-catkin)
