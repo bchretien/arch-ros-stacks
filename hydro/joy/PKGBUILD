@@ -14,7 +14,7 @@ ros_depends=(ros-hydro-roscpp
   ros-hydro-sensor-msgs
   ros-hydro-diagnostic-updater)
 depends=(${ros_depends[@]}
-  joyutils)
+  linuxconsole)
 
 _tag=release/hydro/joy/${pkgver}-${_pkgver_patch}
 _dir=joy
