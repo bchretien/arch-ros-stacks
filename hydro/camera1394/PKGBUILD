@@ -1,11 +1,12 @@
-
+# Script generated with import_catkin_packages.py
+# For more information: https://github.com/bchretien/arch-ros-stacks
 pkgdesc="ROS - ROS driver for devices supporting the IEEE 1394 Digital Camera (IIDC) protocol."
 url='http://www.ros.org/'
 
 pkgname='ros-hydro-camera1394'
 pkgver='1.9.4'
 _pkgver_patch=0
-arch=('i686' 'x86_64')
+arch=('any')
 pkgrel=1
 license=('LGPL')
 
@@ -22,8 +23,8 @@ ros_makedepends=(ros-hydro-camera-info-manager
   ros-hydro-rostest)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
-  pacman
-  boost)
+  boost
+  libdc1394)
 
 ros_depends=(ros-hydro-sensor-msgs
   ros-hydro-nodelet
@@ -34,8 +35,8 @@ ros_depends=(ros-hydro-sensor-msgs
   ros-hydro-dynamic-reconfigure
   ros-hydro-camera-info-manager)
 depends=(${ros_depends[@]}
-  pacman
-  boost)
+  boost
+  libdc1394)
 
 _tag=release/hydro/camera1394/${pkgver}-${_pkgver_patch}
 _dir=camera1394
