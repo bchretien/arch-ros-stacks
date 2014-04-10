@@ -1,24 +1,45 @@
 
-pkgdesc="ROS - ROS driver for a generic Linux joystick."
+pkgdesc="ROS - ROS driver for devices supporting the IEEE 1394 Digital Camera (IIDC) protocol."
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-joy'
-pkgver='1.9.10'
+pkgname='ros-hydro-camera1394'
+pkgver='1.9.4'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD')
-makedepends=('cmake' 'ros-build-tools')
+license=('LGPL')
 
-ros_depends=(ros-hydro-roscpp
+ros_makedepends=(ros-hydro-camera-info-manager
   ros-hydro-sensor-msgs
-  ros-hydro-diagnostic-updater)
-depends=(${ros_depends[@]}
-  linuxconsole)
+  ros-hydro-nodelet
+  ros-hydro-diagnostic-updater
+  ros-hydro-image-transport
+  ros-hydro-roscpp
+  ros-hydro-catkin
+  ros-hydro-tf
+  ros-hydro-dynamic-reconfigure
+  ros-hydro-driver-base
+  ros-hydro-rostest)
+makedepends=('cmake' 'git' 'ros-build-tools'
+  ${ros_makedepends[@]}
+  pacman
+  boost)
 
-_tag=release/hydro/joy/${pkgver}-${_pkgver_patch}
-_dir=joy
-source=("${_dir}"::"git+https://github.com/ros-gbp/joystick_drivers-release.git"#tag=${_tag})
+ros_depends=(ros-hydro-sensor-msgs
+  ros-hydro-nodelet
+  ros-hydro-diagnostic-updater
+  ros-hydro-image-transport
+  ros-hydro-roscpp
+  ros-hydro-tf
+  ros-hydro-dynamic-reconfigure
+  ros-hydro-camera-info-manager)
+depends=(${ros_depends[@]}
+  pacman
+  boost)
+
+_tag=release/hydro/camera1394/${pkgver}-${_pkgver_patch}
+_dir=camera1394
+source=("${_dir}"::"git+https://github.com/ros-drivers-gbp/camera1394-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
