@@ -1,29 +1,44 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - Ecto is a hybrid C++/Python development framework for constructing and maintaining pipelines."
-url='http://ecto.willowgarage.com'
+pkgdesc="ROS - Code that generates random views of an object."
+url='http://ecto.willowgarage.com/recognition'
 
-pkgname='ros-hydro-ecto'
-pkgver='0.6.3'
+pkgname='ros-hydro-object-recognition-renderer'
+pkgver='0.2.0'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('BSD>')
 
-ros_makedepends=(ros-hydro-catkin)
+ros_makedepends=(ros-hydro-catkin
+  ros-hydro-opencv2)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
+  devil
+  freeimage
+  libxi
+  libxmu
+  assimp
   boost
-  python2)
+  sdl
+  mesa
+  freeglut)
 
-ros_depends=()
+ros_depends=(ros-hydro-opencv2)
 depends=(${ros_depends[@]}
+  devil
+  freeimage
+  libxi
+  libxmu
+  assimp
   boost
-  python2)
+  sdl
+  mesa
+  freeglut)
 
-_tag=release/hydro/ecto/${pkgver}-${_pkgver_patch}
-_dir=ecto
-source=("${_dir}"::"git+https://github.com/ros-gbp/ecto-release.git"#tag=${_tag})
+_tag=release/hydro/object_recognition_renderer/${pkgver}-${_pkgver_patch}
+_dir=object_recognition_renderer
+source=("${_dir}"::"git+https://github.com/ros-gbp/object_recognition_renderer-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

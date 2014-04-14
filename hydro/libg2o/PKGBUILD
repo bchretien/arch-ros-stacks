@@ -1,29 +1,33 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - Ecto is a hybrid C++/Python development framework for constructing and maintaining pipelines."
-url='http://ecto.willowgarage.com'
+pkgdesc="ROS - The libg2o library from http://openslam.org/g2o.html"
+url='https://github.com/RainerKuemmerle/g2o'
 
-pkgname='ros-hydro-ecto'
-pkgver='0.6.3'
-_pkgver_patch=0
+pkgname='ros-hydro-libg2o'
+pkgver='2014.02.18'
+_pkgver_patch=1
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-catkin)
+ros_makedepends=()
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
+  mesa
   boost
-  python2)
+  eigen3
+  suitesparse)
 
-ros_depends=()
+ros_depends=(ros-hydro-catkin)
 depends=(${ros_depends[@]}
+  mesa
   boost
-  python2)
+  eigen3
+  suitesparse)
 
-_tag=release/hydro/ecto/${pkgver}-${_pkgver_patch}
-_dir=ecto
-source=("${_dir}"::"git+https://github.com/ros-gbp/ecto-release.git"#tag=${_tag})
+_tag=release/indigo/libg2o/${pkgver}-${_pkgver_patch}
+_dir=libg2o
+source=("${_dir}"::"git+https://github.com/ros-gbp/libg2o-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
