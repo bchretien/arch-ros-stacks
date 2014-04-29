@@ -30,4 +30,10 @@ To simply update `package_foo`:
 $ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -u package_foo
 ```
 
+To recursively "force update" `package_foo`:
+
+```shell
+$ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -rfu package_foo
+```
+
 Note that the default behavior is to fetch release information from the [official rosdistro distribution.yaml](https://github.com/ros/rosdistro/blob/master/hydro/distribution.yaml).
