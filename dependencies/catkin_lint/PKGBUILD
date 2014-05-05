@@ -1,4 +1,4 @@
-pkgdesc="ROS - Low-level build system macros and infrastructure for ROS."
+pkgdesc="ROS - Checks package configurations for the catkin build system."
 url='http://www.ros.org/'
 
 pkgname=python2-catkin_lint
@@ -25,4 +25,3 @@ package() {
   cd ${srcdir}/${_dir}
   python2 setup.py install -O2 --skip-build --prefix=/usr --root=${pkgdir}
 }
-
