@@ -1,27 +1,43 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - The messages required by multimaster packages."
-url='http://ros.org/wiki/multimaster_msgs_fkie'
+pkgdesc="ROS - Graphical interface, written in PySide, to manage the running and configured ROS nodes on different hosts."
+url='http://ros.org/wiki/node_manager_fkie'
 
-pkgname='ros-hydro-multimaster-msgs-fkie'
+pkgname='ros-hydro-node-manager-fkie'
 pkgver='0.3.10'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('BSD, LGPL, CC')
 
-ros_makedepends=(ros-hydro-message-generation
+ros_makedepends=(ros-hydro-master-discovery-fkie
   ros-hydro-catkin
-  ros-hydro-std-msgs)
+  ros-hydro-multimaster-msgs-fkie)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-message-runtime
-  ros-hydro-std-msgs)
-depends=(${ros_depends[@]})
+ros_depends=(ros-hydro-multimaster-msgs-fkie
+  ros-hydro-rospy
+  ros-hydro-rqt-reconfigure
+  ros-hydro-master-sync-fkie
+  ros-hydro-rosservice
+  ros-hydro-rqt-gui
+  ros-hydro-python-qt-binding
+  ros-hydro-roslib
+  ros-hydro-rosgraph
+  ros-hydro-rosmsg
+  ros-hydro-default-cfg-fkie
+  ros-hydro-master-discovery-fkie
+  ros-hydro-roslaunch
+  ros-hydro-dynamic-reconfigure)
+depends=(${ros_depends[@]}
+  screen
+  xterm
+  python2-paramiko
+  python2-docutils)
 
-_tag=release/hydro/multimaster_msgs_fkie/${pkgver}-${_pkgver_patch}
-_dir=multimaster_msgs_fkie
+_tag=release/hydro/node_manager_fkie/${pkgver}-${_pkgver_patch}
+_dir=node_manager_fkie
 source=("${_dir}"::"git+https://github.com/fkie-release/multimaster_fkie-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
