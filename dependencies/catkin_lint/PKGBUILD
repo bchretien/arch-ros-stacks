@@ -1,0 +1,27 @@
+pkgdesc="ROS - Checks package configurations for the catkin build system."
+url='http://www.ros.org/'
+
+pkgname=python2-catkin_lint
+pkgver=1.3.5
+arch=(any)
+pkgrel=1
+license=('BSD')
+makedepends=('ros-build-tools' 'git')
+
+_tag=${pkgver}
+_dir=catkin_lint
+source=("${_dir}"::"git+https://github.com/fkie/catkin_lint.git"#tag=${_tag})
+md5sums=('SKIP')
+
+build() {
+  # Fix Python3 error
+  /usr/share/ros-build-tools/fix-python-scripts.sh ${srcdir}/${_dir}
+
+  cd ${srcdir}/${_dir}
+  python2 setup.py build
+}
+
+package() {
+  cd ${srcdir}/${_dir}
+  python2 setup.py install -O2 --skip-build --prefix=/usr --root=${pkgdir}
+}
