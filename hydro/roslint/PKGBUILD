@@ -1,26 +1,25 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - Xacro (XML Macros) Xacro is an XML macro language."
-url='http://ros.org/wiki/xacro'
+pkgdesc="ROS - CMake lint commands for ROS packages."
+url='http://ros.org/wiki/roslint'
 
-pkgname='ros-hydro-xacro'
-pkgver='1.8.5'
+pkgname='ros-hydro-roslint'
+pkgver='0.9.2'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-roslint
-  ros-hydro-catkin)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-roslaunch)
+ros_depends=()
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/xacro/${pkgver}-${_pkgver_patch}
-_dir=xacro
-source=("${_dir}"::"git+https://github.com/ros-gbp/xacro-release.git"#tag=${_tag})
+_tag=release/hydro/roslint/${pkgver}-${_pkgver_patch}
+_dir=roslint
+source=("${_dir}"::"git+https://github.com/ros-gbp/roslint-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
