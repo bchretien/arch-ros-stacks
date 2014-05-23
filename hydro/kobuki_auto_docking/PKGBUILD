@@ -1,11 +1,12 @@
-
-pkgdesc="ROS - Automatic docking for Kobuki: 	 Users owning a docking station for Kobuki can use this tool to let Kobuki find its nest autonomously."
-url='http://www.ros.org/'
+# Script generated with import_catkin_packages.py
+# For more information: https://github.com/bchretien/arch-ros-stacks
+pkgdesc="ROS - Automatic docking for Kobuki: Users owning a docking station for Kobuki can use this tool to let Kobuki find its nest autonomously."
+url='http://ros.org/wiki/kobuki_auto_docking'
 
 pkgname='ros-hydro-kobuki-auto-docking'
-pkgver='0.5.5'
-_pkgver_patch=1
-arch=('i686' 'x86_64')
+pkgver='0.5.6'
+_pkgver_patch=0
+arch=('any')
 pkgrel=1
 license=('BSD')
 
@@ -41,6 +42,7 @@ ros_depends=(ros-hydro-kdl-conversions
   ros-hydro-actionlib
   ros-hydro-ecl-linear-algebra
   ros-hydro-actionlib-msgs
+  ros-hydro-yocs-cmd-vel-mux
   ros-hydro-kobuki-msgs
   ros-hydro-ecl-geometry
   ros-hydro-std-msgs

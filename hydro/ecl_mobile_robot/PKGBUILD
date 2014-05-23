@@ -1,11 +1,12 @@
-
-pkgdesc="ROS - Contains transforms (e."
-url='http://www.ros.org/'
+# Script generated with import_catkin_packages.py
+# For more information: https://github.com/bchretien/arch-ros-stacks
+pkgdesc="ROS - Contains transforms for the various types of mobile robot platforms."
+url='http://wiki.ros.org/ecl_mobile_robot'
 
 pkgname='ros-hydro-ecl-mobile-robot'
 pkgver='0.60.0'
 _pkgver_patch=2
-arch=('i686' 'x86_64')
+arch=('any')
 pkgrel=1
 license=('BSD')
 
