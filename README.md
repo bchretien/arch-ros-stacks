@@ -17,6 +17,12 @@ The script that automates most of the work is `import_catkin_packages.py` availa
 $ python2 import_catkin_packages.py --help
 ```
 
+To list all available packages:
+
+```shell
+$ python2 import_catkin_packages.py --distro=hydro --list | less
+```
+
 To add a new official package called `package_foo` recursively:
 
 ```shell
