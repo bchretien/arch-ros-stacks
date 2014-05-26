@@ -1,26 +1,37 @@
 
-pkgdesc="ROS - Interface for using ROS with the Gazebo simulator."
+pkgdesc="ROS - gazebo_ros_control plugin"
 url='http://www.ros.org/'
 
-pkgname='ros-hydro-gazebo-ros-pkgs'
+pkgname='ros-hydro-gazebo-ros-control'
 pkgver='2.4.2'
 _pkgver_patch=0
 arch=('i686' 'x86_64')
 pkgrel=1
-license=('BSD,LGPL,Apache 2.0')
+license=('BSD')
 
-ros_makedepends=(ros-hydro-catkin)
+ros_makedepends=(ros-hydro-gazebo-ros
+  ros-hydro-control-toolbox
+  ros-hydro-controller-manager
+  ros-hydro-catkin
+  ros-hydro-pluginlib
+  ros-hydro-transmission-interface
+  ros-hydro-joint-limits-interface
+  ros-hydro-urdf)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
 ros_depends=(ros-hydro-gazebo-ros
-  ros-hydro-gazebo-msgs
-  ros-hydro-gazebo-plugins
-  ros-hydro-gazebo-ros-control)
+  ros-hydro-control-toolbox
+  ros-hydro-controller-manager
+  ros-hydro-catkin
+  ros-hydro-pluginlib
+  ros-hydro-transmission-interface
+  ros-hydro-joint-limits-interface
+  ros-hydro-urdf)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/gazebo_ros_pkgs/${pkgver}-${_pkgver_patch}
-_dir=gazebo_ros_pkgs
+_tag=release/hydro/gazebo_ros_control/${pkgver}-${_pkgver_patch}
+_dir=gazebo_control
 source=("${_dir}"::"git+https://github.com/ros-gbp/gazebo_ros_pkgs-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
