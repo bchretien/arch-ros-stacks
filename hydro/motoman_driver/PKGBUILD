@@ -1,32 +1,47 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - The industrial message package containes industrial specific messages definitions."
-url='http://ros.org/wiki/industrial_msg'
+pkgdesc="ROS - The motoman driver package includes nodes for interfacing with a motoman industrial robot controllers."
+url='http://ros.org/wiki/motoman_driver'
 
-pkgname='ros-hydro-industrial-msgs'
-pkgver='0.3.4'
+pkgname='ros-hydro-motoman-driver'
+pkgver='0.3.3'
 _pkgver_patch=1
 arch=('any')
 pkgrel=2
 license=('BSD')
 
-ros_makedepends=(ros-hydro-trajectory-msgs
-  ros-hydro-message-generation
-  ros-hydro-genmsg
+ros_makedepends=(ros-hydro-industrial-msgs
+  ros-hydro-trajectory-msgs
+  ros-hydro-sensor-msgs
+  ros-hydro-industrial-robot-client
+  ros-hydro-roscpp
+  ros-hydro-industrial-utils
   ros-hydro-catkin
-  ros-hydro-std-msgs)
+  ros-hydro-std-msgs
+  ros-hydro-actionlib
+  ros-hydro-actionlib-msgs
+  ros-hydro-urdf
+  ros-hydro-simple-message
+  ros-hydro-control-msgs)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-trajectory-msgs
-  ros-hydro-genmsg
+ros_depends=(ros-hydro-industrial-msgs
+  ros-hydro-trajectory-msgs
+  ros-hydro-sensor-msgs
+  ros-hydro-industrial-robot-client
+  ros-hydro-roscpp
   ros-hydro-std-msgs
-  ros-hydro-message-runtime)
+  ros-hydro-actionlib
+  ros-hydro-actionlib-msgs
+  ros-hydro-urdf
+  ros-hydro-simple-message
+  ros-hydro-control-msgs)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/industrial_msgs/${pkgver}-${_pkgver_patch}
-_dir=industrial_msgs
-source=("${_dir}"::"git+https://github.com/ros-industrial-release/industrial_core-release.git"#tag=${_tag})
+_tag=release/hydro/motoman_driver/${pkgver}-${_pkgver_patch}
+_dir=motoman_driver
+source=("${_dir}"::"git+https://github.com/ros-industrial-release/motoman-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

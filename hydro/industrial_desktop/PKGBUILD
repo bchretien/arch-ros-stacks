@@ -1,32 +1,28 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - The industrial message package containes industrial specific messages definitions."
-url='http://ros.org/wiki/industrial_msg'
+pkgdesc="ROS - The industrial_desktop package contains all released packages."
+url='http://www.ros.org/'
 
-pkgname='ros-hydro-industrial-msgs'
-pkgver='0.3.4'
+pkgname='ros-hydro-industrial-desktop'
+pkgver='0.0.1'
 _pkgver_patch=1
 arch=('any')
 pkgrel=2
-license=('BSD')
+license=('BSD, Apache 2.0')
 
-ros_makedepends=(ros-hydro-trajectory-msgs
-  ros-hydro-message-generation
-  ros-hydro-genmsg
-  ros-hydro-catkin
-  ros-hydro-std-msgs)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-trajectory-msgs
-  ros-hydro-genmsg
-  ros-hydro-std-msgs
-  ros-hydro-message-runtime)
+ros_depends=(ros-hydro-industrial-core
+  ros-hydro-motoman
+  ros-hydro-fanuc
+  ros-hydro-universal-robot)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/industrial_msgs/${pkgver}-${_pkgver_patch}
-_dir=industrial_msgs
-source=("${_dir}"::"git+https://github.com/ros-industrial-release/industrial_core-release.git"#tag=${_tag})
+_tag=release/hydro/industrial_desktop/${pkgver}-${_pkgver_patch}
+_dir=industrial_desktop
+source=("${_dir}"::"git+https://github.com/ros-industrial-release/industrial_metapackages-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

@@ -1,32 +1,29 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - The industrial message package containes industrial specific messages definitions."
-url='http://ros.org/wiki/industrial_msg'
+pkgdesc="ROS -  ROS Industrial support for the Motoman sia20d (and variants)."
+url='http://ros.org/wiki/motoman_sia20d_support'
 
-pkgname='ros-hydro-industrial-msgs'
-pkgver='0.3.4'
+pkgname='ros-hydro-motoman-sia20d-support'
+pkgver='0.3.3'
 _pkgver_patch=1
 arch=('any')
 pkgrel=2
 license=('BSD')
 
-ros_makedepends=(ros-hydro-trajectory-msgs
-  ros-hydro-message-generation
-  ros-hydro-genmsg
-  ros-hydro-catkin
-  ros-hydro-std-msgs)
+ros_makedepends=(ros-hydro-catkin
+  ros-hydro-roslaunch)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-trajectory-msgs
-  ros-hydro-genmsg
-  ros-hydro-std-msgs
-  ros-hydro-message-runtime)
+ros_depends=(ros-hydro-joint-state-publisher
+  ros-hydro-motoman-driver
+  ros-hydro-robot-state-publisher
+  ros-hydro-rviz)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/industrial_msgs/${pkgver}-${_pkgver_patch}
-_dir=industrial_msgs
-source=("${_dir}"::"git+https://github.com/ros-industrial-release/industrial_core-release.git"#tag=${_tag})
+_tag=release/hydro/motoman_sia20d_support/${pkgver}-${_pkgver_patch}
+_dir=motoman_sia20d_support
+source=("${_dir}"::"git+https://github.com/ros-industrial-release/motoman-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
