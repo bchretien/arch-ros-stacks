@@ -1,31 +1,32 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - This package defines messages for storing calibration samples to be used in full robot calibration procedures."
-url='http://www.ros.org/wiki/calibration_msgs'
+pkgdesc="ROS - Provides a toolchain running through the robot calibration process."
+url='http://www.ros.org/wiki/ros_comm'
 
-pkgname='ros-hydro-calibration-msgs'
+pkgname='ros-hydro-calibration'
 pkgver='0.10.10'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-geometry-msgs
-  ros-hydro-std-msgs
-  ros-hydro-catkin
-  ros-hydro-message-generation
-  ros-hydro-sensor-msgs)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-message-runtime
-  ros-hydro-geometry-msgs
-  ros-hydro-sensor-msgs
-  ros-hydro-std-msgs)
+ros_depends=(ros-hydro-laser-cb-detector
+  ros-hydro-calibration-estimation
+  ros-hydro-settlerlib
+  ros-hydro-calibration-launch
+  ros-hydro-joint-states-settler
+  ros-hydro-image-cb-detector
+  ros-hydro-calibration-msgs
+  ros-hydro-interval-intersection
+  ros-hydro-monocam-settler)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/calibration_msgs/${pkgver}-${_pkgver_patch}
-_dir=calibration_msgs
+_tag=release/hydro/calibration/${pkgver}-${_pkgver_patch}
+_dir=calibration
 source=("${_dir}"::"git+https://github.com/ros-gbp/calibration-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
