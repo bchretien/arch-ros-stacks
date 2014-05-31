@@ -23,6 +23,13 @@ To list all available packages:
 $ python2 import_catkin_packages.py --distro=hydro --list | less
 ```
 
+You can also provide the output directory when listing packages, in order to see the ones that have not been generated yet:
+
+```shell
+$ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro --list | less
+```
+
+
 To add a new official package called `package_foo` recursively:
 
 ```shell
