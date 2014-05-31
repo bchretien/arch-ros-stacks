@@ -1,48 +1,31 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - PR2 specific plugins for MoveIt."
-url='http://moveit.ros.org'
+pkgdesc="ROS - A pure-python interaface to the MoveIt! ROS API."
+url='http://ros.org/wiki/moveit_python'
 
-pkgname='ros-hydro-pr2-moveit-plugins'
-pkgver='0.5.6'
+pkgname='ros-hydro-moveit-python'
+pkgver='0.2.3'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-hydro-eigen-conversions
-  ros-hydro-pr2-controllers-msgs
-  ros-hydro-tf-conversions
-  ros-hydro-pr2-mechanism-msgs
-  ros-hydro-kdl-parser
-  ros-hydro-roscpp
-  ros-hydro-angles
-  ros-hydro-catkin
-  ros-hydro-actionlib
-  ros-hydro-moveit-core
-  ros-hydro-urdf
-  ros-hydro-control-msgs
-  ros-hydro-pluginlib)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-eigen-conversions
-  ros-hydro-pr2-controllers-msgs
-  ros-hydro-tf-conversions
-  ros-hydro-pr2-mechanism-msgs
-  ros-hydro-kdl-parser
-  ros-hydro-roscpp
-  ros-hydro-angles
+ros_depends=(ros-hydro-shape-msgs
+  ros-hydro-rospy
+  ros-hydro-moveit-msgs
+  ros-hydro-geometry-msgs
   ros-hydro-actionlib
-  ros-hydro-moveit-core
-  ros-hydro-urdf
-  ros-hydro-control-msgs
-  ros-hydro-pluginlib)
-depends=(${ros_depends[@]})
+  ros-hydro-tf)
+depends=(${ros_depends[@]}
+  python2-pyassimp)
 
-_tag=release/hydro/pr2_moveit_plugins/${pkgver}-${_pkgver_patch}
-_dir=pr2_moveit_plugins
-source=("${_dir}"::"git+https://github.com/ros-gbp/moveit_pr2-release.git"#tag=${_tag})
+_tag=release/hydro/moveit_python/${pkgver}-${_pkgver_patch}
+_dir=moveit_python
+source=("${_dir}"::"git+https://github.com/mikeferguson/moveit_python-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
