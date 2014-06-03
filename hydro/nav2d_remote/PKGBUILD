@@ -1,27 +1,32 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - rosnode is a command-line tool for displaying debug information about ROS Nodes, including publications, subscriptions and connections."
-url='http://ros.org/wiki/rosnode'
+pkgdesc="ROS - This package is used to manually control a robot that uses the operator and navigator node from navigation_2d."
+url='http://wiki.ros.org/remote_controller'
 
-pkgname='ros-hydro-rosnode'
-pkgver='1.10.3'
+pkgname='ros-hydro-nav2d-remote'
+pkgver='0.1.2'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('GPLv3')
 
-ros_makedepends=(ros-hydro-catkin
-  ros-hydro-rostest)
+ros_makedepends=(ros-hydro-nav2d-operator
+  ros-hydro-roscpp
+  ros-hydro-nav2d-navigator
+  ros-hydro-catkin
+  ros-hydro-sensor-msgs)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-rosgraph
-  ros-hydro-rostopic)
+ros_depends=(ros-hydro-nav2d-operator
+  ros-hydro-roscpp
+  ros-hydro-nav2d-navigator
+  ros-hydro-sensor-msgs)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/rosnode/${pkgver}-${_pkgver_patch}
-_dir=rosnode
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/nav2d_remote/${pkgver}-${_pkgver_patch}
+_dir=nav2d_remote
+source=("${_dir}"::"git+https://github.com/skasperski/navigation_2d-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

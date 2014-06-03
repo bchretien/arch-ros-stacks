@@ -1,27 +1,42 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - rosnode is a command-line tool for displaying debug information about ROS Nodes, including publications, subscriptions and connections."
-url='http://ros.org/wiki/rosnode'
+pkgdesc="ROS - This package provides a node for higher level navigation of a mobile robot in a planar environment."
+url='http://wiki.ros.org/robot_operator'
 
-pkgname='ros-hydro-rosnode'
-pkgver='1.10.3'
+pkgname='ros-hydro-nav2d-navigator'
+pkgver='0.1.2'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('GPLv3')
 
-ros_makedepends=(ros-hydro-catkin
-  ros-hydro-rostest)
+ros_makedepends=(ros-hydro-message-generation
+  ros-hydro-actionlib-msgs
+  ros-hydro-nav2d-msgs
+  ros-hydro-roscpp
+  ros-hydro-geometry-msgs
+  ros-hydro-catkin
+  ros-hydro-nav2d-operator
+  ros-hydro-actionlib
+  ros-hydro-tf
+  ros-hydro-pluginlib)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-rosgraph
-  ros-hydro-rostopic)
+ros_depends=(ros-hydro-actionlib-msgs
+  ros-hydro-nav2d-msgs
+  ros-hydro-message-runtime
+  ros-hydro-roscpp
+  ros-hydro-geometry-msgs
+  ros-hydro-nav2d-operator
+  ros-hydro-actionlib
+  ros-hydro-tf
+  ros-hydro-pluginlib)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/rosnode/${pkgver}-${_pkgver_patch}
-_dir=rosnode
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/nav2d_navigator/${pkgver}-${_pkgver_patch}
+_dir=nav2d_navigator
+source=("${_dir}"::"git+https://github.com/skasperski/navigation_2d-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
@@ -45,7 +60,7 @@ build() {
         -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 \
         -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so \
         -DSETUPTOOLS_DEB_LAYOUT=OFF
-  make
+  make -j1
 }
 
 package() {

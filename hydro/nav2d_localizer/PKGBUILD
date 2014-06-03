@@ -1,27 +1,34 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - rosnode is a command-line tool for displaying debug information about ROS Nodes, including publications, subscriptions and connections."
-url='http://ros.org/wiki/rosnode'
+pkgdesc="ROS - Wrapper around Particle Filter implementation."
+url='http://wiki.ros.org/self_localizer'
 
-pkgname='ros-hydro-rosnode'
-pkgver='1.10.3'
+pkgname='ros-hydro-nav2d-localizer'
+pkgver='0.1.2'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('GPLv3')
 
-ros_makedepends=(ros-hydro-catkin
-  ros-hydro-rostest)
+ros_makedepends=(ros-hydro-sensor-msgs
+  ros-hydro-roscpp
+  ros-hydro-geometry-msgs
+  ros-hydro-catkin
+  ros-hydro-nav-msgs
+  ros-hydro-tf)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-rosgraph
-  ros-hydro-rostopic)
+ros_depends=(ros-hydro-tf
+  ros-hydro-roscpp
+  ros-hydro-sensor-msgs
+  ros-hydro-geometry-msgs
+  ros-hydro-nav-msgs)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/rosnode/${pkgver}-${_pkgver_patch}
-_dir=rosnode
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/hydro/nav2d_localizer/${pkgver}-${_pkgver_patch}
+_dir=nav2d_localizer
+source=("${_dir}"::"git+https://github.com/skasperski/navigation_2d-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
