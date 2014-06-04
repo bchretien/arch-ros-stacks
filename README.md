@@ -3,7 +3,7 @@ arch-ros-stacks
 
 This is a fork of [zootboy](https://github.com/zootboy/arch-ros-stacks)'s fork of [hauptmech](https://github.com/hauptmech/arch-ros-stacks)'s fork of [moesenle](https://github.com/moesenle/arch-ros-stacks)'s very nice arch-ros-stacks.
 
-I am maintaining Hydro packages for Arch Linux. Please e-mail me with any suggestions, comments or package requests:
+I am maintaining Hydro/Indigo packages for Arch Linux. Please e-mail me with any suggestions, comments or package requests:
 
 \<chretien at lirmm dot fr\>
 
