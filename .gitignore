@@ -11,3 +11,7 @@ hydro/*/**
 !hydro/*/PKGBUILD
 !hydro/*/*.patch
 !hydro/*/*.install
+indigo/*/**
+!indigo/*/PKGBUILD
+!indigo/*/*.patch
+!indigo/*/*.install
