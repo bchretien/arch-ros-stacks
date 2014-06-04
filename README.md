@@ -14,39 +14,39 @@ If you want to contribute, simply fork this repository, create or update some pa
 The script that automates most of the work is `import_catkin_packages.py` available in `dependencies/ros-build-tools`. To list its options:
 
 ```shell
-$ python2 import_catkin_packages.py --help
+$ python3 import_catkin_packages.py --help
 ```
 
 To list all available packages:
 
 ```shell
-$ python2 import_catkin_packages.py --distro=hydro --list | less
+$ python3 import_catkin_packages.py --distro=hydro --list | less
 ```
 
 You can also provide the output directory when listing packages, in order to see the ones that have not been generated yet:
 
 ```shell
-$ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro --list | less
+$ python3 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro --list | less
 ```
 
 
 To add a new official package called `package_foo` recursively:
 
 ```shell
-$ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -r package_foo
+$ python3 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -r package_foo
 ```
 
 To simply update `package_foo`:
 
 
 ```shell
-$ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -u package_foo
+$ python3 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -u package_foo
 ```
 
 To recursively "force update" `package_foo`:
 
 ```shell
-$ python2 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -rfu package_foo
+$ python3 import_catkin_packages.py --distro=hydro --output-directory=/path/to/arch-ros-stacks/hydro -rfu package_foo
 ```
 
 Note that the default behavior is to fetch release information from the [official rosdistro distribution.yaml](https://github.com/ros/rosdistro/blob/master/hydro/distribution.yaml).
