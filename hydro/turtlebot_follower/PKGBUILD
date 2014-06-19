@@ -1,37 +1,37 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - depthimage_to_laserscan."
-url='http://ros.org/wiki/depthimage_to_laserscan'
+pkgdesc="ROS - Follower for the turtlebot."
+url='http://ros.org/wiki/turtlebot_apps'
 
-pkgname='ros-hydro-depthimage-to-laserscan'
-pkgver='1.0.7'
-_pkgver_patch=0
+pkgname='ros-hydro-turtlebot-follower'
+pkgver='2.2.5'
+_pkgver_patch=1
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
-ros_makedepends=(ros-hydro-sensor-msgs
+ros_makedepends=(ros-hydro-turtlebot-msgs
   ros-hydro-nodelet
-  ros-hydro-image-geometry
-  ros-hydro-image-transport
   ros-hydro-roscpp
   ros-hydro-catkin
-  ros-hydro-dynamic-reconfigure)
+  ros-hydro-visualization-msgs
+  ros-hydro-dynamic-reconfigure
+  ros-hydro-pcl-ros)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]}
-  gtest)
+  ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-sensor-msgs
+ros_depends=(ros-hydro-turtlebot-msgs
   ros-hydro-nodelet
-  ros-hydro-image-geometry
-  ros-hydro-image-transport
   ros-hydro-roscpp
-  ros-hydro-dynamic-reconfigure)
+  ros-hydro-turtlebot-bringup
+  ros-hydro-visualization-msgs
+  ros-hydro-dynamic-reconfigure
+  ros-hydro-pcl-ros)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/depthimage_to_laserscan/${pkgver}-${_pkgver_patch}
-_dir=depthimage_to_laserscan
-source=("${_dir}"::"git+https://github.com/ros-gbp/depthimage_to_laserscan-release.git"#tag=${_tag})
+_tag=release/hydro/turtlebot_follower/${pkgver}-${_pkgver_patch}
+_dir=turtlebot_follower
+source=("${_dir}"::"git+https://github.com/turtlebot-release/turtlebot_apps-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
