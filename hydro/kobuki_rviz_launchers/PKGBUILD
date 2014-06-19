@@ -1,29 +1,24 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - The Kobuki dashboard is a RQT-based plug-in for visualising data from Kobuki and giving easy access to basic functionalities."
-url='http://ros.org/wiki/kobuki_dashboard'
+pkgdesc="ROS - The kobuki_rviz_launchers package."
+url='http://ros.org/wiki/kobuki_rviz_launchers'
 
-pkgname='ros-hydro-kobuki-dashboard'
+pkgname='ros-hydro-kobuki-rviz-launchers'
 pkgver='0.3.2'
 _pkgver_patch=1
 arch=('any')
 pkgrel=2
 license=('BSD')
 
-ros_makedepends=(ros-hydro-rospy
-  ros-hydro-kobuki-msgs
-  ros-hydro-catkin
-  ros-hydro-rqt-robot-dashboard)
+ros_makedepends=(ros-hydro-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-hydro-rospy
-  ros-hydro-kobuki-msgs
-  ros-hydro-rqt-robot-dashboard)
+ros_depends=(ros-hydro-rviz)
 depends=(${ros_depends[@]})
 
-_tag=release/hydro/kobuki_dashboard/${pkgver}-${_pkgver_patch}
-_dir=kobuki_dashboard
+_tag=release/hydro/kobuki_rviz_launchers/${pkgver}-${_pkgver_patch}
+_dir=kobuki_rviz_launchers
 source=("${_dir}"::"git+https://github.com/yujinrobot-release/kobuki_desktop-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
