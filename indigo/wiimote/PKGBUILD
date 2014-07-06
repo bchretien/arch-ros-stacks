@@ -1,44 +1,42 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - roscpp is a C++ implementation of ROS."
-url='http://ros.org/wiki/roscpp'
+pkgdesc="ROS - The wiimote package allows ROS nodes to communicate with a Nintendo Wiimote and its related peripherals, including the Nunchuk, Motion Plus, and (experimentally) the Classic."
+url='http://www.ros.org/wiki/wiimote'
 
-pkgname='ros-indigo-roscpp'
-pkgver='1.11.5'
+pkgname='ros-indigo-wiimote'
+pkgver='1.10.0'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('GPL')
 
-ros_makedepends=(ros-indigo-roslang
-  ros-indigo-roscpp-serialization
+ros_makedepends=(ros-indigo-geometry-msgs
+  ros-indigo-genmsg
   ros-indigo-std-msgs
-  ros-indigo-rostime
-  ros-indigo-catkin
-  ros-indigo-message-generation
-  ros-indigo-rosconsole
-  ros-indigo-cpp-common
-  ros-indigo-roscpp-traits
-  ros-indigo-rosgraph-msgs
-  ros-indigo-xmlrpcpp)
+  ros-indigo-rospy
+  ros-indigo-std-srvs
+  ros-indigo-sensor-msgs
+  ros-indigo-roslib
+  ros-indigo-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
-  pkg-config)
+  cwiid
+  python2-numpy)
 
-ros_depends=(ros-indigo-roscpp-serialization
+ros_depends=(ros-indigo-geometry-msgs
+  ros-indigo-genmsg
   ros-indigo-std-msgs
-  ros-indigo-message-runtime
-  ros-indigo-rostime
-  ros-indigo-rosconsole
-  ros-indigo-cpp-common
-  ros-indigo-roscpp-traits
-  ros-indigo-rosgraph-msgs
-  ros-indigo-xmlrpcpp)
-depends=(${ros_depends[@]})
+  ros-indigo-rospy
+  ros-indigo-std-srvs
+  ros-indigo-sensor-msgs
+  ros-indigo-roslib)
+depends=(${ros_depends[@]}
+  cwiid
+  python2-numpy)
 
-_tag=release/indigo/roscpp/${pkgver}-${_pkgver_patch}
-_dir=roscpp
-source=("${_dir}"::"git+https://github.com/ros-gbp/ros_comm-release.git"#tag=${_tag})
+_tag=release/indigo/wiimote/${pkgver}-${_pkgver_patch}
+_dir=wiimote
+source=("${_dir}"::"git+https://github.com/ros-gbp/joystick_drivers-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
