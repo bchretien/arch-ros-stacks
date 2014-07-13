@@ -19,8 +19,9 @@ conflicts=('pyqt4')
 build() {
   cp -r PyQt-x11-gpl-${pkgver} Py2Qt-x11-gpl-${pkgver}
 
+  ### Python 3 version ###
   cd PyQt-x11-gpl-${pkgver}
-  python configure.py \
+  python3 configure.py \
     --confirm-license \
     --qsci-api \
     -q /usr/bin/qmake-qt4
@@ -30,7 +31,7 @@ build() {
 
   make
 
-  ### Python2 version ###
+  ### Python 2 version ###
   cd ../Py2Qt-x11-gpl-${pkgver}
   python2 configure.py \
     --confirm-license \
