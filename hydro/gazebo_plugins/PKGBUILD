@@ -1,11 +1,12 @@
-
+# Script generated with import_catkin_packages.py
+# For more information: https://github.com/bchretien/arch-ros-stacks
 pkgdesc="ROS - Robot-independent Gazebo plugins for sensors, motors and dynamic reconfigurable components."
-url='http://www.ros.org/'
+url='http://gazebosim.org/wiki/Tutorials'
 
 pkgname='ros-hydro-gazebo-plugins'
-pkgver='2.4.2'
+pkgver='2.3.6'
 _pkgver_patch=0
-arch=('i686' 'x86_64')
+arch=('any')
 pkgrel=1
 license=('BSD')
 
@@ -22,6 +23,7 @@ ros_makedepends=(ros-hydro-rosconsole
   ros-hydro-geometry-msgs
   ros-hydro-gazebo-msgs
   ros-hydro-nav-msgs
+  ros-hydro-tf2-ros
   ros-hydro-roscpp
   ros-hydro-std-srvs
   ros-hydro-urdf
@@ -31,8 +33,7 @@ ros_makedepends=(ros-hydro-rosconsole
   ros-hydro-rospy
   ros-hydro-trajectory-msgs
   ros-hydro-catkin
-  ros-hydro-tf
-  ros-hydro-pcl-ros)
+  ros-hydro-tf)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
   gazebo
@@ -51,6 +52,7 @@ ros_depends=(ros-hydro-rosconsole
   ros-hydro-geometry-msgs
   ros-hydro-gazebo-msgs
   ros-hydro-nav-msgs
+  ros-hydro-tf2-ros
   ros-hydro-roscpp
   ros-hydro-std-srvs
   ros-hydro-urdf
@@ -59,8 +61,7 @@ ros_depends=(ros-hydro-rosconsole
   ros-hydro-cv-bridge
   ros-hydro-rospy
   ros-hydro-trajectory-msgs
-  ros-hydro-tf
-  ros-hydro-pcl-ros)
+  ros-hydro-tf)
 depends=(${ros_depends[@]}
   gazebo
   ogre-1.8)
@@ -74,13 +75,8 @@ md5sums=('SKIP'
 
 build() {
   # Use ROS environment variables
-  /usr/share/ros-build-tools/clear-ros-env.sh
+  source /usr/share/ros-build-tools/clear-ros-env.sh
   [ -f /opt/ros/hydro/setup.bash ] && source /opt/ros/hydro/setup.bash
-
-  # Apply patch
-  msg "Patching source code"
-  cd ${srcdir}/${_dir}
-  git apply ${srcdir}/ogre_linker.patch
 
   # Create build directory
   [ -d ${srcdir}/build ] || mkdir ${srcdir}/build
