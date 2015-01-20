@@ -1,30 +1,30 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - diagnostic_common_diagnostics."
-url='http://ros.org/wiki/diagnostic_common_diagnostics'
+pkgdesc="ROS - Launch files to start the openni2_camera drivers using rgbd_launch."
+url='http://www.ros.org/'
 
-pkgname='ros-indigo-diagnostic-common-diagnostics'
-pkgver='1.8.7'
+pkgname='ros-indigo-openni2-launch'
+pkgver='0.2.1'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-indigo-diagnostic-updater
-  ros-indigo-rospy
-  ros-indigo-catkin)
+ros_makedepends=(ros-indigo-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-indigo-tf
-  ros-indigo-diagnostic-updater
-  ros-indigo-rospy)
-depends=(${ros_depends[@]}
-  hddtemp)
+ros_depends=(ros-indigo-nodelet
+  ros-indigo-rgbd-launch
+  ros-indigo-depth-image-proc
+  ros-indigo-openni2-camera
+  ros-indigo-image-proc
+  ros-indigo-tf)
+depends=(${ros_depends[@]})
 
-_tag=release/indigo/diagnostic_common_diagnostics/${pkgver}-${_pkgver_patch}
-_dir=diagnostic_common_diagnostics
-source=("${_dir}"::"git+https://github.com/ros-gbp/diagnostics-release.git"#tag=${_tag})
+_tag=release/indigo/openni2_launch/${pkgver}-${_pkgver_patch}
+_dir=openni2_launch
+source=("${_dir}"::"git+https://github.com/ros-gbp/openni2_launch.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

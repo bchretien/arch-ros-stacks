@@ -1,30 +1,38 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - diagnostic_common_diagnostics."
-url='http://ros.org/wiki/diagnostic_common_diagnostics'
+pkgdesc="ROS - Drivers for the Asus Xtion and Primesense Devices."
+url='http://www.ros.org/'
 
-pkgname='ros-indigo-diagnostic-common-diagnostics'
-pkgver='1.8.7'
+pkgname='ros-indigo-openni2-camera'
+pkgver='0.2.2'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-indigo-diagnostic-updater
-  ros-indigo-rospy
-  ros-indigo-catkin)
+ros_makedepends=(ros-indigo-nodelet
+  ros-indigo-roscpp
+  ros-indigo-catkin
+  ros-indigo-image-transport
+  ros-indigo-camera-info-manager
+  ros-indigo-sensor-msgs
+  ros-indigo-dynamic-reconfigure)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]})
+  ${ros_makedepends[@]}
+  openni2)
 
-ros_depends=(ros-indigo-tf
-  ros-indigo-diagnostic-updater
-  ros-indigo-rospy)
+ros_depends=(ros-indigo-nodelet
+  ros-indigo-roscpp
+  ros-indigo-image-transport
+  ros-indigo-camera-info-manager
+  ros-indigo-sensor-msgs
+  ros-indigo-dynamic-reconfigure)
 depends=(${ros_depends[@]}
-  hddtemp)
+  openni2)
 
-_tag=release/indigo/diagnostic_common_diagnostics/${pkgver}-${_pkgver_patch}
-_dir=diagnostic_common_diagnostics
-source=("${_dir}"::"git+https://github.com/ros-gbp/diagnostics-release.git"#tag=${_tag})
+_tag=release/indigo/openni2_camera/${pkgver}-${_pkgver_patch}
+_dir=openni2_camera
+source=("${_dir}"::"git+https://github.com/ros-gbp/openni2_camera-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

@@ -1,30 +1,34 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - diagnostic_common_diagnostics."
-url='http://ros.org/wiki/diagnostic_common_diagnostics'
+pkgdesc="ROS - Small lib to transform sensor_msgs with tf."
+url='http://www.ros.org/wiki/tf2_ros'
 
-pkgname='ros-indigo-diagnostic-common-diagnostics'
-pkgver='1.8.7'
+pkgname='ros-indigo-tf2-sensor-msgs'
+pkgver='0.5.7'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-indigo-diagnostic-updater
-  ros-indigo-rospy
-  ros-indigo-catkin)
+ros_makedepends=(ros-indigo-cmake-modules
+  ros-indigo-catkin
+  ros-indigo-tf2-ros
+  ros-indigo-tf2
+  ros-indigo-sensor-msgs)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]})
+  ${ros_makedepends[@]}
+  eigen3)
 
-ros_depends=(ros-indigo-tf
-  ros-indigo-diagnostic-updater
-  ros-indigo-rospy)
+ros_depends=(ros-indigo-cmake-modules
+  ros-indigo-tf2-ros
+  ros-indigo-tf2
+  ros-indigo-sensor-msgs)
 depends=(${ros_depends[@]}
-  hddtemp)
+  eigen3)
 
-_tag=release/indigo/diagnostic_common_diagnostics/${pkgver}-${_pkgver_patch}
-_dir=diagnostic_common_diagnostics
-source=("${_dir}"::"git+https://github.com/ros-gbp/diagnostics-release.git"#tag=${_tag})
+_tag=release/indigo/tf2_sensor_msgs/${pkgver}-${_pkgver_patch}
+_dir=tf2_sensor_msgs
+source=("${_dir}"::"git+https://github.com/ros-gbp/geometry_experimental-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

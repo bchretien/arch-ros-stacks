@@ -1,30 +1,32 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - diagnostic_common_diagnostics."
-url='http://ros.org/wiki/diagnostic_common_diagnostics'
+pkgdesc="ROS - Launch files to open an RGBD device and load all nodelets to convert raw depth/RGB/IR streams to depth images, disparity images, and (registered) point clouds."
+url='http://www.ros.org/wiki/rgbd_launch'
 
-pkgname='ros-indigo-diagnostic-common-diagnostics'
-pkgver='1.8.7'
+pkgname='ros-indigo-rgbd-launch'
+pkgver='2.1.0'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-indigo-diagnostic-updater
-  ros-indigo-rospy
-  ros-indigo-catkin)
+ros_makedepends=(ros-indigo-image-proc
+  ros-indigo-catkin
+  ros-indigo-tf
+  ros-indigo-nodelet
+  ros-indigo-depth-image-proc)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-indigo-tf
-  ros-indigo-diagnostic-updater
-  ros-indigo-rospy)
-depends=(${ros_depends[@]}
-  hddtemp)
+ros_depends=(ros-indigo-image-proc
+  ros-indigo-tf
+  ros-indigo-nodelet
+  ros-indigo-depth-image-proc)
+depends=(${ros_depends[@]})
 
-_tag=release/indigo/diagnostic_common_diagnostics/${pkgver}-${_pkgver_patch}
-_dir=diagnostic_common_diagnostics
-source=("${_dir}"::"git+https://github.com/ros-gbp/diagnostics-release.git"#tag=${_tag})
+_tag=release/indigo/rgbd_launch/${pkgver}-${_pkgver_patch}
+_dir=rgbd_launch
+source=("${_dir}"::"git+https://github.com/ros-gbp/rgbd_launch-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
