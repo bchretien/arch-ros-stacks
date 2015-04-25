@@ -1,31 +1,25 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - This package contains a number of URDF tutorials."
-url='http://ros.org/wiki/urdf_tutorial'
+pkgdesc="ROS - Mesh Conversion Utility Used to generate .iv files from .stl files."
+url='https://sourceforge.net/projects/ivcon/'
 
-pkgname='ros-indigo-urdf-tutorial'
-pkgver='0.2.4'
+pkgname='ros-indigo-ivcon'
+pkgver='0.1.5'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('GPL')
 
-ros_makedepends=(ros-indigo-urdf
-  ros-indigo-catkin)
+ros_makedepends=(ros-indigo-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-indigo-pr2-description
-  ros-indigo-rviz
-  ros-indigo-joint-state-publisher
-  ros-indigo-xacro
-  ros-indigo-robot-state-publisher
-  ros-indigo-urdf)
+ros_depends=()
 depends=(${ros_depends[@]})
 
-_tag=release/indigo/urdf_tutorial/${pkgver}-${_pkgver_patch}
-_dir=urdf_tutorial
-source=("${_dir}"::"git+https://github.com/ros-gbp/urdf_tutorial-release.git"#tag=${_tag})
+_tag=release/indigo/ivcon/${pkgver}-${_pkgver_patch}
+_dir=ivcon
+source=("${_dir}"::"git+https://github.com/ros-gbp/ivcon-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {

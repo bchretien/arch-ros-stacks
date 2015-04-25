@@ -1,31 +1,27 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - This package contains a number of URDF tutorials."
-url='http://ros.org/wiki/urdf_tutorial'
+pkgdesc="ROS - Convex Decomposition Tool for Robot Model."
+url='http://codesuppository.blogspot.com'
 
-pkgname='ros-indigo-urdf-tutorial'
-pkgver='0.2.4'
+pkgname='ros-indigo-convex-decomposition'
+pkgver='0.1.10'
 _pkgver_patch=0
 arch=('any')
 pkgrel=1
-license=('BSD')
+license=('MIT')
 
-ros_makedepends=(ros-indigo-urdf
-  ros-indigo-catkin)
+ros_makedepends=(ros-indigo-catkin)
 makedepends=('cmake' 'git' 'ros-build-tools'
-  ${ros_makedepends[@]})
+  ${ros_makedepends[@]}
+  unzip)
 
-ros_depends=(ros-indigo-pr2-description
-  ros-indigo-rviz
-  ros-indigo-joint-state-publisher
-  ros-indigo-xacro
-  ros-indigo-robot-state-publisher
-  ros-indigo-urdf)
-depends=(${ros_depends[@]})
+ros_depends=()
+depends=(${ros_depends[@]}
+  unzip)
 
-_tag=release/indigo/urdf_tutorial/${pkgver}-${_pkgver_patch}
-_dir=urdf_tutorial
-source=("${_dir}"::"git+https://github.com/ros-gbp/urdf_tutorial-release.git"#tag=${_tag})
+_tag=release/indigo/convex_decomposition/${pkgver}-${_pkgver_patch}
+_dir=convex_decomposition
+source=("${_dir}"::"git+https://github.com/ros-gbp/convex_decomposition-release.git"#tag=${_tag})
 md5sums=('SKIP')
 
 build() {
