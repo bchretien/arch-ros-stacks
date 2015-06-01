@@ -15,3 +15,7 @@ indigo/*/**
 !indigo/*/PKGBUILD
 !indigo/*/*.patch
 !indigo/*/*.install
+jade/*/**
+!jade/*/PKGBUILD
+!jade/*/*.patch
+!jade/*/*.install
