@@ -13,6 +13,60 @@ function usage() {
   echo "Released under dual GPL license."
 }
 
+
+# Some PKGBUILDs were not valid when added to arch-ros-stacks (*cough*
+# ros-build-tools *cough*), so our git filter-branch here will lead to invalid
+# .AURINFO and a rejected push from the AUR. For now, we'll squash commits
+# until the first valid one before pushing. In order to be able to update the
+# AUR package with this script, DO NOT CHANGE THE COMMIT HASHES SET HERE!
+function squashCheck() {
+  local package=$1
+  local branch=$2
+  if [[ "${package}" == "ros-build-tools" ]]; then
+    squashHead ${branch} c8aba9f523731dc2f7623417faf60e8a308c6a5f
+  fi
+}
+
+# Function inspired from: http://stackoverflow.com/a/436530/1043187
+function squashHead() {
+  local branch=$1
+  local good_sha=$2
+
+  local first_sha=$(git rev-list --max-parents=0 ${branch})
+
+  local master_branch=$(git rev-parse --abbrev-ref HEAD)
+
+  git stash
+  git checkout ${branch}
+
+  # Go back to the last commit that we want
+  # to form the initial commit (detach HEAD)
+  git checkout ${good_sha}
+
+  # reset the branch pointer to the initial commit,
+  # but leaving the index and working tree intact.
+  git reset --soft ${first_sha}
+
+  # amend the initial tree using the tree from 'B'
+  git commit --amend -m "Squashed commits"
+
+  # temporarily tag this new initial commit
+  # (or you could remember the new commit sha1 manually)
+  git tag -f tmp
+
+  # go back to the original branch (assume master for this example)
+  git checkout ${branch}
+
+  # Replay all the commits after B onto the new initial commit
+  git rebase --no-verify --onto tmp ${good_sha}
+
+  # remove the temporary tag
+  git tag -d tmp
+
+  git checkout ${master_branch}
+  git stash pop
+}
+
 # Make sure mksrcinfo is available
 command -v mksrcinfo >/dev/null 2>&1 \
   || { echo "Please install pkgbuild-introspection."; exit -1; }
@@ -82,7 +136,11 @@ set -x
 if ! $(ssh -p${AUR4PORT} ${AUR4USER}@${AUR4HOST} list-repos | grep -q "${full_name}"); then
   # Create subtree and run mksrcinfo in it
   git subtree split --prefix="${subdir}" -b ${branch_name}
+  squashCheck ${full_name} ${branch_name}
+
+  git stash
   git filter-branch -f --tree-filter "mksrcinfo" -- ${branch_name}
+  git stash pop
 
   # Setup repo if the package does not exist
   ssh -p${AUR4PORT} ${AUR4USER}@${AUR4HOST} setup-repo "${full_name}" || \
@@ -108,7 +166,10 @@ else
 
   # Create subtree and run mksrcinfo in it
   git subtree split --prefix="${subdir}" -b ${branch_name}
+  squashCheck ${full_name} ${branch_name}
+  git stash
   git filter-branch -f --tree-filter "mksrcinfo" -- ${branch_name}
+  git stash pop
 
   # Push to AUR4
   git push "ssh+git://${git_repo}" "${branch_name}:master" || \
