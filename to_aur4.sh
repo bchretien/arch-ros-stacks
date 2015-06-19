@@ -1,5 +1,18 @@
 #!/bin/sh
 
+function usage() {
+  echo "Push ROS-related package modifications to the AUR (v4)"
+  echo ""
+  echo "Usage 1: $0 <ROS distribution> <ROS package name>"
+  echo "Example: $0 indigo desktop_full"
+  echo ""
+  echo "Usage 2: $0 dependency <package name>"
+  echo "Example: $0 dependency python2-empy"
+  echo ""
+  echo "Copyright 2015 (c) Benjamin Chrétien <chretien+aur@lirmm.fr>"
+  echo "Released under dual GPL license."
+}
+
 # Make sure mksrcinfo is available
 command -v mksrcinfo >/dev/null 2>&1 \
   || { echo "Please install pkgbuild-introspection."; exit -1; }
@@ -19,27 +32,43 @@ DISTRIB=${1:-}
 LOCAL_NAME=${2:-}
 
 if [[ -z "${DISTRIB}" || -z "${LOCAL_NAME}" ]]; then
-  echo "Usage: $0 <ROS distribution> <ROS package name>"
-  echo "Example: $0 indigo desktop_full"
-  echo "Copyright 2015 (c) Benjamin Chrétien <chretien+aur@lirmm.fr>"
-  # TODO: fix license
-  echo "Released under dual GPL/BSD license."
+  usage
   exit 1
 fi
 
-if [[ "${DISTRIB}" != "indigo" && "${DISTRIB}" != "jade" ]]; then
+if [[ "${DISTRIB}" == "dependency" ]]; then
+  is_ros_package="false"
+elif [[ "${DISTRIB}" == "indigo" || "${DISTRIB}" == "jade" ]]; then
+  is_ros_package="true"
+else
   echo "ROS distribution should be \"indigo\" or \"jade\""
   exit 1
 fi
 
-# Subdirectory
+# arch-ros-stacks directory
 arch_ros_stacks_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 pushd ${arch_ros_stacks_dir}
 
-subdir="${DISTRIB}/${LOCAL_NAME}"
+if [[ "${is_ros_package}" == "true" ]]; then
+  # Subdirectory in arch-ros-stacks
+  subdir="${DISTRIB}/${LOCAL_NAME}"
 
-# Full AUR package name
-full_name="ros-${DISTRIB}-${LOCAL_NAME//_/-}"
+  # Full AUR package name
+  full_name="ros-${DISTRIB}-${LOCAL_NAME//_/-}"
+else
+  # Subdirectory in arch-ros-stacks
+  subdir="dependencies/${LOCAL_NAME}"
+
+  # Full AUR package name
+  full_name="${LOCAL_NAME}"
+fi
+
+# Check that a PKGBUILD exists
+full_pkgbuild_path="${arch_ros_stacks_dir}/${subdir}/PKGBUILD"
+if [ ! -f "${full_pkgbuild_path}" ]; then
+  echo "PKGBUILD not found in ${arch_ros_stacks_dir}/${subdir}"
+  exit 1
+fi
 
 # Unique branch name for subtree
 branch_name="aur4/${full_name}"
