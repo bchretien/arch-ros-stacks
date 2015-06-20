@@ -7,7 +7,7 @@ pkgname='ros-indigo-moveit-ros-planning-interface'
 pkgver='0.5.19'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(ros-indigo-roscpp
@@ -25,7 +25,7 @@ ros_makedepends=(ros-indigo-roscpp
   ros-indigo-moveit-ros-warehouse)
 makedepends=('cmake' 'git' 'ros-build-tools'
   ${ros_makedepends[@]}
-  python2-catkin_pkg
+  python2-catkin-pkg
   python2)
 
 ros_depends=(ros-indigo-roscpp
