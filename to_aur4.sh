@@ -35,9 +35,9 @@ function newPackage() {
   git subtree split --prefix="${package_dir}" -b ${branch_name}
   squashCheck ${package_name} ${branch_name}
 
-  git stash
+  git stash -q
   git filter-branch -f --tree-filter "mksrcinfo" -- ${branch_name}
-  git stash pop
+  git stash pop -q
 
   # Setup repo if the package does not exist
   ssh -p${AUR4PORT} ${AUR4USER}@${AUR4HOST} setup-repo "${package_name}" || \
@@ -69,9 +69,9 @@ function updatePackage() {
   # Create subtree and run mksrcinfo in it
   git subtree split --prefix="${package_dir}" -b ${branch_name}
   squashCheck ${package_name} ${branch_name}
-  git stash
+  git stash -q
   git filter-branch -f --tree-filter "mksrcinfo" -- ${branch_name}
-  git stash pop
+  git stash pop -q
 
   # Push to AUR4
   git push "ssh+git://${git_repo}" "${branch_name}:master" || \
@@ -130,7 +130,7 @@ function squashHead() {
 
   local master_branch=$(git rev-parse --abbrev-ref HEAD)
 
-  git stash
+  git stash -q
   git checkout ${branch}
 
   # Go back to the last commit that we want
@@ -158,7 +158,7 @@ function squashHead() {
   git tag -d tmp
 
   git checkout ${master_branch}
-  git stash pop
+  git stash pop -q
 }
 
 # Make sure mksrcinfo is available
@@ -223,7 +223,6 @@ elif [[ "${query_type}" == "dependency" ]]; then
   # Process package
   processPackage ${subdir} ${full_name}
 elif [[ "${query_type}" == "commit" ]]; then
-  # TODO
   updated_pkgbuilds=$(git diff-tree --no-commit-id --name-only -r HEAD | grep PKGBUILD)
   for p in ${updated_pkgbuilds}; do
     subdir=$(dirname ${p})
