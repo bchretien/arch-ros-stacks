@@ -225,6 +225,11 @@ elif [[ "${query_type}" == "dependency" ]]; then
 elif [[ "${query_type}" == "commit" ]]; then
   updated_pkgbuilds=$(git diff-tree --no-commit-id --name-only -r HEAD | grep PKGBUILD)
   for p in ${updated_pkgbuilds}; do
+    # If the PKGBUILD does not exist (e.g. was removed in the commit)
+    if [[ ! -f "${p}" ]]; then
+      break
+    fi
+
     subdir=$(dirname ${p})
     first_subdir=${subdir%/*}
     if [[ "${first_subdir}" == "dependencies" ]]; then
