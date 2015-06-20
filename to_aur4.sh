@@ -94,7 +94,7 @@ function processPackage() {
   # Check that a PKGBUILD exists
   if [ ! -f "${package_dir}/PKGBUILD" ]; then
     echo "PKGBUILD not found in ${package_dir}"
-    exit 1
+    return
   fi
 
   # Check if the package already exists
@@ -243,7 +243,6 @@ elif [[ "${query_type}" == "commit" ]]; then
     # Process package
     processPackage ${subdir} ${full_name}
   done
-  exit 2
 fi
 
 popd
