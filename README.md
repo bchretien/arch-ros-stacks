@@ -73,3 +73,9 @@ $ python2 import_catkin_packages.py --python-version=2.7 --distro=indigo --outpu
 Note that the default behavior is to fetch release information from the
 [official rosdistro
 distribution.yaml](https://github.com/ros/rosdistro/blob/master/indigo/distribution.yaml).
+
+### AUR4 upload
+
+The `to_aur4.sh` script can take care of uploading newly created/updated packages to the AUR. Since it works by creating a subtree of a specific package from `arch-ros-stacks`, applying `mksrcinfo` to create the required `.SRCINFO` file, and pushing the result to the AUR, it will only work if all pushes to the AUR were done using it.
+
+A future version of `import_catkin_packages.py` may create/pull AUR submodules, and a hook will take care of handling `mksrcinfo` calls. In the meantime, `to_aur4.sh` is the easiest way to handle AUR4 uploads.
