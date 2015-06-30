@@ -1,0 +1,3 @@
+[submodule "dependencies/ros-build-tools"]
+	path = dependencies/ros-build-tools
+	url = https://aur4.archlinux.org/ros-build-tools.git
