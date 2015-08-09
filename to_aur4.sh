@@ -37,7 +37,7 @@ function newPackage() {
 
   git stash -q
   git filter-branch -f --tree-filter "mksrcinfo" -- ${branch_name}
-  git stash pop -q
+  git stash pop -q &>/dev/null
 
   # Setup repo if the package does not exist
   ssh -p${AUR4PORT} ${AUR4USER}@${AUR4HOST} setup-repo "${package_name}" || \
@@ -71,7 +71,7 @@ function updatePackage() {
   squashCheck ${package_name} ${branch_name}
   git stash -q
   git filter-branch -f --tree-filter "mksrcinfo" -- ${branch_name}
-  git stash pop -q
+  git stash pop -q &>/dev/null
 
   # Push to AUR4
   git push "ssh+git://${git_repo}" "${branch_name}:master" || \
@@ -158,7 +158,7 @@ function squashHead() {
   git tag -d tmp
 
   git checkout ${master_branch}
-  git stash pop -q
+  git stash pop -q &>/dev/null
 }
 
 # Make sure mksrcinfo is available
