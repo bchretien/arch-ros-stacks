@@ -169,7 +169,7 @@ set -e
 set -u
 
 # AUR4 parameters
-AUR4HOST=${AUR4HOST:-aur4.archlinux.org}
+AUR4HOST=${AUR4HOST:-aur.archlinux.org}
 AUR4USER=${AUR4USER:-aur}
 AUR4PORT=${AUR4PORT:-22}
 
