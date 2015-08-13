@@ -838,3 +838,678 @@
 [submodule "indigo/libccd"]
 	path = indigo/libccd
 	url = https://aur.archlinux.org/ros-indigo-libccd.git
+[submodule "jade/diagnostic_aggregator"]
+	path = jade/diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-jade-diagnostic-aggregator.git
+[submodule "jade/rqt_robot_dashboard"]
+	path = jade/rqt_robot_dashboard
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-dashboard.git
+[submodule "jade/image_geometry"]
+	path = jade/image_geometry
+	url = https://aur.archlinux.org/ros-jade-image-geometry.git
+[submodule "jade/bond"]
+	path = jade/bond
+	url = https://aur.archlinux.org/ros-jade-bond.git
+[submodule "jade/rqt_image_view"]
+	path = jade/rqt_image_view
+	url = https://aur.archlinux.org/ros-jade-rqt-image-view.git
+[submodule "jade/smach_ros"]
+	path = jade/smach_ros
+	url = https://aur.archlinux.org/ros-jade-smach-ros.git
+[submodule "jade/turtle_actionlib"]
+	path = jade/turtle_actionlib
+	url = https://aur.archlinux.org/ros-jade-turtle-actionlib.git
+[submodule "jade/interactive_marker_tutorials"]
+	path = jade/interactive_marker_tutorials
+	url = https://aur.archlinux.org/ros-jade-interactive-marker-tutorials.git
+[submodule "jade/rqt_common_plugins"]
+	path = jade/rqt_common_plugins
+	url = https://aur.archlinux.org/ros-jade-rqt-common-plugins.git
+[submodule "jade/roscpp"]
+	path = jade/roscpp
+	url = https://aur.archlinux.org/ros-jade-roscpp.git
+[submodule "jade/urdf_parser_plugin"]
+	path = jade/urdf_parser_plugin
+	url = https://aur.archlinux.org/ros-jade-urdf-parser-plugin.git
+[submodule "jade/desktop"]
+	path = jade/desktop
+	url = https://aur.archlinux.org/ros-jade-desktop.git
+[submodule "jade/rqt_py_common"]
+	path = jade/rqt_py_common
+	url = https://aur.archlinux.org/ros-jade-rqt-py-common.git
+[submodule "jade/cmake_modules"]
+	path = jade/cmake_modules
+	url = https://aur.archlinux.org/ros-jade-cmake-modules.git
+[submodule "jade/smach_msgs"]
+	path = jade/smach_msgs
+	url = https://aur.archlinux.org/ros-jade-smach-msgs.git
+[submodule "jade/rosunit"]
+	path = jade/rosunit
+	url = https://aur.archlinux.org/ros-jade-rosunit.git
+[submodule "jade/stage_ros"]
+	path = jade/stage_ros
+	url = https://aur.archlinux.org/ros-jade-stage-ros.git
+[submodule "jade/sensor_msgs"]
+	path = jade/sensor_msgs
+	url = https://aur.archlinux.org/ros-jade-sensor-msgs.git
+[submodule "jade/rqt_topic"]
+	path = jade/rqt_topic
+	url = https://aur.archlinux.org/ros-jade-rqt-topic.git
+[submodule "jade/compressed_depth_image_transport"]
+	path = jade/compressed_depth_image_transport
+	url = https://aur.archlinux.org/ros-jade-compressed-depth-image-transport.git
+[submodule "jade/roslint"]
+	path = jade/roslint
+	url = https://aur.archlinux.org/ros-jade-roslint.git
+[submodule "jade/rosbag_storage"]
+	path = jade/rosbag_storage
+	url = https://aur.archlinux.org/ros-jade-rosbag-storage.git
+[submodule "jade/dynamic_reconfigure"]
+	path = jade/dynamic_reconfigure
+	url = https://aur.archlinux.org/ros-jade-dynamic-reconfigure.git
+[submodule "jade/rqt_dep"]
+	path = jade/rqt_dep
+	url = https://aur.archlinux.org/ros-jade-rqt-dep.git
+[submodule "jade/rosout"]
+	path = jade/rosout
+	url = https://aur.archlinux.org/ros-jade-rosout.git
+[submodule "jade/rostime"]
+	path = jade/rostime
+	url = https://aur.archlinux.org/ros-jade-rostime.git
+[submodule "jade/trajectory_msgs"]
+	path = jade/trajectory_msgs
+	url = https://aur.archlinux.org/ros-jade-trajectory-msgs.git
+[submodule "jade/nodelet_tutorial_math"]
+	path = jade/nodelet_tutorial_math
+	url = https://aur.archlinux.org/ros-jade-nodelet-tutorial-math.git
+[submodule "jade/geometry"]
+	path = jade/geometry
+	url = https://aur.archlinux.org/ros-jade-geometry.git
+[submodule "jade/compressed_image_transport"]
+	path = jade/compressed_image_transport
+	url = https://aur.archlinux.org/ros-jade-compressed-image-transport.git
+[submodule "jade/driver_base"]
+	path = jade/driver_base
+	url = https://aur.archlinux.org/ros-jade-driver-base.git
+[submodule "jade/geometric_shapes"]
+	path = jade/geometric_shapes
+	url = https://aur.archlinux.org/ros-jade-geometric-shapes.git
+[submodule "jade/collada_urdf"]
+	path = jade/collada_urdf
+	url = https://aur.archlinux.org/ros-jade-collada-urdf.git
+[submodule "jade/nodelet_topic_tools"]
+	path = jade/nodelet_topic_tools
+	url = https://aur.archlinux.org/ros-jade-nodelet-topic-tools.git
+[submodule "jade/robot_model"]
+	path = jade/robot_model
+	url = https://aur.archlinux.org/ros-jade-robot-model.git
+[submodule "jade/actionlib_tutorials"]
+	path = jade/actionlib_tutorials
+	url = https://aur.archlinux.org/ros-jade-actionlib-tutorials.git
+[submodule "jade/pcl_msgs"]
+	path = jade/pcl_msgs
+	url = https://aur.archlinux.org/ros-jade-pcl-msgs.git
+[submodule "jade/stereo_image_proc"]
+	path = jade/stereo_image_proc
+	url = https://aur.archlinux.org/ros-jade-stereo-image-proc.git
+[submodule "jade/rqt_rviz"]
+	path = jade/rqt_rviz
+	url = https://aur.archlinux.org/ros-jade-rqt-rviz.git
+[submodule "jade/python_orocos_kdl"]
+	path = jade/python_orocos_kdl
+	url = https://aur.archlinux.org/ros-jade-python-orocos-kdl.git
+[submodule "jade/rosmake"]
+	path = jade/rosmake
+	url = https://aur.archlinux.org/ros-jade-rosmake.git
+[submodule "jade/octomap"]
+	path = jade/octomap
+	url = https://aur.archlinux.org/ros-jade-octomap.git
+[submodule "jade/rosmaster"]
+	path = jade/rosmaster
+	url = https://aur.archlinux.org/ros-jade-rosmaster.git
+[submodule "jade/rqt_shell"]
+	path = jade/rqt_shell
+	url = https://aur.archlinux.org/ros-jade-rqt-shell.git
+[submodule "jade/robot_state_publisher"]
+	path = jade/robot_state_publisher
+	url = https://aur.archlinux.org/ros-jade-robot-state-publisher.git
+[submodule "jade/visualization_marker_tutorials"]
+	path = jade/visualization_marker_tutorials
+	url = https://aur.archlinux.org/ros-jade-visualization-marker-tutorials.git
+[submodule "jade/std_msgs"]
+	path = jade/std_msgs
+	url = https://aur.archlinux.org/ros-jade-std-msgs.git
+[submodule "jade/genlisp"]
+	path = jade/genlisp
+	url = https://aur.archlinux.org/ros-jade-genlisp.git
+[submodule "jade/rqt_robot_steering"]
+	path = jade/rqt_robot_steering
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-steering.git
+[submodule "jade/rosbuild"]
+	path = jade/rosbuild
+	url = https://aur.archlinux.org/ros-jade-rosbuild.git
+[submodule "jade/smach"]
+	path = jade/smach
+	url = https://aur.archlinux.org/ros-jade-smach.git
+[submodule "jade/image_transport_plugins"]
+	path = jade/image_transport_plugins
+	url = https://aur.archlinux.org/ros-jade-image-transport-plugins.git
+[submodule "jade/control_msgs"]
+	path = jade/control_msgs
+	url = https://aur.archlinux.org/ros-jade-control-msgs.git
+[submodule "jade/camera_info_manager"]
+	path = jade/camera_info_manager
+	url = https://aur.archlinux.org/ros-jade-camera-info-manager.git
+[submodule "jade/eigen_stl_containers"]
+	path = jade/eigen_stl_containers
+	url = https://aur.archlinux.org/ros-jade-eigen-stl-containers.git
+[submodule "jade/image_common"]
+	path = jade/image_common
+	url = https://aur.archlinux.org/ros-jade-image-common.git
+[submodule "jade/class_loader"]
+	path = jade/class_loader
+	url = https://aur.archlinux.org/ros-jade-class-loader.git
+[submodule "jade/rqt_tf_tree"]
+	path = jade/rqt_tf_tree
+	url = https://aur.archlinux.org/ros-jade-rqt-tf-tree.git
+[submodule "jade/gazebo_msgs"]
+	path = jade/gazebo_msgs
+	url = https://aur.archlinux.org/ros-jade-gazebo-msgs.git
+[submodule "jade/rqt_nav_view"]
+	path = jade/rqt_nav_view
+	url = https://aur.archlinux.org/ros-jade-rqt-nav-view.git
+[submodule "jade/diagnostic_updater"]
+	path = jade/diagnostic_updater
+	url = https://aur.archlinux.org/ros-jade-diagnostic-updater.git
+[submodule "jade/stereo_msgs"]
+	path = jade/stereo_msgs
+	url = https://aur.archlinux.org/ros-jade-stereo-msgs.git
+[submodule "jade/nodelet_core"]
+	path = jade/nodelet_core
+	url = https://aur.archlinux.org/ros-jade-nodelet-core.git
+[submodule "jade/pluginlib"]
+	path = jade/pluginlib
+	url = https://aur.archlinux.org/ros-jade-pluginlib.git
+[submodule "jade/image_pipeline"]
+	path = jade/image_pipeline
+	url = https://aur.archlinux.org/ros-jade-image-pipeline.git
+[submodule "jade/rospack"]
+	path = jade/rospack
+	url = https://aur.archlinux.org/ros-jade-rospack.git
+[submodule "jade/qt_gui_cpp"]
+	path = jade/qt_gui_cpp
+	url = https://aur.archlinux.org/ros-jade-qt-gui-cpp.git
+[submodule "jade/angles"]
+	path = jade/angles
+	url = https://aur.archlinux.org/ros-jade-angles.git
+[submodule "jade/rviz"]
+	path = jade/rviz
+	url = https://aur.archlinux.org/ros-jade-rviz.git
+[submodule "jade/mk"]
+	path = jade/mk
+	url = https://aur.archlinux.org/ros-jade-mk.git
+[submodule "jade/roswtf"]
+	path = jade/roswtf
+	url = https://aur.archlinux.org/ros-jade-roswtf.git
+[submodule "jade/roslang"]
+	path = jade/roslang
+	url = https://aur.archlinux.org/ros-jade-roslang.git
+[submodule "jade/resource_retriever"]
+	path = jade/resource_retriever
+	url = https://aur.archlinux.org/ros-jade-resource-retriever.git
+[submodule "jade/tf_conversions"]
+	path = jade/tf_conversions
+	url = https://aur.archlinux.org/ros-jade-tf-conversions.git
+[submodule "jade/tf2_ros"]
+	path = jade/tf2_ros
+	url = https://aur.archlinux.org/ros-jade-tf2-ros.git
+[submodule "jade/ros_tutorials"]
+	path = jade/ros_tutorials
+	url = https://aur.archlinux.org/ros-jade-ros-tutorials.git
+[submodule "jade/rqt_plot"]
+	path = jade/rqt_plot
+	url = https://aur.archlinux.org/ros-jade-rqt-plot.git
+[submodule "jade/simulators"]
+	path = jade/simulators
+	url = https://aur.archlinux.org/ros-jade-simulators.git
+[submodule "jade/ros_base"]
+	path = jade/ros_base
+	url = https://aur.archlinux.org/ros-jade-ros-base.git
+[submodule "jade/rqt_robot_monitor"]
+	path = jade/rqt_robot_monitor
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-monitor.git
+[submodule "jade/pluginlib_tutorials"]
+	path = jade/pluginlib_tutorials
+	url = https://aur.archlinux.org/ros-jade-pluginlib-tutorials.git
+[submodule "jade/roslib"]
+	path = jade/roslib
+	url = https://aur.archlinux.org/ros-jade-roslib.git
+[submodule "jade/rosgraph"]
+	path = jade/rosgraph
+	url = https://aur.archlinux.org/ros-jade-rosgraph.git
+[submodule "jade/robot"]
+	path = jade/robot
+	url = https://aur.archlinux.org/ros-jade-robot.git
+[submodule "jade/rosboost_cfg"]
+	path = jade/rosboost_cfg
+	url = https://aur.archlinux.org/ros-jade-rosboost-cfg.git
+[submodule "jade/actionlib_msgs"]
+	path = jade/actionlib_msgs
+	url = https://aur.archlinux.org/ros-jade-actionlib-msgs.git
+[submodule "jade/rospy_tutorials"]
+	path = jade/rospy_tutorials
+	url = https://aur.archlinux.org/ros-jade-rospy-tutorials.git
+[submodule "jade/self_test"]
+	path = jade/self_test
+	url = https://aur.archlinux.org/ros-jade-self-test.git
+[submodule "jade/image_proc"]
+	path = jade/image_proc
+	url = https://aur.archlinux.org/ros-jade-image-proc.git
+[submodule "jade/ros_comm"]
+	path = jade/ros_comm
+	url = https://aur.archlinux.org/ros-jade-ros-comm.git
+[submodule "jade/vision_opencv"]
+	path = jade/vision_opencv
+	url = https://aur.archlinux.org/ros-jade-vision-opencv.git
+[submodule "jade/roscpp_tutorials"]
+	path = jade/roscpp_tutorials
+	url = https://aur.archlinux.org/ros-jade-roscpp-tutorials.git
+[submodule "jade/eigen_conversions"]
+	path = jade/eigen_conversions
+	url = https://aur.archlinux.org/ros-jade-eigen-conversions.git
+[submodule "jade/nodelet"]
+	path = jade/nodelet
+	url = https://aur.archlinux.org/ros-jade-nodelet.git
+[submodule "jade/pr2_description"]
+	path = jade/pr2_description
+	url = https://aur.archlinux.org/ros-jade-pr2-description.git
+[submodule "jade/orocos_kdl"]
+	path = jade/orocos_kdl
+	url = https://aur.archlinux.org/ros-jade-orocos-kdl.git
+[submodule "jade/std_srvs"]
+	path = jade/std_srvs
+	url = https://aur.archlinux.org/ros-jade-std-srvs.git
+[submodule "jade/xacro"]
+	path = jade/xacro
+	url = https://aur.archlinux.org/ros-jade-xacro.git
+[submodule "jade/qt_gui"]
+	path = jade/qt_gui
+	url = https://aur.archlinux.org/ros-jade-qt-gui.git
+[submodule "jade/geneus"]
+	path = jade/geneus
+	url = https://aur.archlinux.org/ros-jade-geneus.git
+[submodule "jade/rqt_msg"]
+	path = jade/rqt_msg
+	url = https://aur.archlinux.org/ros-jade-rqt-msg.git
+[submodule "jade/xmlrpcpp"]
+	path = jade/xmlrpcpp
+	url = https://aur.archlinux.org/ros-jade-xmlrpcpp.git
+[submodule "jade/urdf"]
+	path = jade/urdf
+	url = https://aur.archlinux.org/ros-jade-urdf.git
+[submodule "jade/stage"]
+	path = jade/stage
+	url = https://aur.archlinux.org/ros-jade-stage.git
+[submodule "jade/rosclean"]
+	path = jade/rosclean
+	url = https://aur.archlinux.org/ros-jade-rosclean.git
+[submodule "jade/roscpp_serialization"]
+	path = jade/roscpp_serialization
+	url = https://aur.archlinux.org/ros-jade-roscpp-serialization.git
+[submodule "jade/ros_core"]
+	path = jade/ros_core
+	url = https://aur.archlinux.org/ros-jade-ros-core.git
+[submodule "jade/rqt_gui"]
+	path = jade/rqt_gui
+	url = https://aur.archlinux.org/ros-jade-rqt-gui.git
+[submodule "jade/rqt_pose_view"]
+	path = jade/rqt_pose_view
+	url = https://aur.archlinux.org/ros-jade-rqt-pose-view.git
+[submodule "jade/diagnostics"]
+	path = jade/diagnostics
+	url = https://aur.archlinux.org/ros-jade-diagnostics.git
+[submodule "jade/diagnostic_common_diagnostics"]
+	path = jade/diagnostic_common_diagnostics
+	url = https://aur.archlinux.org/ros-jade-diagnostic-common-diagnostics.git
+[submodule "jade/roslisp"]
+	path = jade/roslisp
+	url = https://aur.archlinux.org/ros-jade-roslisp.git
+[submodule "jade/rosgraph_msgs"]
+	path = jade/rosgraph_msgs
+	url = https://aur.archlinux.org/ros-jade-rosgraph-msgs.git
+[submodule "jade/filters"]
+	path = jade/filters
+	url = https://aur.archlinux.org/ros-jade-filters.git
+[submodule "jade/theora_image_transport"]
+	path = jade/theora_image_transport
+	url = https://aur.archlinux.org/ros-jade-theora-image-transport.git
+[submodule "jade/rosbag"]
+	path = jade/rosbag
+	url = https://aur.archlinux.org/ros-jade-rosbag.git
+[submodule "jade/joint_state_publisher"]
+	path = jade/joint_state_publisher
+	url = https://aur.archlinux.org/ros-jade-joint-state-publisher.git
+[submodule "jade/visualization_msgs"]
+	path = jade/visualization_msgs
+	url = https://aur.archlinux.org/ros-jade-visualization-msgs.git
+[submodule "jade/perception_pcl"]
+	path = jade/perception_pcl
+	url = https://aur.archlinux.org/ros-jade-perception-pcl.git
+[submodule "jade/rqt_top"]
+	path = jade/rqt_top
+	url = https://aur.archlinux.org/ros-jade-rqt-top.git
+[submodule "jade/message_runtime"]
+	path = jade/message_runtime
+	url = https://aur.archlinux.org/ros-jade-message-runtime.git
+[submodule "jade/librviz_tutorial"]
+	path = jade/librviz_tutorial
+	url = https://aur.archlinux.org/ros-jade-librviz-tutorial.git
+[submodule "jade/rqt_reconfigure"]
+	path = jade/rqt_reconfigure
+	url = https://aur.archlinux.org/ros-jade-rqt-reconfigure.git
+[submodule "jade/gazebo_ros_pkgs"]
+	path = jade/gazebo_ros_pkgs
+	url = https://aur.archlinux.org/ros-jade-gazebo-ros-pkgs.git
+[submodule "jade/rqt_graph"]
+	path = jade/rqt_graph
+	url = https://aur.archlinux.org/ros-jade-rqt-graph.git
+[submodule "jade/tf2_geometry_msgs"]
+	path = jade/tf2_geometry_msgs
+	url = https://aur.archlinux.org/ros-jade-tf2-geometry-msgs.git
+[submodule "jade/desktop_full"]
+	path = jade/desktop_full
+	url = https://aur.archlinux.org/ros-jade-desktop-full.git
+[submodule "jade/rqt_bag"]
+	path = jade/rqt_bag
+	url = https://aur.archlinux.org/ros-jade-rqt-bag.git
+[submodule "jade/smclib"]
+	path = jade/smclib
+	url = https://aur.archlinux.org/ros-jade-smclib.git
+[submodule "jade/rosmsg"]
+	path = jade/rosmsg
+	url = https://aur.archlinux.org/ros-jade-rosmsg.git
+[submodule "jade/ros"]
+	path = jade/ros
+	url = https://aur.archlinux.org/ros-jade-ros.git
+[submodule "jade/rosconsole"]
+	path = jade/rosconsole
+	url = https://aur.archlinux.org/ros-jade-rosconsole.git
+[submodule "jade/rqt_publisher"]
+	path = jade/rqt_publisher
+	url = https://aur.archlinux.org/ros-jade-rqt-publisher.git
+[submodule "jade/rqt_launch"]
+	path = jade/rqt_launch
+	url = https://aur.archlinux.org/ros-jade-rqt-launch.git
+[submodule "jade/topic_tools"]
+	path = jade/topic_tools
+	url = https://aur.archlinux.org/ros-jade-topic-tools.git
+[submodule "jade/geometry_tutorials"]
+	path = jade/geometry_tutorials
+	url = https://aur.archlinux.org/ros-jade-geometry-tutorials.git
+[submodule "jade/rqt_py_console"]
+	path = jade/rqt_py_console
+	url = https://aur.archlinux.org/ros-jade-rqt-py-console.git
+[submodule "jade/polled_camera"]
+	path = jade/polled_camera
+	url = https://aur.archlinux.org/ros-jade-polled-camera.git
+[submodule "jade/genmsg"]
+	path = jade/genmsg
+	url = https://aur.archlinux.org/ros-jade-genmsg.git
+[submodule "jade/interactive_markers"]
+	path = jade/interactive_markers
+	url = https://aur.archlinux.org/ros-jade-interactive-markers.git
+[submodule "jade/ivcon"]
+	path = jade/ivcon
+	url = https://aur.archlinux.org/ros-jade-ivcon.git
+[submodule "jade/gazebo_plugins"]
+	path = jade/gazebo_plugins
+	url = https://aur.archlinux.org/ros-jade-gazebo-plugins.git
+[submodule "jade/laser_filters"]
+	path = jade/laser_filters
+	url = https://aur.archlinux.org/ros-jade-laser-filters.git
+[submodule "jade/image_view"]
+	path = jade/image_view
+	url = https://aur.archlinux.org/ros-jade-image-view.git
+[submodule "jade/viz"]
+	path = jade/viz
+	url = https://aur.archlinux.org/ros-jade-viz.git
+[submodule "jade/rqt_web"]
+	path = jade/rqt_web
+	url = https://aur.archlinux.org/ros-jade-rqt-web.git
+[submodule "jade/bond_core"]
+	path = jade/bond_core
+	url = https://aur.archlinux.org/ros-jade-bond-core.git
+[submodule "jade/random_numbers"]
+	path = jade/random_numbers
+	url = https://aur.archlinux.org/ros-jade-random-numbers.git
+[submodule "jade/rostest"]
+	path = jade/rostest
+	url = https://aur.archlinux.org/ros-jade-rostest.git
+[submodule "jade/kdl_parser"]
+	path = jade/kdl_parser
+	url = https://aur.archlinux.org/ros-jade-kdl-parser.git
+[submodule "jade/rosparam"]
+	path = jade/rosparam
+	url = https://aur.archlinux.org/ros-jade-rosparam.git
+[submodule "jade/common_msgs"]
+	path = jade/common_msgs
+	url = https://aur.archlinux.org/ros-jade-common-msgs.git
+[submodule "jade/roscpp_traits"]
+	path = jade/roscpp_traits
+	url = https://aur.archlinux.org/ros-jade-roscpp-traits.git
+[submodule "jade/roslaunch"]
+	path = jade/roslaunch
+	url = https://aur.archlinux.org/ros-jade-roslaunch.git
+[submodule "jade/depth_image_proc"]
+	path = jade/depth_image_proc
+	url = https://aur.archlinux.org/ros-jade-depth-image-proc.git
+[submodule "jade/convex_decomposition"]
+	path = jade/convex_decomposition
+	url = https://aur.archlinux.org/ros-jade-convex-decomposition.git
+[submodule "jade/rqt_robot_plugins"]
+	path = jade/rqt_robot_plugins
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-plugins.git
+[submodule "jade/rqt_bag_plugins"]
+	path = jade/rqt_bag_plugins
+	url = https://aur.archlinux.org/ros-jade-rqt-bag-plugins.git
+[submodule "jade/tf"]
+	path = jade/tf
+	url = https://aur.archlinux.org/ros-jade-tf.git
+[submodule "jade/rospy"]
+	path = jade/rospy
+	url = https://aur.archlinux.org/ros-jade-rospy.git
+[submodule "jade/kdl_conversions"]
+	path = jade/kdl_conversions
+	url = https://aur.archlinux.org/ros-jade-kdl-conversions.git
+[submodule "jade/actionlib"]
+	path = jade/actionlib
+	url = https://aur.archlinux.org/ros-jade-actionlib.git
+[submodule "jade/nav_msgs"]
+	path = jade/nav_msgs
+	url = https://aur.archlinux.org/ros-jade-nav-msgs.git
+[submodule "jade/camera_calibration"]
+	path = jade/camera_calibration
+	url = https://aur.archlinux.org/ros-jade-camera-calibration.git
+[submodule "jade/visualization_tutorials"]
+	path = jade/visualization_tutorials
+	url = https://aur.archlinux.org/ros-jade-visualization-tutorials.git
+[submodule "jade/executive_smach"]
+	path = jade/executive_smach
+	url = https://aur.archlinux.org/ros-jade-executive-smach.git
+[submodule "jade/bondcpp"]
+	path = jade/bondcpp
+	url = https://aur.archlinux.org/ros-jade-bondcpp.git
+[submodule "jade/rqt_moveit"]
+	path = jade/rqt_moveit
+	url = https://aur.archlinux.org/ros-jade-rqt-moveit.git
+[submodule "jade/shape_msgs"]
+	path = jade/shape_msgs
+	url = https://aur.archlinux.org/ros-jade-shape-msgs.git
+[submodule "jade/rqt_runtime_monitor"]
+	path = jade/rqt_runtime_monitor
+	url = https://aur.archlinux.org/ros-jade-rqt-runtime-monitor.git
+[submodule "jade/message_generation"]
+	path = jade/message_generation
+	url = https://aur.archlinux.org/ros-jade-message-generation.git
+[submodule "jade/image_rotate"]
+	path = jade/image_rotate
+	url = https://aur.archlinux.org/ros-jade-image-rotate.git
+[submodule "jade/urdf_tutorial"]
+	path = jade/urdf_tutorial
+	url = https://aur.archlinux.org/ros-jade-urdf-tutorial.git
+[submodule "jade/tf2_msgs"]
+	path = jade/tf2_msgs
+	url = https://aur.archlinux.org/ros-jade-tf2-msgs.git
+[submodule "jade/gazebo_ros"]
+	path = jade/gazebo_ros
+	url = https://aur.archlinux.org/ros-jade-gazebo-ros.git
+[submodule "jade/rqt_service_caller"]
+	path = jade/rqt_service_caller
+	url = https://aur.archlinux.org/ros-jade-rqt-service-caller.git
+[submodule "jade/tf2"]
+	path = jade/tf2
+	url = https://aur.archlinux.org/ros-jade-tf2.git
+[submodule "jade/rqt_gui_cpp"]
+	path = jade/rqt_gui_cpp
+	url = https://aur.archlinux.org/ros-jade-rqt-gui-cpp.git
+[submodule "jade/rqt_gui_py"]
+	path = jade/rqt_gui_py
+	url = https://aur.archlinux.org/ros-jade-rqt-gui-py.git
+[submodule "jade/rosbag_migration_rule"]
+	path = jade/rosbag_migration_rule
+	url = https://aur.archlinux.org/ros-jade-rosbag-migration-rule.git
+[submodule "jade/turtlesim"]
+	path = jade/turtlesim
+	url = https://aur.archlinux.org/ros-jade-turtlesim.git
+[submodule "jade/message_filters"]
+	path = jade/message_filters
+	url = https://aur.archlinux.org/ros-jade-message-filters.git
+[submodule "jade/map_msgs"]
+	path = jade/map_msgs
+	url = https://aur.archlinux.org/ros-jade-map-msgs.git
+[submodule "jade/rqt_action"]
+	path = jade/rqt_action
+	url = https://aur.archlinux.org/ros-jade-rqt-action.git
+[submodule "jade/common_tutorials"]
+	path = jade/common_tutorials
+	url = https://aur.archlinux.org/ros-jade-common-tutorials.git
+[submodule "jade/rqt_srv"]
+	path = jade/rqt_srv
+	url = https://aur.archlinux.org/ros-jade-rqt-srv.git
+[submodule "jade/tf2_sensor_msgs"]
+	path = jade/tf2_sensor_msgs
+	url = https://aur.archlinux.org/ros-jade-tf2-sensor-msgs.git
+[submodule "jade/image_transport"]
+	path = jade/image_transport
+	url = https://aur.archlinux.org/ros-jade-image-transport.git
+[submodule "jade/qt_gui_py_common"]
+	path = jade/qt_gui_py_common
+	url = https://aur.archlinux.org/ros-jade-qt-gui-py-common.git
+[submodule "jade/rosnode"]
+	path = jade/rosnode
+	url = https://aur.archlinux.org/ros-jade-rosnode.git
+[submodule "jade/pcl_ros"]
+	path = jade/pcl_ros
+	url = https://aur.archlinux.org/ros-jade-pcl-ros.git
+[submodule "jade/tf2_py"]
+	path = jade/tf2_py
+	url = https://aur.archlinux.org/ros-jade-tf2-py.git
+[submodule "jade/rosconsole_bridge"]
+	path = jade/rosconsole_bridge
+	url = https://aur.archlinux.org/ros-jade-rosconsole-bridge.git
+[submodule "jade/pcl_conversions"]
+	path = jade/pcl_conversions
+	url = https://aur.archlinux.org/ros-jade-pcl-conversions.git
+[submodule "jade/roscpp_core"]
+	path = jade/roscpp_core
+	url = https://aur.archlinux.org/ros-jade-roscpp-core.git
+[submodule "jade/qt_dotgraph"]
+	path = jade/qt_dotgraph
+	url = https://aur.archlinux.org/ros-jade-qt-dotgraph.git
+[submodule "jade/diagnostic_analysis"]
+	path = jade/diagnostic_analysis
+	url = https://aur.archlinux.org/ros-jade-diagnostic-analysis.git
+[submodule "jade/rosservice"]
+	path = jade/rosservice
+	url = https://aur.archlinux.org/ros-jade-rosservice.git
+[submodule "jade/cv_bridge"]
+	path = jade/cv_bridge
+	url = https://aur.archlinux.org/ros-jade-cv-bridge.git
+[submodule "jade/roslz4"]
+	path = jade/roslz4
+	url = https://aur.archlinux.org/ros-jade-roslz4.git
+[submodule "jade/bondpy"]
+	path = jade/bondpy
+	url = https://aur.archlinux.org/ros-jade-bondpy.git
+[submodule "jade/pointcloud_to_laserscan"]
+	path = jade/pointcloud_to_laserscan
+	url = https://aur.archlinux.org/ros-jade-pointcloud-to-laserscan.git
+[submodule "jade/perception"]
+	path = jade/perception
+	url = https://aur.archlinux.org/ros-jade-perception.git
+[submodule "jade/python_qt_binding"]
+	path = jade/python_qt_binding
+	url = https://aur.archlinux.org/ros-jade-python-qt-binding.git
+[submodule "jade/rqt_console"]
+	path = jade/rqt_console
+	url = https://aur.archlinux.org/ros-jade-rqt-console.git
+[submodule "jade/turtle_tf2"]
+	path = jade/turtle_tf2
+	url = https://aur.archlinux.org/ros-jade-turtle-tf2.git
+[submodule "jade/genpy"]
+	path = jade/genpy
+	url = https://aur.archlinux.org/ros-jade-genpy.git
+[submodule "jade/laser_geometry"]
+	path = jade/laser_geometry
+	url = https://aur.archlinux.org/ros-jade-laser-geometry.git
+[submodule "jade/turtle_tf"]
+	path = jade/turtle_tf
+	url = https://aur.archlinux.org/ros-jade-turtle-tf.git
+[submodule "jade/diagnostic_msgs"]
+	path = jade/diagnostic_msgs
+	url = https://aur.archlinux.org/ros-jade-diagnostic-msgs.git
+[submodule "jade/laser_assembler"]
+	path = jade/laser_assembler
+	url = https://aur.archlinux.org/ros-jade-laser-assembler.git
+[submodule "jade/rviz_python_tutorial"]
+	path = jade/rviz_python_tutorial
+	url = https://aur.archlinux.org/ros-jade-rviz-python-tutorial.git
+[submodule "jade/camera_calibration_parsers"]
+	path = jade/camera_calibration_parsers
+	url = https://aur.archlinux.org/ros-jade-camera-calibration-parsers.git
+[submodule "jade/catkin"]
+	path = jade/catkin
+	url = https://aur.archlinux.org/ros-jade-catkin.git
+[submodule "jade/rqt_logger_level"]
+	path = jade/rqt_logger_level
+	url = https://aur.archlinux.org/ros-jade-rqt-logger-level.git
+[submodule "jade/rviz_plugin_tutorials"]
+	path = jade/rviz_plugin_tutorials
+	url = https://aur.archlinux.org/ros-jade-rviz-plugin-tutorials.git
+[submodule "jade/cpp_common"]
+	path = jade/cpp_common
+	url = https://aur.archlinux.org/ros-jade-cpp-common.git
+[submodule "jade/collada_parser"]
+	path = jade/collada_parser
+	url = https://aur.archlinux.org/ros-jade-collada-parser.git
+[submodule "jade/gencpp"]
+	path = jade/gencpp
+	url = https://aur.archlinux.org/ros-jade-gencpp.git
+[submodule "jade/media_export"]
+	path = jade/media_export
+	url = https://aur.archlinux.org/ros-jade-media-export.git
+[submodule "jade/laser_pipeline"]
+	path = jade/laser_pipeline
+	url = https://aur.archlinux.org/ros-jade-laser-pipeline.git
+[submodule "jade/roscreate"]
+	path = jade/roscreate
+	url = https://aur.archlinux.org/ros-jade-roscreate.git
+[submodule "jade/rostopic"]
+	path = jade/rostopic
+	url = https://aur.archlinux.org/ros-jade-rostopic.git
+[submodule "jade/geometry_msgs"]
+	path = jade/geometry_msgs
+	url = https://aur.archlinux.org/ros-jade-geometry-msgs.git
+[submodule "jade/rosbash"]
+	path = jade/rosbash
+	url = https://aur.archlinux.org/ros-jade-rosbash.git
