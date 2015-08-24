@@ -1519,3 +1519,30 @@
 [submodule "dependencies/python-catkin-pkg"]
 	path = dependencies/python-catkin-pkg
 	url = https://aur4.archlinux.org/python-catkin-pkg.git
+[submodule "indigo/realtime_tools"]
+	path = indigo/realtime_tools
+	url = https://aur.archlinux.org/ros-indigo-realtime-tools.git
+[submodule "indigo/control_toolbox"]
+	path = indigo/control_toolbox
+	url = https://aur.archlinux.org/ros-indigo-control-toolbox.git
+[submodule "indigo/hardware_interface"]
+	path = indigo/hardware_interface
+	url = https://aur.archlinux.org/ros-indigo-hardware-interface.git
+[submodule "indigo/controller_interface"]
+	path = indigo/controller_interface
+	url = https://aur.archlinux.org/ros-indigo-controller-interface.git
+[submodule "indigo/controller_manager_msgs"]
+	path = indigo/controller_manager_msgs
+	url = https://aur.archlinux.org/ros-indigo-controller-manager-msgs.git
+[submodule "indigo/controller_manager"]
+	path = indigo/controller_manager
+	url = https://aur.archlinux.org/ros-indigo-controller-manager.git
+[submodule "indigo/transmission_interface"]
+	path = indigo/transmission_interface
+	url = https://aur.archlinux.org/ros-indigo-transmission-interface.git
+[submodule "indigo/joint_limits_interface"]
+	path = indigo/joint_limits_interface
+	url = https://aur.archlinux.org/ros-indigo-joint-limits-interface.git
+[submodule "indigo/gazebo_ros_control"]
+	path = indigo/gazebo_ros_control
+	url = https://aur.archlinux.org/ros-indigo-gazebo-ros-control.git
