@@ -1513,3 +1513,9 @@
 [submodule "jade/rosbash"]
 	path = jade/rosbash
 	url = https://aur.archlinux.org/ros-jade-rosbash.git
+[submodule "dependencies/python2-catkin-pkg"]
+	path = dependencies/python2-catkin-pkg
+	url = https://aur4.archlinux.org/python2-catkin-pkg.git
+[submodule "dependencies/python-catkin-pkg"]
+	path = dependencies/python-catkin-pkg
+	url = https://aur4.archlinux.org/python-catkin-pkg.git
