@@ -571,6 +571,41 @@ def create_clone(url_ro, url_rw, full_dir):
                          stdout=subprocess.PIPE)
 
 
+def needs_finalize(full_dir):
+  res = subprocess.call(['git', '-C', full_dir, 'rev-parse', 'HEAD'],
+                         stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+  return bool(res)
+
+
+def finalize_submodule(full_dir):
+  subprocess.check_call(['mksrcinfo'], stderr=subprocess.PIPE, stdout=subprocess.PIPE,
+                        cwd=full_dir)
+  subprocess.check_call(['git', '-C', full_dir, 'add', 'PKGBUILD', '.SRCINFO'],
+                        stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+  subprocess.check_call(['git', '-C', full_dir, 'commit', '-m', 'Initial commit'],
+                        stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+
+  # Submodule ==> register to parent now that a commit id is available
+  is_submodule = os.path.isfile(os.path.join(full_dir, ".git"))
+  if is_submodule:
+    pull_url = subprocess.check_output(['git', '-C', full_dir, 'config',
+                                        '--get', 'remote.origin.url'],
+                                        stderr=subprocess.PIPE).rstrip()
+    push_url = subprocess.check_output(['git', '-C', full_dir, 'config',
+                                        '--get', 'remote.origin.pushurl'],
+                                        stderr=subprocess.PIPE).rstrip()
+
+    parent_repo = os.path.abspath(os.path.join(full_dir, '..'))
+    rel_path = os.path.basename(os.path.normpath(full_dir))
+
+    subprocess.check_call(['git', '-C', parent_repo, 'submodule', 'add',
+                           pull_url, rel_path],
+                          stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+    subprocess.check_call(['git', '-C', full_dir, 'remote', 'set-url', '--push',
+                           'origin', push_url], stderr=subprocess.PIPE,
+                          stdout=subprocess.PIPE)
+
+
 def create_package_directory(directory, package):
   """
   Create a directory or an AUR submodule based on the context.
@@ -662,6 +697,9 @@ def generate_pkgbuild(distro, package, directory, force=False,
   with open(pkgbuild_file, 'w') as pkgbuild:
     pkgbuild.write(package.generate(distro.python_version, exclude_dependencies,
                                     rosdep_urls))
+
+  if needs_finalize(output_directory):
+    finalize_submodule(output_directory)
 
   # Add the package to the txt file containing packages to install
   if written:
