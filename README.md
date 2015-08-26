@@ -34,8 +34,7 @@ packages, push these packages to the AUR, and make a pull request afterwards.
 
 ### PKGBUILD creation and update
 
-The script that automates most of the work is `import_catkin_packages.py`
-available in `dependencies/ros-build-tools`.
+The script that automates most of the work is `import_catkin_packages.py`.
 
 Note that the default behavior is to fetch release information from the
 [official rosdistro distribution.yaml][distribution.yaml].
