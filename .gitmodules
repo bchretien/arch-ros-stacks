@@ -1546,3 +1546,15 @@
 [submodule "indigo/gazebo_ros_control"]
 	path = indigo/gazebo_ros_control
 	url = https://aur.archlinux.org/ros-indigo-gazebo-ros-control.git
+[submodule "jade/octovis"]
+	path = jade/octovis
+	url = https://aur.archlinux.org/ros-jade-octovis.git
+[submodule "jade/test_diagnostic_aggregator"]
+	path = jade/test_diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-jade-test-diagnostic-aggregator.git
+[submodule "jade/dynamic_edt_3d"]
+	path = jade/dynamic_edt_3d
+	url = https://aur.archlinux.org/ros-jade-dynamic-edt-3d.git
+[submodule "jade/opencv_apps"]
+	path = jade/opencv_apps
+	url = https://aur.archlinux.org/ros-jade-opencv-apps.git
