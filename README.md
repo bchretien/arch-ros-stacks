@@ -73,11 +73,9 @@ To add a new official package called `package_foo` recursively:
 $ python2 import_catkin_packages.py --distro=indigo --output-directory=/path/to/arch-ros-stacks/indigo -r package_foo
 ```
 
-**WARNING**: packages created that way will be treated as submodules. If the
-remote repository is empty (e.g. new AUR package), a post-processing step is
-required since a commit id is expected to proprely register the submodule.
-After doing the first commit of the package, run `new_submodule.sh` on the
-submodule. This may be solved automatically later on.
+**Note**: packages created that way will be treated as submodules. If the
+remote repository is empty (e.g. new AUR package), an initial commit is
+automatically created to obtain a valid submodule commit id.
 
 #### PKGBUILD update
 
@@ -113,8 +111,6 @@ $ mksrcinfo
 $ git add -p .
 # Commit
 $ git commit -m "Update to version ..."
-# If this is a new package, run new_submodule.sh to properly register the submodule:
-# $ ./new_submodule.sh indigo/foo
 # Push to the AUR
 $ git push origin master
 ```
