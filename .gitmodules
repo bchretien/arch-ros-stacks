@@ -1594,3 +1594,33 @@
 [submodule "indigo/jackal_desktop"]
 	path = indigo/jackal_desktop
 	url = https://aur.archlinux.org/ros-indigo-jackal-desktop.git
+[submodule "indigo/forward_command_controller"]
+	path = indigo/forward_command_controller
+	url = https://aur.archlinux.org/ros-indigo-forward-command-controller.git
+[submodule "indigo/effort_controllers"]
+	path = indigo/effort_controllers
+	url = https://aur.archlinux.org/ros-indigo-effort-controllers.git
+[submodule "indigo/force_torque_sensor_controller"]
+	path = indigo/force_torque_sensor_controller
+	url = https://aur.archlinux.org/ros-indigo-force-torque-sensor-controller.git
+[submodule "indigo/gripper_action_controller"]
+	path = indigo/gripper_action_controller
+	url = https://aur.archlinux.org/ros-indigo-gripper-action-controller.git
+[submodule "indigo/imu_sensor_controller"]
+	path = indigo/imu_sensor_controller
+	url = https://aur.archlinux.org/ros-indigo-imu-sensor-controller.git
+[submodule "indigo/joint_trajectory_controller"]
+	path = indigo/joint_trajectory_controller
+	url = https://aur.archlinux.org/ros-indigo-joint-trajectory-controller.git
+[submodule "indigo/position_controllers"]
+	path = indigo/position_controllers
+	url = https://aur.archlinux.org/ros-indigo-position-controllers.git
+[submodule "indigo/rqt_joint_trajectory_controller"]
+	path = indigo/rqt_joint_trajectory_controller
+	url = https://aur.archlinux.org/ros-indigo-rqt-joint-trajectory-controller.git
+[submodule "indigo/velocity_controllers"]
+	path = indigo/velocity_controllers
+	url = https://aur.archlinux.org/ros-indigo-velocity-controllers.git
+[submodule "indigo/ros_controllers"]
+	path = indigo/ros_controllers
+	url = https://aur.archlinux.org/ros-indigo-ros-controllers.git
