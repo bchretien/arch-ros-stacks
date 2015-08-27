@@ -1,6 +1,23 @@
 arch-ros-stacks
 ---------------
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [How it works](#how-it-works)
+- [How to contribute](#how-to-contribute)
+  - [PKGBUILD creation and update](#pkgbuild-creation-and-update)
+    - [Miscellaneous features](#miscellaneous-features)
+    - [PKGBUILD creation](#pkgbuild-creation)
+    - [PKGBUILD update](#pkgbuild-update)
+    - [AUR upload](#aur-upload)
+    - [Pull requests (PR) to arch-ros-stacks](#pull-requests-pr-to-arch-ros-stacks)
+    - [Conversion to AUR4 packages (legacy)](#conversion-to-aur4-packages-legacy)
+  - [Python version](#python-version)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 This is a fork of [zootboy][zootboy]'s fork of [hauptmech][hauptmech]'s fork of
 [moesenle][moesenle]'s very nice arch-ros-stacks.
 
