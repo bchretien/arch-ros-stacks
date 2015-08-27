@@ -119,6 +119,31 @@ $ git push origin master
 If this is a newly created package, an initial commit should have been made.
 If everything looks good, only the `git push` step is required.
 
+#### Pull requests (PR) to arch-ros-stacks
+
+Now that packages are treated as Git submodules, the pull request should only
+contain new submodules (new entries in `.gitmodules`) and updated submodule
+commit ids. First, you need to **make sure** that you pushed the new/updated
+packages to the AUR. Second, to prepare the actual arch-ros-stacks commit for
+the pull request, go to the root of arch-ros-stacks. Then, if for instance you
+are dealing with indigo packages:
+
+```shell
+$ git add -p indigo
+```
+You should see differences involving `Subproject commit ...`. Just add the
+packages that you updated if you are their maintainer in the AUR, and commit
+with a clear message, e.g.:
+
+```shell
+# If you added new packages:
+$ git commit -m "indigo: add ... and its dependencies"
+# or if you updated the packages you maintain
+$ git commit -m "indigo: update ... and its dependencies"
+```
+
+Finally, push to your GitHub fork and make your PR.
+
 #### Conversion to AUR4 packages (legacy)
 
 The `to_aur4.sh` script can take care of uploading packages that are not
