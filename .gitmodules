@@ -1558,3 +1558,69 @@
 [submodule "jade/opencv_apps"]
 	path = jade/opencv_apps
 	url = https://aur.archlinux.org/ros-jade-opencv-apps.git
+[submodule "indigo/hector_gazebo_plugins"]
+	path = indigo/hector_gazebo_plugins
+	url = https://aur.archlinux.org/ros-indigo-hector-gazebo-plugins.git
+[submodule "indigo/interactive_marker_twist_server"]
+	path = indigo/interactive_marker_twist_server
+	url = https://aur.archlinux.org/ros-indigo-interactive-marker-twist-server.git
+[submodule "indigo/diff_drive_controller"]
+	path = indigo/diff_drive_controller
+	url = https://aur.archlinux.org/ros-indigo-diff-drive-controller.git
+[submodule "indigo/joint_state_controller"]
+	path = indigo/joint_state_controller
+	url = https://aur.archlinux.org/ros-indigo-joint-state-controller.git
+[submodule "indigo/teleop_twist_joy"]
+	path = indigo/teleop_twist_joy
+	url = https://aur.archlinux.org/ros-indigo-teleop-twist-joy.git
+[submodule "indigo/jackal_control"]
+	path = indigo/jackal_control
+	url = https://aur.archlinux.org/ros-indigo-jackal-control.git
+[submodule "indigo/jackal_description"]
+	path = indigo/jackal_description
+	url = https://aur.archlinux.org/ros-indigo-jackal-description.git
+[submodule "indigo/jackal_gazebo"]
+	path = indigo/jackal_gazebo
+	url = https://aur.archlinux.org/ros-indigo-jackal-gazebo.git
+[submodule "indigo/jackal_simulator"]
+	path = indigo/jackal_simulator
+	url = https://aur.archlinux.org/ros-indigo-jackal-simulator.git
+[submodule "indigo/jackal_viz"]
+	path = indigo/jackal_viz
+	url = https://aur.archlinux.org/ros-indigo-jackal-viz.git
+[submodule "indigo/jackal_msgs"]
+	path = indigo/jackal_msgs
+	url = https://aur.archlinux.org/ros-indigo-jackal-msgs.git
+[submodule "indigo/jackal_desktop"]
+	path = indigo/jackal_desktop
+	url = https://aur.archlinux.org/ros-indigo-jackal-desktop.git
+[submodule "indigo/forward_command_controller"]
+	path = indigo/forward_command_controller
+	url = https://aur.archlinux.org/ros-indigo-forward-command-controller.git
+[submodule "indigo/effort_controllers"]
+	path = indigo/effort_controllers
+	url = https://aur.archlinux.org/ros-indigo-effort-controllers.git
+[submodule "indigo/force_torque_sensor_controller"]
+	path = indigo/force_torque_sensor_controller
+	url = https://aur.archlinux.org/ros-indigo-force-torque-sensor-controller.git
+[submodule "indigo/gripper_action_controller"]
+	path = indigo/gripper_action_controller
+	url = https://aur.archlinux.org/ros-indigo-gripper-action-controller.git
+[submodule "indigo/imu_sensor_controller"]
+	path = indigo/imu_sensor_controller
+	url = https://aur.archlinux.org/ros-indigo-imu-sensor-controller.git
+[submodule "indigo/joint_trajectory_controller"]
+	path = indigo/joint_trajectory_controller
+	url = https://aur.archlinux.org/ros-indigo-joint-trajectory-controller.git
+[submodule "indigo/position_controllers"]
+	path = indigo/position_controllers
+	url = https://aur.archlinux.org/ros-indigo-position-controllers.git
+[submodule "indigo/rqt_joint_trajectory_controller"]
+	path = indigo/rqt_joint_trajectory_controller
+	url = https://aur.archlinux.org/ros-indigo-rqt-joint-trajectory-controller.git
+[submodule "indigo/velocity_controllers"]
+	path = indigo/velocity_controllers
+	url = https://aur.archlinux.org/ros-indigo-velocity-controllers.git
+[submodule "indigo/ros_controllers"]
+	path = indigo/ros_controllers
+	url = https://aur.archlinux.org/ros-indigo-ros-controllers.git
