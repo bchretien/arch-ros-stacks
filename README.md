@@ -104,6 +104,8 @@ the package is up-to-date, which can be done by running `mksrcinfo`.
 Thus, the typical workflow once the PKGBUILD has been updated is:
 
 ```shell
+# Go to the package directory, e.g. indigo/actionlib
+$ cd indigo/actionlib
 # Update .SRCINFO
 $ mksrcinfo
 # Review changes
@@ -113,6 +115,9 @@ $ git commit -m "Update to version ..."
 # Push to the AUR
 $ git push origin master
 ```
+
+If this is a newly created package, an initial commit should have been made.
+If everything looks good, only the `git push` step is required.
 
 #### Conversion to AUR4 packages (legacy)
 
