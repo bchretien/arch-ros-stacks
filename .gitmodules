@@ -1627,3 +1627,15 @@
 [submodule "indigo/xv_11_laser_driver"]
 	path = indigo/xv_11_laser_driver
 	url = https://aur.archlinux.org/ros-indigo-xv-11-laser-driver.git
+[submodule "indigo/test_diagnostic_aggregator"]
+	path = indigo/test_diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-indigo-test-diagnostic-aggregator.git
+[submodule "indigo/dynamic_edt_3d"]
+	path = indigo/dynamic_edt_3d
+	url = https://aur.archlinux.org/ros-indigo-dynamic-edt-3d.git
+[submodule "indigo/octovis"]
+	path = indigo/octovis
+	url = https://aur.archlinux.org/ros-indigo-octovis.git
+[submodule "indigo/opencv_apps"]
+	path = indigo/opencv_apps
+	url = https://aur.archlinux.org/ros-indigo-opencv-apps.git
