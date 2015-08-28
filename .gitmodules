@@ -1624,3 +1624,6 @@
 [submodule "indigo/ros_controllers"]
 	path = indigo/ros_controllers
 	url = https://aur.archlinux.org/ros-indigo-ros-controllers.git
+[submodule "indigo/xv_11_laser_driver"]
+	path = indigo/xv_11_laser_driver
+	url = https://aur.archlinux.org/ros-indigo-xv-11-laser-driver.git
