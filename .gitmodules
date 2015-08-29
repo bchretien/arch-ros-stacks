@@ -1639,3 +1639,6 @@
 [submodule "indigo/opencv_apps"]
 	path = indigo/opencv_apps
 	url = https://aur.archlinux.org/ros-indigo-opencv-apps.git
+[submodule "indigo/turtlebot_teleop"]
+	path = indigo/turtlebot_teleop
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-teleop.git
