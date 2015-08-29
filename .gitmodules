@@ -1930,24 +1930,6 @@
 [submodule "indigo/turtlebot_simulator"]
 	path = indigo/turtlebot_simulator
 	url = https://aur.archlinux.org/ros-indigo-turtlebot-simulator.git
-[submodule "indigo/costmap_2d"]
-	path = indigo/costmap_2d
-	url = https://aur.archlinux.org/ros-indigo-costmap-2d.git
-[submodule "indigo/voxel_grid"]
-	path = indigo/voxel_grid
-	url = https://aur.archlinux.org/ros-indigo-voxel-grid.git
-[submodule "indigo/rotate_recovery"]
-	path = indigo/rotate_recovery
-	url = https://aur.archlinux.org/ros-indigo-rotate-recovery.git
-[submodule "indigo/navfn"]
-	path = indigo/navfn
-	url = https://aur.archlinux.org/ros-indigo-navfn.git
-[submodule "indigo/clear_costmap_recovery"]
-	path = indigo/clear_costmap_recovery
-	url = https://aur.archlinux.org/ros-indigo-clear-costmap-recovery.git
-[submodule "indigo/move_base_msgs"]
-	path = indigo/move_base_msgs
-	url = https://aur.archlinux.org/ros-indigo-move-base-msgs.git
 [submodule "indigo/pano_core"]
 	path = indigo/pano_core
 	url = https://aur.archlinux.org/ros-indigo-pano-core.git
@@ -1990,3 +1972,30 @@
 [submodule "indigo/turtlebot_apps"]
 	path = indigo/turtlebot_apps
 	url = https://aur.archlinux.org/ros-indigo-turtlebot-apps.git
+[submodule "indigo/move_base"]
+	path = indigo/move_base
+	url = https://aur.archlinux.org/ros-indigo-move-base.git
+[submodule "indigo/voxel_grid"]
+	path = indigo/voxel_grid
+	url = https://aur.archlinux.org/ros-indigo-voxel-grid.git
+[submodule "indigo/costmap_2d"]
+	path = indigo/costmap_2d
+	url = https://aur.archlinux.org/ros-indigo-costmap-2d.git
+[submodule "indigo/nav_core"]
+	path = indigo/nav_core
+	url = https://aur.archlinux.org/ros-indigo-nav-core.git
+[submodule "indigo/base_local_planner"]
+	path = indigo/base_local_planner
+	url = https://aur.archlinux.org/ros-indigo-base-local-planner.git
+[submodule "indigo/clear_costmap_recovery"]
+	path = indigo/clear_costmap_recovery
+	url = https://aur.archlinux.org/ros-indigo-clear-costmap-recovery.git
+[submodule "indigo/navfn"]
+	path = indigo/navfn
+	url = https://aur.archlinux.org/ros-indigo-navfn.git
+[submodule "indigo/rotate_recovery"]
+	path = indigo/rotate_recovery
+	url = https://aur.archlinux.org/ros-indigo-rotate-recovery.git
+[submodule "indigo/move_base_msgs"]
+	path = indigo/move_base_msgs
+	url = https://aur.archlinux.org/ros-indigo-move-base-msgs.git
