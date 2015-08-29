@@ -1948,3 +1948,45 @@
 [submodule "indigo/move_base_msgs"]
 	path = indigo/move_base_msgs
 	url = https://aur.archlinux.org/ros-indigo-move-base-msgs.git
+[submodule "indigo/pano_core"]
+	path = indigo/pano_core
+	url = https://aur.archlinux.org/ros-indigo-pano-core.git
+[submodule "indigo/pano_py"]
+	path = indigo/pano_py
+	url = https://aur.archlinux.org/ros-indigo-pano-py.git
+[submodule "indigo/pano_ros"]
+	path = indigo/pano_ros
+	url = https://aur.archlinux.org/ros-indigo-pano-ros.git
+[submodule "indigo/turtlebot_actions"]
+	path = indigo/turtlebot_actions
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-actions.git
+[submodule "indigo/turtlebot_calibration"]
+	path = indigo/turtlebot_calibration
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-calibration.git
+[submodule "indigo/turtlebot_msgs"]
+	path = indigo/turtlebot_msgs
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-msgs.git
+[submodule "indigo/turtlebot_follower"]
+	path = indigo/turtlebot_follower
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-follower.git
+[submodule "indigo/turtlebot_panorama"]
+	path = indigo/turtlebot_panorama
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-panorama.git
+[submodule "indigo/robot_pose_publisher"]
+	path = indigo/robot_pose_publisher
+	url = https://aur.archlinux.org/ros-indigo-robot-pose-publisher.git
+[submodule "indigo/world_canvas_msgs"]
+	path = indigo/world_canvas_msgs
+	url = https://aur.archlinux.org/ros-indigo-world-canvas-msgs.git
+[submodule "indigo/world_canvas_utils"]
+	path = indigo/world_canvas_utils
+	url = https://aur.archlinux.org/ros-indigo-world-canvas-utils.git
+[submodule "indigo/world_canvas_server"]
+	path = indigo/world_canvas_server
+	url = https://aur.archlinux.org/ros-indigo-world-canvas-server.git
+[submodule "indigo/turtlebot_rapps"]
+	path = indigo/turtlebot_rapps
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-rapps.git
+[submodule "indigo/turtlebot_apps"]
+	path = indigo/turtlebot_apps
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-apps.git
