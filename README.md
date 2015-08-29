@@ -44,6 +44,15 @@ Once these files are generated, they simply need to be commited and pushed
 to the AUR, so that every Arch user can install the package with his
 favorite AUR helper.
 
+To clone this repository, do:
+
+```shell
+$ git clone --recursive https://github.com/bchretien/arch-ros-stacks.git
+```
+
+This will download the submodules (`git submodule init && git submodule
+update`) after cloning the repository.
+
 ## How to contribute
 
 If you want to contribute, simply fork this repository, create or update some
