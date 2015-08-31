@@ -1999,3 +1999,6 @@
 [submodule "indigo/move_base_msgs"]
 	path = indigo/move_base_msgs
 	url = https://aur.archlinux.org/ros-indigo-move-base-msgs.git
+[submodule "indigo/kobuki_gazebo"]
+	path = indigo/kobuki_gazebo
+	url = https://aur.archlinux.org/ros-indigo-kobuki-gazebo.git
