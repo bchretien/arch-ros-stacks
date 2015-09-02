@@ -1990,3 +1990,9 @@
 [submodule "indigo/turtlebot_apps"]
 	path = indigo/turtlebot_apps
 	url = https://aur.archlinux.org/ros-indigo-turtlebot-apps.git
+[submodule "dependencies/python2-rosdep"]
+	path = dependencies/python2-rosdep
+	url = ssh+git://aur@aur4.archlinux.org/python2-rosdep
+[submodule "dependencies/python2-empy"]
+	path = dependencies/python2-empy
+	url = ssh+git://aur@aur4.archlinux.org/python2-empy
