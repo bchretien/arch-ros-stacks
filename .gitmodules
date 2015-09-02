@@ -1,1836 +1,723 @@
-[submodule "dependencies/ros-build-tools"]
-	path = dependencies/ros-build-tools
-	url = https://aur4.archlinux.org/ros-build-tools.git
-[submodule "dependencies/python2-rosdep"]
-	path = dependencies/python2-rosdep
-	url = ssh+git://aur@aur4.archlinux.org/python2-rosdep
-[submodule "dependencies/python2-empy"]
-	path = dependencies/python2-empy
-	url = ssh+git://aur@aur4.archlinux.org/python2-empy
-[submodule "dependencies/python2-catkin-pkg"]
-	path = dependencies/python2-catkin-pkg
-	url = https://aur4.archlinux.org/python2-catkin-pkg.git
 [submodule "dependencies/python-catkin-pkg"]
 	path = dependencies/python-catkin-pkg
 	url = https://aur4.archlinux.org/python-catkin-pkg.git
-[submodule "indigo/catkin"]
-	path = indigo/catkin
-	url = https://aur.archlinux.org/ros-indigo-catkin.git
-[submodule "indigo/diagnostic_aggregator"]
-	path = indigo/diagnostic_aggregator
-	url = https://aur.archlinux.org/ros-indigo-diagnostic-aggregator.git
-[submodule "indigo/rqt_robot_dashboard"]
-	path = indigo/rqt_robot_dashboard
-	url = https://aur.archlinux.org/ros-indigo-rqt-robot-dashboard.git
-[submodule "indigo/wiimote"]
-	path = indigo/wiimote
-	url = https://aur.archlinux.org/ros-indigo-wiimote.git
-[submodule "indigo/image_geometry"]
-	path = indigo/image_geometry
-	url = https://aur.archlinux.org/ros-indigo-image-geometry.git
-[submodule "indigo/bond"]
-	path = indigo/bond
-	url = https://aur.archlinux.org/ros-indigo-bond.git
-[submodule "indigo/rqt_image_view"]
-	path = indigo/rqt_image_view
-	url = https://aur.archlinux.org/ros-indigo-rqt-image-view.git
-[submodule "indigo/smach_ros"]
-	path = indigo/smach_ros
-	url = https://aur.archlinux.org/ros-indigo-smach-ros.git
-[submodule "indigo/turtle_actionlib"]
-	path = indigo/turtle_actionlib
-	url = https://aur.archlinux.org/ros-indigo-turtle-actionlib.git
-[submodule "indigo/interactive_marker_tutorials"]
-	path = indigo/interactive_marker_tutorials
-	url = https://aur.archlinux.org/ros-indigo-interactive-marker-tutorials.git
-[submodule "indigo/rqt_common_plugins"]
-	path = indigo/rqt_common_plugins
-	url = https://aur.archlinux.org/ros-indigo-rqt-common-plugins.git
-[submodule "indigo/moveit_msgs"]
-	path = indigo/moveit_msgs
-	url = https://aur.archlinux.org/ros-indigo-moveit-msgs.git
-[submodule "indigo/roscpp"]
-	path = indigo/roscpp
-	url = https://aur.archlinux.org/ros-indigo-roscpp.git
-[submodule "indigo/urdf_parser_plugin"]
-	path = indigo/urdf_parser_plugin
-	url = https://aur.archlinux.org/ros-indigo-urdf-parser-plugin.git
-[submodule "indigo/desktop"]
-	path = indigo/desktop
-	url = https://aur.archlinux.org/ros-indigo-desktop.git
-[submodule "indigo/rqt_py_common"]
-	path = indigo/rqt_py_common
-	url = https://aur.archlinux.org/ros-indigo-rqt-py-common.git
-[submodule "indigo/cmake_modules"]
-	path = indigo/cmake_modules
-	url = https://aur.archlinux.org/ros-indigo-cmake-modules.git
-[submodule "indigo/srdfdom"]
-	path = indigo/srdfdom
-	url = https://aur.archlinux.org/ros-indigo-srdfdom.git
-[submodule "indigo/smach_msgs"]
-	path = indigo/smach_msgs
-	url = https://aur.archlinux.org/ros-indigo-smach-msgs.git
-[submodule "indigo/rosunit"]
-	path = indigo/rosunit
-	url = https://aur.archlinux.org/ros-indigo-rosunit.git
-[submodule "indigo/rosserial_client"]
-	path = indigo/rosserial_client
-	url = https://aur.archlinux.org/ros-indigo-rosserial-client.git
-[submodule "indigo/stage_ros"]
-	path = indigo/stage_ros
-	url = https://aur.archlinux.org/ros-indigo-stage-ros.git
-[submodule "indigo/sensor_msgs"]
-	path = indigo/sensor_msgs
-	url = https://aur.archlinux.org/ros-indigo-sensor-msgs.git
-[submodule "indigo/rqt_topic"]
-	path = indigo/rqt_topic
-	url = https://aur.archlinux.org/ros-indigo-rqt-topic.git
-[submodule "indigo/compressed_depth_image_transport"]
-	path = indigo/compressed_depth_image_transport
-	url = https://aur.archlinux.org/ros-indigo-compressed-depth-image-transport.git
-[submodule "indigo/web_video_server"]
-	path = indigo/web_video_server
-	url = https://aur.archlinux.org/ros-indigo-web-video-server.git
-[submodule "indigo/roslint"]
-	path = indigo/roslint
-	url = https://aur.archlinux.org/ros-indigo-roslint.git
-[submodule "indigo/rosbag_storage"]
-	path = indigo/rosbag_storage
-	url = https://aur.archlinux.org/ros-indigo-rosbag-storage.git
-[submodule "indigo/moveit_ros_benchmarks"]
-	path = indigo/moveit_ros_benchmarks
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-benchmarks.git
-[submodule "indigo/dynamic_reconfigure"]
-	path = indigo/dynamic_reconfigure
-	url = https://aur.archlinux.org/ros-indigo-dynamic-reconfigure.git
-[submodule "indigo/camera1394"]
-	path = indigo/camera1394
-	url = https://aur.archlinux.org/ros-indigo-camera1394.git
-[submodule "indigo/rqt_dep"]
-	path = indigo/rqt_dep
-	url = https://aur.archlinux.org/ros-indigo-rqt-dep.git
-[submodule "indigo/libfreenect"]
-	path = indigo/libfreenect
-	url = https://aur.archlinux.org/ros-indigo-libfreenect.git
-[submodule "indigo/rosout"]
-	path = indigo/rosout
-	url = https://aur.archlinux.org/ros-indigo-rosout.git
-[submodule "indigo/rostime"]
-	path = indigo/rostime
-	url = https://aur.archlinux.org/ros-indigo-rostime.git
-[submodule "indigo/trajectory_msgs"]
-	path = indigo/trajectory_msgs
-	url = https://aur.archlinux.org/ros-indigo-trajectory-msgs.git
-[submodule "indigo/nodelet_tutorial_math"]
-	path = indigo/nodelet_tutorial_math
-	url = https://aur.archlinux.org/ros-indigo-nodelet-tutorial-math.git
-[submodule "indigo/geometry"]
-	path = indigo/geometry
-	url = https://aur.archlinux.org/ros-indigo-geometry.git
-[submodule "indigo/compressed_image_transport"]
-	path = indigo/compressed_image_transport
-	url = https://aur.archlinux.org/ros-indigo-compressed-image-transport.git
-[submodule "indigo/driver_base"]
-	path = indigo/driver_base
-	url = https://aur.archlinux.org/ros-indigo-driver-base.git
-[submodule "indigo/geometric_shapes"]
-	path = indigo/geometric_shapes
-	url = https://aur.archlinux.org/ros-indigo-geometric-shapes.git
-[submodule "indigo/collada_urdf"]
-	path = indigo/collada_urdf
-	url = https://aur.archlinux.org/ros-indigo-collada-urdf.git
-[submodule "indigo/rosapi"]
-	path = indigo/rosapi
-	url = https://aur.archlinux.org/ros-indigo-rosapi.git
-[submodule "indigo/rosbridge_server"]
-	path = indigo/rosbridge_server
-	url = https://aur.archlinux.org/ros-indigo-rosbridge-server.git
-[submodule "indigo/nodelet_topic_tools"]
-	path = indigo/nodelet_topic_tools
-	url = https://aur.archlinux.org/ros-indigo-nodelet-topic-tools.git
-[submodule "indigo/robot_model"]
-	path = indigo/robot_model
-	url = https://aur.archlinux.org/ros-indigo-robot-model.git
-[submodule "indigo/actionlib_tutorials"]
-	path = indigo/actionlib_tutorials
-	url = https://aur.archlinux.org/ros-indigo-actionlib-tutorials.git
-[submodule "indigo/pcl_msgs"]
-	path = indigo/pcl_msgs
-	url = https://aur.archlinux.org/ros-indigo-pcl-msgs.git
-[submodule "indigo/freenect_camera"]
-	path = indigo/freenect_camera
-	url = https://aur.archlinux.org/ros-indigo-freenect-camera.git
-[submodule "indigo/stereo_image_proc"]
-	path = indigo/stereo_image_proc
-	url = https://aur.archlinux.org/ros-indigo-stereo-image-proc.git
-[submodule "indigo/rqt_rviz"]
-	path = indigo/rqt_rviz
-	url = https://aur.archlinux.org/ros-indigo-rqt-rviz.git
-[submodule "indigo/python_orocos_kdl"]
-	path = indigo/python_orocos_kdl
-	url = https://aur.archlinux.org/ros-indigo-python-orocos-kdl.git
-[submodule "indigo/moveit_ros_robot_interaction"]
-	path = indigo/moveit_ros_robot_interaction
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-robot-interaction.git
-[submodule "indigo/rosmake"]
-	path = indigo/rosmake
-	url = https://aur.archlinux.org/ros-indigo-rosmake.git
-[submodule "indigo/octomap"]
-	path = indigo/octomap
-	url = https://aur.archlinux.org/ros-indigo-octomap.git
-[submodule "indigo/rosmaster"]
-	path = indigo/rosmaster
-	url = https://aur.archlinux.org/ros-indigo-rosmaster.git
-[submodule "indigo/rqt_shell"]
-	path = indigo/rqt_shell
-	url = https://aur.archlinux.org/ros-indigo-rqt-shell.git
-[submodule "indigo/robot_state_publisher"]
-	path = indigo/robot_state_publisher
-	url = https://aur.archlinux.org/ros-indigo-robot-state-publisher.git
-[submodule "indigo/shape_tools"]
-	path = indigo/shape_tools
-	url = https://aur.archlinux.org/ros-indigo-shape-tools.git
-[submodule "indigo/urdfdom_headers"]
-	path = indigo/urdfdom_headers
-	url = https://aur.archlinux.org/ros-indigo-urdfdom-headers.git
-[submodule "indigo/visualization_marker_tutorials"]
-	path = indigo/visualization_marker_tutorials
-	url = https://aur.archlinux.org/ros-indigo-visualization-marker-tutorials.git
-[submodule "indigo/std_msgs"]
-	path = indigo/std_msgs
-	url = https://aur.archlinux.org/ros-indigo-std-msgs.git
-[submodule "indigo/genlisp"]
-	path = indigo/genlisp
-	url = https://aur.archlinux.org/ros-indigo-genlisp.git
-[submodule "indigo/rqt_robot_steering"]
-	path = indigo/rqt_robot_steering
-	url = https://aur.archlinux.org/ros-indigo-rqt-robot-steering.git
-[submodule "indigo/rosbuild"]
-	path = indigo/rosbuild
-	url = https://aur.archlinux.org/ros-indigo-rosbuild.git
-[submodule "indigo/smach"]
-	path = indigo/smach
-	url = https://aur.archlinux.org/ros-indigo-smach.git
-[submodule "indigo/image_transport_plugins"]
-	path = indigo/image_transport_plugins
-	url = https://aur.archlinux.org/ros-indigo-image-transport-plugins.git
-[submodule "indigo/control_msgs"]
-	path = indigo/control_msgs
-	url = https://aur.archlinux.org/ros-indigo-control-msgs.git
-[submodule "indigo/camera_info_manager"]
-	path = indigo/camera_info_manager
-	url = https://aur.archlinux.org/ros-indigo-camera-info-manager.git
-[submodule "indigo/eigen_stl_containers"]
-	path = indigo/eigen_stl_containers
-	url = https://aur.archlinux.org/ros-indigo-eigen-stl-containers.git
-[submodule "indigo/rosping"]
-	path = indigo/rosping
-	url = https://aur.archlinux.org/ros-indigo-rosping.git
-[submodule "indigo/image_common"]
-	path = indigo/image_common
-	url = https://aur.archlinux.org/ros-indigo-image-common.git
-[submodule "indigo/class_loader"]
-	path = indigo/class_loader
-	url = https://aur.archlinux.org/ros-indigo-class-loader.git
-[submodule "indigo/rqt_tf_tree"]
-	path = indigo/rqt_tf_tree
-	url = https://aur.archlinux.org/ros-indigo-rqt-tf-tree.git
-[submodule "indigo/gazebo_msgs"]
-	path = indigo/gazebo_msgs
-	url = https://aur.archlinux.org/ros-indigo-gazebo-msgs.git
-[submodule "indigo/rqt_nav_view"]
-	path = indigo/rqt_nav_view
-	url = https://aur.archlinux.org/ros-indigo-rqt-nav-view.git
-[submodule "indigo/diagnostic_updater"]
-	path = indigo/diagnostic_updater
-	url = https://aur.archlinux.org/ros-indigo-diagnostic-updater.git
-[submodule "indigo/stereo_msgs"]
-	path = indigo/stereo_msgs
-	url = https://aur.archlinux.org/ros-indigo-stereo-msgs.git
-[submodule "indigo/nodelet_core"]
-	path = indigo/nodelet_core
-	url = https://aur.archlinux.org/ros-indigo-nodelet-core.git
-[submodule "indigo/pluginlib"]
-	path = indigo/pluginlib
-	url = https://aur.archlinux.org/ros-indigo-pluginlib.git
-[submodule "indigo/image_pipeline"]
-	path = indigo/image_pipeline
-	url = https://aur.archlinux.org/ros-indigo-image-pipeline.git
-[submodule "indigo/rospack"]
-	path = indigo/rospack
-	url = https://aur.archlinux.org/ros-indigo-rospack.git
-[submodule "indigo/qt_gui_cpp"]
-	path = indigo/qt_gui_cpp
-	url = https://aur.archlinux.org/ros-indigo-qt-gui-cpp.git
-[submodule "indigo/angles"]
-	path = indigo/angles
-	url = https://aur.archlinux.org/ros-indigo-angles.git
-[submodule "indigo/rosserial_python"]
-	path = indigo/rosserial_python
-	url = https://aur.archlinux.org/ros-indigo-rosserial-python.git
-[submodule "indigo/rviz"]
-	path = indigo/rviz
-	url = https://aur.archlinux.org/ros-indigo-rviz.git
-[submodule "indigo/mk"]
-	path = indigo/mk
-	url = https://aur.archlinux.org/ros-indigo-mk.git
-[submodule "indigo/fcl"]
-	path = indigo/fcl
-	url = https://aur.archlinux.org/ros-indigo-fcl.git
-[submodule "indigo/roswtf"]
-	path = indigo/roswtf
-	url = https://aur.archlinux.org/ros-indigo-roswtf.git
-[submodule "indigo/roslang"]
-	path = indigo/roslang
-	url = https://aur.archlinux.org/ros-indigo-roslang.git
-[submodule "indigo/resource_retriever"]
-	path = indigo/resource_retriever
-	url = https://aur.archlinux.org/ros-indigo-resource-retriever.git
-[submodule "indigo/tf_conversions"]
-	path = indigo/tf_conversions
-	url = https://aur.archlinux.org/ros-indigo-tf-conversions.git
-[submodule "indigo/tf2_ros"]
-	path = indigo/tf2_ros
-	url = https://aur.archlinux.org/ros-indigo-tf2-ros.git
-[submodule "indigo/joy"]
-	path = indigo/joy
-	url = https://aur.archlinux.org/ros-indigo-joy.git
-[submodule "indigo/freenect_stack"]
-	path = indigo/freenect_stack
-	url = https://aur.archlinux.org/ros-indigo-freenect-stack.git
-[submodule "indigo/moveit_ros_move_group"]
-	path = indigo/moveit_ros_move_group
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-move-group.git
-[submodule "indigo/rosserial_msgs"]
-	path = indigo/rosserial_msgs
-	url = https://aur.archlinux.org/ros-indigo-rosserial-msgs.git
-[submodule "indigo/ros_tutorials"]
-	path = indigo/ros_tutorials
-	url = https://aur.archlinux.org/ros-indigo-ros-tutorials.git
-[submodule "indigo/rqt_plot"]
-	path = indigo/rqt_plot
-	url = https://aur.archlinux.org/ros-indigo-rqt-plot.git
-[submodule "indigo/simulators"]
-	path = indigo/simulators
-	url = https://aur.archlinux.org/ros-indigo-simulators.git
-[submodule "indigo/moveit_ros_visualization"]
-	path = indigo/moveit_ros_visualization
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-visualization.git
-[submodule "indigo/ros_base"]
-	path = indigo/ros_base
-	url = https://aur.archlinux.org/ros-indigo-ros-base.git
-[submodule "indigo/rqt_robot_monitor"]
-	path = indigo/rqt_robot_monitor
-	url = https://aur.archlinux.org/ros-indigo-rqt-robot-monitor.git
-[submodule "indigo/pluginlib_tutorials"]
-	path = indigo/pluginlib_tutorials
-	url = https://aur.archlinux.org/ros-indigo-pluginlib-tutorials.git
-[submodule "indigo/roslib"]
-	path = indigo/roslib
-	url = https://aur.archlinux.org/ros-indigo-roslib.git
-[submodule "indigo/rosgraph"]
-	path = indigo/rosgraph
-	url = https://aur.archlinux.org/ros-indigo-rosgraph.git
-[submodule "indigo/robot"]
-	path = indigo/robot
-	url = https://aur.archlinux.org/ros-indigo-robot.git
-[submodule "indigo/rosboost_cfg"]
-	path = indigo/rosboost_cfg
-	url = https://aur.archlinux.org/ros-indigo-rosboost-cfg.git
-[submodule "indigo/actionlib_msgs"]
-	path = indigo/actionlib_msgs
-	url = https://aur.archlinux.org/ros-indigo-actionlib-msgs.git
-[submodule "indigo/object_recognition_msgs"]
-	path = indigo/object_recognition_msgs
-	url = https://aur.archlinux.org/ros-indigo-object-recognition-msgs.git
-[submodule "indigo/rosserial"]
-	path = indigo/rosserial
-	url = https://aur.archlinux.org/ros-indigo-rosserial.git
-[submodule "indigo/rospy_tutorials"]
-	path = indigo/rospy_tutorials
-	url = https://aur.archlinux.org/ros-indigo-rospy-tutorials.git
-[submodule "indigo/self_test"]
-	path = indigo/self_test
-	url = https://aur.archlinux.org/ros-indigo-self-test.git
-[submodule "indigo/image_proc"]
-	path = indigo/image_proc
-	url = https://aur.archlinux.org/ros-indigo-image-proc.git
-[submodule "indigo/rgbd_launch"]
-	path = indigo/rgbd_launch
-	url = https://aur.archlinux.org/ros-indigo-rgbd-launch.git
-[submodule "indigo/console_bridge"]
-	path = indigo/console_bridge
-	url = https://aur.archlinux.org/ros-indigo-console-bridge.git
-[submodule "indigo/ros_comm"]
-	path = indigo/ros_comm
-	url = https://aur.archlinux.org/ros-indigo-ros-comm.git
-[submodule "indigo/vision_opencv"]
-	path = indigo/vision_opencv
-	url = https://aur.archlinux.org/ros-indigo-vision-opencv.git
-[submodule "indigo/roscpp_tutorials"]
-	path = indigo/roscpp_tutorials
-	url = https://aur.archlinux.org/ros-indigo-roscpp-tutorials.git
-[submodule "indigo/eigen_conversions"]
-	path = indigo/eigen_conversions
-	url = https://aur.archlinux.org/ros-indigo-eigen-conversions.git
-[submodule "indigo/nodelet"]
-	path = indigo/nodelet
-	url = https://aur.archlinux.org/ros-indigo-nodelet.git
-[submodule "indigo/pr2_description"]
-	path = indigo/pr2_description
-	url = https://aur.archlinux.org/ros-indigo-pr2-description.git
-[submodule "indigo/orocos_kdl"]
-	path = indigo/orocos_kdl
-	url = https://aur.archlinux.org/ros-indigo-orocos-kdl.git
-[submodule "indigo/std_srvs"]
-	path = indigo/std_srvs
-	url = https://aur.archlinux.org/ros-indigo-std-srvs.git
-[submodule "indigo/xacro"]
-	path = indigo/xacro
-	url = https://aur.archlinux.org/ros-indigo-xacro.git
-[submodule "indigo/openni2_launch"]
-	path = indigo/openni2_launch
-	url = https://aur.archlinux.org/ros-indigo-openni2-launch.git
-[submodule "indigo/qt_gui"]
-	path = indigo/qt_gui
-	url = https://aur.archlinux.org/ros-indigo-qt-gui.git
-[submodule "indigo/rqt_msg"]
-	path = indigo/rqt_msg
-	url = https://aur.archlinux.org/ros-indigo-rqt-msg.git
-[submodule "indigo/xmlrpcpp"]
-	path = indigo/xmlrpcpp
-	url = https://aur.archlinux.org/ros-indigo-xmlrpcpp.git
-[submodule "indigo/urdf"]
-	path = indigo/urdf
-	url = https://aur.archlinux.org/ros-indigo-urdf.git
-[submodule "indigo/openni2_camera"]
-	path = indigo/openni2_camera
-	url = https://aur.archlinux.org/ros-indigo-openni2-camera.git
-[submodule "indigo/stage"]
-	path = indigo/stage
-	url = https://aur.archlinux.org/ros-indigo-stage.git
-[submodule "indigo/rosclean"]
-	path = indigo/rosclean
-	url = https://aur.archlinux.org/ros-indigo-rosclean.git
-[submodule "indigo/roscpp_serialization"]
-	path = indigo/roscpp_serialization
-	url = https://aur.archlinux.org/ros-indigo-roscpp-serialization.git
-[submodule "indigo/ros_core"]
-	path = indigo/ros_core
-	url = https://aur.archlinux.org/ros-indigo-ros-core.git
-[submodule "indigo/rqt_gui"]
-	path = indigo/rqt_gui
-	url = https://aur.archlinux.org/ros-indigo-rqt-gui.git
-[submodule "indigo/moveit_core"]
-	path = indigo/moveit_core
-	url = https://aur.archlinux.org/ros-indigo-moveit-core.git
-[submodule "indigo/rqt_pose_view"]
-	path = indigo/rqt_pose_view
-	url = https://aur.archlinux.org/ros-indigo-rqt-pose-view.git
-[submodule "indigo/diagnostics"]
-	path = indigo/diagnostics
-	url = https://aur.archlinux.org/ros-indigo-diagnostics.git
-[submodule "indigo/diagnostic_common_diagnostics"]
-	path = indigo/diagnostic_common_diagnostics
-	url = https://aur.archlinux.org/ros-indigo-diagnostic-common-diagnostics.git
-[submodule "indigo/roslisp"]
-	path = indigo/roslisp
-	url = https://aur.archlinux.org/ros-indigo-roslisp.git
-[submodule "indigo/rosgraph_msgs"]
-	path = indigo/rosgraph_msgs
-	url = https://aur.archlinux.org/ros-indigo-rosgraph-msgs.git
-[submodule "indigo/filters"]
-	path = indigo/filters
-	url = https://aur.archlinux.org/ros-indigo-filters.git
-[submodule "indigo/theora_image_transport"]
-	path = indigo/theora_image_transport
-	url = https://aur.archlinux.org/ros-indigo-theora-image-transport.git
-[submodule "indigo/rosbag"]
-	path = indigo/rosbag
-	url = https://aur.archlinux.org/ros-indigo-rosbag.git
-[submodule "indigo/joint_state_publisher"]
-	path = indigo/joint_state_publisher
-	url = https://aur.archlinux.org/ros-indigo-joint-state-publisher.git
-[submodule "indigo/visualization_msgs"]
-	path = indigo/visualization_msgs
-	url = https://aur.archlinux.org/ros-indigo-visualization-msgs.git
-[submodule "indigo/perception_pcl"]
-	path = indigo/perception_pcl
-	url = https://aur.archlinux.org/ros-indigo-perception-pcl.git
-[submodule "indigo/manipulation_msgs"]
-	path = indigo/manipulation_msgs
-	url = https://aur.archlinux.org/ros-indigo-manipulation-msgs.git
-[submodule "indigo/rqt_top"]
-	path = indigo/rqt_top
-	url = https://aur.archlinux.org/ros-indigo-rqt-top.git
-[submodule "indigo/message_runtime"]
-	path = indigo/message_runtime
-	url = https://aur.archlinux.org/ros-indigo-message-runtime.git
-[submodule "indigo/librviz_tutorial"]
-	path = indigo/librviz_tutorial
-	url = https://aur.archlinux.org/ros-indigo-librviz-tutorial.git
-[submodule "indigo/rqt_reconfigure"]
-	path = indigo/rqt_reconfigure
-	url = https://aur.archlinux.org/ros-indigo-rqt-reconfigure.git
-[submodule "indigo/moveit_ros"]
-	path = indigo/moveit_ros
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros.git
-[submodule "indigo/freenect_launch"]
-	path = indigo/freenect_launch
-	url = https://aur.archlinux.org/ros-indigo-freenect-launch.git
-[submodule "indigo/ps3joy"]
-	path = indigo/ps3joy
-	url = https://aur.archlinux.org/ros-indigo-ps3joy.git
-[submodule "indigo/gazebo_ros_pkgs"]
-	path = indigo/gazebo_ros_pkgs
-	url = https://aur.archlinux.org/ros-indigo-gazebo-ros-pkgs.git
-[submodule "indigo/rqt_graph"]
-	path = indigo/rqt_graph
-	url = https://aur.archlinux.org/ros-indigo-rqt-graph.git
-[submodule "indigo/tf2_geometry_msgs"]
-	path = indigo/tf2_geometry_msgs
-	url = https://aur.archlinux.org/ros-indigo-tf2-geometry-msgs.git
-[submodule "indigo/desktop_full"]
-	path = indigo/desktop_full
-	url = https://aur.archlinux.org/ros-indigo-desktop-full.git
-[submodule "indigo/rqt_bag"]
-	path = indigo/rqt_bag
-	url = https://aur.archlinux.org/ros-indigo-rqt-bag.git
-[submodule "indigo/smclib"]
-	path = indigo/smclib
-	url = https://aur.archlinux.org/ros-indigo-smclib.git
-[submodule "indigo/rosmsg"]
-	path = indigo/rosmsg
-	url = https://aur.archlinux.org/ros-indigo-rosmsg.git
-[submodule "indigo/ros"]
-	path = indigo/ros
-	url = https://aur.archlinux.org/ros-indigo-ros.git
-[submodule "indigo/octomap_msgs"]
-	path = indigo/octomap_msgs
-	url = https://aur.archlinux.org/ros-indigo-octomap-msgs.git
-[submodule "indigo/household_objects_database_msgs"]
-	path = indigo/household_objects_database_msgs
-	url = https://aur.archlinux.org/ros-indigo-household-objects-database-msgs.git
-[submodule "indigo/rosconsole"]
-	path = indigo/rosconsole
-	url = https://aur.archlinux.org/ros-indigo-rosconsole.git
-[submodule "indigo/rqt_publisher"]
-	path = indigo/rqt_publisher
-	url = https://aur.archlinux.org/ros-indigo-rqt-publisher.git
-[submodule "indigo/rqt_launch"]
-	path = indigo/rqt_launch
-	url = https://aur.archlinux.org/ros-indigo-rqt-launch.git
-[submodule "indigo/topic_tools"]
-	path = indigo/topic_tools
-	url = https://aur.archlinux.org/ros-indigo-topic-tools.git
-[submodule "indigo/geometry_tutorials"]
-	path = indigo/geometry_tutorials
-	url = https://aur.archlinux.org/ros-indigo-geometry-tutorials.git
-[submodule "indigo/rqt_py_console"]
-	path = indigo/rqt_py_console
-	url = https://aur.archlinux.org/ros-indigo-rqt-py-console.git
-[submodule "indigo/polled_camera"]
-	path = indigo/polled_camera
-	url = https://aur.archlinux.org/ros-indigo-polled-camera.git
-[submodule "indigo/genmsg"]
-	path = indigo/genmsg
-	url = https://aur.archlinux.org/ros-indigo-genmsg.git
-[submodule "indigo/interactive_markers"]
-	path = indigo/interactive_markers
-	url = https://aur.archlinux.org/ros-indigo-interactive-markers.git
-[submodule "indigo/rosbridge_library"]
-	path = indigo/rosbridge_library
-	url = https://aur.archlinux.org/ros-indigo-rosbridge-library.git
-[submodule "indigo/ivcon"]
-	path = indigo/ivcon
-	url = https://aur.archlinux.org/ros-indigo-ivcon.git
-[submodule "indigo/gazebo_plugins"]
-	path = indigo/gazebo_plugins
-	url = https://aur.archlinux.org/ros-indigo-gazebo-plugins.git
-[submodule "indigo/laser_filters"]
-	path = indigo/laser_filters
-	url = https://aur.archlinux.org/ros-indigo-laser-filters.git
-[submodule "indigo/urdfdom_py"]
-	path = indigo/urdfdom_py
-	url = https://aur.archlinux.org/ros-indigo-urdfdom-py.git
-[submodule "indigo/moveit_ros_planning_interface"]
-	path = indigo/moveit_ros_planning_interface
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-planning-interface.git
-[submodule "indigo/image_view"]
-	path = indigo/image_view
-	url = https://aur.archlinux.org/ros-indigo-image-view.git
-[submodule "indigo/viz"]
-	path = indigo/viz
-	url = https://aur.archlinux.org/ros-indigo-viz.git
-[submodule "indigo/rqt_web"]
-	path = indigo/rqt_web
-	url = https://aur.archlinux.org/ros-indigo-rqt-web.git
-[submodule "indigo/bond_core"]
-	path = indigo/bond_core
-	url = https://aur.archlinux.org/ros-indigo-bond-core.git
-[submodule "indigo/random_numbers"]
-	path = indigo/random_numbers
-	url = https://aur.archlinux.org/ros-indigo-random-numbers.git
-[submodule "indigo/rostest"]
-	path = indigo/rostest
-	url = https://aur.archlinux.org/ros-indigo-rostest.git
-[submodule "indigo/kdl_parser"]
-	path = indigo/kdl_parser
-	url = https://aur.archlinux.org/ros-indigo-kdl-parser.git
-[submodule "indigo/rosparam"]
-	path = indigo/rosparam
-	url = https://aur.archlinux.org/ros-indigo-rosparam.git
-[submodule "indigo/common_msgs"]
-	path = indigo/common_msgs
-	url = https://aur.archlinux.org/ros-indigo-common-msgs.git
-[submodule "indigo/roscpp_traits"]
-	path = indigo/roscpp_traits
-	url = https://aur.archlinux.org/ros-indigo-roscpp-traits.git
-[submodule "indigo/roslaunch"]
-	path = indigo/roslaunch
-	url = https://aur.archlinux.org/ros-indigo-roslaunch.git
-[submodule "indigo/depth_image_proc"]
-	path = indigo/depth_image_proc
-	url = https://aur.archlinux.org/ros-indigo-depth-image-proc.git
-[submodule "indigo/convex_decomposition"]
-	path = indigo/convex_decomposition
-	url = https://aur.archlinux.org/ros-indigo-convex-decomposition.git
-[submodule "indigo/rqt_robot_plugins"]
-	path = indigo/rqt_robot_plugins
-	url = https://aur.archlinux.org/ros-indigo-rqt-robot-plugins.git
-[submodule "indigo/rqt_bag_plugins"]
-	path = indigo/rqt_bag_plugins
-	url = https://aur.archlinux.org/ros-indigo-rqt-bag-plugins.git
-[submodule "indigo/tf"]
-	path = indigo/tf
-	url = https://aur.archlinux.org/ros-indigo-tf.git
-[submodule "indigo/rospy"]
-	path = indigo/rospy
-	url = https://aur.archlinux.org/ros-indigo-rospy.git
-[submodule "indigo/spacenav_node"]
-	path = indigo/spacenav_node
-	url = https://aur.archlinux.org/ros-indigo-spacenav-node.git
-[submodule "indigo/rosbridge_suite"]
-	path = indigo/rosbridge_suite
-	url = https://aur.archlinux.org/ros-indigo-rosbridge-suite.git
-[submodule "indigo/kdl_conversions"]
-	path = indigo/kdl_conversions
-	url = https://aur.archlinux.org/ros-indigo-kdl-conversions.git
+[submodule "dependencies/python2-catkin-pkg"]
+	path = dependencies/python2-catkin-pkg
+	url = https://aur4.archlinux.org/python2-catkin-pkg.git
+[submodule "dependencies/python2-empy"]
+	path = dependencies/python2-empy
+	url = ssh+git://aur@aur4.archlinux.org/python2-empy
+[submodule "dependencies/python2-rosdep"]
+	path = dependencies/python2-rosdep
+	url = ssh+git://aur@aur4.archlinux.org/python2-rosdep
+[submodule "dependencies/ros-build-tools"]
+	path = dependencies/ros-build-tools
+	url = https://aur4.archlinux.org/ros-build-tools.git
 [submodule "indigo/actionlib"]
 	path = indigo/actionlib
 	url = https://aur.archlinux.org/ros-indigo-actionlib.git
-[submodule "indigo/nav_msgs"]
-	path = indigo/nav_msgs
-	url = https://aur.archlinux.org/ros-indigo-nav-msgs.git
-[submodule "indigo/camera_calibration"]
-	path = indigo/camera_calibration
-	url = https://aur.archlinux.org/ros-indigo-camera-calibration.git
-[submodule "indigo/visualization_tutorials"]
-	path = indigo/visualization_tutorials
-	url = https://aur.archlinux.org/ros-indigo-visualization-tutorials.git
-[submodule "indigo/executive_smach"]
-	path = indigo/executive_smach
-	url = https://aur.archlinux.org/ros-indigo-executive-smach.git
+[submodule "indigo/actionlib_msgs"]
+	path = indigo/actionlib_msgs
+	url = https://aur.archlinux.org/ros-indigo-actionlib-msgs.git
+[submodule "indigo/actionlib_tutorials"]
+	path = indigo/actionlib_tutorials
+	url = https://aur.archlinux.org/ros-indigo-actionlib-tutorials.git
+[submodule "indigo/angles"]
+	path = indigo/angles
+	url = https://aur.archlinux.org/ros-indigo-angles.git
+[submodule "indigo/base_local_planner"]
+	path = indigo/base_local_planner
+	url = https://aur.archlinux.org/ros-indigo-base-local-planner.git
+[submodule "indigo/bond"]
+	path = indigo/bond
+	url = https://aur.archlinux.org/ros-indigo-bond.git
+[submodule "indigo/bond_core"]
+	path = indigo/bond_core
+	url = https://aur.archlinux.org/ros-indigo-bond-core.git
 [submodule "indigo/bondcpp"]
 	path = indigo/bondcpp
 	url = https://aur.archlinux.org/ros-indigo-bondcpp.git
-[submodule "indigo/rosauth"]
-	path = indigo/rosauth
-	url = https://aur.archlinux.org/ros-indigo-rosauth.git
-[submodule "indigo/rqt_moveit"]
-	path = indigo/rqt_moveit
-	url = https://aur.archlinux.org/ros-indigo-rqt-moveit.git
-[submodule "indigo/shape_msgs"]
-	path = indigo/shape_msgs
-	url = https://aur.archlinux.org/ros-indigo-shape-msgs.git
-[submodule "indigo/joystick_drivers"]
-	path = indigo/joystick_drivers
-	url = https://aur.archlinux.org/ros-indigo-joystick-drivers.git
-[submodule "indigo/rqt_runtime_monitor"]
-	path = indigo/rqt_runtime_monitor
-	url = https://aur.archlinux.org/ros-indigo-rqt-runtime-monitor.git
-[submodule "indigo/message_generation"]
-	path = indigo/message_generation
-	url = https://aur.archlinux.org/ros-indigo-message-generation.git
-[submodule "indigo/image_rotate"]
-	path = indigo/image_rotate
-	url = https://aur.archlinux.org/ros-indigo-image-rotate.git
-[submodule "indigo/moveit_ros_planning"]
-	path = indigo/moveit_ros_planning
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-planning.git
-[submodule "indigo/moveit_ros_perception"]
-	path = indigo/moveit_ros_perception
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-perception.git
-[submodule "indigo/urdf_tutorial"]
-	path = indigo/urdf_tutorial
-	url = https://aur.archlinux.org/ros-indigo-urdf-tutorial.git
-[submodule "indigo/rviz_fixed_view_controller"]
-	path = indigo/rviz_fixed_view_controller
-	url = https://aur.archlinux.org/ros-indigo-rviz-fixed-view-controller.git
-[submodule "indigo/tf2_msgs"]
-	path = indigo/tf2_msgs
-	url = https://aur.archlinux.org/ros-indigo-tf2-msgs.git
-[submodule "indigo/gazebo_ros"]
-	path = indigo/gazebo_ros
-	url = https://aur.archlinux.org/ros-indigo-gazebo-ros.git
-[submodule "indigo/rqt_service_caller"]
-	path = indigo/rqt_service_caller
-	url = https://aur.archlinux.org/ros-indigo-rqt-service-caller.git
-[submodule "indigo/tf2"]
-	path = indigo/tf2
-	url = https://aur.archlinux.org/ros-indigo-tf2.git
-[submodule "indigo/rqt_gui_cpp"]
-	path = indigo/rqt_gui_cpp
-	url = https://aur.archlinux.org/ros-indigo-rqt-gui-cpp.git
-[submodule "indigo/rqt_gui_py"]
-	path = indigo/rqt_gui_py
-	url = https://aur.archlinux.org/ros-indigo-rqt-gui-py.git
-[submodule "indigo/rosbag_migration_rule"]
-	path = indigo/rosbag_migration_rule
-	url = https://aur.archlinux.org/ros-indigo-rosbag-migration-rule.git
-[submodule "indigo/turtlesim"]
-	path = indigo/turtlesim
-	url = https://aur.archlinux.org/ros-indigo-turtlesim.git
-[submodule "indigo/message_filters"]
-	path = indigo/message_filters
-	url = https://aur.archlinux.org/ros-indigo-message-filters.git
-[submodule "indigo/map_msgs"]
-	path = indigo/map_msgs
-	url = https://aur.archlinux.org/ros-indigo-map-msgs.git
-[submodule "indigo/rqt_action"]
-	path = indigo/rqt_action
-	url = https://aur.archlinux.org/ros-indigo-rqt-action.git
-[submodule "indigo/common_tutorials"]
-	path = indigo/common_tutorials
-	url = https://aur.archlinux.org/ros-indigo-common-tutorials.git
-[submodule "indigo/rqt_srv"]
-	path = indigo/rqt_srv
-	url = https://aur.archlinux.org/ros-indigo-rqt-srv.git
-[submodule "indigo/warehouse_ros"]
-	path = indigo/warehouse_ros
-	url = https://aur.archlinux.org/ros-indigo-warehouse-ros.git
-[submodule "indigo/tf2_sensor_msgs"]
-	path = indigo/tf2_sensor_msgs
-	url = https://aur.archlinux.org/ros-indigo-tf2-sensor-msgs.git
-[submodule "indigo/image_transport"]
-	path = indigo/image_transport
-	url = https://aur.archlinux.org/ros-indigo-image-transport.git
-[submodule "indigo/rqt"]
-	path = indigo/rqt
-	url = https://aur.archlinux.org/ros-indigo-rqt.git
-[submodule "indigo/qt_gui_py_common"]
-	path = indigo/qt_gui_py_common
-	url = https://aur.archlinux.org/ros-indigo-qt-gui-py-common.git
-[submodule "indigo/rosnode"]
-	path = indigo/rosnode
-	url = https://aur.archlinux.org/ros-indigo-rosnode.git
-[submodule "indigo/rviz_animated_view_controller"]
-	path = indigo/rviz_animated_view_controller
-	url = https://aur.archlinux.org/ros-indigo-rviz-animated-view-controller.git
-[submodule "indigo/pcl_ros"]
-	path = indigo/pcl_ros
-	url = https://aur.archlinux.org/ros-indigo-pcl-ros.git
-[submodule "indigo/tf2_py"]
-	path = indigo/tf2_py
-	url = https://aur.archlinux.org/ros-indigo-tf2-py.git
-[submodule "indigo/rosconsole_bridge"]
-	path = indigo/rosconsole_bridge
-	url = https://aur.archlinux.org/ros-indigo-rosconsole-bridge.git
-[submodule "indigo/pcl_conversions"]
-	path = indigo/pcl_conversions
-	url = https://aur.archlinux.org/ros-indigo-pcl-conversions.git
-[submodule "indigo/roscpp_core"]
-	path = indigo/roscpp_core
-	url = https://aur.archlinux.org/ros-indigo-roscpp-core.git
-[submodule "indigo/qt_dotgraph"]
-	path = indigo/qt_dotgraph
-	url = https://aur.archlinux.org/ros-indigo-qt-dotgraph.git
-[submodule "indigo/view_controller_msgs"]
-	path = indigo/view_controller_msgs
-	url = https://aur.archlinux.org/ros-indigo-view-controller-msgs.git
-[submodule "indigo/usb_cam"]
-	path = indigo/usb_cam
-	url = https://aur.archlinux.org/ros-indigo-usb-cam.git
-[submodule "indigo/diagnostic_analysis"]
-	path = indigo/diagnostic_analysis
-	url = https://aur.archlinux.org/ros-indigo-diagnostic-analysis.git
-[submodule "indigo/moveit_ros_benchmarks_gui"]
-	path = indigo/moveit_ros_benchmarks_gui
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-benchmarks-gui.git
-[submodule "indigo/rosservice"]
-	path = indigo/rosservice
-	url = https://aur.archlinux.org/ros-indigo-rosservice.git
-[submodule "indigo/cv_bridge"]
-	path = indigo/cv_bridge
-	url = https://aur.archlinux.org/ros-indigo-cv-bridge.git
-[submodule "indigo/roslz4"]
-	path = indigo/roslz4
-	url = https://aur.archlinux.org/ros-indigo-roslz4.git
 [submodule "indigo/bondpy"]
 	path = indigo/bondpy
 	url = https://aur.archlinux.org/ros-indigo-bondpy.git
-[submodule "indigo/pointcloud_to_laserscan"]
-	path = indigo/pointcloud_to_laserscan
-	url = https://aur.archlinux.org/ros-indigo-pointcloud-to-laserscan.git
-[submodule "indigo/perception"]
-	path = indigo/perception
-	url = https://aur.archlinux.org/ros-indigo-perception.git
-[submodule "indigo/python_qt_binding"]
-	path = indigo/python_qt_binding
-	url = https://aur.archlinux.org/ros-indigo-python-qt-binding.git
-[submodule "indigo/rqt_console"]
-	path = indigo/rqt_console
-	url = https://aur.archlinux.org/ros-indigo-rqt-console.git
-[submodule "indigo/turtle_tf2"]
-	path = indigo/turtle_tf2
-	url = https://aur.archlinux.org/ros-indigo-turtle-tf2.git
-[submodule "indigo/genpy"]
-	path = indigo/genpy
-	url = https://aur.archlinux.org/ros-indigo-genpy.git
-[submodule "indigo/laser_geometry"]
-	path = indigo/laser_geometry
-	url = https://aur.archlinux.org/ros-indigo-laser-geometry.git
-[submodule "indigo/turtle_tf"]
-	path = indigo/turtle_tf
-	url = https://aur.archlinux.org/ros-indigo-turtle-tf.git
-[submodule "indigo/diagnostic_msgs"]
-	path = indigo/diagnostic_msgs
-	url = https://aur.archlinux.org/ros-indigo-diagnostic-msgs.git
-[submodule "indigo/laser_assembler"]
-	path = indigo/laser_assembler
-	url = https://aur.archlinux.org/ros-indigo-laser-assembler.git
-[submodule "indigo/rviz_python_tutorial"]
-	path = indigo/rviz_python_tutorial
-	url = https://aur.archlinux.org/ros-indigo-rviz-python-tutorial.git
+[submodule "indigo/camera1394"]
+	path = indigo/camera1394
+	url = https://aur.archlinux.org/ros-indigo-camera1394.git
+[submodule "indigo/camera_calibration"]
+	path = indigo/camera_calibration
+	url = https://aur.archlinux.org/ros-indigo-camera-calibration.git
 [submodule "indigo/camera_calibration_parsers"]
 	path = indigo/camera_calibration_parsers
 	url = https://aur.archlinux.org/ros-indigo-camera-calibration-parsers.git
-[submodule "indigo/rqt_logger_level"]
-	path = indigo/rqt_logger_level
-	url = https://aur.archlinux.org/ros-indigo-rqt-logger-level.git
-[submodule "indigo/rviz_plugin_tutorials"]
-	path = indigo/rviz_plugin_tutorials
-	url = https://aur.archlinux.org/ros-indigo-rviz-plugin-tutorials.git
-[submodule "indigo/cpp_common"]
-	path = indigo/cpp_common
-	url = https://aur.archlinux.org/ros-indigo-cpp-common.git
-[submodule "indigo/collada_parser"]
-	path = indigo/collada_parser
-	url = https://aur.archlinux.org/ros-indigo-collada-parser.git
-[submodule "indigo/moveit_ros_warehouse"]
-	path = indigo/moveit_ros_warehouse
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-warehouse.git
-[submodule "indigo/gencpp"]
-	path = indigo/gencpp
-	url = https://aur.archlinux.org/ros-indigo-gencpp.git
-[submodule "indigo/media_export"]
-	path = indigo/media_export
-	url = https://aur.archlinux.org/ros-indigo-media-export.git
-[submodule "indigo/urdfdom"]
-	path = indigo/urdfdom
-	url = https://aur.archlinux.org/ros-indigo-urdfdom.git
-[submodule "indigo/moveit_ros_manipulation"]
-	path = indigo/moveit_ros_manipulation
-	url = https://aur.archlinux.org/ros-indigo-moveit-ros-manipulation.git
-[submodule "indigo/laser_pipeline"]
-	path = indigo/laser_pipeline
-	url = https://aur.archlinux.org/ros-indigo-laser-pipeline.git
-[submodule "indigo/roscreate"]
-	path = indigo/roscreate
-	url = https://aur.archlinux.org/ros-indigo-roscreate.git
-[submodule "indigo/rostopic"]
-	path = indigo/rostopic
-	url = https://aur.archlinux.org/ros-indigo-rostopic.git
-[submodule "indigo/geometry_msgs"]
-	path = indigo/geometry_msgs
-	url = https://aur.archlinux.org/ros-indigo-geometry-msgs.git
-[submodule "indigo/rosbash"]
-	path = indigo/rosbash
-	url = https://aur.archlinux.org/ros-indigo-rosbash.git
-[submodule "indigo/libccd"]
-	path = indigo/libccd
-	url = https://aur.archlinux.org/ros-indigo-libccd.git
-[submodule "jade/diagnostic_aggregator"]
-	path = jade/diagnostic_aggregator
-	url = https://aur.archlinux.org/ros-jade-diagnostic-aggregator.git
-[submodule "jade/rqt_robot_dashboard"]
-	path = jade/rqt_robot_dashboard
-	url = https://aur.archlinux.org/ros-jade-rqt-robot-dashboard.git
-[submodule "jade/image_geometry"]
-	path = jade/image_geometry
-	url = https://aur.archlinux.org/ros-jade-image-geometry.git
-[submodule "jade/bond"]
-	path = jade/bond
-	url = https://aur.archlinux.org/ros-jade-bond.git
-[submodule "jade/rqt_image_view"]
-	path = jade/rqt_image_view
-	url = https://aur.archlinux.org/ros-jade-rqt-image-view.git
-[submodule "jade/smach_ros"]
-	path = jade/smach_ros
-	url = https://aur.archlinux.org/ros-jade-smach-ros.git
-[submodule "jade/turtle_actionlib"]
-	path = jade/turtle_actionlib
-	url = https://aur.archlinux.org/ros-jade-turtle-actionlib.git
-[submodule "jade/interactive_marker_tutorials"]
-	path = jade/interactive_marker_tutorials
-	url = https://aur.archlinux.org/ros-jade-interactive-marker-tutorials.git
-[submodule "jade/rqt_common_plugins"]
-	path = jade/rqt_common_plugins
-	url = https://aur.archlinux.org/ros-jade-rqt-common-plugins.git
-[submodule "jade/roscpp"]
-	path = jade/roscpp
-	url = https://aur.archlinux.org/ros-jade-roscpp.git
-[submodule "jade/urdf_parser_plugin"]
-	path = jade/urdf_parser_plugin
-	url = https://aur.archlinux.org/ros-jade-urdf-parser-plugin.git
-[submodule "jade/desktop"]
-	path = jade/desktop
-	url = https://aur.archlinux.org/ros-jade-desktop.git
-[submodule "jade/rqt_py_common"]
-	path = jade/rqt_py_common
-	url = https://aur.archlinux.org/ros-jade-rqt-py-common.git
-[submodule "jade/cmake_modules"]
-	path = jade/cmake_modules
-	url = https://aur.archlinux.org/ros-jade-cmake-modules.git
-[submodule "jade/smach_msgs"]
-	path = jade/smach_msgs
-	url = https://aur.archlinux.org/ros-jade-smach-msgs.git
-[submodule "jade/rosunit"]
-	path = jade/rosunit
-	url = https://aur.archlinux.org/ros-jade-rosunit.git
-[submodule "jade/stage_ros"]
-	path = jade/stage_ros
-	url = https://aur.archlinux.org/ros-jade-stage-ros.git
-[submodule "jade/sensor_msgs"]
-	path = jade/sensor_msgs
-	url = https://aur.archlinux.org/ros-jade-sensor-msgs.git
-[submodule "jade/rqt_topic"]
-	path = jade/rqt_topic
-	url = https://aur.archlinux.org/ros-jade-rqt-topic.git
-[submodule "jade/compressed_depth_image_transport"]
-	path = jade/compressed_depth_image_transport
-	url = https://aur.archlinux.org/ros-jade-compressed-depth-image-transport.git
-[submodule "jade/roslint"]
-	path = jade/roslint
-	url = https://aur.archlinux.org/ros-jade-roslint.git
-[submodule "jade/rosbag_storage"]
-	path = jade/rosbag_storage
-	url = https://aur.archlinux.org/ros-jade-rosbag-storage.git
-[submodule "jade/dynamic_reconfigure"]
-	path = jade/dynamic_reconfigure
-	url = https://aur.archlinux.org/ros-jade-dynamic-reconfigure.git
-[submodule "jade/rqt_dep"]
-	path = jade/rqt_dep
-	url = https://aur.archlinux.org/ros-jade-rqt-dep.git
-[submodule "jade/rosout"]
-	path = jade/rosout
-	url = https://aur.archlinux.org/ros-jade-rosout.git
-[submodule "jade/rostime"]
-	path = jade/rostime
-	url = https://aur.archlinux.org/ros-jade-rostime.git
-[submodule "jade/trajectory_msgs"]
-	path = jade/trajectory_msgs
-	url = https://aur.archlinux.org/ros-jade-trajectory-msgs.git
-[submodule "jade/nodelet_tutorial_math"]
-	path = jade/nodelet_tutorial_math
-	url = https://aur.archlinux.org/ros-jade-nodelet-tutorial-math.git
-[submodule "jade/geometry"]
-	path = jade/geometry
-	url = https://aur.archlinux.org/ros-jade-geometry.git
-[submodule "jade/compressed_image_transport"]
-	path = jade/compressed_image_transport
-	url = https://aur.archlinux.org/ros-jade-compressed-image-transport.git
-[submodule "jade/driver_base"]
-	path = jade/driver_base
-	url = https://aur.archlinux.org/ros-jade-driver-base.git
-[submodule "jade/geometric_shapes"]
-	path = jade/geometric_shapes
-	url = https://aur.archlinux.org/ros-jade-geometric-shapes.git
-[submodule "jade/collada_urdf"]
-	path = jade/collada_urdf
-	url = https://aur.archlinux.org/ros-jade-collada-urdf.git
-[submodule "jade/nodelet_topic_tools"]
-	path = jade/nodelet_topic_tools
-	url = https://aur.archlinux.org/ros-jade-nodelet-topic-tools.git
-[submodule "jade/robot_model"]
-	path = jade/robot_model
-	url = https://aur.archlinux.org/ros-jade-robot-model.git
-[submodule "jade/actionlib_tutorials"]
-	path = jade/actionlib_tutorials
-	url = https://aur.archlinux.org/ros-jade-actionlib-tutorials.git
-[submodule "jade/pcl_msgs"]
-	path = jade/pcl_msgs
-	url = https://aur.archlinux.org/ros-jade-pcl-msgs.git
-[submodule "jade/stereo_image_proc"]
-	path = jade/stereo_image_proc
-	url = https://aur.archlinux.org/ros-jade-stereo-image-proc.git
-[submodule "jade/rqt_rviz"]
-	path = jade/rqt_rviz
-	url = https://aur.archlinux.org/ros-jade-rqt-rviz.git
-[submodule "jade/python_orocos_kdl"]
-	path = jade/python_orocos_kdl
-	url = https://aur.archlinux.org/ros-jade-python-orocos-kdl.git
-[submodule "jade/rosmake"]
-	path = jade/rosmake
-	url = https://aur.archlinux.org/ros-jade-rosmake.git
-[submodule "jade/octomap"]
-	path = jade/octomap
-	url = https://aur.archlinux.org/ros-jade-octomap.git
-[submodule "jade/rosmaster"]
-	path = jade/rosmaster
-	url = https://aur.archlinux.org/ros-jade-rosmaster.git
-[submodule "jade/rqt_shell"]
-	path = jade/rqt_shell
-	url = https://aur.archlinux.org/ros-jade-rqt-shell.git
-[submodule "jade/robot_state_publisher"]
-	path = jade/robot_state_publisher
-	url = https://aur.archlinux.org/ros-jade-robot-state-publisher.git
-[submodule "jade/visualization_marker_tutorials"]
-	path = jade/visualization_marker_tutorials
-	url = https://aur.archlinux.org/ros-jade-visualization-marker-tutorials.git
-[submodule "jade/std_msgs"]
-	path = jade/std_msgs
-	url = https://aur.archlinux.org/ros-jade-std-msgs.git
-[submodule "jade/genlisp"]
-	path = jade/genlisp
-	url = https://aur.archlinux.org/ros-jade-genlisp.git
-[submodule "jade/rqt_robot_steering"]
-	path = jade/rqt_robot_steering
-	url = https://aur.archlinux.org/ros-jade-rqt-robot-steering.git
-[submodule "jade/rosbuild"]
-	path = jade/rosbuild
-	url = https://aur.archlinux.org/ros-jade-rosbuild.git
-[submodule "jade/smach"]
-	path = jade/smach
-	url = https://aur.archlinux.org/ros-jade-smach.git
-[submodule "jade/image_transport_plugins"]
-	path = jade/image_transport_plugins
-	url = https://aur.archlinux.org/ros-jade-image-transport-plugins.git
-[submodule "jade/control_msgs"]
-	path = jade/control_msgs
-	url = https://aur.archlinux.org/ros-jade-control-msgs.git
-[submodule "jade/camera_info_manager"]
-	path = jade/camera_info_manager
-	url = https://aur.archlinux.org/ros-jade-camera-info-manager.git
-[submodule "jade/eigen_stl_containers"]
-	path = jade/eigen_stl_containers
-	url = https://aur.archlinux.org/ros-jade-eigen-stl-containers.git
-[submodule "jade/image_common"]
-	path = jade/image_common
-	url = https://aur.archlinux.org/ros-jade-image-common.git
-[submodule "jade/class_loader"]
-	path = jade/class_loader
-	url = https://aur.archlinux.org/ros-jade-class-loader.git
-[submodule "jade/rqt_tf_tree"]
-	path = jade/rqt_tf_tree
-	url = https://aur.archlinux.org/ros-jade-rqt-tf-tree.git
-[submodule "jade/gazebo_msgs"]
-	path = jade/gazebo_msgs
-	url = https://aur.archlinux.org/ros-jade-gazebo-msgs.git
-[submodule "jade/rqt_nav_view"]
-	path = jade/rqt_nav_view
-	url = https://aur.archlinux.org/ros-jade-rqt-nav-view.git
-[submodule "jade/diagnostic_updater"]
-	path = jade/diagnostic_updater
-	url = https://aur.archlinux.org/ros-jade-diagnostic-updater.git
-[submodule "jade/stereo_msgs"]
-	path = jade/stereo_msgs
-	url = https://aur.archlinux.org/ros-jade-stereo-msgs.git
-[submodule "jade/nodelet_core"]
-	path = jade/nodelet_core
-	url = https://aur.archlinux.org/ros-jade-nodelet-core.git
-[submodule "jade/pluginlib"]
-	path = jade/pluginlib
-	url = https://aur.archlinux.org/ros-jade-pluginlib.git
-[submodule "jade/image_pipeline"]
-	path = jade/image_pipeline
-	url = https://aur.archlinux.org/ros-jade-image-pipeline.git
-[submodule "jade/rospack"]
-	path = jade/rospack
-	url = https://aur.archlinux.org/ros-jade-rospack.git
-[submodule "jade/qt_gui_cpp"]
-	path = jade/qt_gui_cpp
-	url = https://aur.archlinux.org/ros-jade-qt-gui-cpp.git
-[submodule "jade/angles"]
-	path = jade/angles
-	url = https://aur.archlinux.org/ros-jade-angles.git
-[submodule "jade/rviz"]
-	path = jade/rviz
-	url = https://aur.archlinux.org/ros-jade-rviz.git
-[submodule "jade/mk"]
-	path = jade/mk
-	url = https://aur.archlinux.org/ros-jade-mk.git
-[submodule "jade/roswtf"]
-	path = jade/roswtf
-	url = https://aur.archlinux.org/ros-jade-roswtf.git
-[submodule "jade/roslang"]
-	path = jade/roslang
-	url = https://aur.archlinux.org/ros-jade-roslang.git
-[submodule "jade/resource_retriever"]
-	path = jade/resource_retriever
-	url = https://aur.archlinux.org/ros-jade-resource-retriever.git
-[submodule "jade/tf_conversions"]
-	path = jade/tf_conversions
-	url = https://aur.archlinux.org/ros-jade-tf-conversions.git
-[submodule "jade/tf2_ros"]
-	path = jade/tf2_ros
-	url = https://aur.archlinux.org/ros-jade-tf2-ros.git
-[submodule "jade/ros_tutorials"]
-	path = jade/ros_tutorials
-	url = https://aur.archlinux.org/ros-jade-ros-tutorials.git
-[submodule "jade/rqt_plot"]
-	path = jade/rqt_plot
-	url = https://aur.archlinux.org/ros-jade-rqt-plot.git
-[submodule "jade/simulators"]
-	path = jade/simulators
-	url = https://aur.archlinux.org/ros-jade-simulators.git
-[submodule "jade/ros_base"]
-	path = jade/ros_base
-	url = https://aur.archlinux.org/ros-jade-ros-base.git
-[submodule "jade/rqt_robot_monitor"]
-	path = jade/rqt_robot_monitor
-	url = https://aur.archlinux.org/ros-jade-rqt-robot-monitor.git
-[submodule "jade/pluginlib_tutorials"]
-	path = jade/pluginlib_tutorials
-	url = https://aur.archlinux.org/ros-jade-pluginlib-tutorials.git
-[submodule "jade/roslib"]
-	path = jade/roslib
-	url = https://aur.archlinux.org/ros-jade-roslib.git
-[submodule "jade/rosgraph"]
-	path = jade/rosgraph
-	url = https://aur.archlinux.org/ros-jade-rosgraph.git
-[submodule "jade/robot"]
-	path = jade/robot
-	url = https://aur.archlinux.org/ros-jade-robot.git
-[submodule "jade/rosboost_cfg"]
-	path = jade/rosboost_cfg
-	url = https://aur.archlinux.org/ros-jade-rosboost-cfg.git
-[submodule "jade/actionlib_msgs"]
-	path = jade/actionlib_msgs
-	url = https://aur.archlinux.org/ros-jade-actionlib-msgs.git
-[submodule "jade/rospy_tutorials"]
-	path = jade/rospy_tutorials
-	url = https://aur.archlinux.org/ros-jade-rospy-tutorials.git
-[submodule "jade/self_test"]
-	path = jade/self_test
-	url = https://aur.archlinux.org/ros-jade-self-test.git
-[submodule "jade/image_proc"]
-	path = jade/image_proc
-	url = https://aur.archlinux.org/ros-jade-image-proc.git
-[submodule "jade/ros_comm"]
-	path = jade/ros_comm
-	url = https://aur.archlinux.org/ros-jade-ros-comm.git
-[submodule "jade/vision_opencv"]
-	path = jade/vision_opencv
-	url = https://aur.archlinux.org/ros-jade-vision-opencv.git
-[submodule "jade/roscpp_tutorials"]
-	path = jade/roscpp_tutorials
-	url = https://aur.archlinux.org/ros-jade-roscpp-tutorials.git
-[submodule "jade/eigen_conversions"]
-	path = jade/eigen_conversions
-	url = https://aur.archlinux.org/ros-jade-eigen-conversions.git
-[submodule "jade/nodelet"]
-	path = jade/nodelet
-	url = https://aur.archlinux.org/ros-jade-nodelet.git
-[submodule "jade/pr2_description"]
-	path = jade/pr2_description
-	url = https://aur.archlinux.org/ros-jade-pr2-description.git
-[submodule "jade/orocos_kdl"]
-	path = jade/orocos_kdl
-	url = https://aur.archlinux.org/ros-jade-orocos-kdl.git
-[submodule "jade/std_srvs"]
-	path = jade/std_srvs
-	url = https://aur.archlinux.org/ros-jade-std-srvs.git
-[submodule "jade/xacro"]
-	path = jade/xacro
-	url = https://aur.archlinux.org/ros-jade-xacro.git
-[submodule "jade/qt_gui"]
-	path = jade/qt_gui
-	url = https://aur.archlinux.org/ros-jade-qt-gui.git
-[submodule "jade/geneus"]
-	path = jade/geneus
-	url = https://aur.archlinux.org/ros-jade-geneus.git
-[submodule "jade/rqt_msg"]
-	path = jade/rqt_msg
-	url = https://aur.archlinux.org/ros-jade-rqt-msg.git
-[submodule "jade/xmlrpcpp"]
-	path = jade/xmlrpcpp
-	url = https://aur.archlinux.org/ros-jade-xmlrpcpp.git
-[submodule "jade/urdf"]
-	path = jade/urdf
-	url = https://aur.archlinux.org/ros-jade-urdf.git
-[submodule "jade/stage"]
-	path = jade/stage
-	url = https://aur.archlinux.org/ros-jade-stage.git
-[submodule "jade/rosclean"]
-	path = jade/rosclean
-	url = https://aur.archlinux.org/ros-jade-rosclean.git
-[submodule "jade/roscpp_serialization"]
-	path = jade/roscpp_serialization
-	url = https://aur.archlinux.org/ros-jade-roscpp-serialization.git
-[submodule "jade/ros_core"]
-	path = jade/ros_core
-	url = https://aur.archlinux.org/ros-jade-ros-core.git
-[submodule "jade/rqt_gui"]
-	path = jade/rqt_gui
-	url = https://aur.archlinux.org/ros-jade-rqt-gui.git
-[submodule "jade/rqt_pose_view"]
-	path = jade/rqt_pose_view
-	url = https://aur.archlinux.org/ros-jade-rqt-pose-view.git
-[submodule "jade/diagnostics"]
-	path = jade/diagnostics
-	url = https://aur.archlinux.org/ros-jade-diagnostics.git
-[submodule "jade/diagnostic_common_diagnostics"]
-	path = jade/diagnostic_common_diagnostics
-	url = https://aur.archlinux.org/ros-jade-diagnostic-common-diagnostics.git
-[submodule "jade/roslisp"]
-	path = jade/roslisp
-	url = https://aur.archlinux.org/ros-jade-roslisp.git
-[submodule "jade/rosgraph_msgs"]
-	path = jade/rosgraph_msgs
-	url = https://aur.archlinux.org/ros-jade-rosgraph-msgs.git
-[submodule "jade/filters"]
-	path = jade/filters
-	url = https://aur.archlinux.org/ros-jade-filters.git
-[submodule "jade/theora_image_transport"]
-	path = jade/theora_image_transport
-	url = https://aur.archlinux.org/ros-jade-theora-image-transport.git
-[submodule "jade/rosbag"]
-	path = jade/rosbag
-	url = https://aur.archlinux.org/ros-jade-rosbag.git
-[submodule "jade/joint_state_publisher"]
-	path = jade/joint_state_publisher
-	url = https://aur.archlinux.org/ros-jade-joint-state-publisher.git
-[submodule "jade/visualization_msgs"]
-	path = jade/visualization_msgs
-	url = https://aur.archlinux.org/ros-jade-visualization-msgs.git
-[submodule "jade/perception_pcl"]
-	path = jade/perception_pcl
-	url = https://aur.archlinux.org/ros-jade-perception-pcl.git
-[submodule "jade/rqt_top"]
-	path = jade/rqt_top
-	url = https://aur.archlinux.org/ros-jade-rqt-top.git
-[submodule "jade/message_runtime"]
-	path = jade/message_runtime
-	url = https://aur.archlinux.org/ros-jade-message-runtime.git
-[submodule "jade/librviz_tutorial"]
-	path = jade/librviz_tutorial
-	url = https://aur.archlinux.org/ros-jade-librviz-tutorial.git
-[submodule "jade/rqt_reconfigure"]
-	path = jade/rqt_reconfigure
-	url = https://aur.archlinux.org/ros-jade-rqt-reconfigure.git
-[submodule "jade/gazebo_ros_pkgs"]
-	path = jade/gazebo_ros_pkgs
-	url = https://aur.archlinux.org/ros-jade-gazebo-ros-pkgs.git
-[submodule "jade/rqt_graph"]
-	path = jade/rqt_graph
-	url = https://aur.archlinux.org/ros-jade-rqt-graph.git
-[submodule "jade/tf2_geometry_msgs"]
-	path = jade/tf2_geometry_msgs
-	url = https://aur.archlinux.org/ros-jade-tf2-geometry-msgs.git
-[submodule "jade/desktop_full"]
-	path = jade/desktop_full
-	url = https://aur.archlinux.org/ros-jade-desktop-full.git
-[submodule "jade/rqt_bag"]
-	path = jade/rqt_bag
-	url = https://aur.archlinux.org/ros-jade-rqt-bag.git
-[submodule "jade/smclib"]
-	path = jade/smclib
-	url = https://aur.archlinux.org/ros-jade-smclib.git
-[submodule "jade/rosmsg"]
-	path = jade/rosmsg
-	url = https://aur.archlinux.org/ros-jade-rosmsg.git
-[submodule "jade/ros"]
-	path = jade/ros
-	url = https://aur.archlinux.org/ros-jade-ros.git
-[submodule "jade/rosconsole"]
-	path = jade/rosconsole
-	url = https://aur.archlinux.org/ros-jade-rosconsole.git
-[submodule "jade/rqt_publisher"]
-	path = jade/rqt_publisher
-	url = https://aur.archlinux.org/ros-jade-rqt-publisher.git
-[submodule "jade/rqt_launch"]
-	path = jade/rqt_launch
-	url = https://aur.archlinux.org/ros-jade-rqt-launch.git
-[submodule "jade/topic_tools"]
-	path = jade/topic_tools
-	url = https://aur.archlinux.org/ros-jade-topic-tools.git
-[submodule "jade/geometry_tutorials"]
-	path = jade/geometry_tutorials
-	url = https://aur.archlinux.org/ros-jade-geometry-tutorials.git
-[submodule "jade/rqt_py_console"]
-	path = jade/rqt_py_console
-	url = https://aur.archlinux.org/ros-jade-rqt-py-console.git
-[submodule "jade/polled_camera"]
-	path = jade/polled_camera
-	url = https://aur.archlinux.org/ros-jade-polled-camera.git
-[submodule "jade/genmsg"]
-	path = jade/genmsg
-	url = https://aur.archlinux.org/ros-jade-genmsg.git
-[submodule "jade/interactive_markers"]
-	path = jade/interactive_markers
-	url = https://aur.archlinux.org/ros-jade-interactive-markers.git
-[submodule "jade/ivcon"]
-	path = jade/ivcon
-	url = https://aur.archlinux.org/ros-jade-ivcon.git
-[submodule "jade/gazebo_plugins"]
-	path = jade/gazebo_plugins
-	url = https://aur.archlinux.org/ros-jade-gazebo-plugins.git
-[submodule "jade/laser_filters"]
-	path = jade/laser_filters
-	url = https://aur.archlinux.org/ros-jade-laser-filters.git
-[submodule "jade/image_view"]
-	path = jade/image_view
-	url = https://aur.archlinux.org/ros-jade-image-view.git
-[submodule "jade/viz"]
-	path = jade/viz
-	url = https://aur.archlinux.org/ros-jade-viz.git
-[submodule "jade/rqt_web"]
-	path = jade/rqt_web
-	url = https://aur.archlinux.org/ros-jade-rqt-web.git
-[submodule "jade/bond_core"]
-	path = jade/bond_core
-	url = https://aur.archlinux.org/ros-jade-bond-core.git
-[submodule "jade/random_numbers"]
-	path = jade/random_numbers
-	url = https://aur.archlinux.org/ros-jade-random-numbers.git
-[submodule "jade/rostest"]
-	path = jade/rostest
-	url = https://aur.archlinux.org/ros-jade-rostest.git
-[submodule "jade/kdl_parser"]
-	path = jade/kdl_parser
-	url = https://aur.archlinux.org/ros-jade-kdl-parser.git
-[submodule "jade/rosparam"]
-	path = jade/rosparam
-	url = https://aur.archlinux.org/ros-jade-rosparam.git
-[submodule "jade/common_msgs"]
-	path = jade/common_msgs
-	url = https://aur.archlinux.org/ros-jade-common-msgs.git
-[submodule "jade/roscpp_traits"]
-	path = jade/roscpp_traits
-	url = https://aur.archlinux.org/ros-jade-roscpp-traits.git
-[submodule "jade/roslaunch"]
-	path = jade/roslaunch
-	url = https://aur.archlinux.org/ros-jade-roslaunch.git
-[submodule "jade/depth_image_proc"]
-	path = jade/depth_image_proc
-	url = https://aur.archlinux.org/ros-jade-depth-image-proc.git
-[submodule "jade/convex_decomposition"]
-	path = jade/convex_decomposition
-	url = https://aur.archlinux.org/ros-jade-convex-decomposition.git
-[submodule "jade/rqt_robot_plugins"]
-	path = jade/rqt_robot_plugins
-	url = https://aur.archlinux.org/ros-jade-rqt-robot-plugins.git
-[submodule "jade/rqt_bag_plugins"]
-	path = jade/rqt_bag_plugins
-	url = https://aur.archlinux.org/ros-jade-rqt-bag-plugins.git
-[submodule "jade/tf"]
-	path = jade/tf
-	url = https://aur.archlinux.org/ros-jade-tf.git
-[submodule "jade/rospy"]
-	path = jade/rospy
-	url = https://aur.archlinux.org/ros-jade-rospy.git
-[submodule "jade/kdl_conversions"]
-	path = jade/kdl_conversions
-	url = https://aur.archlinux.org/ros-jade-kdl-conversions.git
-[submodule "jade/actionlib"]
-	path = jade/actionlib
-	url = https://aur.archlinux.org/ros-jade-actionlib.git
-[submodule "jade/nav_msgs"]
-	path = jade/nav_msgs
-	url = https://aur.archlinux.org/ros-jade-nav-msgs.git
-[submodule "jade/camera_calibration"]
-	path = jade/camera_calibration
-	url = https://aur.archlinux.org/ros-jade-camera-calibration.git
-[submodule "jade/visualization_tutorials"]
-	path = jade/visualization_tutorials
-	url = https://aur.archlinux.org/ros-jade-visualization-tutorials.git
-[submodule "jade/executive_smach"]
-	path = jade/executive_smach
-	url = https://aur.archlinux.org/ros-jade-executive-smach.git
-[submodule "jade/bondcpp"]
-	path = jade/bondcpp
-	url = https://aur.archlinux.org/ros-jade-bondcpp.git
-[submodule "jade/rqt_moveit"]
-	path = jade/rqt_moveit
-	url = https://aur.archlinux.org/ros-jade-rqt-moveit.git
-[submodule "jade/shape_msgs"]
-	path = jade/shape_msgs
-	url = https://aur.archlinux.org/ros-jade-shape-msgs.git
-[submodule "jade/rqt_runtime_monitor"]
-	path = jade/rqt_runtime_monitor
-	url = https://aur.archlinux.org/ros-jade-rqt-runtime-monitor.git
-[submodule "jade/message_generation"]
-	path = jade/message_generation
-	url = https://aur.archlinux.org/ros-jade-message-generation.git
-[submodule "jade/image_rotate"]
-	path = jade/image_rotate
-	url = https://aur.archlinux.org/ros-jade-image-rotate.git
-[submodule "jade/urdf_tutorial"]
-	path = jade/urdf_tutorial
-	url = https://aur.archlinux.org/ros-jade-urdf-tutorial.git
-[submodule "jade/tf2_msgs"]
-	path = jade/tf2_msgs
-	url = https://aur.archlinux.org/ros-jade-tf2-msgs.git
-[submodule "jade/gazebo_ros"]
-	path = jade/gazebo_ros
-	url = https://aur.archlinux.org/ros-jade-gazebo-ros.git
-[submodule "jade/rqt_service_caller"]
-	path = jade/rqt_service_caller
-	url = https://aur.archlinux.org/ros-jade-rqt-service-caller.git
-[submodule "jade/tf2"]
-	path = jade/tf2
-	url = https://aur.archlinux.org/ros-jade-tf2.git
-[submodule "jade/rqt_gui_cpp"]
-	path = jade/rqt_gui_cpp
-	url = https://aur.archlinux.org/ros-jade-rqt-gui-cpp.git
-[submodule "jade/rqt_gui_py"]
-	path = jade/rqt_gui_py
-	url = https://aur.archlinux.org/ros-jade-rqt-gui-py.git
-[submodule "jade/rosbag_migration_rule"]
-	path = jade/rosbag_migration_rule
-	url = https://aur.archlinux.org/ros-jade-rosbag-migration-rule.git
-[submodule "jade/turtlesim"]
-	path = jade/turtlesim
-	url = https://aur.archlinux.org/ros-jade-turtlesim.git
-[submodule "jade/message_filters"]
-	path = jade/message_filters
-	url = https://aur.archlinux.org/ros-jade-message-filters.git
-[submodule "jade/map_msgs"]
-	path = jade/map_msgs
-	url = https://aur.archlinux.org/ros-jade-map-msgs.git
-[submodule "jade/rqt_action"]
-	path = jade/rqt_action
-	url = https://aur.archlinux.org/ros-jade-rqt-action.git
-[submodule "jade/common_tutorials"]
-	path = jade/common_tutorials
-	url = https://aur.archlinux.org/ros-jade-common-tutorials.git
-[submodule "jade/rqt_srv"]
-	path = jade/rqt_srv
-	url = https://aur.archlinux.org/ros-jade-rqt-srv.git
-[submodule "jade/tf2_sensor_msgs"]
-	path = jade/tf2_sensor_msgs
-	url = https://aur.archlinux.org/ros-jade-tf2-sensor-msgs.git
-[submodule "jade/image_transport"]
-	path = jade/image_transport
-	url = https://aur.archlinux.org/ros-jade-image-transport.git
-[submodule "jade/qt_gui_py_common"]
-	path = jade/qt_gui_py_common
-	url = https://aur.archlinux.org/ros-jade-qt-gui-py-common.git
-[submodule "jade/rosnode"]
-	path = jade/rosnode
-	url = https://aur.archlinux.org/ros-jade-rosnode.git
-[submodule "jade/pcl_ros"]
-	path = jade/pcl_ros
-	url = https://aur.archlinux.org/ros-jade-pcl-ros.git
-[submodule "jade/tf2_py"]
-	path = jade/tf2_py
-	url = https://aur.archlinux.org/ros-jade-tf2-py.git
-[submodule "jade/rosconsole_bridge"]
-	path = jade/rosconsole_bridge
-	url = https://aur.archlinux.org/ros-jade-rosconsole-bridge.git
-[submodule "jade/pcl_conversions"]
-	path = jade/pcl_conversions
-	url = https://aur.archlinux.org/ros-jade-pcl-conversions.git
-[submodule "jade/roscpp_core"]
-	path = jade/roscpp_core
-	url = https://aur.archlinux.org/ros-jade-roscpp-core.git
-[submodule "jade/qt_dotgraph"]
-	path = jade/qt_dotgraph
-	url = https://aur.archlinux.org/ros-jade-qt-dotgraph.git
-[submodule "jade/diagnostic_analysis"]
-	path = jade/diagnostic_analysis
-	url = https://aur.archlinux.org/ros-jade-diagnostic-analysis.git
-[submodule "jade/rosservice"]
-	path = jade/rosservice
-	url = https://aur.archlinux.org/ros-jade-rosservice.git
-[submodule "jade/cv_bridge"]
-	path = jade/cv_bridge
-	url = https://aur.archlinux.org/ros-jade-cv-bridge.git
-[submodule "jade/roslz4"]
-	path = jade/roslz4
-	url = https://aur.archlinux.org/ros-jade-roslz4.git
-[submodule "jade/bondpy"]
-	path = jade/bondpy
-	url = https://aur.archlinux.org/ros-jade-bondpy.git
-[submodule "jade/pointcloud_to_laserscan"]
-	path = jade/pointcloud_to_laserscan
-	url = https://aur.archlinux.org/ros-jade-pointcloud-to-laserscan.git
-[submodule "jade/perception"]
-	path = jade/perception
-	url = https://aur.archlinux.org/ros-jade-perception.git
-[submodule "jade/python_qt_binding"]
-	path = jade/python_qt_binding
-	url = https://aur.archlinux.org/ros-jade-python-qt-binding.git
-[submodule "jade/rqt_console"]
-	path = jade/rqt_console
-	url = https://aur.archlinux.org/ros-jade-rqt-console.git
-[submodule "jade/turtle_tf2"]
-	path = jade/turtle_tf2
-	url = https://aur.archlinux.org/ros-jade-turtle-tf2.git
-[submodule "jade/genpy"]
-	path = jade/genpy
-	url = https://aur.archlinux.org/ros-jade-genpy.git
-[submodule "jade/laser_geometry"]
-	path = jade/laser_geometry
-	url = https://aur.archlinux.org/ros-jade-laser-geometry.git
-[submodule "jade/turtle_tf"]
-	path = jade/turtle_tf
-	url = https://aur.archlinux.org/ros-jade-turtle-tf.git
-[submodule "jade/diagnostic_msgs"]
-	path = jade/diagnostic_msgs
-	url = https://aur.archlinux.org/ros-jade-diagnostic-msgs.git
-[submodule "jade/laser_assembler"]
-	path = jade/laser_assembler
-	url = https://aur.archlinux.org/ros-jade-laser-assembler.git
-[submodule "jade/rviz_python_tutorial"]
-	path = jade/rviz_python_tutorial
-	url = https://aur.archlinux.org/ros-jade-rviz-python-tutorial.git
-[submodule "jade/camera_calibration_parsers"]
-	path = jade/camera_calibration_parsers
-	url = https://aur.archlinux.org/ros-jade-camera-calibration-parsers.git
-[submodule "jade/catkin"]
-	path = jade/catkin
-	url = https://aur.archlinux.org/ros-jade-catkin.git
-[submodule "jade/rqt_logger_level"]
-	path = jade/rqt_logger_level
-	url = https://aur.archlinux.org/ros-jade-rqt-logger-level.git
-[submodule "jade/rviz_plugin_tutorials"]
-	path = jade/rviz_plugin_tutorials
-	url = https://aur.archlinux.org/ros-jade-rviz-plugin-tutorials.git
-[submodule "jade/cpp_common"]
-	path = jade/cpp_common
-	url = https://aur.archlinux.org/ros-jade-cpp-common.git
-[submodule "jade/collada_parser"]
-	path = jade/collada_parser
-	url = https://aur.archlinux.org/ros-jade-collada-parser.git
-[submodule "jade/gencpp"]
-	path = jade/gencpp
-	url = https://aur.archlinux.org/ros-jade-gencpp.git
-[submodule "jade/media_export"]
-	path = jade/media_export
-	url = https://aur.archlinux.org/ros-jade-media-export.git
-[submodule "jade/laser_pipeline"]
-	path = jade/laser_pipeline
-	url = https://aur.archlinux.org/ros-jade-laser-pipeline.git
-[submodule "jade/roscreate"]
-	path = jade/roscreate
-	url = https://aur.archlinux.org/ros-jade-roscreate.git
-[submodule "jade/rostopic"]
-	path = jade/rostopic
-	url = https://aur.archlinux.org/ros-jade-rostopic.git
-[submodule "jade/geometry_msgs"]
-	path = jade/geometry_msgs
-	url = https://aur.archlinux.org/ros-jade-geometry-msgs.git
-[submodule "jade/rosbash"]
-	path = jade/rosbash
-	url = https://aur.archlinux.org/ros-jade-rosbash.git
-[submodule "indigo/realtime_tools"]
-	path = indigo/realtime_tools
-	url = https://aur.archlinux.org/ros-indigo-realtime-tools.git
-[submodule "indigo/control_toolbox"]
-	path = indigo/control_toolbox
-	url = https://aur.archlinux.org/ros-indigo-control-toolbox.git
-[submodule "indigo/hardware_interface"]
-	path = indigo/hardware_interface
-	url = https://aur.archlinux.org/ros-indigo-hardware-interface.git
-[submodule "indigo/controller_interface"]
-	path = indigo/controller_interface
-	url = https://aur.archlinux.org/ros-indigo-controller-interface.git
-[submodule "indigo/controller_manager_msgs"]
-	path = indigo/controller_manager_msgs
-	url = https://aur.archlinux.org/ros-indigo-controller-manager-msgs.git
-[submodule "indigo/controller_manager"]
-	path = indigo/controller_manager
-	url = https://aur.archlinux.org/ros-indigo-controller-manager.git
-[submodule "indigo/transmission_interface"]
-	path = indigo/transmission_interface
-	url = https://aur.archlinux.org/ros-indigo-transmission-interface.git
-[submodule "indigo/joint_limits_interface"]
-	path = indigo/joint_limits_interface
-	url = https://aur.archlinux.org/ros-indigo-joint-limits-interface.git
-[submodule "indigo/gazebo_ros_control"]
-	path = indigo/gazebo_ros_control
-	url = https://aur.archlinux.org/ros-indigo-gazebo-ros-control.git
-[submodule "jade/octovis"]
-	path = jade/octovis
-	url = https://aur.archlinux.org/ros-jade-octovis.git
-[submodule "jade/test_diagnostic_aggregator"]
-	path = jade/test_diagnostic_aggregator
-	url = https://aur.archlinux.org/ros-jade-test-diagnostic-aggregator.git
-[submodule "jade/dynamic_edt_3d"]
-	path = jade/dynamic_edt_3d
-	url = https://aur.archlinux.org/ros-jade-dynamic-edt-3d.git
-[submodule "jade/opencv_apps"]
-	path = jade/opencv_apps
-	url = https://aur.archlinux.org/ros-jade-opencv-apps.git
-[submodule "indigo/hector_gazebo_plugins"]
-	path = indigo/hector_gazebo_plugins
-	url = https://aur.archlinux.org/ros-indigo-hector-gazebo-plugins.git
-[submodule "indigo/interactive_marker_twist_server"]
-	path = indigo/interactive_marker_twist_server
-	url = https://aur.archlinux.org/ros-indigo-interactive-marker-twist-server.git
-[submodule "indigo/diff_drive_controller"]
-	path = indigo/diff_drive_controller
-	url = https://aur.archlinux.org/ros-indigo-diff-drive-controller.git
-[submodule "indigo/joint_state_controller"]
-	path = indigo/joint_state_controller
-	url = https://aur.archlinux.org/ros-indigo-joint-state-controller.git
-[submodule "indigo/teleop_twist_joy"]
-	path = indigo/teleop_twist_joy
-	url = https://aur.archlinux.org/ros-indigo-teleop-twist-joy.git
-[submodule "indigo/jackal_control"]
-	path = indigo/jackal_control
-	url = https://aur.archlinux.org/ros-indigo-jackal-control.git
-[submodule "indigo/jackal_description"]
-	path = indigo/jackal_description
-	url = https://aur.archlinux.org/ros-indigo-jackal-description.git
-[submodule "indigo/jackal_gazebo"]
-	path = indigo/jackal_gazebo
-	url = https://aur.archlinux.org/ros-indigo-jackal-gazebo.git
-[submodule "indigo/jackal_simulator"]
-	path = indigo/jackal_simulator
-	url = https://aur.archlinux.org/ros-indigo-jackal-simulator.git
-[submodule "indigo/jackal_viz"]
-	path = indigo/jackal_viz
-	url = https://aur.archlinux.org/ros-indigo-jackal-viz.git
-[submodule "indigo/jackal_msgs"]
-	path = indigo/jackal_msgs
-	url = https://aur.archlinux.org/ros-indigo-jackal-msgs.git
-[submodule "indigo/jackal_desktop"]
-	path = indigo/jackal_desktop
-	url = https://aur.archlinux.org/ros-indigo-jackal-desktop.git
-[submodule "indigo/forward_command_controller"]
-	path = indigo/forward_command_controller
-	url = https://aur.archlinux.org/ros-indigo-forward-command-controller.git
-[submodule "indigo/effort_controllers"]
-	path = indigo/effort_controllers
-	url = https://aur.archlinux.org/ros-indigo-effort-controllers.git
-[submodule "indigo/force_torque_sensor_controller"]
-	path = indigo/force_torque_sensor_controller
-	url = https://aur.archlinux.org/ros-indigo-force-torque-sensor-controller.git
-[submodule "indigo/gripper_action_controller"]
-	path = indigo/gripper_action_controller
-	url = https://aur.archlinux.org/ros-indigo-gripper-action-controller.git
-[submodule "indigo/imu_sensor_controller"]
-	path = indigo/imu_sensor_controller
-	url = https://aur.archlinux.org/ros-indigo-imu-sensor-controller.git
-[submodule "indigo/joint_trajectory_controller"]
-	path = indigo/joint_trajectory_controller
-	url = https://aur.archlinux.org/ros-indigo-joint-trajectory-controller.git
-[submodule "indigo/position_controllers"]
-	path = indigo/position_controllers
-	url = https://aur.archlinux.org/ros-indigo-position-controllers.git
-[submodule "indigo/rqt_joint_trajectory_controller"]
-	path = indigo/rqt_joint_trajectory_controller
-	url = https://aur.archlinux.org/ros-indigo-rqt-joint-trajectory-controller.git
-[submodule "indigo/velocity_controllers"]
-	path = indigo/velocity_controllers
-	url = https://aur.archlinux.org/ros-indigo-velocity-controllers.git
-[submodule "indigo/ros_controllers"]
-	path = indigo/ros_controllers
-	url = https://aur.archlinux.org/ros-indigo-ros-controllers.git
-[submodule "indigo/xv_11_laser_driver"]
-	path = indigo/xv_11_laser_driver
-	url = https://aur.archlinux.org/ros-indigo-xv-11-laser-driver.git
-[submodule "indigo/test_diagnostic_aggregator"]
-	path = indigo/test_diagnostic_aggregator
-	url = https://aur.archlinux.org/ros-indigo-test-diagnostic-aggregator.git
-[submodule "indigo/dynamic_edt_3d"]
-	path = indigo/dynamic_edt_3d
-	url = https://aur.archlinux.org/ros-indigo-dynamic-edt-3d.git
-[submodule "indigo/octovis"]
-	path = indigo/octovis
-	url = https://aur.archlinux.org/ros-indigo-octovis.git
-[submodule "indigo/opencv_apps"]
-	path = indigo/opencv_apps
-	url = https://aur.archlinux.org/ros-indigo-opencv-apps.git
-[submodule "indigo/turtlebot_teleop"]
-	path = indigo/turtlebot_teleop
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-teleop.git
-[submodule "indigo/yocs_cmd_vel_mux"]
-	path = indigo/yocs_cmd_vel_mux
-	url = https://aur.archlinux.org/ros-indigo-yocs-cmd-vel-mux.git
-[submodule "indigo/depthimage_to_laserscan"]
-	path = indigo/depthimage_to_laserscan
-	url = https://aur.archlinux.org/ros-indigo-depthimage-to-laserscan.git
-[submodule "indigo/kobuki_msgs"]
-	path = indigo/kobuki_msgs
-	url = https://aur.archlinux.org/ros-indigo-kobuki-msgs.git
-[submodule "indigo/kobuki_gazebo_plugins"]
-	path = indigo/kobuki_gazebo_plugins
-	url = https://aur.archlinux.org/ros-indigo-kobuki-gazebo-plugins.git
-[submodule "indigo/zeroconf_msgs"]
-	path = indigo/zeroconf_msgs
-	url = https://aur.archlinux.org/ros-indigo-zeroconf-msgs.git
-[submodule "indigo/zeroconf_avahi"]
-	path = indigo/zeroconf_avahi
-	url = https://aur.archlinux.org/ros-indigo-zeroconf-avahi.git
+[submodule "indigo/camera_info_manager"]
+	path = indigo/camera_info_manager
+	url = https://aur.archlinux.org/ros-indigo-camera-info-manager.git
 [submodule "indigo/capabilities"]
 	path = indigo/capabilities
 	url = https://aur.archlinux.org/ros-indigo-capabilities.git
-[submodule "indigo/ecl_license"]
-	path = indigo/ecl_license
-	url = https://aur.archlinux.org/ros-indigo-ecl-license.git
+[submodule "indigo/catkin"]
+	path = indigo/catkin
+	url = https://aur.archlinux.org/ros-indigo-catkin.git
+[submodule "indigo/class_loader"]
+	path = indigo/class_loader
+	url = https://aur.archlinux.org/ros-indigo-class-loader.git
+[submodule "indigo/clear_costmap_recovery"]
+	path = indigo/clear_costmap_recovery
+	url = https://aur.archlinux.org/ros-indigo-clear-costmap-recovery.git
+[submodule "indigo/cmake_modules"]
+	path = indigo/cmake_modules
+	url = https://aur.archlinux.org/ros-indigo-cmake-modules.git
+[submodule "indigo/collada_parser"]
+	path = indigo/collada_parser
+	url = https://aur.archlinux.org/ros-indigo-collada-parser.git
+[submodule "indigo/collada_urdf"]
+	path = indigo/collada_urdf
+	url = https://aur.archlinux.org/ros-indigo-collada-urdf.git
+[submodule "indigo/common_msgs"]
+	path = indigo/common_msgs
+	url = https://aur.archlinux.org/ros-indigo-common-msgs.git
+[submodule "indigo/common_tutorials"]
+	path = indigo/common_tutorials
+	url = https://aur.archlinux.org/ros-indigo-common-tutorials.git
+[submodule "indigo/compressed_depth_image_transport"]
+	path = indigo/compressed_depth_image_transport
+	url = https://aur.archlinux.org/ros-indigo-compressed-depth-image-transport.git
+[submodule "indigo/compressed_image_transport"]
+	path = indigo/compressed_image_transport
+	url = https://aur.archlinux.org/ros-indigo-compressed-image-transport.git
+[submodule "indigo/console_bridge"]
+	path = indigo/console_bridge
+	url = https://aur.archlinux.org/ros-indigo-console-bridge.git
+[submodule "indigo/control_msgs"]
+	path = indigo/control_msgs
+	url = https://aur.archlinux.org/ros-indigo-control-msgs.git
+[submodule "indigo/control_toolbox"]
+	path = indigo/control_toolbox
+	url = https://aur.archlinux.org/ros-indigo-control-toolbox.git
+[submodule "indigo/controller_interface"]
+	path = indigo/controller_interface
+	url = https://aur.archlinux.org/ros-indigo-controller-interface.git
+[submodule "indigo/controller_manager"]
+	path = indigo/controller_manager
+	url = https://aur.archlinux.org/ros-indigo-controller-manager.git
+[submodule "indigo/controller_manager_msgs"]
+	path = indigo/controller_manager_msgs
+	url = https://aur.archlinux.org/ros-indigo-controller-manager-msgs.git
+[submodule "indigo/convex_decomposition"]
+	path = indigo/convex_decomposition
+	url = https://aur.archlinux.org/ros-indigo-convex-decomposition.git
+[submodule "indigo/costmap_2d"]
+	path = indigo/costmap_2d
+	url = https://aur.archlinux.org/ros-indigo-costmap-2d.git
+[submodule "indigo/cpp_common"]
+	path = indigo/cpp_common
+	url = https://aur.archlinux.org/ros-indigo-cpp-common.git
+[submodule "indigo/create_description"]
+	path = indigo/create_description
+	url = https://aur.archlinux.org/ros-indigo-create-description.git
+[submodule "indigo/create_driver"]
+	path = indigo/create_driver
+	url = https://aur.archlinux.org/ros-indigo-create-driver.git
+[submodule "indigo/create_node"]
+	path = indigo/create_node
+	url = https://aur.archlinux.org/ros-indigo-create-node.git
+[submodule "indigo/cv_bridge"]
+	path = indigo/cv_bridge
+	url = https://aur.archlinux.org/ros-indigo-cv-bridge.git
+[submodule "indigo/depth_image_proc"]
+	path = indigo/depth_image_proc
+	url = https://aur.archlinux.org/ros-indigo-depth-image-proc.git
+[submodule "indigo/depthimage_to_laserscan"]
+	path = indigo/depthimage_to_laserscan
+	url = https://aur.archlinux.org/ros-indigo-depthimage-to-laserscan.git
+[submodule "indigo/desktop"]
+	path = indigo/desktop
+	url = https://aur.archlinux.org/ros-indigo-desktop.git
+[submodule "indigo/desktop_full"]
+	path = indigo/desktop_full
+	url = https://aur.archlinux.org/ros-indigo-desktop-full.git
+[submodule "indigo/diagnostic_aggregator"]
+	path = indigo/diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-indigo-diagnostic-aggregator.git
+[submodule "indigo/diagnostic_analysis"]
+	path = indigo/diagnostic_analysis
+	url = https://aur.archlinux.org/ros-indigo-diagnostic-analysis.git
+[submodule "indigo/diagnostic_common_diagnostics"]
+	path = indigo/diagnostic_common_diagnostics
+	url = https://aur.archlinux.org/ros-indigo-diagnostic-common-diagnostics.git
+[submodule "indigo/diagnostic_msgs"]
+	path = indigo/diagnostic_msgs
+	url = https://aur.archlinux.org/ros-indigo-diagnostic-msgs.git
+[submodule "indigo/diagnostic_updater"]
+	path = indigo/diagnostic_updater
+	url = https://aur.archlinux.org/ros-indigo-diagnostic-updater.git
+[submodule "indigo/diagnostics"]
+	path = indigo/diagnostics
+	url = https://aur.archlinux.org/ros-indigo-diagnostics.git
+[submodule "indigo/diff_drive_controller"]
+	path = indigo/diff_drive_controller
+	url = https://aur.archlinux.org/ros-indigo-diff-drive-controller.git
+[submodule "indigo/driver_base"]
+	path = indigo/driver_base
+	url = https://aur.archlinux.org/ros-indigo-driver-base.git
+[submodule "indigo/dynamic_edt_3d"]
+	path = indigo/dynamic_edt_3d
+	url = https://aur.archlinux.org/ros-indigo-dynamic-edt-3d.git
+[submodule "indigo/dynamic_reconfigure"]
+	path = indigo/dynamic_reconfigure
+	url = https://aur.archlinux.org/ros-indigo-dynamic-reconfigure.git
 [submodule "indigo/ecl_build"]
 	path = indigo/ecl_build
 	url = https://aur.archlinux.org/ros-indigo-ecl-build.git
-[submodule "indigo/ecl_config"]
-	path = indigo/ecl_config
-	url = https://aur.archlinux.org/ros-indigo-ecl-config.git
-[submodule "indigo/ecl_errors"]
-	path = indigo/ecl_errors
-	url = https://aur.archlinux.org/ros-indigo-ecl-errors.git
-[submodule "indigo/ecl_mpl"]
-	path = indigo/ecl_mpl
-	url = https://aur.archlinux.org/ros-indigo-ecl-mpl.git
-[submodule "indigo/ecl_type_traits"]
-	path = indigo/ecl_type_traits
-	url = https://aur.archlinux.org/ros-indigo-ecl-type-traits.git
+[submodule "indigo/ecl_command_line"]
+	path = indigo/ecl_command_line
+	url = https://aur.archlinux.org/ros-indigo-ecl-command-line.git
 [submodule "indigo/ecl_concepts"]
 	path = indigo/ecl_concepts
 	url = https://aur.archlinux.org/ros-indigo-ecl-concepts.git
-[submodule "indigo/ecl_exceptions"]
-	path = indigo/ecl_exceptions
-	url = https://aur.archlinux.org/ros-indigo-ecl-exceptions.git
-[submodule "indigo/ecl_time_lite"]
-	path = indigo/ecl_time_lite
-	url = https://aur.archlinux.org/ros-indigo-ecl-time-lite.git
-[submodule "indigo/ecl_time"]
-	path = indigo/ecl_time
-	url = https://aur.archlinux.org/ros-indigo-ecl-time.git
-[submodule "indigo/ecl_utilities"]
-	path = indigo/ecl_utilities
-	url = https://aur.archlinux.org/ros-indigo-ecl-utilities.git
-[submodule "indigo/ecl_threads"]
-	path = indigo/ecl_threads
-	url = https://aur.archlinux.org/ros-indigo-ecl-threads.git
-[submodule "indigo/ecl_converters"]
-	path = indigo/ecl_converters
-	url = https://aur.archlinux.org/ros-indigo-ecl-converters.git
-[submodule "indigo/ecl_formatters"]
-	path = indigo/ecl_formatters
-	url = https://aur.archlinux.org/ros-indigo-ecl-formatters.git
+[submodule "indigo/ecl_config"]
+	path = indigo/ecl_config
+	url = https://aur.archlinux.org/ros-indigo-ecl-config.git
 [submodule "indigo/ecl_containers"]
 	path = indigo/ecl_containers
 	url = https://aur.archlinux.org/ros-indigo-ecl-containers.git
+[submodule "indigo/ecl_converters"]
+	path = indigo/ecl_converters
+	url = https://aur.archlinux.org/ros-indigo-ecl-converters.git
+[submodule "indigo/ecl_devices"]
+	path = indigo/ecl_devices
+	url = https://aur.archlinux.org/ros-indigo-ecl-devices.git
 [submodule "indigo/ecl_eigen"]
 	path = indigo/ecl_eigen
 	url = https://aur.archlinux.org/ros-indigo-ecl-eigen.git
+[submodule "indigo/ecl_errors"]
+	path = indigo/ecl_errors
+	url = https://aur.archlinux.org/ros-indigo-ecl-errors.git
+[submodule "indigo/ecl_exceptions"]
+	path = indigo/ecl_exceptions
+	url = https://aur.archlinux.org/ros-indigo-ecl-exceptions.git
+[submodule "indigo/ecl_formatters"]
+	path = indigo/ecl_formatters
+	url = https://aur.archlinux.org/ros-indigo-ecl-formatters.git
+[submodule "indigo/ecl_geometry"]
+	path = indigo/ecl_geometry
+	url = https://aur.archlinux.org/ros-indigo-ecl-geometry.git
+[submodule "indigo/ecl_license"]
+	path = indigo/ecl_license
+	url = https://aur.archlinux.org/ros-indigo-ecl-license.git
 [submodule "indigo/ecl_linear_algebra"]
 	path = indigo/ecl_linear_algebra
 	url = https://aur.archlinux.org/ros-indigo-ecl-linear-algebra.git
 [submodule "indigo/ecl_math"]
 	path = indigo/ecl_math
 	url = https://aur.archlinux.org/ros-indigo-ecl-math.git
-[submodule "indigo/ecl_geometry"]
-	path = indigo/ecl_geometry
-	url = https://aur.archlinux.org/ros-indigo-ecl-geometry.git
-[submodule "indigo/kobuki_dock_drive"]
-	path = indigo/kobuki_dock_drive
-	url = https://aur.archlinux.org/ros-indigo-kobuki-dock-drive.git
-[submodule "indigo/kobuki_auto_docking"]
-	path = indigo/kobuki_auto_docking
-	url = https://aur.archlinux.org/ros-indigo-kobuki-auto-docking.git
-[submodule "indigo/yocs_controllers"]
-	path = indigo/yocs_controllers
-	url = https://aur.archlinux.org/ros-indigo-yocs-controllers.git
-[submodule "indigo/kobuki_random_walker"]
-	path = indigo/kobuki_random_walker
-	url = https://aur.archlinux.org/ros-indigo-kobuki-random-walker.git
-[submodule "indigo/kobuki_rapps"]
-	path = indigo/kobuki_rapps
-	url = https://aur.archlinux.org/ros-indigo-kobuki-rapps.git
 [submodule "indigo/ecl_mobile_robot"]
 	path = indigo/ecl_mobile_robot
 	url = https://aur.archlinux.org/ros-indigo-ecl-mobile-robot.git
-[submodule "indigo/ecl_devices"]
-	path = indigo/ecl_devices
-	url = https://aur.archlinux.org/ros-indigo-ecl-devices.git
+[submodule "indigo/ecl_mpl"]
+	path = indigo/ecl_mpl
+	url = https://aur.archlinux.org/ros-indigo-ecl-mpl.git
 [submodule "indigo/ecl_sigslots"]
 	path = indigo/ecl_sigslots
 	url = https://aur.archlinux.org/ros-indigo-ecl-sigslots.git
-[submodule "indigo/ecl_command_line"]
-	path = indigo/ecl_command_line
-	url = https://aur.archlinux.org/ros-indigo-ecl-command-line.git
+[submodule "indigo/ecl_streams"]
+	path = indigo/ecl_streams
+	url = https://aur.archlinux.org/ros-indigo-ecl-streams.git
+[submodule "indigo/ecl_threads"]
+	path = indigo/ecl_threads
+	url = https://aur.archlinux.org/ros-indigo-ecl-threads.git
+[submodule "indigo/ecl_time"]
+	path = indigo/ecl_time
+	url = https://aur.archlinux.org/ros-indigo-ecl-time.git
+[submodule "indigo/ecl_time_lite"]
+	path = indigo/ecl_time_lite
+	url = https://aur.archlinux.org/ros-indigo-ecl-time-lite.git
+[submodule "indigo/ecl_type_traits"]
+	path = indigo/ecl_type_traits
+	url = https://aur.archlinux.org/ros-indigo-ecl-type-traits.git
+[submodule "indigo/ecl_utilities"]
+	path = indigo/ecl_utilities
+	url = https://aur.archlinux.org/ros-indigo-ecl-utilities.git
+[submodule "indigo/effort_controllers"]
+	path = indigo/effort_controllers
+	url = https://aur.archlinux.org/ros-indigo-effort-controllers.git
+[submodule "indigo/eigen_conversions"]
+	path = indigo/eigen_conversions
+	url = https://aur.archlinux.org/ros-indigo-eigen-conversions.git
+[submodule "indigo/eigen_stl_containers"]
+	path = indigo/eigen_stl_containers
+	url = https://aur.archlinux.org/ros-indigo-eigen-stl-containers.git
+[submodule "indigo/executive_smach"]
+	path = indigo/executive_smach
+	url = https://aur.archlinux.org/ros-indigo-executive-smach.git
+[submodule "indigo/fcl"]
+	path = indigo/fcl
+	url = https://aur.archlinux.org/ros-indigo-fcl.git
+[submodule "indigo/filters"]
+	path = indigo/filters
+	url = https://aur.archlinux.org/ros-indigo-filters.git
+[submodule "indigo/force_torque_sensor_controller"]
+	path = indigo/force_torque_sensor_controller
+	url = https://aur.archlinux.org/ros-indigo-force-torque-sensor-controller.git
+[submodule "indigo/forward_command_controller"]
+	path = indigo/forward_command_controller
+	url = https://aur.archlinux.org/ros-indigo-forward-command-controller.git
+[submodule "indigo/freenect_camera"]
+	path = indigo/freenect_camera
+	url = https://aur.archlinux.org/ros-indigo-freenect-camera.git
+[submodule "indigo/freenect_launch"]
+	path = indigo/freenect_launch
+	url = https://aur.archlinux.org/ros-indigo-freenect-launch.git
+[submodule "indigo/freenect_stack"]
+	path = indigo/freenect_stack
+	url = https://aur.archlinux.org/ros-indigo-freenect-stack.git
+[submodule "indigo/gateway_msgs"]
+	path = indigo/gateway_msgs
+	url = https://aur.archlinux.org/ros-indigo-gateway-msgs.git
+[submodule "indigo/gazebo_msgs"]
+	path = indigo/gazebo_msgs
+	url = https://aur.archlinux.org/ros-indigo-gazebo-msgs.git
+[submodule "indigo/gazebo_plugins"]
+	path = indigo/gazebo_plugins
+	url = https://aur.archlinux.org/ros-indigo-gazebo-plugins.git
+[submodule "indigo/gazebo_ros"]
+	path = indigo/gazebo_ros
+	url = https://aur.archlinux.org/ros-indigo-gazebo-ros.git
+[submodule "indigo/gazebo_ros_control"]
+	path = indigo/gazebo_ros_control
+	url = https://aur.archlinux.org/ros-indigo-gazebo-ros-control.git
+[submodule "indigo/gazebo_ros_pkgs"]
+	path = indigo/gazebo_ros_pkgs
+	url = https://aur.archlinux.org/ros-indigo-gazebo-ros-pkgs.git
+[submodule "indigo/gencpp"]
+	path = indigo/gencpp
+	url = https://aur.archlinux.org/ros-indigo-gencpp.git
+[submodule "indigo/genlisp"]
+	path = indigo/genlisp
+	url = https://aur.archlinux.org/ros-indigo-genlisp.git
+[submodule "indigo/genmsg"]
+	path = indigo/genmsg
+	url = https://aur.archlinux.org/ros-indigo-genmsg.git
+[submodule "indigo/genpy"]
+	path = indigo/genpy
+	url = https://aur.archlinux.org/ros-indigo-genpy.git
+[submodule "indigo/geometric_shapes"]
+	path = indigo/geometric_shapes
+	url = https://aur.archlinux.org/ros-indigo-geometric-shapes.git
+[submodule "indigo/geometry"]
+	path = indigo/geometry
+	url = https://aur.archlinux.org/ros-indigo-geometry.git
+[submodule "indigo/geometry_msgs"]
+	path = indigo/geometry_msgs
+	url = https://aur.archlinux.org/ros-indigo-geometry-msgs.git
+[submodule "indigo/geometry_tutorials"]
+	path = indigo/geometry_tutorials
+	url = https://aur.archlinux.org/ros-indigo-geometry-tutorials.git
+[submodule "indigo/global_planner"]
+	path = indigo/global_planner
+	url = https://aur.archlinux.org/ros-indigo-global-planner.git
+[submodule "indigo/gmapping"]
+	path = indigo/gmapping
+	url = https://aur.archlinux.org/ros-indigo-gmapping.git
+[submodule "indigo/gripper_action_controller"]
+	path = indigo/gripper_action_controller
+	url = https://aur.archlinux.org/ros-indigo-gripper-action-controller.git
+[submodule "indigo/hardware_interface"]
+	path = indigo/hardware_interface
+	url = https://aur.archlinux.org/ros-indigo-hardware-interface.git
+[submodule "indigo/hector_gazebo_plugins"]
+	path = indigo/hector_gazebo_plugins
+	url = https://aur.archlinux.org/ros-indigo-hector-gazebo-plugins.git
+[submodule "indigo/household_objects_database_msgs"]
+	path = indigo/household_objects_database_msgs
+	url = https://aur.archlinux.org/ros-indigo-household-objects-database-msgs.git
+[submodule "indigo/image_common"]
+	path = indigo/image_common
+	url = https://aur.archlinux.org/ros-indigo-image-common.git
+[submodule "indigo/image_geometry"]
+	path = indigo/image_geometry
+	url = https://aur.archlinux.org/ros-indigo-image-geometry.git
+[submodule "indigo/image_pipeline"]
+	path = indigo/image_pipeline
+	url = https://aur.archlinux.org/ros-indigo-image-pipeline.git
+[submodule "indigo/image_proc"]
+	path = indigo/image_proc
+	url = https://aur.archlinux.org/ros-indigo-image-proc.git
+[submodule "indigo/image_rotate"]
+	path = indigo/image_rotate
+	url = https://aur.archlinux.org/ros-indigo-image-rotate.git
+[submodule "indigo/image_transport"]
+	path = indigo/image_transport
+	url = https://aur.archlinux.org/ros-indigo-image-transport.git
+[submodule "indigo/image_transport_plugins"]
+	path = indigo/image_transport_plugins
+	url = https://aur.archlinux.org/ros-indigo-image-transport-plugins.git
+[submodule "indigo/image_view"]
+	path = indigo/image_view
+	url = https://aur.archlinux.org/ros-indigo-image-view.git
+[submodule "indigo/imu_sensor_controller"]
+	path = indigo/imu_sensor_controller
+	url = https://aur.archlinux.org/ros-indigo-imu-sensor-controller.git
+[submodule "indigo/interactive_marker_tutorials"]
+	path = indigo/interactive_marker_tutorials
+	url = https://aur.archlinux.org/ros-indigo-interactive-marker-tutorials.git
+[submodule "indigo/interactive_marker_twist_server"]
+	path = indigo/interactive_marker_twist_server
+	url = https://aur.archlinux.org/ros-indigo-interactive-marker-twist-server.git
+[submodule "indigo/interactive_markers"]
+	path = indigo/interactive_markers
+	url = https://aur.archlinux.org/ros-indigo-interactive-markers.git
+[submodule "indigo/ivcon"]
+	path = indigo/ivcon
+	url = https://aur.archlinux.org/ros-indigo-ivcon.git
+[submodule "indigo/jackal_control"]
+	path = indigo/jackal_control
+	url = https://aur.archlinux.org/ros-indigo-jackal-control.git
+[submodule "indigo/jackal_description"]
+	path = indigo/jackal_description
+	url = https://aur.archlinux.org/ros-indigo-jackal-description.git
+[submodule "indigo/jackal_desktop"]
+	path = indigo/jackal_desktop
+	url = https://aur.archlinux.org/ros-indigo-jackal-desktop.git
+[submodule "indigo/jackal_gazebo"]
+	path = indigo/jackal_gazebo
+	url = https://aur.archlinux.org/ros-indigo-jackal-gazebo.git
+[submodule "indigo/jackal_msgs"]
+	path = indigo/jackal_msgs
+	url = https://aur.archlinux.org/ros-indigo-jackal-msgs.git
+[submodule "indigo/jackal_simulator"]
+	path = indigo/jackal_simulator
+	url = https://aur.archlinux.org/ros-indigo-jackal-simulator.git
+[submodule "indigo/jackal_viz"]
+	path = indigo/jackal_viz
+	url = https://aur.archlinux.org/ros-indigo-jackal-viz.git
+[submodule "indigo/joint_limits_interface"]
+	path = indigo/joint_limits_interface
+	url = https://aur.archlinux.org/ros-indigo-joint-limits-interface.git
+[submodule "indigo/joint_state_controller"]
+	path = indigo/joint_state_controller
+	url = https://aur.archlinux.org/ros-indigo-joint-state-controller.git
+[submodule "indigo/joint_state_publisher"]
+	path = indigo/joint_state_publisher
+	url = https://aur.archlinux.org/ros-indigo-joint-state-publisher.git
+[submodule "indigo/joint_trajectory_controller"]
+	path = indigo/joint_trajectory_controller
+	url = https://aur.archlinux.org/ros-indigo-joint-trajectory-controller.git
+[submodule "indigo/joy"]
+	path = indigo/joy
+	url = https://aur.archlinux.org/ros-indigo-joy.git
+[submodule "indigo/joystick_drivers"]
+	path = indigo/joystick_drivers
+	url = https://aur.archlinux.org/ros-indigo-joystick-drivers.git
+[submodule "indigo/kdl_conversions"]
+	path = indigo/kdl_conversions
+	url = https://aur.archlinux.org/ros-indigo-kdl-conversions.git
+[submodule "indigo/kdl_parser"]
+	path = indigo/kdl_parser
+	url = https://aur.archlinux.org/ros-indigo-kdl-parser.git
+[submodule "indigo/kobuki_auto_docking"]
+	path = indigo/kobuki_auto_docking
+	url = https://aur.archlinux.org/ros-indigo-kobuki-auto-docking.git
+[submodule "indigo/kobuki_bumper2pc"]
+	path = indigo/kobuki_bumper2pc
+	url = https://aur.archlinux.org/ros-indigo-kobuki-bumper2pc.git
+[submodule "indigo/kobuki_capabilities"]
+	path = indigo/kobuki_capabilities
+	url = https://aur.archlinux.org/ros-indigo-kobuki-capabilities.git
+[submodule "indigo/kobuki_description"]
+	path = indigo/kobuki_description
+	url = https://aur.archlinux.org/ros-indigo-kobuki-description.git
+[submodule "indigo/kobuki_dock_drive"]
+	path = indigo/kobuki_dock_drive
+	url = https://aur.archlinux.org/ros-indigo-kobuki-dock-drive.git
 [submodule "indigo/kobuki_driver"]
 	path = indigo/kobuki_driver
 	url = https://aur.archlinux.org/ros-indigo-kobuki-driver.git
 [submodule "indigo/kobuki_ftdi"]
 	path = indigo/kobuki_ftdi
 	url = https://aur.archlinux.org/ros-indigo-kobuki-ftdi.git
-[submodule "indigo/yocs_velocity_smoother"]
-	path = indigo/yocs_velocity_smoother
-	url = https://aur.archlinux.org/ros-indigo-yocs-velocity-smoother.git
+[submodule "indigo/kobuki_gazebo"]
+	path = indigo/kobuki_gazebo
+	url = https://aur.archlinux.org/ros-indigo-kobuki-gazebo.git
+[submodule "indigo/kobuki_gazebo_plugins"]
+	path = indigo/kobuki_gazebo_plugins
+	url = https://aur.archlinux.org/ros-indigo-kobuki-gazebo-plugins.git
 [submodule "indigo/kobuki_keyop"]
 	path = indigo/kobuki_keyop
 	url = https://aur.archlinux.org/ros-indigo-kobuki-keyop.git
-[submodule "indigo/kobuki_safety_controller"]
-	path = indigo/kobuki_safety_controller
-	url = https://aur.archlinux.org/ros-indigo-kobuki-safety-controller.git
-[submodule "indigo/ecl_streams"]
-	path = indigo/ecl_streams
-	url = https://aur.archlinux.org/ros-indigo-ecl-streams.git
+[submodule "indigo/kobuki_msgs"]
+	path = indigo/kobuki_msgs
+	url = https://aur.archlinux.org/ros-indigo-kobuki-msgs.git
 [submodule "indigo/kobuki_node"]
 	path = indigo/kobuki_node
 	url = https://aur.archlinux.org/ros-indigo-kobuki-node.git
-[submodule "indigo/gateway_msgs"]
-	path = indigo/gateway_msgs
-	url = https://aur.archlinux.org/ros-indigo-gateway-msgs.git
-[submodule "indigo/rocon_service_pair_msgs"]
-	path = indigo/rocon_service_pair_msgs
-	url = https://aur.archlinux.org/ros-indigo-rocon-service-pair-msgs.git
-[submodule "indigo/rocon_std_msgs"]
-	path = indigo/rocon_std_msgs
-	url = https://aur.archlinux.org/ros-indigo-rocon-std-msgs.git
+[submodule "indigo/kobuki_random_walker"]
+	path = indigo/kobuki_random_walker
+	url = https://aur.archlinux.org/ros-indigo-kobuki-random-walker.git
+[submodule "indigo/kobuki_rapps"]
+	path = indigo/kobuki_rapps
+	url = https://aur.archlinux.org/ros-indigo-kobuki-rapps.git
+[submodule "indigo/kobuki_safety_controller"]
+	path = indigo/kobuki_safety_controller
+	url = https://aur.archlinux.org/ros-indigo-kobuki-safety-controller.git
+[submodule "indigo/laptop_battery_monitor"]
+	path = indigo/laptop_battery_monitor
+	url = https://aur.archlinux.org/ros-indigo-laptop-battery-monitor.git
+[submodule "indigo/laser_assembler"]
+	path = indigo/laser_assembler
+	url = https://aur.archlinux.org/ros-indigo-laser-assembler.git
+[submodule "indigo/laser_filters"]
+	path = indigo/laser_filters
+	url = https://aur.archlinux.org/ros-indigo-laser-filters.git
+[submodule "indigo/laser_geometry"]
+	path = indigo/laser_geometry
+	url = https://aur.archlinux.org/ros-indigo-laser-geometry.git
+[submodule "indigo/laser_pipeline"]
+	path = indigo/laser_pipeline
+	url = https://aur.archlinux.org/ros-indigo-laser-pipeline.git
+[submodule "indigo/libccd"]
+	path = indigo/libccd
+	url = https://aur.archlinux.org/ros-indigo-libccd.git
+[submodule "indigo/libfreenect"]
+	path = indigo/libfreenect
+	url = https://aur.archlinux.org/ros-indigo-libfreenect.git
+[submodule "indigo/librviz_tutorial"]
+	path = indigo/librviz_tutorial
+	url = https://aur.archlinux.org/ros-indigo-librviz-tutorial.git
+[submodule "indigo/manipulation_msgs"]
+	path = indigo/manipulation_msgs
+	url = https://aur.archlinux.org/ros-indigo-manipulation-msgs.git
+[submodule "indigo/map_msgs"]
+	path = indigo/map_msgs
+	url = https://aur.archlinux.org/ros-indigo-map-msgs.git
+[submodule "indigo/media_export"]
+	path = indigo/media_export
+	url = https://aur.archlinux.org/ros-indigo-media-export.git
+[submodule "indigo/message_filters"]
+	path = indigo/message_filters
+	url = https://aur.archlinux.org/ros-indigo-message-filters.git
+[submodule "indigo/message_generation"]
+	path = indigo/message_generation
+	url = https://aur.archlinux.org/ros-indigo-message-generation.git
+[submodule "indigo/message_runtime"]
+	path = indigo/message_runtime
+	url = https://aur.archlinux.org/ros-indigo-message-runtime.git
+[submodule "indigo/mk"]
+	path = indigo/mk
+	url = https://aur.archlinux.org/ros-indigo-mk.git
+[submodule "indigo/move_base"]
+	path = indigo/move_base
+	url = https://aur.archlinux.org/ros-indigo-move-base.git
+[submodule "indigo/move_base_msgs"]
+	path = indigo/move_base_msgs
+	url = https://aur.archlinux.org/ros-indigo-move-base-msgs.git
+[submodule "indigo/moveit_core"]
+	path = indigo/moveit_core
+	url = https://aur.archlinux.org/ros-indigo-moveit-core.git
+[submodule "indigo/moveit_msgs"]
+	path = indigo/moveit_msgs
+	url = https://aur.archlinux.org/ros-indigo-moveit-msgs.git
+[submodule "indigo/moveit_ros"]
+	path = indigo/moveit_ros
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros.git
+[submodule "indigo/moveit_ros_benchmarks"]
+	path = indigo/moveit_ros_benchmarks
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-benchmarks.git
+[submodule "indigo/moveit_ros_benchmarks_gui"]
+	path = indigo/moveit_ros_benchmarks_gui
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-benchmarks-gui.git
+[submodule "indigo/moveit_ros_manipulation"]
+	path = indigo/moveit_ros_manipulation
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-manipulation.git
+[submodule "indigo/moveit_ros_move_group"]
+	path = indigo/moveit_ros_move_group
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-move-group.git
+[submodule "indigo/moveit_ros_perception"]
+	path = indigo/moveit_ros_perception
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-perception.git
+[submodule "indigo/moveit_ros_planning"]
+	path = indigo/moveit_ros_planning
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-planning.git
+[submodule "indigo/moveit_ros_planning_interface"]
+	path = indigo/moveit_ros_planning_interface
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-planning-interface.git
+[submodule "indigo/moveit_ros_robot_interaction"]
+	path = indigo/moveit_ros_robot_interaction
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-robot-interaction.git
+[submodule "indigo/moveit_ros_visualization"]
+	path = indigo/moveit_ros_visualization
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-visualization.git
+[submodule "indigo/moveit_ros_warehouse"]
+	path = indigo/moveit_ros_warehouse
+	url = https://aur.archlinux.org/ros-indigo-moveit-ros-warehouse.git
+[submodule "indigo/nav_core"]
+	path = indigo/nav_core
+	url = https://aur.archlinux.org/ros-indigo-nav-core.git
+[submodule "indigo/nav_msgs"]
+	path = indigo/nav_msgs
+	url = https://aur.archlinux.org/ros-indigo-nav-msgs.git
+[submodule "indigo/navfn"]
+	path = indigo/navfn
+	url = https://aur.archlinux.org/ros-indigo-navfn.git
+[submodule "indigo/nodelet"]
+	path = indigo/nodelet
+	url = https://aur.archlinux.org/ros-indigo-nodelet.git
+[submodule "indigo/nodelet_core"]
+	path = indigo/nodelet_core
+	url = https://aur.archlinux.org/ros-indigo-nodelet-core.git
+[submodule "indigo/nodelet_topic_tools"]
+	path = indigo/nodelet_topic_tools
+	url = https://aur.archlinux.org/ros-indigo-nodelet-topic-tools.git
+[submodule "indigo/nodelet_tutorial_math"]
+	path = indigo/nodelet_tutorial_math
+	url = https://aur.archlinux.org/ros-indigo-nodelet-tutorial-math.git
+[submodule "indigo/object_recognition_msgs"]
+	path = indigo/object_recognition_msgs
+	url = https://aur.archlinux.org/ros-indigo-object-recognition-msgs.git
+[submodule "indigo/octomap"]
+	path = indigo/octomap
+	url = https://aur.archlinux.org/ros-indigo-octomap.git
+[submodule "indigo/octomap_msgs"]
+	path = indigo/octomap_msgs
+	url = https://aur.archlinux.org/ros-indigo-octomap-msgs.git
+[submodule "indigo/octovis"]
+	path = indigo/octovis
+	url = https://aur.archlinux.org/ros-indigo-octovis.git
+[submodule "indigo/opencv_apps"]
+	path = indigo/opencv_apps
+	url = https://aur.archlinux.org/ros-indigo-opencv-apps.git
+[submodule "indigo/openni2_camera"]
+	path = indigo/openni2_camera
+	url = https://aur.archlinux.org/ros-indigo-openni2-camera.git
+[submodule "indigo/openni2_launch"]
+	path = indigo/openni2_launch
+	url = https://aur.archlinux.org/ros-indigo-openni2-launch.git
+[submodule "indigo/openslam_gmapping"]
+	path = indigo/openslam_gmapping
+	url = https://aur.archlinux.org/ros-indigo-openslam-gmapping.git
+[submodule "indigo/orocos_kdl"]
+	path = indigo/orocos_kdl
+	url = https://aur.archlinux.org/ros-indigo-orocos-kdl.git
+[submodule "indigo/pano_core"]
+	path = indigo/pano_core
+	url = https://aur.archlinux.org/ros-indigo-pano-core.git
+[submodule "indigo/pano_py"]
+	path = indigo/pano_py
+	url = https://aur.archlinux.org/ros-indigo-pano-py.git
+[submodule "indigo/pano_ros"]
+	path = indigo/pano_ros
+	url = https://aur.archlinux.org/ros-indigo-pano-ros.git
+[submodule "indigo/pcl_conversions"]
+	path = indigo/pcl_conversions
+	url = https://aur.archlinux.org/ros-indigo-pcl-conversions.git
+[submodule "indigo/pcl_msgs"]
+	path = indigo/pcl_msgs
+	url = https://aur.archlinux.org/ros-indigo-pcl-msgs.git
+[submodule "indigo/pcl_ros"]
+	path = indigo/pcl_ros
+	url = https://aur.archlinux.org/ros-indigo-pcl-ros.git
+[submodule "indigo/perception"]
+	path = indigo/perception
+	url = https://aur.archlinux.org/ros-indigo-perception.git
+[submodule "indigo/perception_pcl"]
+	path = indigo/perception_pcl
+	url = https://aur.archlinux.org/ros-indigo-perception-pcl.git
+[submodule "indigo/pluginlib"]
+	path = indigo/pluginlib
+	url = https://aur.archlinux.org/ros-indigo-pluginlib.git
+[submodule "indigo/pluginlib_tutorials"]
+	path = indigo/pluginlib_tutorials
+	url = https://aur.archlinux.org/ros-indigo-pluginlib-tutorials.git
+[submodule "indigo/pointcloud_to_laserscan"]
+	path = indigo/pointcloud_to_laserscan
+	url = https://aur.archlinux.org/ros-indigo-pointcloud-to-laserscan.git
+[submodule "indigo/polled_camera"]
+	path = indigo/polled_camera
+	url = https://aur.archlinux.org/ros-indigo-polled-camera.git
+[submodule "indigo/position_controllers"]
+	path = indigo/position_controllers
+	url = https://aur.archlinux.org/ros-indigo-position-controllers.git
+[submodule "indigo/pr2_description"]
+	path = indigo/pr2_description
+	url = https://aur.archlinux.org/ros-indigo-pr2-description.git
+[submodule "indigo/ps3joy"]
+	path = indigo/ps3joy
+	url = https://aur.archlinux.org/ros-indigo-ps3joy.git
+[submodule "indigo/python_orocos_kdl"]
+	path = indigo/python_orocos_kdl
+	url = https://aur.archlinux.org/ros-indigo-python-orocos-kdl.git
+[submodule "indigo/python_qt_binding"]
+	path = indigo/python_qt_binding
+	url = https://aur.archlinux.org/ros-indigo-python-qt-binding.git
+[submodule "indigo/qt_dotgraph"]
+	path = indigo/qt_dotgraph
+	url = https://aur.archlinux.org/ros-indigo-qt-dotgraph.git
+[submodule "indigo/qt_gui"]
+	path = indigo/qt_gui
+	url = https://aur.archlinux.org/ros-indigo-qt-gui.git
+[submodule "indigo/qt_gui_cpp"]
+	path = indigo/qt_gui_cpp
+	url = https://aur.archlinux.org/ros-indigo-qt-gui-cpp.git
+[submodule "indigo/qt_gui_py_common"]
+	path = indigo/qt_gui_py_common
+	url = https://aur.archlinux.org/ros-indigo-qt-gui-py-common.git
+[submodule "indigo/random_numbers"]
+	path = indigo/random_numbers
+	url = https://aur.archlinux.org/ros-indigo-random-numbers.git
+[submodule "indigo/realtime_tools"]
+	path = indigo/realtime_tools
+	url = https://aur.archlinux.org/ros-indigo-realtime-tools.git
+[submodule "indigo/resource_retriever"]
+	path = indigo/resource_retriever
+	url = https://aur.archlinux.org/ros-indigo-resource-retriever.git
+[submodule "indigo/rgbd_launch"]
+	path = indigo/rgbd_launch
+	url = https://aur.archlinux.org/ros-indigo-rgbd-launch.git
+[submodule "indigo/robot"]
+	path = indigo/robot
+	url = https://aur.archlinux.org/ros-indigo-robot.git
+[submodule "indigo/robot_model"]
+	path = indigo/robot_model
+	url = https://aur.archlinux.org/ros-indigo-robot-model.git
+[submodule "indigo/robot_pose_publisher"]
+	path = indigo/robot_pose_publisher
+	url = https://aur.archlinux.org/ros-indigo-robot-pose-publisher.git
+[submodule "indigo/robot_state_publisher"]
+	path = indigo/robot_state_publisher
+	url = https://aur.archlinux.org/ros-indigo-robot-state-publisher.git
+[submodule "indigo/rocon_app_manager"]
+	path = indigo/rocon_app_manager
+	url = https://aur.archlinux.org/ros-indigo-rocon-app-manager.git
 [submodule "indigo/rocon_app_manager_msgs"]
 	path = indigo/rocon_app_manager_msgs
 	url = https://aur.archlinux.org/ros-indigo-rocon-app-manager-msgs.git
-[submodule "indigo/rocon_console"]
-	path = indigo/rocon_console
-	url = https://aur.archlinux.org/ros-indigo-rocon-console.git
-[submodule "indigo/rocon_python_utils"]
-	path = indigo/rocon_python_utils
-	url = https://aur.archlinux.org/ros-indigo-rocon-python-utils.git
-[submodule "indigo/rocon_ebnf"]
-	path = indigo/rocon_ebnf
-	url = https://aur.archlinux.org/ros-indigo-rocon-ebnf.git
-[submodule "indigo/rocon_uri"]
-	path = indigo/rocon_uri
-	url = https://aur.archlinux.org/ros-indigo-rocon-uri.git
 [submodule "indigo/rocon_app_utilities"]
 	path = indigo/rocon_app_utilities
 	url = https://aur.archlinux.org/ros-indigo-rocon-app-utilities.git
 [submodule "indigo/rocon_apps"]
 	path = indigo/rocon_apps
 	url = https://aur.archlinux.org/ros-indigo-rocon-apps.git
-[submodule "indigo/rocon_python_comms"]
-	path = indigo/rocon_python_comms
-	url = https://aur.archlinux.org/ros-indigo-rocon-python-comms.git
-[submodule "indigo/rocon_gateway_utils"]
-	path = indigo/rocon_gateway_utils
-	url = https://aur.archlinux.org/ros-indigo-rocon-gateway-utils.git
-[submodule "indigo/rocon_python_redis"]
-	path = indigo/rocon_python_redis
-	url = https://aur.archlinux.org/ros-indigo-rocon-python-redis.git
-[submodule "indigo/rocon_hub_client"]
-	path = indigo/rocon_hub_client
-	url = https://aur.archlinux.org/ros-indigo-rocon-hub-client.git
-[submodule "indigo/rocon_python_wifi"]
-	path = indigo/rocon_python_wifi
-	url = https://aur.archlinux.org/ros-indigo-rocon-python-wifi.git
-[submodule "indigo/rocon_gateway"]
-	path = indigo/rocon_gateway
-	url = https://aur.archlinux.org/ros-indigo-rocon-gateway.git
-[submodule "indigo/rocon_semantic_version"]
-	path = indigo/rocon_semantic_version
-	url = https://aur.archlinux.org/ros-indigo-rocon-semantic-version.git
-[submodule "indigo/rocon_hub"]
-	path = indigo/rocon_hub
-	url = https://aur.archlinux.org/ros-indigo-rocon-hub.git
 [submodule "indigo/rocon_bubble_icons"]
 	path = indigo/rocon_bubble_icons
 	url = https://aur.archlinux.org/ros-indigo-rocon-bubble-icons.git
+[submodule "indigo/rocon_console"]
+	path = indigo/rocon_console
+	url = https://aur.archlinux.org/ros-indigo-rocon-console.git
+[submodule "indigo/rocon_ebnf"]
+	path = indigo/rocon_ebnf
+	url = https://aur.archlinux.org/ros-indigo-rocon-ebnf.git
+[submodule "indigo/rocon_gateway"]
+	path = indigo/rocon_gateway
+	url = https://aur.archlinux.org/ros-indigo-rocon-gateway.git
+[submodule "indigo/rocon_gateway_utils"]
+	path = indigo/rocon_gateway_utils
+	url = https://aur.archlinux.org/ros-indigo-rocon-gateway-utils.git
+[submodule "indigo/rocon_hub"]
+	path = indigo/rocon_hub
+	url = https://aur.archlinux.org/ros-indigo-rocon-hub.git
+[submodule "indigo/rocon_hub_client"]
+	path = indigo/rocon_hub_client
+	url = https://aur.archlinux.org/ros-indigo-rocon-hub-client.git
 [submodule "indigo/rocon_icons"]
 	path = indigo/rocon_icons
 	url = https://aur.archlinux.org/ros-indigo-rocon-icons.git
@@ -1843,168 +730,1281 @@
 [submodule "indigo/rocon_master_info"]
 	path = indigo/rocon_master_info
 	url = https://aur.archlinux.org/ros-indigo-rocon-master-info.git
-[submodule "indigo/rocon_app_manager"]
-	path = indigo/rocon_app_manager
-	url = https://aur.archlinux.org/ros-indigo-rocon-app-manager.git
-[submodule "indigo/std_capabilities"]
-	path = indigo/std_capabilities
-	url = https://aur.archlinux.org/ros-indigo-std-capabilities.git
-[submodule "indigo/kobuki_capabilities"]
-	path = indigo/kobuki_capabilities
-	url = https://aur.archlinux.org/ros-indigo-kobuki-capabilities.git
-[submodule "indigo/kobuki_bumper2pc"]
-	path = indigo/kobuki_bumper2pc
-	url = https://aur.archlinux.org/ros-indigo-kobuki-bumper2pc.git
-[submodule "indigo/create_driver"]
-	path = indigo/create_driver
-	url = https://aur.archlinux.org/ros-indigo-create-driver.git
-[submodule "indigo/create_node"]
-	path = indigo/create_node
-	url = https://aur.archlinux.org/ros-indigo-create-node.git
-[submodule "indigo/turtlebot_capabilities"]
-	path = indigo/turtlebot_capabilities
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-capabilities.git
-[submodule "indigo/kobuki_description"]
-	path = indigo/kobuki_description
-	url = https://aur.archlinux.org/ros-indigo-kobuki-description.git
-[submodule "indigo/create_description"]
-	path = indigo/create_description
-	url = https://aur.archlinux.org/ros-indigo-create-description.git
-[submodule "indigo/turtlebot_description"]
-	path = indigo/turtlebot_description
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-description.git
-[submodule "indigo/smart_battery_msgs"]
-	path = indigo/smart_battery_msgs
-	url = https://aur.archlinux.org/ros-indigo-smart-battery-msgs.git
-[submodule "indigo/laptop_battery_monitor"]
-	path = indigo/laptop_battery_monitor
-	url = https://aur.archlinux.org/ros-indigo-laptop-battery-monitor.git
-[submodule "indigo/turtlebot_bringup"]
-	path = indigo/turtlebot_bringup
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-bringup.git
-[submodule "indigo/openslam_gmapping"]
-	path = indigo/openslam_gmapping
-	url = https://aur.archlinux.org/ros-indigo-openslam-gmapping.git
-[submodule "indigo/gmapping"]
-	path = indigo/gmapping
-	url = https://aur.archlinux.org/ros-indigo-gmapping.git
-[submodule "indigo/turtlebot_navigation"]
-	path = indigo/turtlebot_navigation
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-navigation.git
-[submodule "indigo/turtlebot_gazebo"]
-	path = indigo/turtlebot_gazebo
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-gazebo.git
-[submodule "indigo/global_planner"]
-	path = indigo/global_planner
-	url = https://aur.archlinux.org/ros-indigo-global-planner.git
-[submodule "indigo/yocs_msgs"]
-	path = indigo/yocs_msgs
-	url = https://aur.archlinux.org/ros-indigo-yocs-msgs.git
-[submodule "indigo/yocs_math_toolkit"]
-	path = indigo/yocs_math_toolkit
-	url = https://aur.archlinux.org/ros-indigo-yocs-math-toolkit.git
+[submodule "indigo/rocon_python_comms"]
+	path = indigo/rocon_python_comms
+	url = https://aur.archlinux.org/ros-indigo-rocon-python-comms.git
+[submodule "indigo/rocon_python_redis"]
+	path = indigo/rocon_python_redis
+	url = https://aur.archlinux.org/ros-indigo-rocon-python-redis.git
+[submodule "indigo/rocon_python_utils"]
+	path = indigo/rocon_python_utils
+	url = https://aur.archlinux.org/ros-indigo-rocon-python-utils.git
+[submodule "indigo/rocon_python_wifi"]
+	path = indigo/rocon_python_wifi
+	url = https://aur.archlinux.org/ros-indigo-rocon-python-wifi.git
+[submodule "indigo/rocon_semantic_version"]
+	path = indigo/rocon_semantic_version
+	url = https://aur.archlinux.org/ros-indigo-rocon-semantic-version.git
+[submodule "indigo/rocon_service_pair_msgs"]
+	path = indigo/rocon_service_pair_msgs
+	url = https://aur.archlinux.org/ros-indigo-rocon-service-pair-msgs.git
+[submodule "indigo/rocon_std_msgs"]
+	path = indigo/rocon_std_msgs
+	url = https://aur.archlinux.org/ros-indigo-rocon-std-msgs.git
+[submodule "indigo/rocon_uri"]
+	path = indigo/rocon_uri
+	url = https://aur.archlinux.org/ros-indigo-rocon-uri.git
+[submodule "indigo/ros"]
+	path = indigo/ros
+	url = https://aur.archlinux.org/ros-indigo-ros.git
+[submodule "indigo/ros_base"]
+	path = indigo/ros_base
+	url = https://aur.archlinux.org/ros-indigo-ros-base.git
+[submodule "indigo/ros_comm"]
+	path = indigo/ros_comm
+	url = https://aur.archlinux.org/ros-indigo-ros-comm.git
+[submodule "indigo/ros_controllers"]
+	path = indigo/ros_controllers
+	url = https://aur.archlinux.org/ros-indigo-ros-controllers.git
+[submodule "indigo/ros_core"]
+	path = indigo/ros_core
+	url = https://aur.archlinux.org/ros-indigo-ros-core.git
+[submodule "indigo/ros_tutorials"]
+	path = indigo/ros_tutorials
+	url = https://aur.archlinux.org/ros-indigo-ros-tutorials.git
+[submodule "indigo/rosapi"]
+	path = indigo/rosapi
+	url = https://aur.archlinux.org/ros-indigo-rosapi.git
+[submodule "indigo/rosauth"]
+	path = indigo/rosauth
+	url = https://aur.archlinux.org/ros-indigo-rosauth.git
+[submodule "indigo/rosbag"]
+	path = indigo/rosbag
+	url = https://aur.archlinux.org/ros-indigo-rosbag.git
+[submodule "indigo/rosbag_migration_rule"]
+	path = indigo/rosbag_migration_rule
+	url = https://aur.archlinux.org/ros-indigo-rosbag-migration-rule.git
+[submodule "indigo/rosbag_storage"]
+	path = indigo/rosbag_storage
+	url = https://aur.archlinux.org/ros-indigo-rosbag-storage.git
+[submodule "indigo/rosbash"]
+	path = indigo/rosbash
+	url = https://aur.archlinux.org/ros-indigo-rosbash.git
+[submodule "indigo/rosboost_cfg"]
+	path = indigo/rosboost_cfg
+	url = https://aur.archlinux.org/ros-indigo-rosboost-cfg.git
+[submodule "indigo/rosbridge_library"]
+	path = indigo/rosbridge_library
+	url = https://aur.archlinux.org/ros-indigo-rosbridge-library.git
+[submodule "indigo/rosbridge_server"]
+	path = indigo/rosbridge_server
+	url = https://aur.archlinux.org/ros-indigo-rosbridge-server.git
+[submodule "indigo/rosbridge_suite"]
+	path = indigo/rosbridge_suite
+	url = https://aur.archlinux.org/ros-indigo-rosbridge-suite.git
+[submodule "indigo/rosbuild"]
+	path = indigo/rosbuild
+	url = https://aur.archlinux.org/ros-indigo-rosbuild.git
+[submodule "indigo/rosclean"]
+	path = indigo/rosclean
+	url = https://aur.archlinux.org/ros-indigo-rosclean.git
+[submodule "indigo/rosconsole"]
+	path = indigo/rosconsole
+	url = https://aur.archlinux.org/ros-indigo-rosconsole.git
+[submodule "indigo/rosconsole_bridge"]
+	path = indigo/rosconsole_bridge
+	url = https://aur.archlinux.org/ros-indigo-rosconsole-bridge.git
+[submodule "indigo/roscpp"]
+	path = indigo/roscpp
+	url = https://aur.archlinux.org/ros-indigo-roscpp.git
+[submodule "indigo/roscpp_core"]
+	path = indigo/roscpp_core
+	url = https://aur.archlinux.org/ros-indigo-roscpp-core.git
+[submodule "indigo/roscpp_serialization"]
+	path = indigo/roscpp_serialization
+	url = https://aur.archlinux.org/ros-indigo-roscpp-serialization.git
+[submodule "indigo/roscpp_traits"]
+	path = indigo/roscpp_traits
+	url = https://aur.archlinux.org/ros-indigo-roscpp-traits.git
+[submodule "indigo/roscpp_tutorials"]
+	path = indigo/roscpp_tutorials
+	url = https://aur.archlinux.org/ros-indigo-roscpp-tutorials.git
+[submodule "indigo/roscreate"]
+	path = indigo/roscreate
+	url = https://aur.archlinux.org/ros-indigo-roscreate.git
+[submodule "indigo/rosgraph"]
+	path = indigo/rosgraph
+	url = https://aur.archlinux.org/ros-indigo-rosgraph.git
+[submodule "indigo/rosgraph_msgs"]
+	path = indigo/rosgraph_msgs
+	url = https://aur.archlinux.org/ros-indigo-rosgraph-msgs.git
+[submodule "indigo/roslang"]
+	path = indigo/roslang
+	url = https://aur.archlinux.org/ros-indigo-roslang.git
+[submodule "indigo/roslaunch"]
+	path = indigo/roslaunch
+	url = https://aur.archlinux.org/ros-indigo-roslaunch.git
+[submodule "indigo/roslib"]
+	path = indigo/roslib
+	url = https://aur.archlinux.org/ros-indigo-roslib.git
+[submodule "indigo/roslint"]
+	path = indigo/roslint
+	url = https://aur.archlinux.org/ros-indigo-roslint.git
+[submodule "indigo/roslisp"]
+	path = indigo/roslisp
+	url = https://aur.archlinux.org/ros-indigo-roslisp.git
+[submodule "indigo/roslz4"]
+	path = indigo/roslz4
+	url = https://aur.archlinux.org/ros-indigo-roslz4.git
+[submodule "indigo/rosmake"]
+	path = indigo/rosmake
+	url = https://aur.archlinux.org/ros-indigo-rosmake.git
+[submodule "indigo/rosmaster"]
+	path = indigo/rosmaster
+	url = https://aur.archlinux.org/ros-indigo-rosmaster.git
+[submodule "indigo/rosmsg"]
+	path = indigo/rosmsg
+	url = https://aur.archlinux.org/ros-indigo-rosmsg.git
+[submodule "indigo/rosnode"]
+	path = indigo/rosnode
+	url = https://aur.archlinux.org/ros-indigo-rosnode.git
+[submodule "indigo/rosout"]
+	path = indigo/rosout
+	url = https://aur.archlinux.org/ros-indigo-rosout.git
+[submodule "indigo/rospack"]
+	path = indigo/rospack
+	url = https://aur.archlinux.org/ros-indigo-rospack.git
+[submodule "indigo/rosparam"]
+	path = indigo/rosparam
+	url = https://aur.archlinux.org/ros-indigo-rosparam.git
+[submodule "indigo/rosping"]
+	path = indigo/rosping
+	url = https://aur.archlinux.org/ros-indigo-rosping.git
+[submodule "indigo/rospy"]
+	path = indigo/rospy
+	url = https://aur.archlinux.org/ros-indigo-rospy.git
 [submodule "indigo/rospy_message_converter"]
 	path = indigo/rospy_message_converter
 	url = https://aur.archlinux.org/ros-indigo-rospy-message-converter.git
-[submodule "indigo/yocs_virtual_sensor"]
-	path = indigo/yocs_virtual_sensor
-	url = https://aur.archlinux.org/ros-indigo-yocs-virtual-sensor.git
-[submodule "indigo/turtlebot_stage"]
-	path = indigo/turtlebot_stage
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-stage.git
+[submodule "indigo/rospy_tutorials"]
+	path = indigo/rospy_tutorials
+	url = https://aur.archlinux.org/ros-indigo-rospy-tutorials.git
+[submodule "indigo/rosserial"]
+	path = indigo/rosserial
+	url = https://aur.archlinux.org/ros-indigo-rosserial.git
+[submodule "indigo/rosserial_client"]
+	path = indigo/rosserial_client
+	url = https://aur.archlinux.org/ros-indigo-rosserial-client.git
+[submodule "indigo/rosserial_msgs"]
+	path = indigo/rosserial_msgs
+	url = https://aur.archlinux.org/ros-indigo-rosserial-msgs.git
+[submodule "indigo/rosserial_python"]
+	path = indigo/rosserial_python
+	url = https://aur.archlinux.org/ros-indigo-rosserial-python.git
+[submodule "indigo/rosservice"]
+	path = indigo/rosservice
+	url = https://aur.archlinux.org/ros-indigo-rosservice.git
+[submodule "indigo/rostest"]
+	path = indigo/rostest
+	url = https://aur.archlinux.org/ros-indigo-rostest.git
+[submodule "indigo/rostime"]
+	path = indigo/rostime
+	url = https://aur.archlinux.org/ros-indigo-rostime.git
+[submodule "indigo/rostopic"]
+	path = indigo/rostopic
+	url = https://aur.archlinux.org/ros-indigo-rostopic.git
+[submodule "indigo/rosunit"]
+	path = indigo/rosunit
+	url = https://aur.archlinux.org/ros-indigo-rosunit.git
+[submodule "indigo/roswtf"]
+	path = indigo/roswtf
+	url = https://aur.archlinux.org/ros-indigo-roswtf.git
+[submodule "indigo/rotate_recovery"]
+	path = indigo/rotate_recovery
+	url = https://aur.archlinux.org/ros-indigo-rotate-recovery.git
+[submodule "indigo/rqt"]
+	path = indigo/rqt
+	url = https://aur.archlinux.org/ros-indigo-rqt.git
+[submodule "indigo/rqt_action"]
+	path = indigo/rqt_action
+	url = https://aur.archlinux.org/ros-indigo-rqt-action.git
+[submodule "indigo/rqt_bag"]
+	path = indigo/rqt_bag
+	url = https://aur.archlinux.org/ros-indigo-rqt-bag.git
+[submodule "indigo/rqt_bag_plugins"]
+	path = indigo/rqt_bag_plugins
+	url = https://aur.archlinux.org/ros-indigo-rqt-bag-plugins.git
+[submodule "indigo/rqt_common_plugins"]
+	path = indigo/rqt_common_plugins
+	url = https://aur.archlinux.org/ros-indigo-rqt-common-plugins.git
+[submodule "indigo/rqt_console"]
+	path = indigo/rqt_console
+	url = https://aur.archlinux.org/ros-indigo-rqt-console.git
+[submodule "indigo/rqt_dep"]
+	path = indigo/rqt_dep
+	url = https://aur.archlinux.org/ros-indigo-rqt-dep.git
+[submodule "indigo/rqt_graph"]
+	path = indigo/rqt_graph
+	url = https://aur.archlinux.org/ros-indigo-rqt-graph.git
+[submodule "indigo/rqt_gui"]
+	path = indigo/rqt_gui
+	url = https://aur.archlinux.org/ros-indigo-rqt-gui.git
+[submodule "indigo/rqt_gui_cpp"]
+	path = indigo/rqt_gui_cpp
+	url = https://aur.archlinux.org/ros-indigo-rqt-gui-cpp.git
+[submodule "indigo/rqt_gui_py"]
+	path = indigo/rqt_gui_py
+	url = https://aur.archlinux.org/ros-indigo-rqt-gui-py.git
+[submodule "indigo/rqt_image_view"]
+	path = indigo/rqt_image_view
+	url = https://aur.archlinux.org/ros-indigo-rqt-image-view.git
+[submodule "indigo/rqt_joint_trajectory_controller"]
+	path = indigo/rqt_joint_trajectory_controller
+	url = https://aur.archlinux.org/ros-indigo-rqt-joint-trajectory-controller.git
+[submodule "indigo/rqt_launch"]
+	path = indigo/rqt_launch
+	url = https://aur.archlinux.org/ros-indigo-rqt-launch.git
+[submodule "indigo/rqt_logger_level"]
+	path = indigo/rqt_logger_level
+	url = https://aur.archlinux.org/ros-indigo-rqt-logger-level.git
+[submodule "indigo/rqt_moveit"]
+	path = indigo/rqt_moveit
+	url = https://aur.archlinux.org/ros-indigo-rqt-moveit.git
+[submodule "indigo/rqt_msg"]
+	path = indigo/rqt_msg
+	url = https://aur.archlinux.org/ros-indigo-rqt-msg.git
+[submodule "indigo/rqt_nav_view"]
+	path = indigo/rqt_nav_view
+	url = https://aur.archlinux.org/ros-indigo-rqt-nav-view.git
+[submodule "indigo/rqt_plot"]
+	path = indigo/rqt_plot
+	url = https://aur.archlinux.org/ros-indigo-rqt-plot.git
+[submodule "indigo/rqt_pose_view"]
+	path = indigo/rqt_pose_view
+	url = https://aur.archlinux.org/ros-indigo-rqt-pose-view.git
+[submodule "indigo/rqt_publisher"]
+	path = indigo/rqt_publisher
+	url = https://aur.archlinux.org/ros-indigo-rqt-publisher.git
+[submodule "indigo/rqt_py_common"]
+	path = indigo/rqt_py_common
+	url = https://aur.archlinux.org/ros-indigo-rqt-py-common.git
+[submodule "indigo/rqt_py_console"]
+	path = indigo/rqt_py_console
+	url = https://aur.archlinux.org/ros-indigo-rqt-py-console.git
+[submodule "indigo/rqt_reconfigure"]
+	path = indigo/rqt_reconfigure
+	url = https://aur.archlinux.org/ros-indigo-rqt-reconfigure.git
+[submodule "indigo/rqt_robot_dashboard"]
+	path = indigo/rqt_robot_dashboard
+	url = https://aur.archlinux.org/ros-indigo-rqt-robot-dashboard.git
+[submodule "indigo/rqt_robot_monitor"]
+	path = indigo/rqt_robot_monitor
+	url = https://aur.archlinux.org/ros-indigo-rqt-robot-monitor.git
+[submodule "indigo/rqt_robot_plugins"]
+	path = indigo/rqt_robot_plugins
+	url = https://aur.archlinux.org/ros-indigo-rqt-robot-plugins.git
+[submodule "indigo/rqt_robot_steering"]
+	path = indigo/rqt_robot_steering
+	url = https://aur.archlinux.org/ros-indigo-rqt-robot-steering.git
+[submodule "indigo/rqt_runtime_monitor"]
+	path = indigo/rqt_runtime_monitor
+	url = https://aur.archlinux.org/ros-indigo-rqt-runtime-monitor.git
+[submodule "indigo/rqt_rviz"]
+	path = indigo/rqt_rviz
+	url = https://aur.archlinux.org/ros-indigo-rqt-rviz.git
+[submodule "indigo/rqt_service_caller"]
+	path = indigo/rqt_service_caller
+	url = https://aur.archlinux.org/ros-indigo-rqt-service-caller.git
+[submodule "indigo/rqt_shell"]
+	path = indigo/rqt_shell
+	url = https://aur.archlinux.org/ros-indigo-rqt-shell.git
+[submodule "indigo/rqt_srv"]
+	path = indigo/rqt_srv
+	url = https://aur.archlinux.org/ros-indigo-rqt-srv.git
+[submodule "indigo/rqt_tf_tree"]
+	path = indigo/rqt_tf_tree
+	url = https://aur.archlinux.org/ros-indigo-rqt-tf-tree.git
+[submodule "indigo/rqt_top"]
+	path = indigo/rqt_top
+	url = https://aur.archlinux.org/ros-indigo-rqt-top.git
+[submodule "indigo/rqt_topic"]
+	path = indigo/rqt_topic
+	url = https://aur.archlinux.org/ros-indigo-rqt-topic.git
+[submodule "indigo/rqt_web"]
+	path = indigo/rqt_web
+	url = https://aur.archlinux.org/ros-indigo-rqt-web.git
+[submodule "indigo/rviz"]
+	path = indigo/rviz
+	url = https://aur.archlinux.org/ros-indigo-rviz.git
+[submodule "indigo/rviz_animated_view_controller"]
+	path = indigo/rviz_animated_view_controller
+	url = https://aur.archlinux.org/ros-indigo-rviz-animated-view-controller.git
+[submodule "indigo/rviz_fixed_view_controller"]
+	path = indigo/rviz_fixed_view_controller
+	url = https://aur.archlinux.org/ros-indigo-rviz-fixed-view-controller.git
+[submodule "indigo/rviz_plugin_tutorials"]
+	path = indigo/rviz_plugin_tutorials
+	url = https://aur.archlinux.org/ros-indigo-rviz-plugin-tutorials.git
+[submodule "indigo/rviz_python_tutorial"]
+	path = indigo/rviz_python_tutorial
+	url = https://aur.archlinux.org/ros-indigo-rviz-python-tutorial.git
+[submodule "indigo/self_test"]
+	path = indigo/self_test
+	url = https://aur.archlinux.org/ros-indigo-self-test.git
+[submodule "indigo/sensor_msgs"]
+	path = indigo/sensor_msgs
+	url = https://aur.archlinux.org/ros-indigo-sensor-msgs.git
+[submodule "indigo/shape_msgs"]
+	path = indigo/shape_msgs
+	url = https://aur.archlinux.org/ros-indigo-shape-msgs.git
+[submodule "indigo/shape_tools"]
+	path = indigo/shape_tools
+	url = https://aur.archlinux.org/ros-indigo-shape-tools.git
+[submodule "indigo/simulators"]
+	path = indigo/simulators
+	url = https://aur.archlinux.org/ros-indigo-simulators.git
+[submodule "indigo/smach"]
+	path = indigo/smach
+	url = https://aur.archlinux.org/ros-indigo-smach.git
+[submodule "indigo/smach_msgs"]
+	path = indigo/smach_msgs
+	url = https://aur.archlinux.org/ros-indigo-smach-msgs.git
+[submodule "indigo/smach_ros"]
+	path = indigo/smach_ros
+	url = https://aur.archlinux.org/ros-indigo-smach-ros.git
+[submodule "indigo/smart_battery_msgs"]
+	path = indigo/smart_battery_msgs
+	url = https://aur.archlinux.org/ros-indigo-smart-battery-msgs.git
+[submodule "indigo/smclib"]
+	path = indigo/smclib
+	url = https://aur.archlinux.org/ros-indigo-smclib.git
+[submodule "indigo/spacenav_node"]
+	path = indigo/spacenav_node
+	url = https://aur.archlinux.org/ros-indigo-spacenav-node.git
+[submodule "indigo/srdfdom"]
+	path = indigo/srdfdom
+	url = https://aur.archlinux.org/ros-indigo-srdfdom.git
+[submodule "indigo/stage"]
+	path = indigo/stage
+	url = https://aur.archlinux.org/ros-indigo-stage.git
+[submodule "indigo/stage_ros"]
+	path = indigo/stage_ros
+	url = https://aur.archlinux.org/ros-indigo-stage-ros.git
+[submodule "indigo/std_capabilities"]
+	path = indigo/std_capabilities
+	url = https://aur.archlinux.org/ros-indigo-std-capabilities.git
+[submodule "indigo/std_msgs"]
+	path = indigo/std_msgs
+	url = https://aur.archlinux.org/ros-indigo-std-msgs.git
+[submodule "indigo/std_srvs"]
+	path = indigo/std_srvs
+	url = https://aur.archlinux.org/ros-indigo-std-srvs.git
+[submodule "indigo/stdr_gui"]
+	path = indigo/stdr_gui
+	url = https://aur.archlinux.org/ros-indigo-stdr-gui.git
 [submodule "indigo/stdr_msgs"]
 	path = indigo/stdr_msgs
 	url = https://aur.archlinux.org/ros-indigo-stdr-msgs.git
 [submodule "indigo/stdr_parser"]
 	path = indigo/stdr_parser
 	url = https://aur.archlinux.org/ros-indigo-stdr-parser.git
+[submodule "indigo/stdr_resources"]
+	path = indigo/stdr_resources
+	url = https://aur.archlinux.org/ros-indigo-stdr-resources.git
 [submodule "indigo/stdr_robot"]
 	path = indigo/stdr_robot
 	url = https://aur.archlinux.org/ros-indigo-stdr-robot.git
 [submodule "indigo/stdr_server"]
 	path = indigo/stdr_server
 	url = https://aur.archlinux.org/ros-indigo-stdr-server.git
-[submodule "indigo/stdr_gui"]
-	path = indigo/stdr_gui
-	url = https://aur.archlinux.org/ros-indigo-stdr-gui.git
-[submodule "indigo/stdr_resources"]
-	path = indigo/stdr_resources
-	url = https://aur.archlinux.org/ros-indigo-stdr-resources.git
-[submodule "indigo/turtlebot_stdr"]
-	path = indigo/turtlebot_stdr
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-stdr.git
-[submodule "indigo/turtlebot_simulator"]
-	path = indigo/turtlebot_simulator
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-simulator.git
-[submodule "indigo/pano_core"]
-	path = indigo/pano_core
-	url = https://aur.archlinux.org/ros-indigo-pano-core.git
-[submodule "indigo/pano_py"]
-	path = indigo/pano_py
-	url = https://aur.archlinux.org/ros-indigo-pano-py.git
-[submodule "indigo/pano_ros"]
-	path = indigo/pano_ros
-	url = https://aur.archlinux.org/ros-indigo-pano-ros.git
+[submodule "indigo/stereo_image_proc"]
+	path = indigo/stereo_image_proc
+	url = https://aur.archlinux.org/ros-indigo-stereo-image-proc.git
+[submodule "indigo/stereo_msgs"]
+	path = indigo/stereo_msgs
+	url = https://aur.archlinux.org/ros-indigo-stereo-msgs.git
+[submodule "indigo/teleop_twist_joy"]
+	path = indigo/teleop_twist_joy
+	url = https://aur.archlinux.org/ros-indigo-teleop-twist-joy.git
+[submodule "indigo/test_diagnostic_aggregator"]
+	path = indigo/test_diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-indigo-test-diagnostic-aggregator.git
+[submodule "indigo/tf"]
+	path = indigo/tf
+	url = https://aur.archlinux.org/ros-indigo-tf.git
+[submodule "indigo/tf2"]
+	path = indigo/tf2
+	url = https://aur.archlinux.org/ros-indigo-tf2.git
+[submodule "indigo/tf2_geometry_msgs"]
+	path = indigo/tf2_geometry_msgs
+	url = https://aur.archlinux.org/ros-indigo-tf2-geometry-msgs.git
+[submodule "indigo/tf2_msgs"]
+	path = indigo/tf2_msgs
+	url = https://aur.archlinux.org/ros-indigo-tf2-msgs.git
+[submodule "indigo/tf2_py"]
+	path = indigo/tf2_py
+	url = https://aur.archlinux.org/ros-indigo-tf2-py.git
+[submodule "indigo/tf2_ros"]
+	path = indigo/tf2_ros
+	url = https://aur.archlinux.org/ros-indigo-tf2-ros.git
+[submodule "indigo/tf2_sensor_msgs"]
+	path = indigo/tf2_sensor_msgs
+	url = https://aur.archlinux.org/ros-indigo-tf2-sensor-msgs.git
+[submodule "indigo/tf_conversions"]
+	path = indigo/tf_conversions
+	url = https://aur.archlinux.org/ros-indigo-tf-conversions.git
+[submodule "indigo/theora_image_transport"]
+	path = indigo/theora_image_transport
+	url = https://aur.archlinux.org/ros-indigo-theora-image-transport.git
+[submodule "indigo/topic_tools"]
+	path = indigo/topic_tools
+	url = https://aur.archlinux.org/ros-indigo-topic-tools.git
+[submodule "indigo/trajectory_msgs"]
+	path = indigo/trajectory_msgs
+	url = https://aur.archlinux.org/ros-indigo-trajectory-msgs.git
+[submodule "indigo/transmission_interface"]
+	path = indigo/transmission_interface
+	url = https://aur.archlinux.org/ros-indigo-transmission-interface.git
+[submodule "indigo/turtle_actionlib"]
+	path = indigo/turtle_actionlib
+	url = https://aur.archlinux.org/ros-indigo-turtle-actionlib.git
+[submodule "indigo/turtle_tf"]
+	path = indigo/turtle_tf
+	url = https://aur.archlinux.org/ros-indigo-turtle-tf.git
+[submodule "indigo/turtle_tf2"]
+	path = indigo/turtle_tf2
+	url = https://aur.archlinux.org/ros-indigo-turtle-tf2.git
 [submodule "indigo/turtlebot_actions"]
 	path = indigo/turtlebot_actions
 	url = https://aur.archlinux.org/ros-indigo-turtlebot-actions.git
-[submodule "indigo/turtlebot_calibration"]
-	path = indigo/turtlebot_calibration
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-calibration.git
-[submodule "indigo/turtlebot_msgs"]
-	path = indigo/turtlebot_msgs
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-msgs.git
-[submodule "indigo/turtlebot_follower"]
-	path = indigo/turtlebot_follower
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-follower.git
-[submodule "indigo/turtlebot_panorama"]
-	path = indigo/turtlebot_panorama
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-panorama.git
-[submodule "indigo/robot_pose_publisher"]
-	path = indigo/robot_pose_publisher
-	url = https://aur.archlinux.org/ros-indigo-robot-pose-publisher.git
-[submodule "indigo/world_canvas_msgs"]
-	path = indigo/world_canvas_msgs
-	url = https://aur.archlinux.org/ros-indigo-world-canvas-msgs.git
-[submodule "indigo/world_canvas_utils"]
-	path = indigo/world_canvas_utils
-	url = https://aur.archlinux.org/ros-indigo-world-canvas-utils.git
-[submodule "indigo/world_canvas_server"]
-	path = indigo/world_canvas_server
-	url = https://aur.archlinux.org/ros-indigo-world-canvas-server.git
-[submodule "indigo/turtlebot_rapps"]
-	path = indigo/turtlebot_rapps
-	url = https://aur.archlinux.org/ros-indigo-turtlebot-rapps.git
 [submodule "indigo/turtlebot_apps"]
 	path = indigo/turtlebot_apps
 	url = https://aur.archlinux.org/ros-indigo-turtlebot-apps.git
-[submodule "indigo/move_base"]
-	path = indigo/move_base
-	url = https://aur.archlinux.org/ros-indigo-move-base.git
+[submodule "indigo/turtlebot_bringup"]
+	path = indigo/turtlebot_bringup
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-bringup.git
+[submodule "indigo/turtlebot_calibration"]
+	path = indigo/turtlebot_calibration
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-calibration.git
+[submodule "indigo/turtlebot_capabilities"]
+	path = indigo/turtlebot_capabilities
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-capabilities.git
+[submodule "indigo/turtlebot_description"]
+	path = indigo/turtlebot_description
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-description.git
+[submodule "indigo/turtlebot_follower"]
+	path = indigo/turtlebot_follower
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-follower.git
+[submodule "indigo/turtlebot_gazebo"]
+	path = indigo/turtlebot_gazebo
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-gazebo.git
+[submodule "indigo/turtlebot_msgs"]
+	path = indigo/turtlebot_msgs
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-msgs.git
+[submodule "indigo/turtlebot_navigation"]
+	path = indigo/turtlebot_navigation
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-navigation.git
+[submodule "indigo/turtlebot_panorama"]
+	path = indigo/turtlebot_panorama
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-panorama.git
+[submodule "indigo/turtlebot_rapps"]
+	path = indigo/turtlebot_rapps
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-rapps.git
+[submodule "indigo/turtlebot_simulator"]
+	path = indigo/turtlebot_simulator
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-simulator.git
+[submodule "indigo/turtlebot_stage"]
+	path = indigo/turtlebot_stage
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-stage.git
+[submodule "indigo/turtlebot_stdr"]
+	path = indigo/turtlebot_stdr
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-stdr.git
+[submodule "indigo/turtlebot_teleop"]
+	path = indigo/turtlebot_teleop
+	url = https://aur.archlinux.org/ros-indigo-turtlebot-teleop.git
+[submodule "indigo/turtlesim"]
+	path = indigo/turtlesim
+	url = https://aur.archlinux.org/ros-indigo-turtlesim.git
+[submodule "indigo/urdf"]
+	path = indigo/urdf
+	url = https://aur.archlinux.org/ros-indigo-urdf.git
+[submodule "indigo/urdf_parser_plugin"]
+	path = indigo/urdf_parser_plugin
+	url = https://aur.archlinux.org/ros-indigo-urdf-parser-plugin.git
+[submodule "indigo/urdf_tutorial"]
+	path = indigo/urdf_tutorial
+	url = https://aur.archlinux.org/ros-indigo-urdf-tutorial.git
+[submodule "indigo/urdfdom"]
+	path = indigo/urdfdom
+	url = https://aur.archlinux.org/ros-indigo-urdfdom.git
+[submodule "indigo/urdfdom_headers"]
+	path = indigo/urdfdom_headers
+	url = https://aur.archlinux.org/ros-indigo-urdfdom-headers.git
+[submodule "indigo/urdfdom_py"]
+	path = indigo/urdfdom_py
+	url = https://aur.archlinux.org/ros-indigo-urdfdom-py.git
+[submodule "indigo/usb_cam"]
+	path = indigo/usb_cam
+	url = https://aur.archlinux.org/ros-indigo-usb-cam.git
+[submodule "indigo/velocity_controllers"]
+	path = indigo/velocity_controllers
+	url = https://aur.archlinux.org/ros-indigo-velocity-controllers.git
+[submodule "indigo/view_controller_msgs"]
+	path = indigo/view_controller_msgs
+	url = https://aur.archlinux.org/ros-indigo-view-controller-msgs.git
+[submodule "indigo/vision_opencv"]
+	path = indigo/vision_opencv
+	url = https://aur.archlinux.org/ros-indigo-vision-opencv.git
+[submodule "indigo/visualization_marker_tutorials"]
+	path = indigo/visualization_marker_tutorials
+	url = https://aur.archlinux.org/ros-indigo-visualization-marker-tutorials.git
+[submodule "indigo/visualization_msgs"]
+	path = indigo/visualization_msgs
+	url = https://aur.archlinux.org/ros-indigo-visualization-msgs.git
+[submodule "indigo/visualization_tutorials"]
+	path = indigo/visualization_tutorials
+	url = https://aur.archlinux.org/ros-indigo-visualization-tutorials.git
+[submodule "indigo/viz"]
+	path = indigo/viz
+	url = https://aur.archlinux.org/ros-indigo-viz.git
 [submodule "indigo/voxel_grid"]
 	path = indigo/voxel_grid
 	url = https://aur.archlinux.org/ros-indigo-voxel-grid.git
-[submodule "indigo/costmap_2d"]
-	path = indigo/costmap_2d
-	url = https://aur.archlinux.org/ros-indigo-costmap-2d.git
-[submodule "indigo/nav_core"]
-	path = indigo/nav_core
-	url = https://aur.archlinux.org/ros-indigo-nav-core.git
-[submodule "indigo/base_local_planner"]
-	path = indigo/base_local_planner
-	url = https://aur.archlinux.org/ros-indigo-base-local-planner.git
-[submodule "indigo/clear_costmap_recovery"]
-	path = indigo/clear_costmap_recovery
-	url = https://aur.archlinux.org/ros-indigo-clear-costmap-recovery.git
-[submodule "indigo/navfn"]
-	path = indigo/navfn
-	url = https://aur.archlinux.org/ros-indigo-navfn.git
-[submodule "indigo/rotate_recovery"]
-	path = indigo/rotate_recovery
-	url = https://aur.archlinux.org/ros-indigo-rotate-recovery.git
-[submodule "indigo/move_base_msgs"]
-	path = indigo/move_base_msgs
-	url = https://aur.archlinux.org/ros-indigo-move-base-msgs.git
-[submodule "indigo/kobuki_gazebo"]
-	path = indigo/kobuki_gazebo
-	url = https://aur.archlinux.org/ros-indigo-kobuki-gazebo.git
+[submodule "indigo/warehouse_ros"]
+	path = indigo/warehouse_ros
+	url = https://aur.archlinux.org/ros-indigo-warehouse-ros.git
+[submodule "indigo/web_video_server"]
+	path = indigo/web_video_server
+	url = https://aur.archlinux.org/ros-indigo-web-video-server.git
+[submodule "indigo/wiimote"]
+	path = indigo/wiimote
+	url = https://aur.archlinux.org/ros-indigo-wiimote.git
+[submodule "indigo/world_canvas_msgs"]
+	path = indigo/world_canvas_msgs
+	url = https://aur.archlinux.org/ros-indigo-world-canvas-msgs.git
+[submodule "indigo/world_canvas_server"]
+	path = indigo/world_canvas_server
+	url = https://aur.archlinux.org/ros-indigo-world-canvas-server.git
+[submodule "indigo/world_canvas_utils"]
+	path = indigo/world_canvas_utils
+	url = https://aur.archlinux.org/ros-indigo-world-canvas-utils.git
+[submodule "indigo/xacro"]
+	path = indigo/xacro
+	url = https://aur.archlinux.org/ros-indigo-xacro.git
+[submodule "indigo/xmlrpcpp"]
+	path = indigo/xmlrpcpp
+	url = https://aur.archlinux.org/ros-indigo-xmlrpcpp.git
+[submodule "indigo/xv_11_laser_driver"]
+	path = indigo/xv_11_laser_driver
+	url = https://aur.archlinux.org/ros-indigo-xv-11-laser-driver.git
+[submodule "indigo/yocs_cmd_vel_mux"]
+	path = indigo/yocs_cmd_vel_mux
+	url = https://aur.archlinux.org/ros-indigo-yocs-cmd-vel-mux.git
+[submodule "indigo/yocs_controllers"]
+	path = indigo/yocs_controllers
+	url = https://aur.archlinux.org/ros-indigo-yocs-controllers.git
+[submodule "indigo/yocs_math_toolkit"]
+	path = indigo/yocs_math_toolkit
+	url = https://aur.archlinux.org/ros-indigo-yocs-math-toolkit.git
+[submodule "indigo/yocs_msgs"]
+	path = indigo/yocs_msgs
+	url = https://aur.archlinux.org/ros-indigo-yocs-msgs.git
+[submodule "indigo/yocs_velocity_smoother"]
+	path = indigo/yocs_velocity_smoother
+	url = https://aur.archlinux.org/ros-indigo-yocs-velocity-smoother.git
+[submodule "indigo/yocs_virtual_sensor"]
+	path = indigo/yocs_virtual_sensor
+	url = https://aur.archlinux.org/ros-indigo-yocs-virtual-sensor.git
+[submodule "indigo/zeroconf_avahi"]
+	path = indigo/zeroconf_avahi
+	url = https://aur.archlinux.org/ros-indigo-zeroconf-avahi.git
+[submodule "indigo/zeroconf_msgs"]
+	path = indigo/zeroconf_msgs
+	url = https://aur.archlinux.org/ros-indigo-zeroconf-msgs.git
+[submodule "jade/actionlib"]
+	path = jade/actionlib
+	url = https://aur.archlinux.org/ros-jade-actionlib.git
+[submodule "jade/actionlib_msgs"]
+	path = jade/actionlib_msgs
+	url = https://aur.archlinux.org/ros-jade-actionlib-msgs.git
+[submodule "jade/actionlib_tutorials"]
+	path = jade/actionlib_tutorials
+	url = https://aur.archlinux.org/ros-jade-actionlib-tutorials.git
+[submodule "jade/angles"]
+	path = jade/angles
+	url = https://aur.archlinux.org/ros-jade-angles.git
+[submodule "jade/bond"]
+	path = jade/bond
+	url = https://aur.archlinux.org/ros-jade-bond.git
+[submodule "jade/bond_core"]
+	path = jade/bond_core
+	url = https://aur.archlinux.org/ros-jade-bond-core.git
+[submodule "jade/bondcpp"]
+	path = jade/bondcpp
+	url = https://aur.archlinux.org/ros-jade-bondcpp.git
+[submodule "jade/bondpy"]
+	path = jade/bondpy
+	url = https://aur.archlinux.org/ros-jade-bondpy.git
+[submodule "jade/camera_calibration"]
+	path = jade/camera_calibration
+	url = https://aur.archlinux.org/ros-jade-camera-calibration.git
+[submodule "jade/camera_calibration_parsers"]
+	path = jade/camera_calibration_parsers
+	url = https://aur.archlinux.org/ros-jade-camera-calibration-parsers.git
+[submodule "jade/camera_info_manager"]
+	path = jade/camera_info_manager
+	url = https://aur.archlinux.org/ros-jade-camera-info-manager.git
+[submodule "jade/catkin"]
+	path = jade/catkin
+	url = https://aur.archlinux.org/ros-jade-catkin.git
+[submodule "jade/class_loader"]
+	path = jade/class_loader
+	url = https://aur.archlinux.org/ros-jade-class-loader.git
+[submodule "jade/cmake_modules"]
+	path = jade/cmake_modules
+	url = https://aur.archlinux.org/ros-jade-cmake-modules.git
+[submodule "jade/collada_parser"]
+	path = jade/collada_parser
+	url = https://aur.archlinux.org/ros-jade-collada-parser.git
+[submodule "jade/collada_urdf"]
+	path = jade/collada_urdf
+	url = https://aur.archlinux.org/ros-jade-collada-urdf.git
+[submodule "jade/common_msgs"]
+	path = jade/common_msgs
+	url = https://aur.archlinux.org/ros-jade-common-msgs.git
+[submodule "jade/common_tutorials"]
+	path = jade/common_tutorials
+	url = https://aur.archlinux.org/ros-jade-common-tutorials.git
+[submodule "jade/compressed_depth_image_transport"]
+	path = jade/compressed_depth_image_transport
+	url = https://aur.archlinux.org/ros-jade-compressed-depth-image-transport.git
+[submodule "jade/compressed_image_transport"]
+	path = jade/compressed_image_transport
+	url = https://aur.archlinux.org/ros-jade-compressed-image-transport.git
+[submodule "jade/control_msgs"]
+	path = jade/control_msgs
+	url = https://aur.archlinux.org/ros-jade-control-msgs.git
+[submodule "jade/convex_decomposition"]
+	path = jade/convex_decomposition
+	url = https://aur.archlinux.org/ros-jade-convex-decomposition.git
+[submodule "jade/cpp_common"]
+	path = jade/cpp_common
+	url = https://aur.archlinux.org/ros-jade-cpp-common.git
+[submodule "jade/cv_bridge"]
+	path = jade/cv_bridge
+	url = https://aur.archlinux.org/ros-jade-cv-bridge.git
+[submodule "jade/depth_image_proc"]
+	path = jade/depth_image_proc
+	url = https://aur.archlinux.org/ros-jade-depth-image-proc.git
+[submodule "jade/desktop"]
+	path = jade/desktop
+	url = https://aur.archlinux.org/ros-jade-desktop.git
+[submodule "jade/desktop_full"]
+	path = jade/desktop_full
+	url = https://aur.archlinux.org/ros-jade-desktop-full.git
+[submodule "jade/diagnostic_aggregator"]
+	path = jade/diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-jade-diagnostic-aggregator.git
+[submodule "jade/diagnostic_analysis"]
+	path = jade/diagnostic_analysis
+	url = https://aur.archlinux.org/ros-jade-diagnostic-analysis.git
+[submodule "jade/diagnostic_common_diagnostics"]
+	path = jade/diagnostic_common_diagnostics
+	url = https://aur.archlinux.org/ros-jade-diagnostic-common-diagnostics.git
+[submodule "jade/diagnostic_msgs"]
+	path = jade/diagnostic_msgs
+	url = https://aur.archlinux.org/ros-jade-diagnostic-msgs.git
+[submodule "jade/diagnostic_updater"]
+	path = jade/diagnostic_updater
+	url = https://aur.archlinux.org/ros-jade-diagnostic-updater.git
+[submodule "jade/diagnostics"]
+	path = jade/diagnostics
+	url = https://aur.archlinux.org/ros-jade-diagnostics.git
+[submodule "jade/driver_base"]
+	path = jade/driver_base
+	url = https://aur.archlinux.org/ros-jade-driver-base.git
+[submodule "jade/dynamic_edt_3d"]
+	path = jade/dynamic_edt_3d
+	url = https://aur.archlinux.org/ros-jade-dynamic-edt-3d.git
+[submodule "jade/dynamic_reconfigure"]
+	path = jade/dynamic_reconfigure
+	url = https://aur.archlinux.org/ros-jade-dynamic-reconfigure.git
+[submodule "jade/eigen_conversions"]
+	path = jade/eigen_conversions
+	url = https://aur.archlinux.org/ros-jade-eigen-conversions.git
+[submodule "jade/eigen_stl_containers"]
+	path = jade/eigen_stl_containers
+	url = https://aur.archlinux.org/ros-jade-eigen-stl-containers.git
+[submodule "jade/executive_smach"]
+	path = jade/executive_smach
+	url = https://aur.archlinux.org/ros-jade-executive-smach.git
+[submodule "jade/filters"]
+	path = jade/filters
+	url = https://aur.archlinux.org/ros-jade-filters.git
+[submodule "jade/gazebo_msgs"]
+	path = jade/gazebo_msgs
+	url = https://aur.archlinux.org/ros-jade-gazebo-msgs.git
+[submodule "jade/gazebo_plugins"]
+	path = jade/gazebo_plugins
+	url = https://aur.archlinux.org/ros-jade-gazebo-plugins.git
+[submodule "jade/gazebo_ros"]
+	path = jade/gazebo_ros
+	url = https://aur.archlinux.org/ros-jade-gazebo-ros.git
+[submodule "jade/gazebo_ros_pkgs"]
+	path = jade/gazebo_ros_pkgs
+	url = https://aur.archlinux.org/ros-jade-gazebo-ros-pkgs.git
+[submodule "jade/gencpp"]
+	path = jade/gencpp
+	url = https://aur.archlinux.org/ros-jade-gencpp.git
+[submodule "jade/geneus"]
+	path = jade/geneus
+	url = https://aur.archlinux.org/ros-jade-geneus.git
+[submodule "jade/genlisp"]
+	path = jade/genlisp
+	url = https://aur.archlinux.org/ros-jade-genlisp.git
+[submodule "jade/genmsg"]
+	path = jade/genmsg
+	url = https://aur.archlinux.org/ros-jade-genmsg.git
+[submodule "jade/genpy"]
+	path = jade/genpy
+	url = https://aur.archlinux.org/ros-jade-genpy.git
+[submodule "jade/geometric_shapes"]
+	path = jade/geometric_shapes
+	url = https://aur.archlinux.org/ros-jade-geometric-shapes.git
+[submodule "jade/geometry"]
+	path = jade/geometry
+	url = https://aur.archlinux.org/ros-jade-geometry.git
+[submodule "jade/geometry_msgs"]
+	path = jade/geometry_msgs
+	url = https://aur.archlinux.org/ros-jade-geometry-msgs.git
+[submodule "jade/geometry_tutorials"]
+	path = jade/geometry_tutorials
+	url = https://aur.archlinux.org/ros-jade-geometry-tutorials.git
+[submodule "jade/image_common"]
+	path = jade/image_common
+	url = https://aur.archlinux.org/ros-jade-image-common.git
+[submodule "jade/image_geometry"]
+	path = jade/image_geometry
+	url = https://aur.archlinux.org/ros-jade-image-geometry.git
+[submodule "jade/image_pipeline"]
+	path = jade/image_pipeline
+	url = https://aur.archlinux.org/ros-jade-image-pipeline.git
+[submodule "jade/image_proc"]
+	path = jade/image_proc
+	url = https://aur.archlinux.org/ros-jade-image-proc.git
+[submodule "jade/image_rotate"]
+	path = jade/image_rotate
+	url = https://aur.archlinux.org/ros-jade-image-rotate.git
+[submodule "jade/image_transport"]
+	path = jade/image_transport
+	url = https://aur.archlinux.org/ros-jade-image-transport.git
+[submodule "jade/image_transport_plugins"]
+	path = jade/image_transport_plugins
+	url = https://aur.archlinux.org/ros-jade-image-transport-plugins.git
+[submodule "jade/image_view"]
+	path = jade/image_view
+	url = https://aur.archlinux.org/ros-jade-image-view.git
+[submodule "jade/interactive_marker_tutorials"]
+	path = jade/interactive_marker_tutorials
+	url = https://aur.archlinux.org/ros-jade-interactive-marker-tutorials.git
+[submodule "jade/interactive_markers"]
+	path = jade/interactive_markers
+	url = https://aur.archlinux.org/ros-jade-interactive-markers.git
+[submodule "jade/ivcon"]
+	path = jade/ivcon
+	url = https://aur.archlinux.org/ros-jade-ivcon.git
+[submodule "jade/joint_state_publisher"]
+	path = jade/joint_state_publisher
+	url = https://aur.archlinux.org/ros-jade-joint-state-publisher.git
+[submodule "jade/kdl_conversions"]
+	path = jade/kdl_conversions
+	url = https://aur.archlinux.org/ros-jade-kdl-conversions.git
+[submodule "jade/kdl_parser"]
+	path = jade/kdl_parser
+	url = https://aur.archlinux.org/ros-jade-kdl-parser.git
+[submodule "jade/laser_assembler"]
+	path = jade/laser_assembler
+	url = https://aur.archlinux.org/ros-jade-laser-assembler.git
+[submodule "jade/laser_filters"]
+	path = jade/laser_filters
+	url = https://aur.archlinux.org/ros-jade-laser-filters.git
+[submodule "jade/laser_geometry"]
+	path = jade/laser_geometry
+	url = https://aur.archlinux.org/ros-jade-laser-geometry.git
+[submodule "jade/laser_pipeline"]
+	path = jade/laser_pipeline
+	url = https://aur.archlinux.org/ros-jade-laser-pipeline.git
+[submodule "jade/librviz_tutorial"]
+	path = jade/librviz_tutorial
+	url = https://aur.archlinux.org/ros-jade-librviz-tutorial.git
+[submodule "jade/map_msgs"]
+	path = jade/map_msgs
+	url = https://aur.archlinux.org/ros-jade-map-msgs.git
+[submodule "jade/media_export"]
+	path = jade/media_export
+	url = https://aur.archlinux.org/ros-jade-media-export.git
+[submodule "jade/message_filters"]
+	path = jade/message_filters
+	url = https://aur.archlinux.org/ros-jade-message-filters.git
+[submodule "jade/message_generation"]
+	path = jade/message_generation
+	url = https://aur.archlinux.org/ros-jade-message-generation.git
+[submodule "jade/message_runtime"]
+	path = jade/message_runtime
+	url = https://aur.archlinux.org/ros-jade-message-runtime.git
+[submodule "jade/mk"]
+	path = jade/mk
+	url = https://aur.archlinux.org/ros-jade-mk.git
+[submodule "jade/nav_msgs"]
+	path = jade/nav_msgs
+	url = https://aur.archlinux.org/ros-jade-nav-msgs.git
+[submodule "jade/nodelet"]
+	path = jade/nodelet
+	url = https://aur.archlinux.org/ros-jade-nodelet.git
+[submodule "jade/nodelet_core"]
+	path = jade/nodelet_core
+	url = https://aur.archlinux.org/ros-jade-nodelet-core.git
+[submodule "jade/nodelet_topic_tools"]
+	path = jade/nodelet_topic_tools
+	url = https://aur.archlinux.org/ros-jade-nodelet-topic-tools.git
+[submodule "jade/nodelet_tutorial_math"]
+	path = jade/nodelet_tutorial_math
+	url = https://aur.archlinux.org/ros-jade-nodelet-tutorial-math.git
+[submodule "jade/octomap"]
+	path = jade/octomap
+	url = https://aur.archlinux.org/ros-jade-octomap.git
+[submodule "jade/octovis"]
+	path = jade/octovis
+	url = https://aur.archlinux.org/ros-jade-octovis.git
+[submodule "jade/opencv_apps"]
+	path = jade/opencv_apps
+	url = https://aur.archlinux.org/ros-jade-opencv-apps.git
+[submodule "jade/orocos_kdl"]
+	path = jade/orocos_kdl
+	url = https://aur.archlinux.org/ros-jade-orocos-kdl.git
+[submodule "jade/pcl_conversions"]
+	path = jade/pcl_conversions
+	url = https://aur.archlinux.org/ros-jade-pcl-conversions.git
+[submodule "jade/pcl_msgs"]
+	path = jade/pcl_msgs
+	url = https://aur.archlinux.org/ros-jade-pcl-msgs.git
+[submodule "jade/pcl_ros"]
+	path = jade/pcl_ros
+	url = https://aur.archlinux.org/ros-jade-pcl-ros.git
+[submodule "jade/perception"]
+	path = jade/perception
+	url = https://aur.archlinux.org/ros-jade-perception.git
+[submodule "jade/perception_pcl"]
+	path = jade/perception_pcl
+	url = https://aur.archlinux.org/ros-jade-perception-pcl.git
+[submodule "jade/pluginlib"]
+	path = jade/pluginlib
+	url = https://aur.archlinux.org/ros-jade-pluginlib.git
+[submodule "jade/pluginlib_tutorials"]
+	path = jade/pluginlib_tutorials
+	url = https://aur.archlinux.org/ros-jade-pluginlib-tutorials.git
+[submodule "jade/pointcloud_to_laserscan"]
+	path = jade/pointcloud_to_laserscan
+	url = https://aur.archlinux.org/ros-jade-pointcloud-to-laserscan.git
+[submodule "jade/polled_camera"]
+	path = jade/polled_camera
+	url = https://aur.archlinux.org/ros-jade-polled-camera.git
+[submodule "jade/pr2_description"]
+	path = jade/pr2_description
+	url = https://aur.archlinux.org/ros-jade-pr2-description.git
+[submodule "jade/python_orocos_kdl"]
+	path = jade/python_orocos_kdl
+	url = https://aur.archlinux.org/ros-jade-python-orocos-kdl.git
+[submodule "jade/python_qt_binding"]
+	path = jade/python_qt_binding
+	url = https://aur.archlinux.org/ros-jade-python-qt-binding.git
+[submodule "jade/qt_dotgraph"]
+	path = jade/qt_dotgraph
+	url = https://aur.archlinux.org/ros-jade-qt-dotgraph.git
+[submodule "jade/qt_gui"]
+	path = jade/qt_gui
+	url = https://aur.archlinux.org/ros-jade-qt-gui.git
+[submodule "jade/qt_gui_cpp"]
+	path = jade/qt_gui_cpp
+	url = https://aur.archlinux.org/ros-jade-qt-gui-cpp.git
+[submodule "jade/qt_gui_py_common"]
+	path = jade/qt_gui_py_common
+	url = https://aur.archlinux.org/ros-jade-qt-gui-py-common.git
+[submodule "jade/random_numbers"]
+	path = jade/random_numbers
+	url = https://aur.archlinux.org/ros-jade-random-numbers.git
+[submodule "jade/resource_retriever"]
+	path = jade/resource_retriever
+	url = https://aur.archlinux.org/ros-jade-resource-retriever.git
+[submodule "jade/robot"]
+	path = jade/robot
+	url = https://aur.archlinux.org/ros-jade-robot.git
+[submodule "jade/robot_model"]
+	path = jade/robot_model
+	url = https://aur.archlinux.org/ros-jade-robot-model.git
+[submodule "jade/robot_state_publisher"]
+	path = jade/robot_state_publisher
+	url = https://aur.archlinux.org/ros-jade-robot-state-publisher.git
+[submodule "jade/ros"]
+	path = jade/ros
+	url = https://aur.archlinux.org/ros-jade-ros.git
+[submodule "jade/ros_base"]
+	path = jade/ros_base
+	url = https://aur.archlinux.org/ros-jade-ros-base.git
+[submodule "jade/ros_comm"]
+	path = jade/ros_comm
+	url = https://aur.archlinux.org/ros-jade-ros-comm.git
+[submodule "jade/ros_core"]
+	path = jade/ros_core
+	url = https://aur.archlinux.org/ros-jade-ros-core.git
+[submodule "jade/ros_tutorials"]
+	path = jade/ros_tutorials
+	url = https://aur.archlinux.org/ros-jade-ros-tutorials.git
+[submodule "jade/rosbag"]
+	path = jade/rosbag
+	url = https://aur.archlinux.org/ros-jade-rosbag.git
+[submodule "jade/rosbag_migration_rule"]
+	path = jade/rosbag_migration_rule
+	url = https://aur.archlinux.org/ros-jade-rosbag-migration-rule.git
+[submodule "jade/rosbag_storage"]
+	path = jade/rosbag_storage
+	url = https://aur.archlinux.org/ros-jade-rosbag-storage.git
+[submodule "jade/rosbash"]
+	path = jade/rosbash
+	url = https://aur.archlinux.org/ros-jade-rosbash.git
+[submodule "jade/rosboost_cfg"]
+	path = jade/rosboost_cfg
+	url = https://aur.archlinux.org/ros-jade-rosboost-cfg.git
+[submodule "jade/rosbuild"]
+	path = jade/rosbuild
+	url = https://aur.archlinux.org/ros-jade-rosbuild.git
+[submodule "jade/rosclean"]
+	path = jade/rosclean
+	url = https://aur.archlinux.org/ros-jade-rosclean.git
+[submodule "jade/rosconsole"]
+	path = jade/rosconsole
+	url = https://aur.archlinux.org/ros-jade-rosconsole.git
+[submodule "jade/rosconsole_bridge"]
+	path = jade/rosconsole_bridge
+	url = https://aur.archlinux.org/ros-jade-rosconsole-bridge.git
+[submodule "jade/roscpp"]
+	path = jade/roscpp
+	url = https://aur.archlinux.org/ros-jade-roscpp.git
+[submodule "jade/roscpp_core"]
+	path = jade/roscpp_core
+	url = https://aur.archlinux.org/ros-jade-roscpp-core.git
+[submodule "jade/roscpp_serialization"]
+	path = jade/roscpp_serialization
+	url = https://aur.archlinux.org/ros-jade-roscpp-serialization.git
+[submodule "jade/roscpp_traits"]
+	path = jade/roscpp_traits
+	url = https://aur.archlinux.org/ros-jade-roscpp-traits.git
+[submodule "jade/roscpp_tutorials"]
+	path = jade/roscpp_tutorials
+	url = https://aur.archlinux.org/ros-jade-roscpp-tutorials.git
+[submodule "jade/roscreate"]
+	path = jade/roscreate
+	url = https://aur.archlinux.org/ros-jade-roscreate.git
+[submodule "jade/rosgraph"]
+	path = jade/rosgraph
+	url = https://aur.archlinux.org/ros-jade-rosgraph.git
+[submodule "jade/rosgraph_msgs"]
+	path = jade/rosgraph_msgs
+	url = https://aur.archlinux.org/ros-jade-rosgraph-msgs.git
+[submodule "jade/roslang"]
+	path = jade/roslang
+	url = https://aur.archlinux.org/ros-jade-roslang.git
+[submodule "jade/roslaunch"]
+	path = jade/roslaunch
+	url = https://aur.archlinux.org/ros-jade-roslaunch.git
+[submodule "jade/roslib"]
+	path = jade/roslib
+	url = https://aur.archlinux.org/ros-jade-roslib.git
+[submodule "jade/roslint"]
+	path = jade/roslint
+	url = https://aur.archlinux.org/ros-jade-roslint.git
+[submodule "jade/roslisp"]
+	path = jade/roslisp
+	url = https://aur.archlinux.org/ros-jade-roslisp.git
+[submodule "jade/roslz4"]
+	path = jade/roslz4
+	url = https://aur.archlinux.org/ros-jade-roslz4.git
+[submodule "jade/rosmake"]
+	path = jade/rosmake
+	url = https://aur.archlinux.org/ros-jade-rosmake.git
+[submodule "jade/rosmaster"]
+	path = jade/rosmaster
+	url = https://aur.archlinux.org/ros-jade-rosmaster.git
+[submodule "jade/rosmsg"]
+	path = jade/rosmsg
+	url = https://aur.archlinux.org/ros-jade-rosmsg.git
+[submodule "jade/rosnode"]
+	path = jade/rosnode
+	url = https://aur.archlinux.org/ros-jade-rosnode.git
+[submodule "jade/rosout"]
+	path = jade/rosout
+	url = https://aur.archlinux.org/ros-jade-rosout.git
+[submodule "jade/rospack"]
+	path = jade/rospack
+	url = https://aur.archlinux.org/ros-jade-rospack.git
+[submodule "jade/rosparam"]
+	path = jade/rosparam
+	url = https://aur.archlinux.org/ros-jade-rosparam.git
+[submodule "jade/rospy"]
+	path = jade/rospy
+	url = https://aur.archlinux.org/ros-jade-rospy.git
+[submodule "jade/rospy_tutorials"]
+	path = jade/rospy_tutorials
+	url = https://aur.archlinux.org/ros-jade-rospy-tutorials.git
+[submodule "jade/rosservice"]
+	path = jade/rosservice
+	url = https://aur.archlinux.org/ros-jade-rosservice.git
+[submodule "jade/rostest"]
+	path = jade/rostest
+	url = https://aur.archlinux.org/ros-jade-rostest.git
+[submodule "jade/rostime"]
+	path = jade/rostime
+	url = https://aur.archlinux.org/ros-jade-rostime.git
+[submodule "jade/rostopic"]
+	path = jade/rostopic
+	url = https://aur.archlinux.org/ros-jade-rostopic.git
+[submodule "jade/rosunit"]
+	path = jade/rosunit
+	url = https://aur.archlinux.org/ros-jade-rosunit.git
+[submodule "jade/roswtf"]
+	path = jade/roswtf
+	url = https://aur.archlinux.org/ros-jade-roswtf.git
+[submodule "jade/rqt_action"]
+	path = jade/rqt_action
+	url = https://aur.archlinux.org/ros-jade-rqt-action.git
+[submodule "jade/rqt_bag"]
+	path = jade/rqt_bag
+	url = https://aur.archlinux.org/ros-jade-rqt-bag.git
+[submodule "jade/rqt_bag_plugins"]
+	path = jade/rqt_bag_plugins
+	url = https://aur.archlinux.org/ros-jade-rqt-bag-plugins.git
+[submodule "jade/rqt_common_plugins"]
+	path = jade/rqt_common_plugins
+	url = https://aur.archlinux.org/ros-jade-rqt-common-plugins.git
+[submodule "jade/rqt_console"]
+	path = jade/rqt_console
+	url = https://aur.archlinux.org/ros-jade-rqt-console.git
+[submodule "jade/rqt_dep"]
+	path = jade/rqt_dep
+	url = https://aur.archlinux.org/ros-jade-rqt-dep.git
+[submodule "jade/rqt_graph"]
+	path = jade/rqt_graph
+	url = https://aur.archlinux.org/ros-jade-rqt-graph.git
+[submodule "jade/rqt_gui"]
+	path = jade/rqt_gui
+	url = https://aur.archlinux.org/ros-jade-rqt-gui.git
+[submodule "jade/rqt_gui_cpp"]
+	path = jade/rqt_gui_cpp
+	url = https://aur.archlinux.org/ros-jade-rqt-gui-cpp.git
+[submodule "jade/rqt_gui_py"]
+	path = jade/rqt_gui_py
+	url = https://aur.archlinux.org/ros-jade-rqt-gui-py.git
+[submodule "jade/rqt_image_view"]
+	path = jade/rqt_image_view
+	url = https://aur.archlinux.org/ros-jade-rqt-image-view.git
+[submodule "jade/rqt_launch"]
+	path = jade/rqt_launch
+	url = https://aur.archlinux.org/ros-jade-rqt-launch.git
+[submodule "jade/rqt_logger_level"]
+	path = jade/rqt_logger_level
+	url = https://aur.archlinux.org/ros-jade-rqt-logger-level.git
+[submodule "jade/rqt_moveit"]
+	path = jade/rqt_moveit
+	url = https://aur.archlinux.org/ros-jade-rqt-moveit.git
+[submodule "jade/rqt_msg"]
+	path = jade/rqt_msg
+	url = https://aur.archlinux.org/ros-jade-rqt-msg.git
+[submodule "jade/rqt_nav_view"]
+	path = jade/rqt_nav_view
+	url = https://aur.archlinux.org/ros-jade-rqt-nav-view.git
+[submodule "jade/rqt_plot"]
+	path = jade/rqt_plot
+	url = https://aur.archlinux.org/ros-jade-rqt-plot.git
+[submodule "jade/rqt_pose_view"]
+	path = jade/rqt_pose_view
+	url = https://aur.archlinux.org/ros-jade-rqt-pose-view.git
+[submodule "jade/rqt_publisher"]
+	path = jade/rqt_publisher
+	url = https://aur.archlinux.org/ros-jade-rqt-publisher.git
+[submodule "jade/rqt_py_common"]
+	path = jade/rqt_py_common
+	url = https://aur.archlinux.org/ros-jade-rqt-py-common.git
+[submodule "jade/rqt_py_console"]
+	path = jade/rqt_py_console
+	url = https://aur.archlinux.org/ros-jade-rqt-py-console.git
+[submodule "jade/rqt_reconfigure"]
+	path = jade/rqt_reconfigure
+	url = https://aur.archlinux.org/ros-jade-rqt-reconfigure.git
+[submodule "jade/rqt_robot_dashboard"]
+	path = jade/rqt_robot_dashboard
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-dashboard.git
+[submodule "jade/rqt_robot_monitor"]
+	path = jade/rqt_robot_monitor
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-monitor.git
+[submodule "jade/rqt_robot_plugins"]
+	path = jade/rqt_robot_plugins
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-plugins.git
+[submodule "jade/rqt_robot_steering"]
+	path = jade/rqt_robot_steering
+	url = https://aur.archlinux.org/ros-jade-rqt-robot-steering.git
+[submodule "jade/rqt_runtime_monitor"]
+	path = jade/rqt_runtime_monitor
+	url = https://aur.archlinux.org/ros-jade-rqt-runtime-monitor.git
+[submodule "jade/rqt_rviz"]
+	path = jade/rqt_rviz
+	url = https://aur.archlinux.org/ros-jade-rqt-rviz.git
+[submodule "jade/rqt_service_caller"]
+	path = jade/rqt_service_caller
+	url = https://aur.archlinux.org/ros-jade-rqt-service-caller.git
+[submodule "jade/rqt_shell"]
+	path = jade/rqt_shell
+	url = https://aur.archlinux.org/ros-jade-rqt-shell.git
+[submodule "jade/rqt_srv"]
+	path = jade/rqt_srv
+	url = https://aur.archlinux.org/ros-jade-rqt-srv.git
+[submodule "jade/rqt_tf_tree"]
+	path = jade/rqt_tf_tree
+	url = https://aur.archlinux.org/ros-jade-rqt-tf-tree.git
+[submodule "jade/rqt_top"]
+	path = jade/rqt_top
+	url = https://aur.archlinux.org/ros-jade-rqt-top.git
+[submodule "jade/rqt_topic"]
+	path = jade/rqt_topic
+	url = https://aur.archlinux.org/ros-jade-rqt-topic.git
+[submodule "jade/rqt_web"]
+	path = jade/rqt_web
+	url = https://aur.archlinux.org/ros-jade-rqt-web.git
+[submodule "jade/rviz"]
+	path = jade/rviz
+	url = https://aur.archlinux.org/ros-jade-rviz.git
+[submodule "jade/rviz_plugin_tutorials"]
+	path = jade/rviz_plugin_tutorials
+	url = https://aur.archlinux.org/ros-jade-rviz-plugin-tutorials.git
+[submodule "jade/rviz_python_tutorial"]
+	path = jade/rviz_python_tutorial
+	url = https://aur.archlinux.org/ros-jade-rviz-python-tutorial.git
+[submodule "jade/self_test"]
+	path = jade/self_test
+	url = https://aur.archlinux.org/ros-jade-self-test.git
+[submodule "jade/sensor_msgs"]
+	path = jade/sensor_msgs
+	url = https://aur.archlinux.org/ros-jade-sensor-msgs.git
+[submodule "jade/shape_msgs"]
+	path = jade/shape_msgs
+	url = https://aur.archlinux.org/ros-jade-shape-msgs.git
+[submodule "jade/simulators"]
+	path = jade/simulators
+	url = https://aur.archlinux.org/ros-jade-simulators.git
+[submodule "jade/smach"]
+	path = jade/smach
+	url = https://aur.archlinux.org/ros-jade-smach.git
+[submodule "jade/smach_msgs"]
+	path = jade/smach_msgs
+	url = https://aur.archlinux.org/ros-jade-smach-msgs.git
+[submodule "jade/smach_ros"]
+	path = jade/smach_ros
+	url = https://aur.archlinux.org/ros-jade-smach-ros.git
+[submodule "jade/smclib"]
+	path = jade/smclib
+	url = https://aur.archlinux.org/ros-jade-smclib.git
+[submodule "jade/stage"]
+	path = jade/stage
+	url = https://aur.archlinux.org/ros-jade-stage.git
+[submodule "jade/stage_ros"]
+	path = jade/stage_ros
+	url = https://aur.archlinux.org/ros-jade-stage-ros.git
+[submodule "jade/std_msgs"]
+	path = jade/std_msgs
+	url = https://aur.archlinux.org/ros-jade-std-msgs.git
+[submodule "jade/std_srvs"]
+	path = jade/std_srvs
+	url = https://aur.archlinux.org/ros-jade-std-srvs.git
+[submodule "jade/stereo_image_proc"]
+	path = jade/stereo_image_proc
+	url = https://aur.archlinux.org/ros-jade-stereo-image-proc.git
+[submodule "jade/stereo_msgs"]
+	path = jade/stereo_msgs
+	url = https://aur.archlinux.org/ros-jade-stereo-msgs.git
+[submodule "jade/test_diagnostic_aggregator"]
+	path = jade/test_diagnostic_aggregator
+	url = https://aur.archlinux.org/ros-jade-test-diagnostic-aggregator.git
+[submodule "jade/tf"]
+	path = jade/tf
+	url = https://aur.archlinux.org/ros-jade-tf.git
+[submodule "jade/tf2"]
+	path = jade/tf2
+	url = https://aur.archlinux.org/ros-jade-tf2.git
+[submodule "jade/tf2_geometry_msgs"]
+	path = jade/tf2_geometry_msgs
+	url = https://aur.archlinux.org/ros-jade-tf2-geometry-msgs.git
+[submodule "jade/tf2_msgs"]
+	path = jade/tf2_msgs
+	url = https://aur.archlinux.org/ros-jade-tf2-msgs.git
+[submodule "jade/tf2_py"]
+	path = jade/tf2_py
+	url = https://aur.archlinux.org/ros-jade-tf2-py.git
+[submodule "jade/tf2_ros"]
+	path = jade/tf2_ros
+	url = https://aur.archlinux.org/ros-jade-tf2-ros.git
+[submodule "jade/tf2_sensor_msgs"]
+	path = jade/tf2_sensor_msgs
+	url = https://aur.archlinux.org/ros-jade-tf2-sensor-msgs.git
+[submodule "jade/tf_conversions"]
+	path = jade/tf_conversions
+	url = https://aur.archlinux.org/ros-jade-tf-conversions.git
+[submodule "jade/theora_image_transport"]
+	path = jade/theora_image_transport
+	url = https://aur.archlinux.org/ros-jade-theora-image-transport.git
+[submodule "jade/topic_tools"]
+	path = jade/topic_tools
+	url = https://aur.archlinux.org/ros-jade-topic-tools.git
+[submodule "jade/trajectory_msgs"]
+	path = jade/trajectory_msgs
+	url = https://aur.archlinux.org/ros-jade-trajectory-msgs.git
+[submodule "jade/turtle_actionlib"]
+	path = jade/turtle_actionlib
+	url = https://aur.archlinux.org/ros-jade-turtle-actionlib.git
+[submodule "jade/turtle_tf"]
+	path = jade/turtle_tf
+	url = https://aur.archlinux.org/ros-jade-turtle-tf.git
+[submodule "jade/turtle_tf2"]
+	path = jade/turtle_tf2
+	url = https://aur.archlinux.org/ros-jade-turtle-tf2.git
+[submodule "jade/turtlesim"]
+	path = jade/turtlesim
+	url = https://aur.archlinux.org/ros-jade-turtlesim.git
+[submodule "jade/urdf"]
+	path = jade/urdf
+	url = https://aur.archlinux.org/ros-jade-urdf.git
+[submodule "jade/urdf_parser_plugin"]
+	path = jade/urdf_parser_plugin
+	url = https://aur.archlinux.org/ros-jade-urdf-parser-plugin.git
+[submodule "jade/urdf_tutorial"]
+	path = jade/urdf_tutorial
+	url = https://aur.archlinux.org/ros-jade-urdf-tutorial.git
+[submodule "jade/vision_opencv"]
+	path = jade/vision_opencv
+	url = https://aur.archlinux.org/ros-jade-vision-opencv.git
+[submodule "jade/visualization_marker_tutorials"]
+	path = jade/visualization_marker_tutorials
+	url = https://aur.archlinux.org/ros-jade-visualization-marker-tutorials.git
+[submodule "jade/visualization_msgs"]
+	path = jade/visualization_msgs
+	url = https://aur.archlinux.org/ros-jade-visualization-msgs.git
+[submodule "jade/visualization_tutorials"]
+	path = jade/visualization_tutorials
+	url = https://aur.archlinux.org/ros-jade-visualization-tutorials.git
+[submodule "jade/viz"]
+	path = jade/viz
+	url = https://aur.archlinux.org/ros-jade-viz.git
+[submodule "jade/xacro"]
+	path = jade/xacro
+	url = https://aur.archlinux.org/ros-jade-xacro.git
+[submodule "jade/xmlrpcpp"]
+	path = jade/xmlrpcpp
+	url = https://aur.archlinux.org/ros-jade-xmlrpcpp.git
