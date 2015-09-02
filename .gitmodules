@@ -1,6 +1,18 @@
 [submodule "dependencies/ros-build-tools"]
 	path = dependencies/ros-build-tools
 	url = https://aur4.archlinux.org/ros-build-tools.git
+[submodule "dependencies/python2-rosdep"]
+	path = dependencies/python2-rosdep
+	url = ssh+git://aur@aur4.archlinux.org/python2-rosdep
+[submodule "dependencies/python2-empy"]
+	path = dependencies/python2-empy
+	url = ssh+git://aur@aur4.archlinux.org/python2-empy
+[submodule "dependencies/python2-catkin-pkg"]
+	path = dependencies/python2-catkin-pkg
+	url = https://aur4.archlinux.org/python2-catkin-pkg.git
+[submodule "dependencies/python-catkin-pkg"]
+	path = dependencies/python-catkin-pkg
+	url = https://aur4.archlinux.org/python-catkin-pkg.git
 [submodule "indigo/catkin"]
 	path = indigo/catkin
 	url = https://aur.archlinux.org/ros-indigo-catkin.git
@@ -1513,12 +1525,6 @@
 [submodule "jade/rosbash"]
 	path = jade/rosbash
 	url = https://aur.archlinux.org/ros-jade-rosbash.git
-[submodule "dependencies/python2-catkin-pkg"]
-	path = dependencies/python2-catkin-pkg
-	url = https://aur4.archlinux.org/python2-catkin-pkg.git
-[submodule "dependencies/python-catkin-pkg"]
-	path = dependencies/python-catkin-pkg
-	url = https://aur4.archlinux.org/python-catkin-pkg.git
 [submodule "indigo/realtime_tools"]
 	path = indigo/realtime_tools
 	url = https://aur.archlinux.org/ros-indigo-realtime-tools.git
