@@ -1,18 +1,18 @@
 [submodule "dependencies/python-catkin-pkg"]
 	path = dependencies/python-catkin-pkg
-	url = https://aur4.archlinux.org/python-catkin-pkg.git
+	url = https://aur.archlinux.org/python-catkin-pkg.git
 [submodule "dependencies/python2-catkin-pkg"]
 	path = dependencies/python2-catkin-pkg
-	url = https://aur4.archlinux.org/python2-catkin-pkg.git
+	url = https://aur.archlinux.org/python2-catkin-pkg.git
 [submodule "dependencies/python2-empy"]
 	path = dependencies/python2-empy
-	url = https://aur4.archlinux.org/python2-empy.git
+	url = https://aur.archlinux.org/python2-empy.git
 [submodule "dependencies/python2-rosdep"]
 	path = dependencies/python2-rosdep
-	url = https://aur4.archlinux.org/python2-rosdep.git
+	url = https://aur.archlinux.org/python2-rosdep.git
 [submodule "dependencies/ros-build-tools"]
 	path = dependencies/ros-build-tools
-	url = https://aur4.archlinux.org/ros-build-tools.git
+	url = https://aur.archlinux.org/ros-build-tools.git
 [submodule "indigo/actionlib"]
 	path = indigo/actionlib
 	url = https://aur.archlinux.org/ros-indigo-actionlib.git
