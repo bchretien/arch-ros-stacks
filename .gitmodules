@@ -6,10 +6,10 @@
 	url = https://aur4.archlinux.org/python2-catkin-pkg.git
 [submodule "dependencies/python2-empy"]
 	path = dependencies/python2-empy
-	url = ssh+git://aur@aur4.archlinux.org/python2-empy
+	url = https://aur4.archlinux.org/python2-empy.git
 [submodule "dependencies/python2-rosdep"]
 	path = dependencies/python2-rosdep
-	url = ssh+git://aur@aur4.archlinux.org/python2-rosdep
+	url = https://aur4.archlinux.org/python2-rosdep.git
 [submodule "dependencies/ros-build-tools"]
 	path = dependencies/ros-build-tools
 	url = https://aur4.archlinux.org/ros-build-tools.git
