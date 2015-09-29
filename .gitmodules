@@ -2029,3 +2029,6 @@
 [submodule "indigo/move_slow_and_clear"]
 	path = indigo/move_slow_and_clear
 	url = https://aur.archlinux.org/ros-indigo-move-slow-and-clear.git
+[submodule "indigo/navigation"]
+	path = indigo/navigation
+	url = https://aur.archlinux.org/ros-indigo-navigation.git
