@@ -12,6 +12,7 @@ arch-ros-stacks
     - [PKGBUILD update](#pkgbuild-update)
     - [AUR upload](#aur-upload)
     - [Pull requests (PR) to arch-ros-stacks](#pull-requests-pr-to-arch-ros-stacks)
+    - [Setting push URLs](#setting-push-urls)
     - [Conversion to AUR4 packages (legacy)](#conversion-to-aur4-packages-legacy)
   - [Python version](#python-version)
 
@@ -51,7 +52,29 @@ $ git clone --recursive https://github.com/bchretien/arch-ros-stacks.git
 ```
 
 This will download the submodules (`git submodule init && git submodule
-update`) after cloning the repository.
+update`) after cloning the repository, so this is equivalent to:
+
+```shell
+$ git clone https://github.com/bchretien/arch-ros-stacks.git
+$ git submodule init
+$ git submodule update
+```
+
+If you keep your clone around and want to update it:
+
+```shell
+$ git pull origin master
+$ git submodule init && git submodule update
+```
+
+Note that running `git submodule update` may be quite slow, since it will
+initialize hundreds of submodules sequentially. You may want to use the
+[following approach][parallel-submodule-update] that spawns multiple
+processes:
+
+```shell
+$ cat .gitmodules | grep -Po '".*"' | sed 's/.\(.\+\).$/\1/' | while sleep 0.1 && read line; do git submodule update --init $line & done
+```
 
 ## How to contribute
 
@@ -170,6 +193,14 @@ $ git commit -m "indigo: update ... and its dependencies"
 
 Finally, push to your GitHub fork and make your PR.
 
+#### Setting push URLs
+
+Git can only store one URL for each submodule in the project. Since most users
+do not have SSH access to the AUR repositories, this URL is the read-only HTTPS
+URL by default. If you want to set the push URLs, simply run the
+`set_pushurl.sh` script, and any `git push` attemp will rely on the SSH URL.
+
+
 #### Conversion to AUR4 packages (legacy)
 
 The `to_aur4.sh` script can take care of uploading packages that are not
@@ -194,3 +225,4 @@ for Indigo and Jade.
 [distribution.yaml]: https://github.com/ros/rosdistro/blob/master/indigo/distribution.yaml
 [AUR]: https://aur.archlinux.org/
 [AUR key]: https://wiki.archlinux.org/index.php/Arch_User_Repository#Submitting_packages
+[parallel-submodule-update]: http://stackoverflow.com/a/17322442/1043187
