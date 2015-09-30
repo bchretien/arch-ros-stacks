@@ -2008,3 +2008,27 @@
 [submodule "jade/xmlrpcpp"]
 	path = jade/xmlrpcpp
 	url = https://aur.archlinux.org/ros-jade-xmlrpcpp.git
+[submodule "indigo/robot_pose_ekf"]
+	path = indigo/robot_pose_ekf
+	url = https://aur.archlinux.org/ros-indigo-robot-pose-ekf.git
+[submodule "indigo/map_server"]
+	path = indigo/map_server
+	url = https://aur.archlinux.org/ros-indigo-map-server.git
+[submodule "indigo/amcl"]
+	path = indigo/amcl
+	url = https://aur.archlinux.org/ros-indigo-amcl.git
+[submodule "indigo/dwa_local_planner"]
+	path = indigo/dwa_local_planner
+	url = https://aur.archlinux.org/ros-indigo-dwa-local-planner.git
+[submodule "indigo/carrot_planner"]
+	path = indigo/carrot_planner
+	url = https://aur.archlinux.org/ros-indigo-carrot-planner.git
+[submodule "indigo/fake_localization"]
+	path = indigo/fake_localization
+	url = https://aur.archlinux.org/ros-indigo-fake-localization.git
+[submodule "indigo/move_slow_and_clear"]
+	path = indigo/move_slow_and_clear
+	url = https://aur.archlinux.org/ros-indigo-move-slow-and-clear.git
+[submodule "indigo/navigation"]
+	path = indigo/navigation
+	url = https://aur.archlinux.org/ros-indigo-navigation.git
