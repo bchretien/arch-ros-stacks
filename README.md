@@ -69,12 +69,8 @@ $ git submodule init && git submodule update
 
 Note that running `git submodule update` may be quite slow, since it will
 initialize hundreds of submodules sequentially. You may want to use the
-[following approach][parallel-submodule-update] that spawns multiple
-processes:
-
-```shell
-$ cat .gitmodules | grep -Po '".*"' | sed 's/.\(.\+\).$/\1/' | while sleep 0.1 && read line; do git submodule update --init $line & done
-```
+`parallel_submodule_update.py` script that spawns multiple processes. Simply
+run it right after cloning (without `--recursive`).
 
 ## How to contribute
 
@@ -225,4 +221,3 @@ for Indigo and Jade.
 [distribution.yaml]: https://github.com/ros/rosdistro/blob/master/indigo/distribution.yaml
 [AUR]: https://aur.archlinux.org/
 [AUR key]: https://wiki.archlinux.org/index.php/Arch_User_Repository#Submitting_packages
-[parallel-submodule-update]: http://stackoverflow.com/a/17322442/1043187
