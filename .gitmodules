@@ -2032,3 +2032,12 @@
 [submodule "indigo/navigation"]
 	path = indigo/navigation
 	url = https://aur.archlinux.org/ros-indigo-navigation.git
+[submodule "dependencies/python-rosdistro"]
+	path = dependencies/python-rosdistro
+	url = https://aur.archlinux.org/python-rosdistro.git
+[submodule "dependencies/python-rospkg"]
+	path = dependencies/python-rospkg
+	url = https://aur.archlinux.org/python-rospkg.git
+[submodule "dependencies/python-rosdep"]
+	path = dependencies/python-rosdep
+	url = https://aur.archlinux.org/python-rosdep.git
