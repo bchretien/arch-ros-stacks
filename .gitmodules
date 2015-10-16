@@ -2041,3 +2041,6 @@
 [submodule "dependencies/python-rosdep"]
 	path = dependencies/python-rosdep
 	url = https://aur.archlinux.org/python-rosdep.git
+[submodule "dependencies/python2-rospkg"]
+	path = dependencies/python2-rospkg
+	url = https://aur.archlinux.org/python2-rospkg.git
