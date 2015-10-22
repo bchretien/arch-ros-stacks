@@ -3,4 +3,5 @@ python:
   - "3.5"
 
 script:
+    - cd "$TRAVIS_BUILD_DIR"
     - python ./submodule_check.py
