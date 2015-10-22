@@ -3,6 +3,7 @@
 
 import os
 import re
+import argparse
 import subprocess
 from multiprocessing import Pool
 
@@ -19,13 +20,29 @@ def list_submodules():
 def update_submodule(name):
     cmd = ["git", "-C", path, "submodule", "update", "--init", name]
     print("Updating %s..." % name)
-    res = subprocess.call(cmd, shell=False, stdout=subprocess.DEVNULL,
-                          stderr=subprocess.DEVNULL)
-    print("%s updated" % name)
-    return res
+    # The init locks .git/config, so it may conflict with another process.
+    # We will retry until it succeeds
+    while True:
+        try:
+            subprocess.check_output(cmd, stderr=subprocess.PIPE, shell=False)
+            print("%s updated" % name)
+            return
+        except subprocess.CalledProcessError as e:
+            # Continue if it's a locking issue
+            if b"could not lock config file .git/config: File exists" in e.stderr:
+                print("Retrying %s update..." % name)
+                continue
+            # Rethrow the exception
+            else:
+                raise e
 
 
 if __name__ == '__main__':
-    p = Pool()
+    parser = argparse.ArgumentParser(description='Update submodules in parallel')
+    parser.add_argument(dest="n", nargs='?', const=1, type=int, default=None,
+                        help="Number of processes in the process pool")
+    args = parser.parse_args()
+
+    p = Pool(args.n)
     p.map(update_submodule, list_submodules())
 

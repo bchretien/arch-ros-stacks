@@ -18,15 +18,14 @@ def list_submodules():
 
 
 def check_submodule(name):
-    cmd_commit = ["git", "ls-tree", "master", name]
+    cmd_commit = ["git", "ls-tree", "HEAD", name]
     commit_res = subprocess.Popen(cmd_commit, shell=False,
                                   stdout=subprocess.PIPE).communicate()[0].split()
     if commit_res[1] == b"commit":
         commit_id = commit_res[2]
         cmd_check = ["git", "-C", name, "branch", "--quiet", "-r", "--contains", commit_id]
         print("Checking %s..." % name)
-        res = subprocess.Popen(cmd_check, shell=False, stdout=subprocess.PIPE,
-                               stderr=subprocess.DEVNULL) \
+        res = subprocess.Popen(cmd_check, shell=False, stdout=subprocess.PIPE) \
                         .communicate()[0].decode().splitlines()
         print("%s checked" % name)
         if len(res) == 0:
