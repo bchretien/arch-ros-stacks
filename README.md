@@ -1,6 +1,8 @@
 arch-ros-stacks
 ---------------
 
+[![Build Status](https://travis-ci.org/bchretien/arch-ros-stacks.png?branch=master)](https://travis-ci.org/bchretien/arch-ros-stacks)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
