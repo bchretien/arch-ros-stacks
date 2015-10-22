@@ -2,6 +2,16 @@ language: python
 python:
   - "3.5"
 
+git:
+  # Rely on our custom script
+  submodules: false
+
+branches:
+  only:
+    - master
+    - travis
+
 script:
-    - cd "$TRAVIS_BUILD_DIR"
-    - python ./submodule_check.py
+  - python ./parallel_submodule_update.py
+  - git submodule status
+  - python ./check_submodules.py
