@@ -2044,3 +2044,6 @@
 [submodule "dependencies/python2-rospkg"]
 	path = dependencies/python2-rospkg
 	url = https://aur.archlinux.org/python2-rospkg.git
+[submodule "indigo/tf2_kdl"]
+	path = indigo/tf2_kdl
+	url = https://aur.archlinux.org/ros-indigo-tf2-kdl.git
