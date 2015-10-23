@@ -18,18 +18,22 @@ def list_submodules():
 
 
 def check_submodule(name):
-    cmd_commit = ["git", "ls-tree", "HEAD", name]
-    commit_res = subprocess.Popen(cmd_commit, shell=False,
-                                  stdout=subprocess.PIPE).communicate()[0].split()
-    if commit_res[1] == b"commit":
-        commit_id = commit_res[2]
-        cmd_check = ["git", "-C", name, "branch", "--quiet", "-r", "--contains", commit_id]
-        print("Checking %s..." % name)
-        res = subprocess.Popen(cmd_check, shell=False, stdout=subprocess.PIPE) \
-                        .communicate()[0].decode().splitlines()
-        print("%s checked" % name)
-        if len(res) == 0:
-            return name
+    # Get commit id of local branch
+    cmd_commit = ["git", "-C", name, "rev-parse", "--verify", "HEAD"]
+    commit_id = subprocess.Popen(cmd_commit, shell=False,
+                                 stdout=subprocess.PIPE) \
+                                .communicate()[0].decode().rstrip('\n')
+
+    # Check if it's also in the remote branch
+    cmd_check = ["git", "-C", name, "branch", "--quiet", "-r", "--contains", commit_id]
+    print("Checking %s..." % name)
+    res = subprocess.Popen(cmd_check, shell=False, stdout=subprocess.PIPE) \
+                    .communicate()[0].decode().splitlines()
+    print("%s checked" % name)
+
+    if len(res) == 0:
+        return name
+
     return None
 
 
