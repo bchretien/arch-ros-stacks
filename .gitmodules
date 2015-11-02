@@ -481,6 +481,9 @@
 [submodule "indigo/libfreenect"]
 	path = indigo/libfreenect
 	url = https://aur.archlinux.org/ros-indigo-libfreenect.git
+[submodule "indigo/libmavconn"]
+	path = indigo/libmavconn
+	url = https://aur.archlinux.org/ros-indigo-libmavconn.git
 [submodule "indigo/librviz_tutorial"]
 	path = indigo/librviz_tutorial
 	url = https://aur.archlinux.org/ros-indigo-librviz-tutorial.git
@@ -490,6 +493,12 @@
 [submodule "indigo/map_msgs"]
 	path = indigo/map_msgs
 	url = https://aur.archlinux.org/ros-indigo-map-msgs.git
+[submodule "indigo/mavlink"]
+	path = indigo/mavlink
+	url = https://aur.archlinux.org/ros-indigo-mavlink.git
+[submodule "indigo/mavros"]
+	path = indigo/mavros
+	url = https://aur.archlinux.org/ros-indigo-mavros.git
 [submodule "indigo/media_export"]
 	path = indigo/media_export
 	url = https://aur.archlinux.org/ros-indigo-media-export.git
