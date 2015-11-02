@@ -50,29 +50,28 @@ favorite AUR helper.
 To clone this repository, do:
 
 ```shell
+$ git clone https://github.com/bchretien/arch-ros-stacks.git
+$ cd ./arch-ros-stacks
+$ ./parallel_submodule_update.py
+```
+
+This will initialize/update the (hundreds of) submodules in parallel. This is
+equivalent to the usual commands:
+
+```shell
 $ git clone --recursive https://github.com/bchretien/arch-ros-stacks.git
 ```
 
-This will download the submodules (`git submodule init && git submodule
-update`) after cloning the repository, so this is equivalent to:
+or
 
 ```shell
 $ git clone https://github.com/bchretien/arch-ros-stacks.git
+$ cd ./arch-ros-stacks
 $ git submodule init
 $ git submodule update
 ```
 
-If you keep your clone around and want to update it:
-
-```shell
-$ git pull origin master
-$ git submodule init && git submodule update
-```
-
-Note that running `git submodule update` may be quite slow, since it will
-initialize hundreds of submodules sequentially. You may want to use the
-`parallel_submodule_update.py` script that spawns multiple processes. Simply
-run it right after cloning (without `--recursive`).
+except that it runs on steroids.
 
 ## How to contribute
 
