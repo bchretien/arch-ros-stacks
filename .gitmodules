@@ -2056,3 +2056,9 @@
 [submodule "indigo/tf2_kdl"]
 	path = indigo/tf2_kdl
 	url = https://aur.archlinux.org/ros-indigo-tf2-kdl.git
+[submodule "indigo/mavros_msgs"]
+	path = indigo/mavros_msgs
+	url = https://aur.archlinux.org/ros-indigo-mavros-msgs.git
+[submodule "indigo/mavros_extras"]
+	path = indigo/mavros_extras
+	url = https://aur.archlinux.org/ros-indigo-mavros-extras.git
