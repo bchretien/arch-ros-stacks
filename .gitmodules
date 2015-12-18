@@ -2104,3 +2104,6 @@
 [submodule "indigo/hector_slam"]
 	path = indigo/hector_slam
 	url = https://aur.archlinux.org/ros-indigo-hector-slam.git
+[submodule "indigo/slam_gmapping"]
+	path = indigo/slam_gmapping
+	url = https://aur.archlinux.org/ros-indigo-slam-gmapping.git
