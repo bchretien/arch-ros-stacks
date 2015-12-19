@@ -2107,18 +2107,18 @@
 [submodule "indigo/slam_gmapping"]
 	path = indigo/slam_gmapping
 	url = https://aur.archlinux.org/ros-indigo-slam-gmapping.git
-[submodule "ros-indigo-rosserial-arduino"]
+[submodule "indigo/rosserial_arduino"]
 	path = indigo/rosserial_arduino
-	url = https://aur@aur.archlinux.org/ros-indigo-rosserial-arduino.git
+	url = https://aur.archlinux.org/ros-indigo-rosserial-arduino.git
 [submodule "indigo/rosserial_embeddedlinux"]
 	path = indigo/rosserial_embeddedlinux
-	url = https://aur@aur.archlinux.org/ros-indigo-rosserial-embeddedlinux.git
+	url = https://aur.archlinux.org/ros-indigo-rosserial-embeddedlinux.git
 [submodule "indigo/rosserial_server"]
 	path = indigo/rosserial_server
-	url = https://aur@aur.archlinux.org/ros-indigo-rosserial-server.git
+	url = https://aur.archlinux.org/ros-indigo-rosserial-server.git
 [submodule "indigo/rosserial_windows"]
 	path = indigo/rosserial_windows
-	url = https://aur@aur.archlinux.org/ros-indigo-rosserial-windows.git
+	url = https://aur.archlinux.org/ros-indigo-rosserial-windows.git
 [submodule "indigo/rosserial_xbee"]
 	path = indigo/rosserial_xbee
-	url = https://aur@aur.archlinux.org/ros-indigo-rosserial-xbee.git
+	url = https://aur.archlinux.org/ros-indigo-rosserial-xbee.git
