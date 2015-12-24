@@ -2125,3 +2125,15 @@
 [submodule "indigo/async_web_server_cpp"]
 	path = indigo/async_web_server_cpp
 	url = https://aur.archlinux.org/ros-indigo-async-web-server-cpp.git
+[submodule "indigo/imu_complementary_filter"]
+	path = indigo/imu_complementary_filter
+	url = https://aur.archlinux.org/ros-indigo-imu-complementary-filter.git
+[submodule "indigo/imu_filter_madgwick"]
+	path = indigo/imu_filter_madgwick
+	url = https://aur.archlinux.org/ros-indigo-imu-filter-madgwick.git
+[submodule "indigo/rviz_imu_plugin"]
+	path = indigo/rviz_imu_plugin
+	url = https://aur.archlinux.org/ros-indigo-rviz-imu-plugin.git
+[submodule "indigo/imu_tools"]
+	path = indigo/imu_tools
+	url = https://aur.archlinux.org/ros-indigo-imu-tools.git
