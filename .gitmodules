@@ -2122,6 +2122,9 @@
 [submodule "indigo/rosserial_xbee"]
 	path = indigo/rosserial_xbee
 	url = https://aur.archlinux.org/ros-indigo-rosserial-xbee.git
+[submodule "indigo/async_web_server_cpp"]
+	path = indigo/async_web_server_cpp
+	url = https://aur.archlinux.org/ros-indigo-async-web-server-cpp.git
 [submodule "indigo/imu_complementary_filter"]
 	path = indigo/imu_complementary_filter
 	url = https://aur.archlinux.org/ros-indigo-imu-complementary-filter.git
