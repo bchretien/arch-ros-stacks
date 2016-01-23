@@ -9,7 +9,7 @@ import subprocess
 from multiprocessing import Pool
 
 # path to the project root
-path = os.path.abspath(os.path.dirname(__file__))
+path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 def list_submodules(distrib):
     gitmodules = open(os.path.join(path, ".gitmodules"), 'r')

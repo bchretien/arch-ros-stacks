@@ -14,6 +14,6 @@ branches:
     - travis
 
 script:
-  - python ./parallel_submodule_update.py
+  - python ./scripts/parallel_submodule_update.py
   - git submodule status
-  - python ./check_submodules.py
+  - python ./scripts/check_submodules.py

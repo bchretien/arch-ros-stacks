@@ -196,7 +196,7 @@ if [[ "${query_type}" != "commit" && -z "${LOCAL_NAME}" ]]; then
 fi
 
 # arch-ros-stacks directory
-arch_ros_stacks_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+arch_ros_stacks_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")"/.. && pwd)
 pushd ${arch_ros_stacks_dir}
 
 set -x

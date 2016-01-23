@@ -35,7 +35,7 @@ function processPackage() {
 }
 
 
-root_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+root_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
 pushd ${root_dir}
 
 # Make sure mksrcinfo is available

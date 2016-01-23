@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 pushd ${DIR}
 
 # For each Git submodule
