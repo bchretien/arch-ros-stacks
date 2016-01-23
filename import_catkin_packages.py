@@ -16,6 +16,8 @@ from collections import OrderedDict
 from termcolor import colored, cprint
 import pickle
 import subprocess
+import hashlib
+import shutil
 
 # Directory containing some data files
 updates_packages_dir = "/tmp/import_catkin_packages"
@@ -49,6 +51,7 @@ class PackageBase(object):
     self.packages = []
     self.distro = distro
     self.repository_url = repository_url
+    self.repository_name = self.repository_url.split('/')[-1].split('.')[0]
     package = self._parse_package_file(
       self._get_package_xml_url(repository_url, name, version))
     self.name = package.name
@@ -58,6 +61,15 @@ class PackageBase(object):
     self.licenses = package.licenses
     self.run_dependencies = list(OrderedDict.fromkeys([dependency.name for dependency in package.run_depends]))
     self.build_dependencies = list(OrderedDict.fromkeys([dependency.name for dependency in package.build_depends + package.buildtool_depends]))
+
+    # Tarball
+    self.tarball_url = "%s/archive/release/%s/%s/%s-%s.tar.gz" \
+                        % (self.repository_url.replace('.git',''),
+                           self.distro.name, self.name,
+                           self.version, self.version_patch)
+    self.tarball_dir = "%s-release-%s-%s-%s-%s" \
+                        % (self.repository_name, self.distro.name, self.name,
+                           self.version, self.version_patch)
 
     # This may be the case for some metapackages
     self.is_virtual = False
@@ -195,7 +207,18 @@ class PackageBase(object):
             dependency_map[package_name] = distrib["arch"]
     return dependency_map
 
-  def generate(self, exclude_dependencies=[], rosdep_urls=[]):
+  def _download_tarball(self, url, path):
+    """
+    Download the tarball of the package.
+    """
+    tarball_path = "%s/%s" % (path, url.split('/')[-1])
+    if not os.path.exists(tarball_path):
+      with http.request('GET', url, preload_content=False) \
+          as r, open(tarball_path, 'wb') as out_file:
+        shutil.copyfileobj(r, out_file)
+    return hashlib.sha256(open(tarball_path, 'rb').read()).hexdigest()
+
+  def generate(self, exclude_dependencies=[], rosdep_urls=[], output_dir=None):
     raise Exception('`generate` not implemented.')
 
   def is_same_version(self, pkgbuild_file):
@@ -240,10 +263,16 @@ ros_depends=(%(ros_run_dependencies)s)
 depends=(${ros_depends[@]}
   %(other_run_dependencies)s)
 
-_tag=release/%(distro)s/%(package_name)s/${pkgver}-${_pkgver_patch}
-_dir=%(package_name)s
-source=("${_dir}"::"git+%(package_url)s"#tag=${_tag})
-md5sums=('SKIP')
+# Git version (e.g. for debugging)
+# _tag=release/%(distro)s/%(package_name)s/${pkgver}-${_pkgver_patch}
+# _dir=%(package_name)s
+# source=("${_dir}"::"git+%(package_url)s"#tag=${_tag})
+# sha256sums=('SKIP')
+
+# Tarball version (faster download)
+_dir="%(tarball_dir)s"
+source=("%(tarball_url)s")
+sha256sums=('%(tarball_sha)s')
 
 build() {
   # Use ROS environment variables
@@ -276,7 +305,8 @@ package() {
 }
 """
 
-  def generate(self, python_version, exclude_dependencies=[], rosdep_urls=[]):
+  def generate(self, python_version, exclude_dependencies=[], rosdep_urls=[],
+               output_dir=None):
     raw_build_dep, raw_run_dep = self._get_ros_dependencies()
     ros_build_dep = [dependency for dependency in raw_build_dep
                      if dependency not in exclude_dependencies]
@@ -314,6 +344,12 @@ package() {
       'license': ', '.join(self.licenses),
       'description': self.description,
       'site_url': self.site_url,
+      'tarball_url': "%s/archive/release/%s/%s/${pkgver}-${_pkgver_patch}.tar.gz"
+                     % (self.repository_url.replace('.git',''),
+                        self.distro.name, self.name),
+      'tarball_dir': "%s-release-%s-%s-${pkgver}-${_pkgver_patch}"
+                     % (self.repository_name, self.distro.name, self.name),
+      'tarball_sha': self._download_tarball(self.tarball_url, output_dir),
       'ros_build_dependencies': '\n  '.join(ros_build_dep),
       'ros_run_dependencies': '\n  '.join(ros_run_dep),
       'other_build_dependencies': '\n  '.join(other_build_dep),
@@ -696,7 +732,7 @@ def generate_pkgbuild(distro, package, directory, force=False,
   # Write PKGBUILD file
   with open(pkgbuild_file, 'w') as pkgbuild:
     pkgbuild.write(package.generate(distro.python_version, exclude_dependencies,
-                                    rosdep_urls))
+                                    rosdep_urls, output_directory))
 
   if needs_finalize(output_directory):
     finalize_submodule(output_directory)
@@ -758,8 +794,8 @@ def main():
   valid_python_versions = {"fuerte": ["2.7"],
                            "groovy": ["2.7"],
                            "hydro":  ["2.7"],
-                           "indigo": ["2.7", "3.4"],
-                           "jade": ["2.7", "3.4"]}
+                           "indigo": ["2.7", "3.5"],
+                           "jade": ["2.7", "3.5"]}
 
   # Default Python version that will be used
   default_python_version = {"fuerte": "2.7",
