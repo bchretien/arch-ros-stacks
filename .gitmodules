@@ -2137,3 +2137,6 @@
 [submodule "indigo/imu_tools"]
 	path = indigo/imu_tools
 	url = https://aur.archlinux.org/ros-indigo-imu-tools.git
+[submodule "jade/tf2_kdl"]
+	path = jade/tf2_kdl
+	url = https://aur.archlinux.org/ros-jade-tf2-kdl.git
