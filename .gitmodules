@@ -2140,3 +2140,6 @@
 [submodule "jade/tf2_kdl"]
 	path = jade/tf2_kdl
 	url = https://aur.archlinux.org/ros-jade-tf2-kdl.git
+[submodule "indigo/opencv3"]
+	path = indigo/opencv3
+	url = https://aur.archlinux.org/ros-indigo-opencv3.git
