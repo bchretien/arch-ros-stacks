@@ -2,6 +2,7 @@ arch-ros-stacks
 ---------------
 
 [![Build Status](https://travis-ci.org/bchretien/arch-ros-stacks.png?branch=master)](https://travis-ci.org/bchretien/arch-ros-stacks)
+[![Join the chat at https://gitter.im/bchretien/arch-ros-stacks](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bchretien/arch-ros-stacks?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
