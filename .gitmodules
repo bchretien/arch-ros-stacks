@@ -2161,3 +2161,21 @@
 [submodule "indigo/ecl_lite"]
 	path = indigo/ecl_lite
 	url = https://aur.archlinux.org/ros-indigo-ecl-lite.git
+[submodule "indigo/sophus"]
+	path = indigo/sophus
+	url = https://aur.archlinux.org/ros-indigo-sophus.git
+[submodule "indigo/ecl_ipc"]
+	path = indigo/ecl_ipc
+	url = https://aur.archlinux.org/ros-indigo-ecl-ipc.git
+[submodule "indigo/ecl_core_apps"]
+	path = indigo/ecl_core_apps
+	url = https://aur.archlinux.org/ros-indigo-ecl-core-apps.git
+[submodule "indigo/ecl_filesystem"]
+	path = indigo/ecl_filesystem
+	url = https://aur.archlinux.org/ros-indigo-ecl-filesystem.git
+[submodule "indigo/ecl_statistics"]
+	path = indigo/ecl_statistics
+	url = https://aur.archlinux.org/ros-indigo-ecl-statistics.git
+[submodule "indigo/ecl_core"]
+	path = indigo/ecl_core
+	url = https://aur.archlinux.org/ros-indigo-ecl-core.git
