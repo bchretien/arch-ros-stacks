@@ -2143,3 +2143,18 @@
 [submodule "indigo/opencv3"]
 	path = indigo/opencv3
 	url = https://aur.archlinux.org/ros-indigo-opencv3.git
+[submodule "indigo/ecl_console"]
+	path = indigo/ecl_console
+	url = https://aur.archlinux.org/ros-indigo-ecl-console.git
+[submodule "indigo/ecl_converters_lite"]
+	path = indigo/ecl_converters_lite
+	url = https://aur.archlinux.org/ros-indigo-ecl-converters-lite.git
+[submodule "indigo/ecl_io"]
+	path = indigo/ecl_io
+	url = https://aur.archlinux.org/ros-indigo-ecl-io.git
+[submodule "indigo/ecl_sigslots_lite"]
+	path = indigo/ecl_sigslots_lite
+	url = https://aur.archlinux.org/ros-indigo-ecl-sigslots-lite.git
+[submodule "indigo/ecl_lite"]
+	path = indigo/ecl_lite
+	url = https://aur.archlinux.org/ros-indigo-ecl-lite.git
