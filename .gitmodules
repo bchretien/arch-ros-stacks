@@ -2143,3 +2143,6 @@
 [submodule "indigo/opencv3"]
 	path = indigo/opencv3
 	url = https://aur.archlinux.org/ros-indigo-opencv3.git
+[submodule "indigo/ecl_tools"]
+	path = indigo/ecl_tools
+	url = https://aur.archlinux.org/ros-indigo-ecl-tools.git
