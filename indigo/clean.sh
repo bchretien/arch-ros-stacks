@@ -11,7 +11,7 @@ done
 # Remove generated packages
 for f in $(find $DIR -maxdepth 2 -mindepth 2 -type f \
            -name "*.pkg.tar.xz" -or -name "*.src.tar.gz" \
-           -or -regextype posix-egrep -regex ".*/[0-9.-]+\.tar\.gz")
+           -or -regextype posix-egrep -regex ".*/[0-9.-\_]+\.tar\.gz")
 do
     rm $f
 done
