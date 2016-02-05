@@ -8,11 +8,6 @@ git:
   # Rely on our custom script
   submodules: false
 
-branches:
-  only:
-    - master
-    - travis
-
 script:
   - python ./scripts/parallel_submodule_update.py
   - git submodule status
