@@ -255,7 +255,7 @@ pkgrel=%(package_release)s
 license=('%(license)s')
 
 ros_makedepends=(%(ros_build_dependencies)s)
-makedepends=('cmake' 'git' 'ros-build-tools'
+makedepends=('cmake' 'ros-build-tools'
   ${ros_makedepends[@]}
   %(other_build_dependencies)s)
 
@@ -380,7 +380,7 @@ pkgrel=%(package_release)s
 license=('%(license)s')
 
 ros_makedepends=(%(ros_build_dependencies)s)
-makedepends=('cmake' 'git' 'ros-build-tools'
+makedepends=('cmake' 'ros-build-tools'
   ${ros_makedepends[@]}
   %(other_build_dependencies)s)
 
