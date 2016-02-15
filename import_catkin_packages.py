@@ -265,13 +265,13 @@ depends=(${ros_depends[@]}
 
 # Git version (e.g. for debugging)
 # _tag=release/%(distro)s/%(package_name)s/${pkgver}-${_pkgver_patch}
-# _dir=%(package_name)s
+# _dir=${pkgname}
 # source=("${_dir}"::"git+%(package_url)s"#tag=${_tag})
 # sha256sums=('SKIP')
 
 # Tarball version (faster download)
 _dir="%(tarball_dir)s"
-source=("%(tarball_url)s")
+source=("${pkgname}-${pkgver}-${_pkgver_patch}.tar.gz"::"%(tarball_url)s")
 sha256sums=('%(tarball_sha)s')
 
 build() {
