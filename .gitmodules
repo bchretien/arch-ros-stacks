@@ -2179,3 +2179,12 @@
 [submodule "indigo/ecl_core"]
 	path = indigo/ecl_core
 	url = https://aur.archlinux.org/ros-indigo-ecl-core.git
+[submodule "indigo/uvc_camera"]
+	path = indigo/uvc_camera
+	url = https://aur.archlinux.org/ros-indigo-uvc-camera.git
+[submodule "indigo/libuvc"]
+	path = indigo/libuvc
+	url = https://aur.archlinux.org/ros-indigo-libuvc.git
+[submodule "indigo/libuvc_camera"]
+	path = indigo/libuvc_camera
+	url = https://aur.archlinux.org/ros-indigo-libuvc-camera.git
