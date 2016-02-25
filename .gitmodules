@@ -2188,3 +2188,6 @@
 [submodule "indigo/libuvc_camera"]
 	path = indigo/libuvc_camera
 	url = https://aur.archlinux.org/ros-indigo-libuvc-camera.git
+[submodule "indigo/kdl_parser_py"]
+	path = indigo/kdl_parser_py
+	url = https://aur.archlinux.org/ros-indigo-kdl-parser-py.git
