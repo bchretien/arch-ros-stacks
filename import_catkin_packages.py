@@ -207,11 +207,12 @@ class PackageBase(object):
             dependency_map[package_name] = distrib["arch"]
     return dependency_map
 
-  def _download_tarball(self, url, path):
+  def _download_tarball(self, url, path, name):
     """
-    Download the tarball of the package.
+    Download the tarball of the package, and prepend the package name to avoid
+    clashes.
     """
-    tarball_path = "%s/%s" % (path, url.split('/')[-1])
+    tarball_path = "%s/%s-%s" % (path, name, url.split('/')[-1])
     if not os.path.exists(tarball_path):
       with http.request('GET', url, preload_content=False) \
           as r, open(tarball_path, 'wb') as out_file:
@@ -349,7 +350,9 @@ package() {
                         self.distro.name, self.name),
       'tarball_dir': "%s-release-%s-%s-${pkgver}-${_pkgver_patch}"
                      % (self.repository_name, self.distro.name, self.name),
-      'tarball_sha': self._download_tarball(self.tarball_url, output_dir),
+      'tarball_sha': self._download_tarball(self.tarball_url, output_dir,
+                       "ros-%s-%s" % (self.distro.name,
+                                      self._rosify_package_name(self.name))),
       'ros_build_dependencies': '\n  '.join(ros_build_dep),
       'ros_run_dependencies': '\n  '.join(ros_run_dep),
       'other_build_dependencies': '\n  '.join(other_build_dep),
