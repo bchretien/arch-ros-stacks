@@ -2197,3 +2197,6 @@
 [submodule "jade/kdl_parser_py"]
 	path = jade/kdl_parser_py
 	url = https://aur.archlinux.org/ros-jade-kdl-parser-py.git
+[submodule "indigo/rplidar_ros"]
+	path = indigo/rplidar_ros
+	url = https://aur.archlinux.org/ros-indigo-rplidar-ros.git
