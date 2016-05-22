@@ -2200,3 +2200,30 @@
 [submodule "indigo/rplidar_ros"]
 	path = indigo/rplidar_ros
 	url = https://aur.archlinux.org/ros-indigo-rplidar-ros.git
+[submodule "jade/realtime_tools"]
+	path = jade/realtime_tools
+	url = https://aur.archlinux.org/ros-jade-realtime-tools.git
+[submodule "jade/control_toolbox"]
+	path = jade/control_toolbox
+	url = https://aur.archlinux.org/ros-jade-control-toolbox.git
+[submodule "jade/hardware_interface"]
+	path = jade/hardware_interface
+	url = https://aur.archlinux.org/ros-jade-hardware-interface.git
+[submodule "jade/controller_interface"]
+	path = jade/controller_interface
+	url = https://aur.archlinux.org/ros-jade-controller-interface.git
+[submodule "jade/controller_manager_msgs"]
+	path = jade/controller_manager_msgs
+	url = https://aur.archlinux.org/ros-jade-controller-manager-msgs.git
+[submodule "jade/controller_manager"]
+	path = jade/controller_manager
+	url = https://aur.archlinux.org/ros-jade-controller-manager.git
+[submodule "jade/joint_limits_interface"]
+	path = jade/joint_limits_interface
+	url = https://aur.archlinux.org/ros-jade-joint-limits-interface.git
+[submodule "jade/transmission_interface"]
+	path = jade/transmission_interface
+	url = https://aur.archlinux.org/ros-jade-transmission-interface.git
+[submodule "jade/gazebo_ros_control"]
+	path = jade/gazebo_ros_control
+	url = https://aur.archlinux.org/ros-jade-gazebo-ros-control.git
