@@ -202,7 +202,7 @@ class PackageBase(object):
           if 'pacman' in distrib["arch"]:
             dependency_map[package_name] = distrib["arch"]["pacman"]["packages"]
           elif 'aur' in distrib["arch"]:
-            dependency_map[package_name] = distrib["arch"]["aur"]["packages"]
+            dependency_map[package_name] = distrib["arch"]["aur"]
           else:
             dependency_map[package_name] = distrib["arch"]
     return dependency_map
