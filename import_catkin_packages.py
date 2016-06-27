@@ -290,7 +290,7 @@ build() {
   # Build project
   cmake ${srcdir}/${_dir} \\
         -DCMAKE_BUILD_TYPE=Release \\
-        -DCATKIN_BUILD_BINARY_PACKAGE=ON \\
+        -DCATKIN_BUILD_BINARY_PACKAGE=%(binary)s \\
         -DCMAKE_INSTALL_PREFIX=/opt/ros/%(distro)s \\
         -DPYTHON_EXECUTABLE=%(python_executable)s \\
         -DPYTHON_INCLUDE_DIR=%(python_include_dir)s \\
@@ -357,6 +357,7 @@ package() {
       'ros_run_dependencies': '\n  '.join(ros_run_dep),
       'other_build_dependencies': '\n  '.join(other_build_dep),
       'other_run_dependencies': '\n  '.join(other_run_dep),
+      'binary': "OFF" if self.name == "catkin" else "ON",
       'python_version_major': python_version_major,
       'python_executable': '/usr/bin/python%s' % python_version_major,
       'python_include_dir': '/usr/include/python%s' % python_version_full,
