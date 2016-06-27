@@ -798,14 +798,16 @@ def main():
                            "groovy": ["2.7"],
                            "hydro":  ["2.7"],
                            "indigo": ["2.7", "3.5"],
-                           "jade": ["2.7", "3.5"]}
+                           "jade": ["2.7", "3.5"],
+                           "kinetic" : ["2.7", "3.5"]}
 
   # Default Python version that will be used
   default_python_version = {"fuerte": "2.7",
                             "groovy": "2.7",
                             "hydro":  "2.7",
                             "indigo": "2.7",
-                            "jade": "2.7"}
+                            "jade": "2.7",
+                            "kinetic": "2.7"}
 
   python_version = default_python_version[options.distro]
   if options.python_version != "":
