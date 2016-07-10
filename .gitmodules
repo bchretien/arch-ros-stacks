@@ -2227,3 +2227,6 @@
 [submodule "jade/gazebo_ros_control"]
 	path = jade/gazebo_ros_control
 	url = https://aur.archlinux.org/ros-jade-gazebo-ros-control.git
+[submodule "indigo/stdr_launchers"]
+	path = indigo/stdr_launchers
+	url = https://aur.archlinux.org/ros-indigo-stdr-launchers.git
