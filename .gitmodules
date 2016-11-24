@@ -421,9 +421,6 @@
 [submodule "indigo/kobuki_bumper2pc"]
 	path = indigo/kobuki_bumper2pc
 	url = https://aur.archlinux.org/ros-indigo-kobuki-bumper2pc.git
-[submodule "indigo/kobuki_capabilities"]
-	path = indigo/kobuki_capabilities
-	url = https://aur.archlinux.org/ros-indigo-kobuki-capabilities.git
 [submodule "indigo/kobuki_description"]
 	path = indigo/kobuki_description
 	url = https://aur.archlinux.org/ros-indigo-kobuki-description.git
