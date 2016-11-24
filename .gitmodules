@@ -2233,12 +2233,6 @@
 [submodule "indigo/kobuki_capabilities"]
 	path = indigo/kobuki_capabilities
 	url = https://aur.archlinux.org/ros-indigo-kobuki-capabilities.git
-[submodule "indigo/realsense_camera"]
-	path = indigo/realsense_camera
-	url = https://aur.archlinux.org/ros-indigo-realsense-camera.git
-[submodule "indigo/librealsense"]
-	path = indigo/librealsense
-	url = https://aur.archlinux.org/ros-indigo-librealsense.git
 [submodule "indigo/astra_camera"]
 	path = indigo/astra_camera
 	url = https://aur.archlinux.org/ros-indigo-astra-camera.git
