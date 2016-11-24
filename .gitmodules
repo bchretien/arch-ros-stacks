@@ -2230,3 +2230,6 @@
 [submodule "indigo/teleop_twist_keyboard"]
 	path = indigo/teleop_twist_keyboard
 	url = https://aur.archlinux.org/ros-indigo-teleop-twist-keyboard.git
+[submodule "indigo/kobuki_capabilities"]
+	path = indigo/kobuki_capabilities
+	url = https://aur.archlinux.org/ros-indigo-kobuki-capabilities.git
