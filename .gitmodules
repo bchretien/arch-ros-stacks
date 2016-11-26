@@ -2239,3 +2239,9 @@
 [submodule "indigo/astra_launch"]
 	path = indigo/astra_launch
 	url = https://aur.archlinux.org/ros-indigo-astra-launch.git
+[submodule "indigo/realsense_camera"]
+	path = indigo/realsense_camera
+	url = https://aur.archlinux.org/ros-indigo-realsense-camera.git
+[submodule "indigo/librealsense"]
+	path = indigo/librealsense
+	url = https://aur.archlinux.org/ros-indigo-librealsense.git
